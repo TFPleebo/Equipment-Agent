@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pool Equipment Advisor</title>
+  <style>
+    /* ── Reset & Base ─────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; }
+
+    /* ── Color tokens ──────────────────────────────────────── */
+    :root {
+      --pool-dark:   #0c4a6e;
+      --pool-mid:    #0369a1;
+      --pool-light:  #38bdf8;
+      --pool-pale:   #e0f2fe;
+      --accent:      #06b6d4;
+      --text:        #1e293b;
+      --muted:       #64748b;
+      --border:      #cbd5e1;
+      --bg:          #f8fafc;
+      --white:       #ffffff;
+      --shadow:      0 4px 24px rgba(3,105,161,0.10);
+    }
+
+    /* ── Layout ────────────────────────────────────────────── */
+    body {
+      background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 50%, #ecfeff 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .app-wrapper {
+      width: 100%;
+      max-width: 740px;
+      display: flex;
+      flex-direction: column;
+      height: calc(100vh - 32px);
+      max-height: 860px;
+    }
+
+    /* ── Header ────────────────────────────────────────────── */
+    .header {
+      background: linear-gradient(135deg, var(--pool-dark), var(--pool-mid));
+      color: var(--white);
+      border-radius: 20px 20px 0 0;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      box-shadow: var(--shadow);
+    }
+    .header-left { display: flex; align-items: center; gap: 14px; }
+    .header-icon {
+      width: 48px; height: 48px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px;
+    }
+    .header-text h1 { font-size: 1.15rem; font-weight: 700; }
+    .header-text p  { font-size: 0.78rem; opacity: 0.8; margin-top: 2px; }
+
+    .status-dot {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: #4ade80;
+      border-radius: 50%;
+      margin-right: 6px;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+
+    /* ── Chat area ─────────────────────────────────────────── */
+    .chat-area {
+      flex: 1;
+      overflow-y: auto;
+      background: var(--bg);
+      padding: 20px 20px 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      scroll-behavior: smooth;
+    }
+    .chat-area::-webkit-scrollbar { width: 5px; }
+    .chat-area::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+
+    /* ── Messages ──────────────────────────────────────────── */
+    .msg-row {
+      display: flex;
+      align-items: flex-end;
+      gap: 10px;
+      animation: fadeUp .25s ease;
+    }
+    @keyframes fadeUp { from { opacity:0; transform:translateY(8px) } to { opacity:1; transform:translateY(0) } }
+
+    .msg-row.user  { flex-direction: row-reverse; }
+    .msg-row.bot   { flex-direction: row; }
+
+    .avatar {
+      width: 34px; height: 34px;
+      border-radius: 10px;
+      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px;
+    }
+    .avatar.bot  { background: var(--pool-pale); }
+    .avatar.user { background: var(--pool-mid); }
+
+    .bubble {
+      max-width: 72%;
+      padding: 12px 16px;
+      border-radius: 18px;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .bubble.bot  {
+      background: var(--white);
+      color: var(--text);
+      border-bottom-left-radius: 4px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+      border: 1px solid var(--border);
+    }
+    .bubble.user {
+      background: var(--pool-mid);
+      color: white;
+      border-bottom-right-radius: 4px;
+    }
+    .bubble .ts {
+      font-size: 0.68rem;
+      opacity: 0.5;
+      margin-top: 5px;
+      display: block;
+    }
+
+    /* ── Typing indicator ──────────────────────────────────── */
+    .typing-indicator { display: flex; align-items: flex-end; gap: 10px; }
+    .typing-dots {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 18px 18px 18px 4px;
+      padding: 12px 18px;
+      display: flex; gap: 5px; align-items: center;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+    }
+    .dot {
+      width: 8px; height: 8px;
+      background: var(--pool-light);
+      border-radius: 50%;
+      animation: bounce 1.2s infinite;
+    }
+    .dot:nth-child(2) { animation-delay: 0.2s; }
+    .dot:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes bounce { 0%,60%,100%{transform:translateY(0)} 30%{transform:translateY(-6px)} }
+
+    /* ── Input bar ─────────────────────────────────────────── */
+    .input-bar {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      padding: 14px 16px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-end;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 -2px 12px rgba(0,0,0,0.04);
+    }
+    #userInput {
+      flex: 1;
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      padding: 11px 14px;
+      font-size: 0.9rem;
+      resize: none;
+      outline: none;
+      max-height: 120px;
+      min-height: 44px;
+      line-height: 1.5;
+      color: var(--text);
+      transition: border .2s;
+      font-family: inherit;
+    }
+    #userInput:focus { border-color: var(--pool-mid); }
+    #userInput::placeholder { color: #94a3b8; }
+
+    .send-btn {
+      background: linear-gradient(135deg, var(--pool-mid), var(--accent));
+      color: white;
+      border: none;
+      border-radius: 12px;
+      width: 44px; height: 44px;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      transition: opacity .2s, transform .1s;
+      font-size: 18px;
+    }
+    .send-btn:hover:not(:disabled) { opacity: 0.9; transform: scale(1.04); }
+    .send-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    /* ── Welcome card ──────────────────────────────────────── */
+    .welcome-card {
+      background: linear-gradient(135deg, var(--pool-pale), #ecfeff);
+      border: 1px solid var(--pool-light);
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      color: var(--pool-dark);
+    }
+    .welcome-card .big-icon { font-size: 2.2rem; margin-bottom: 8px; }
+    .welcome-card h2 { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; }
+    .welcome-card p  { font-size: 0.84rem; color: var(--muted); line-height: 1.55; }
+    .quick-prompts   { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; justify-content: center; }
+    .qp-btn {
+      background: white;
+      border: 1.5px solid var(--pool-light);
+      color: var(--pool-mid);
+      border-radius: 20px;
+      padding: 7px 14px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all .2s;
+      font-weight: 500;
+    }
+    .qp-btn:hover { background: var(--pool-pale); border-color: var(--pool-mid); }
+
+    /* ── Error banner ──────────────────────────────────────── */
+    .error-banner {
+      background: #fef2f2;
+      border: 1px solid #fca5a5;
+      color: #991b1b;
+      border-radius: 12px;
+      padding: 10px 14px;
+      font-size: 0.82rem;
+      display: flex; align-items: flex-start; gap: 8px;
+    }
+    .error-banner.hidden { display: none; }
+
+    /* ── Responsive ────────────────────────────────────────── */
+    @media (max-width: 500px) {
+      .app-wrapper { height: 100vh; max-height: none; }
+      .header, .input-bar { border-radius: 0; }
+      body { padding: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════ APP -->
+<div class="app-wrapper">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-left">
+      <div class="header-icon">🏊</div>
+      <div class="header-text">
+        <h1>Pool Equipment Advisor</h1>
+        <p><span class="status-dot"></span>Pumps &amp; Salt Water Generators</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chat messages -->
+  <div class="chat-area" id="chatArea">
+
+    <!-- Welcome card -->
+    <div class="welcome-card" id="welcomeCard">
+      <div class="big-icon">💧</div>
+      <h2>Welcome to the Pool Equipment Advisor</h2>
+      <p>I'll walk you through choosing the right <strong>pump</strong> and <strong>salt water generator (SWG)</strong> for your pool. Tell me about your setup and I'll help you find the perfect fit.</p>
+      <div class="quick-prompts">
+        <button class="qp-btn" onclick="quickSend('I need help choosing a pool pump.')">🔧 Help me choose a pump</button>
+        <button class="qp-btn" onclick="quickSend('What salt water generator do you recommend?')">🧂 Recommend an SWG</button>
+        <button class="qp-btn" onclick="quickSend('My pool is 20,000 gallons. Where do I start?')">📐 I have a 20k gal pool</button>
+        <button class="qp-btn" onclick="quickSend('What\'s the difference between single-speed and variable-speed pumps?')">⚡ Single vs variable speed?</button>
+      </div>
+    </div>
+
+    <!-- Error banner (hidden by default) -->
+    <div class="error-banner hidden" id="errorBanner">
+      <span>⚠️</span>
+      <span id="errorText">Something went wrong.</span>
+    </div>
+
+  </div>
+
+  <!-- Input bar -->
+  <div class="input-bar">
+    <textarea
+      id="userInput"
+      rows="1"
+      placeholder="Ask about pumps, salt water generators, pool size…"
+      autocomplete="off"
+    ></textarea>
+    <button class="send-btn" id="sendBtn" disabled title="Send message">➤</button>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════ SCRIPT -->
+<script>
+  /* ════════════════════════════════════════════════════════
+     CONFIGURATION — fill these in before deploying
+     ════════════════════════════════════════════════════════ */
+  const CONFIG = {
+    apiKey:        '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',
+    promptId:      'pmpt_69aad78e332c8195a97867fcf773fbf106115df9cf68ff74',
+    promptVersion: '15',
+    vectorStoreId: 'vs_69aadabb3f4c8191aa64f0136831e3e6',
+  };
+  /* ════════════════════════════════════════════════════════ */
+
+
+  // Tracks the ID of the last AI response for conversation chaining
+  let previousResponseId = null;
+  let isLoading = false;
+
+  /* ─── Textarea auto-resize & enter-to-send ────────────── */
+  const inputEl = document.getElementById('userInput');
+
+  inputEl.addEventListener('input', () => {
+    inputEl.style.height = 'auto';
+    inputEl.style.height = Math.min(inputEl.scrollHeight, 120) + 'px';
+    updateSendBtn();
+  });
+
+  inputEl.addEventListener('keydown', e => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      if (!document.getElementById('sendBtn').disabled) send();
+    }
+  });
+
+  document.getElementById('sendBtn').addEventListener('click', send);
+
+  function updateSendBtn() {
+    document.getElementById('sendBtn').disabled = isLoading || !inputEl.value.trim();
+  }
+
+  /* ─── Render helpers ──────────────────────────────────── */
+  function now() {
+    return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  }
+
+  function addMessage(role, text) {
+    // Hide welcome card after first message
+    const wc = document.getElementById('welcomeCard');
+    if (wc) wc.style.display = 'none';
+
+    const row = document.createElement('div');
+    row.className = `msg-row ${role}`;
+
+    const avatar = document.createElement('div');
+    avatar.className = `avatar ${role}`;
+    avatar.textContent = role === 'user' ? '👤' : '🏊';
+
+    const bubble = document.createElement('div');
+    bubble.className = `bubble ${role}`;
+    bubble.textContent = text;
+
+    const ts = document.createElement('span');
+    ts.className = 'ts';
+    ts.textContent = now();
+    bubble.appendChild(ts);
+
+    row.appendChild(avatar);
+    row.appendChild(bubble);
+
+    const chat = document.getElementById('chatArea');
+    chat.appendChild(row);
+    chat.scrollTop = chat.scrollHeight;
+  }
+
+  function showTyping() {
+    const row = document.createElement('div');
+    row.className = 'typing-indicator';
+    row.id = 'typingIndicator';
+    row.innerHTML = `
+      <div class="avatar bot">🏊</div>
+      <div class="typing-dots">
+        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+      </div>`;
+    const chat = document.getElementById('chatArea');
+    chat.appendChild(row);
+    chat.scrollTop = chat.scrollHeight;
+  }
+
+  function hideTyping() {
+    const el = document.getElementById('typingIndicator');
+    if (el) el.remove();
+  }
+
+  function showError(msg) {
+    const banner = document.getElementById('errorBanner');
+    document.getElementById('errorText').textContent = msg;
+    banner.classList.remove('hidden');
+    document.getElementById('chatArea').scrollTop = 9999;
+    setTimeout(() => banner.classList.add('hidden'), 8000);
+  }
+
+  /* ─── Quick-prompt buttons ────────────────────────────── */
+  function quickSend(text) {
+    inputEl.value = text;
+    send();
+  }
+
+  /* ─── Core send ───────────────────────────────────────── */
+  async function send() {
+    const text = inputEl.value.trim();
+    if (!text || isLoading) return;
+
+    inputEl.value = '';
+    inputEl.style.height = 'auto';
+    addMessage('user', text);
+
+    isLoading = true;
+    updateSendBtn();
+    showTyping();
+
+    try {
+      const body = {
+        prompt: {
+          id: CONFIG.promptId,
+          ...(CONFIG.promptVersion ? { version: CONFIG.promptVersion } : {})
+        },
+        input: [
+          {
+            type: 'message',
+            role: 'user',
+            content: [{ type: 'input_text', text }]
+          }
+        ],
+        store: true
+      };
+
+      // Chain turns so the AI remembers the full conversation
+      if (previousResponseId) {
+        body.previous_response_id = previousResponseId;
+      }
+
+      // Enable file_search if a vector store is configured
+      if (CONFIG.vectorStoreId) {
+        body.tools = [
+          {
+            type: 'file_search',
+            vector_store_ids: [CONFIG.vectorStoreId]
+          }
+        ];
+      }
+
+      const res = await fetch('https://api.openai.com/v1/responses', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${CONFIG.apiKey}`
+        },
+        body: JSON.stringify(body)
+      });
+
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err?.error?.message || `API error ${res.status}`);
+      }
+
+      const data = await res.json();
+
+      // Remember this response ID for the next turn
+      previousResponseId = data.id;
+
+      // Pull the assistant's text out of the output array
+      let replyText = '';
+      if (Array.isArray(data.output)) {
+        for (const item of data.output) {
+          if (item.type === 'message' && item.role === 'assistant') {
+            for (const c of item.content || []) {
+              if (c.type === 'output_text' && c.text) replyText += c.text;
+            }
+          }
+        }
+      }
+
+      hideTyping();
+      addMessage('bot', replyText || 'I got a response but couldn\'t read the text. Please try again.');
+
+    } catch (err) {
+      hideTyping();
+      console.error('API error:', err);
+      showError('Something went wrong: ' + err.message);
+    } finally {
+      isLoading = false;
+      updateSendBtn();
+      inputEl.focus();
+    }
+  }
+
+  /* ─── Init ────────────────────────────────────────────── */
+  updateSendBtn();
+  inputEl.focus();
+</script>
+</body>
+</html>
