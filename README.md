@@ -1,8 +1,6 @@
-Here’s a clean, structured **README.md** you can drop into GitHub (or your AI agent project). I kept it aligned with your style—practical, product-focused, and ready to evolve.
-
----
-
 # 🧠 Pool Equipment Advisor AI
+https://tfpleebo.github.io/Equipment-Agent/pool-advisor-chatbot.html
+
 
 **SWG & Pump Selection Assistant**
 
