@@ -305,10 +305,11 @@
 <!-- ═══════════════════════════════════════════════════ SCRIPT -->
 <script>
   /* ════════════════════════════════════════════════════════
-     CONFIGURATION — fill these in before deploying
+     CONFIGURATION
      ════════════════════════════════════════════════════════ */
   const CONFIG = {
-    apiKey:        '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',
+    // Cloudflare Worker proxy — API key lives there, not here
+    proxyUrl:      'https://pool-advisor-proxy.9r568xhjmx.workers.dev',
     promptId:      'pmpt_69aad78e332c8195a97867fcf773fbf106115df9cf68ff74',
     promptVersion: '15',
     vectorStoreId: 'vs_69aadabb3f4c8191aa64f0136831e3e6',
@@ -453,11 +454,10 @@
         ];
       }
 
-      const res = await fetch('https://api.openai.com/v1/responses', {
+      const res = await fetch(CONFIG.proxyUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${CONFIG.apiKey}`
         },
         body: JSON.stringify(body)
       });
