@@ -1,6 +1,5 @@
-# 🧠 Pool Equipment Advisor AI
-https://tfpleebo.github.io/Equipment-Agent/pool-advisor-chatbot.html
-
+# 🧠 Pool Equipment Advisor AI[
+https://tfpleebo.github.io/Equipment-Agent/Pool%20Equipment%20Advisor.html
 
 **SWG & Pump Selection Assistant**
 
