@@ -164,6 +164,29 @@ input[type=number],input[type=text],select{background:var(--panel2);border-radiu
 @media(max-width:640px){.keyterms{grid-template-columns:1fr}}
 .kt{font-size:12.5px;color:var(--muted);line-height:1.5}
 .kt b{color:var(--ink);display:block;font-size:13px}
+/* wizard section separators */
+.fsec{margin:22px 0 0;padding-top:18px;border-top:1px solid var(--line)}
+.fsec:first-of-type{margin-top:16px}
+.fsec-h{display:flex;align-items:baseline;gap:9px;margin-bottom:12px}
+.fsec-t{font-family:var(--mono);font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:var(--accent);font-weight:600}
+.fsec-r{font-size:10.5px;letter-spacing:.6px;text-transform:uppercase;color:var(--muted2);font-family:var(--mono)}
+.fsec-r.req{color:var(--warn)}
+/* searchable picker */
+.pick{position:relative}
+.pick-in{width:100%}
+.pick-list{position:absolute;z-index:40;left:0;right:0;top:calc(100% + 4px);max-height:290px;overflow:auto;
+  background:var(--panel);border:1px solid var(--line2);border-radius:12px;box-shadow:var(--shadow);display:none}
+.pick-list.on{display:block}
+.pick-grp{font-family:var(--mono);font-size:10.5px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted2);
+  padding:9px 13px 5px;position:sticky;top:0;background:var(--panel);border-bottom:1px solid var(--line)}
+.pick-it{padding:10px 13px;font-size:14.5px;cursor:pointer;border-bottom:1px solid var(--line)}
+.pick-it:last-child{border-bottom:0}
+.pick-it:hover,.pick-it.cur{background:var(--chip)}
+.pick-it .sm{display:block;font-size:12px;color:var(--muted);margin-top:1px}
+.pick-none{padding:13px;font-size:13.5px;color:var(--muted)}
+.pick-sel{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--chip);
+  border:1px solid var(--accent);border-radius:12px;padding:11px 13px;font-size:14.5px;font-weight:600}
+.pick-x{cursor:pointer;font-family:var(--mono);font-size:11px;letter-spacing:.8px;color:var(--accent);text-transform:uppercase;font-weight:700}
 .payback{margin:-6px 0 14px}
 .payback input{max-width:260px}
 .paynote{margin-top:8px;font-size:13.5px;color:var(--ok);font-weight:600}
@@ -416,8 +439,25 @@ function swgEngine(p){
   if(p.failure==='board-dead') repairOptions.push({summary:'A dead SWG control board is sometimes a repairable RTC-capacitor or relay fault rather than a full replacement — worth a diagnosis before buying new.',ruleId:'AUTOMATION_EXCEPTIONS'});
   if(p.failure==='cell-eol') repairOptions.push({summary:'If only the cell is at end-of-life, a replacement cell for your existing control box is usually far cheaper than a whole new system.',ruleId:'SWG_2X_RULE'});
 
+  // ---- before/after vs the user's current cell (capacity + how hard it must work) ----
+  let comparison=null;
+  const curS = p.currentSwgId ? DATA.swg.find(x=>x.id===p.currentSwgId) : null;
+  if(curS && out.length){
+    const curDerate=(curS.dq==='conflicting-sources'||curS.dq==='advertised-output-disputed')?0.75:1;
+    const curEff=curS.lbs*curDerate;
+    const curPct = curEff>0 ? (lbsNeeded/(curEff*(runtime/24)))*100 : 999;
+    const top=out[0];
+    comparison={
+      current:{model:curS.mfr+' '+curS.model, lbs:round2(curEff), pct:Math.round(curPct),
+               rated:curS.rated, meets:curEff>=requiredLbs},
+      recommended:{model:top.product.mfr+' '+top.product.model, lbs:top.effLbs,
+               pct:top.computed.requiredOutputPct, rated:top.product.rated, meets:top.fit.meetsCapacity},
+      capacityFactor: curEff>0 ? Math.round((top.effLbs/curEff)*100)/100 : null,
+      pctDrop: (curPct<900&&top.computed.requiredOutputPct!=null) ? Math.round(curPct-top.computed.requiredOutputPct) : null
+    };
+  }
   return {mode:'swg',requiredLbs:round2(requiredLbs),lbsNeeded:round3(lbsNeeded),ppm,runtime,
-    recommendations:out.slice(0,12),warnings,repairOptions};
+    comparison,recommendations:out.slice(0,12),warnings,repairOptions};
 }
 
 const cap=s=>s?s.charAt(0).toUpperCase()+s.slice(1):s;
@@ -550,6 +590,59 @@ function fldHelp(text,title,body){
   q.onclick=tog; q.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();tog();}};
   lab.append(q); wrap.append(lab,box); return wrap;
 }
+/* a labelled section inside a wizard card */
+function fsec(title,required){
+  const d=el('div','fsec'); const h=el('div','fsec-h');
+  h.append(el('div','fsec-t',title), el('div','fsec-r'+(required?' req':''), required?'Required':'Optional'));
+  d.append(h); return d;
+}
+/* searchable, manufacturer-grouped model picker.
+   items: [{id,brand,label,sub}]  -> onPick(id|null) */
+function modelPicker(items,selectedId,placeholder,onPick){
+  const wrap=el('div','pick');
+  const sel=items.find(x=>x.id===selectedId);
+  if(sel){
+    const box=el('div','pick-sel');
+    box.append(el('span',null,sel.brand+' \u00b7 '+sel.label));
+    const x=el('span','pick-x','Change'); x.setAttribute('role','button'); x.setAttribute('tabindex','0');
+    const clear=()=>onPick(null);
+    x.onclick=clear; x.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();clear();}};
+    box.append(x); wrap.append(box); return wrap;
+  }
+  const inp=el('input','pick-in'); inp.type='text'; inp.placeholder=placeholder||'Type a brand or model to search…';
+  inp.setAttribute('autocomplete','off'); inp.setAttribute('role','combobox');
+  const list=el('div','pick-list');
+  wrap.append(inp,list);
+  let cur=-1, flat=[];
+  const draw=q=>{
+    list.innerHTML=''; cur=-1; flat=[];
+    const t=(q||'').trim().toLowerCase();
+    const hit=items.filter(x=>!t||((x.brand+' '+x.label).toLowerCase().indexOf(t)>=0));
+    if(!hit.length){ list.append(el('div','pick-none','No match — check the spelling, or leave it blank.')); list.classList.add('on'); return; }
+    const by={}; hit.forEach(x=>{(by[x.brand]=by[x.brand]||[]).push(x);});
+    Object.keys(by).sort((a,b)=>a.localeCompare(b)).forEach(br=>{
+      list.append(el('div','pick-grp',br));
+      by[br].sort((a,b)=>a.label.localeCompare(b.label)).slice(0,60).forEach(x=>{
+        const it=el('div','pick-it'); it.innerHTML=x.label+(x.sub?('<span class="sm">'+x.sub+'</span>'):'');
+        it.onmousedown=e=>{e.preventDefault();onPick(x.id);};
+        list.append(it); flat.push(it);
+      });
+    });
+    list.classList.add('on');
+  };
+  inp.oninput=()=>draw(inp.value);
+  inp.onfocus=()=>draw(inp.value);
+  inp.onblur=()=>setTimeout(()=>list.classList.remove('on'),120);
+  inp.onkeydown=e=>{
+    if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();
+      if(!flat.length)return; flat[cur]&&flat[cur].classList.remove('cur');
+      cur=(cur+(e.key==='ArrowDown'?1:-1)+flat.length)%flat.length;
+      flat[cur].classList.add('cur'); flat[cur].scrollIntoView({block:'nearest'});}
+    else if(e.key==='Enter'){ if(cur>=0&&flat[cur]){e.preventDefault();flat[cur].dispatchEvent(new MouseEvent('mousedown'));} }
+    else if(e.key==='Escape'){ list.classList.remove('on'); }
+  };
+  return wrap;
+}
 function card(inner){const c=el('div','card');c.append(...inner);return c;}
 
 /* ---------------- FILTER ENGINE ---------------- */
@@ -651,12 +744,14 @@ function stepFilterBasics(){
   c.append(el('label','fld','Current filter type'),
     optGrid(true,[{v:'cartridge',t:'Cartridge'},{v:'sand',t:'Sand'},{v:'de',t:'DE'},{v:'hybrid-de',t:'Hybrid DE'},{v:'none',t:'None / not sure'}],p.replacingType,v=>{if(p.replacingType!==v)p.currentFilterId=null;p.replacingType=v;}));
   if(p.replacingType&&p.replacingType!=='none'){
-    const sel=el('select');
-    const o0=el('option',null,'— optional: pick it for a before/after comparison —');o0.value='';sel.append(o0);
-    DATA.filters.filter(f=>f.ft===p.replacingType).sort((a,b)=>(a.area||a.tank||0)-(b.area||b.tank||0))
-      .forEach(f=>{const o=el('option',null,`${f.brand} ${f.model}`);o.value=f.id;if(p.currentFilterId===f.id)o.selected=true;sel.append(o);});
-    sel.onchange=()=>p.currentFilterId=sel.value||null;
-    c.append(el('label','fld','Your current model (optional)'),sel);
+    const sf=fsec('Your current model',false);
+    sf.append(fldHelp('Search your current filter (optional)','Current filter','Pick your existing filter and we\u2019ll show how much more filter area the recommendation gives you \u2014 and how much less often you\u2019d clean it.'));
+    sf.append(modelPicker(
+      DATA.filters.filter(f=>f.ft===p.replacingType).map(f=>({id:f.id,brand:f.brand,label:stripBrand(f.model,f.brand),
+        sub:(f.ft==='sand'?(f.tank+'\u2033 tank'):(f.area+' sq ft'))+(f.gpm?(' \u00b7 max '+f.gpm+' GPM'):'')})),
+      p.currentFilterId||null,'Type a brand or model \u2014 e.g. Hayward C900',
+      id=>{p.currentFilterId=id; render();}));
+    c.append(sf);
   }
   c.append(el('label','fld','What type do you want?'),
     optGrid(true,[{v:'recommend',t:'Recommend for me',d:'Pick based on my answers'},{v:'cartridge',t:'Cartridge'},{v:'sand',t:'Sand'},{v:'de',t:'DE'},{v:'hybrid-de',t:'Hybrid DE'}],p.desiredType,v=>{p.desiredType=v;}));
@@ -728,8 +823,8 @@ function stepGallons(){
   const sl=el('label','fld','Shape');
   r.append(L.wrap,W.wrap,D.wrap);
   helper.append(r,sl,shape);
-  c.append(lab,g,helper);
-  const type=el('div');
+  const s1=fsec('Volume',true); s1.append(lab,g,helper); c.append(s1);
+  const type=fsec('Construction',true);
   type.append(el('label','fld','Pool type'),
     optGrid(true,[
       {v:'inground-plaster',t:'Inground · plaster'},
@@ -746,23 +841,29 @@ function mini(label){const wrap=el('div');const l=el('label','fld',label);const 
 function stepPipeAuto(){
   const p=S.profile;
   const c=card([el('div','q','Your equipment setup'),el('div','hint','These set the flow curve and compatibility checks.')]);
-  c.append(el('label','fld','Main pipe size'),
+  const sp=fsec('Plumbing',true);
+  sp.append(el('label','fld','Main pipe size'),
     optGrid(true,[
       {v:'1.5',t:'1.5"',d:'Curve A'},{v:'2',t:'2"',d:'Curve C'},
       {v:'2.5+',t:'2.5"+',d:'Curve C'},{v:'unknown',t:'Not sure',d:'Curve A (safe)'}
     ],p.pipe,v=>{p.pipe=v;}));
-  c.append(el('label','fld','Automation system'),
+  c.append(sp);
+  const sa=fsec('Automation',true);
+  sa.append(el('label','fld','Automation system'),
     optGrid(true,[
       {v:'none',t:'None'},{v:'pentair',t:'Pentair'},{v:'hayward',t:'Hayward'},
       {v:'jandy',t:'Jandy'},{v:'other',t:'Other'}
     ],p.automation,v=>{p.automation=v;render();}));
+  c.append(sa);
   if(p.automation&&p.automation!=='none'){
     const m=el('input');m.type='text';m.placeholder='Model (e.g. AquaLogic, OmniLogic) — optional';m.value=p.automationModel||'';
     m.oninput=()=>p.automationModel=m.value;
-    c.append(el('label','fld','Automation model (optional)'),m);
+    sa.append(el('label','fld','Automation model (optional)'),m);
   }
-  c.append(el('label','fld','Voltage at the equipment pad'),
+  const sv=fsec('Power',true);
+  sv.append(el('label','fld','Voltage at the equipment pad'),
     optGrid(true,[{v:'115',t:'115V'},{v:'230',t:'230V'},{v:'unknown',t:'Not sure'}],p.voltage,v=>{p.voltage=v;}));
+  c.append(sv);
   c.append(nav(()=>!!p.pipe&&!!p.automation&&!!p.voltage));
   app.appendChild(c);
 }
@@ -780,28 +881,22 @@ function stepClimate(){
 function stepPumpFailure(){
   const p=S.profile;
   const c=card([el('div','q','Your situation'),el('div','hint','Helps flag repair-vs-replace options.')]);
-  c.append(optGrid(true,[
+  const sr=fsec('Why you\u2019re replacing it',true);
+  sr.append(optGrid(true,[
     {v:'dead-motor',t:'Dead motor'},{v:'leaking',t:'Leaking'},
     {v:'loud',t:'Too loud'},{v:'efficiency',t:'Efficiency upgrade'},
     {v:'wrong-size',t:'Wrong size'}
   ],p.failure,v=>{p.failure=v;}));
-  c.append(fldHelp('Your current pump (optional)','Current pump','Pick your existing pump and we\u2019ll show how much energy and money a new one would save each year. Skip it if you don\u2019t know \u2014 recommendations still work.'));
-  const sel=el('select');
-  const o0=el('option',null,'\u2014 optional: pick it to see your yearly savings \u2014');o0.value='';sel.append(o0);
-  const order={SS:0,DS:1,MS:2,VS:3}, stName={SS:'Single-speed',DS:'Two-speed',MS:'Multi-speed',VS:'Variable-speed'};
-  const groups={};
-  DATA.pumps.forEach(x=>{(groups[x.st]=groups[x.st]||[]).push(x);});
-  Object.keys(groups).sort((a,b)=>(order[a]??9)-(order[b]??9)).forEach(st=>{
-    const og=document.createElement('optgroup'); og.label=stName[st]||st;
-    groups[st].slice().sort((a,b)=>(a.brand+a.model).localeCompare(b.brand+b.model)).forEach(x=>{
-      const o=el('option',null,x.model+(x.thp!=null?(' \u00b7 '+x.thp+' THP'):''));
-      o.value=x.id; if(p.currentPumpId===x.id)o.selected=true; og.append(o);
-    });
-    sel.append(og);
-  });
-  sel.onchange=()=>{p.currentPumpId=sel.value||null;
-    const f=DATA.pumps.find(z=>z.id===sel.value); p.currentPump=f?pumpName(f):'';};
-  c.append(sel);
+  c.append(sr);
+  const sc=fsec('Your current pump',false);
+  sc.append(fldHelp('Search your current pump (optional)','Current pump','Pick your existing pump and we\u2019ll show how much energy and money a new one would save each year. Skip it if you don\u2019t know \u2014 recommendations still work.'));
+  const stName={SS:'Single-speed',DS:'Two-speed',MS:'Multi-speed',VS:'Variable-speed'};
+  sc.append(modelPicker(
+    DATA.pumps.map(x=>({id:x.id,brand:x.brand,label:stripBrand(x.model,x.brand),
+      sub:(stName[x.st]||x.st)+(x.thp!=null?(' \u00b7 '+x.thp+' THP'):'')})),
+    p.currentPumpId||null,'Type a brand or model \u2014 e.g. Hayward Super Pump',
+    id=>{p.currentPumpId=id; const f=id?DATA.pumps.find(z=>z.id===id):null; p.currentPump=f?pumpName(f):''; render();}));
+  c.append(sc);
   c.append(nav(()=>!!p.failure));
   app.appendChild(c);
 }
@@ -843,12 +938,24 @@ function stepPumpFilter(){ // merged into features flow; kept for filter details
 function stepSwgFailure(){
   const p=S.profile;
   const c=card([el('div','q','About your salt system'),el('div','hint','First SWG or a replacement?')]);
-  c.append(optGrid(true,[
+  const s1=fsec('Your situation',true);
+  s1.append(optGrid(true,[
     {v:'first',t:'First SWG',d:'Converting to salt'},
     {v:'cell-eol',t:'Cell at end-of-life',d:'Box works, cell worn out'},
     {v:'board-dead',t:'Control board dead',d:'Cell may be fine'},
     {v:'more-capacity',t:'Need more capacity',d:'Current unit undersized'}
   ],p.failure,v=>{p.failure=v;}));
+  c.append(s1);
+  if(p.failure&&p.failure!=='first'){
+    const s2=fsec('Your current salt system',false);
+    s2.append(fldHelp('Search your current cell (optional)','Current salt cell','Pick your existing cell and we\u2019ll show how much more chlorine capacity the recommendation gives you \u2014 and how much easier it would run.'));
+    s2.append(modelPicker(
+      DATA.swg.map(x=>({id:x.id,brand:x.mfr,label:x.model,
+        sub:x.lbs+' lb/day'+(x.rated?(' \u00b7 rated '+(x.rated/1000)+'k gal'):'')})),
+      p.currentSwgId||null,'Type a brand or model \u2014 e.g. Hayward T-CELL-9',
+      id=>{p.currentSwgId=id; render();}));
+    c.append(s2);
+  }
   c.append(nav(()=>!!p.failure));
   app.appendChild(c);
 }
@@ -889,6 +996,24 @@ function stepResults(){
   c.append(head);
   if(S.mode==='filter'&&res.typeReasons&&res.typeReasons.length){
     res.typeReasons.forEach(r=>{const b=el('div','warnbar info');b.innerHTML=`<b>🧭</b> ${r.text}`;c.append(b);});
+  }
+  if(S.mode==='swg'&&res.comparison){
+    const cm=res.comparison;
+    const b=el('div','compare');
+    const pctTxt=v=>v>100?('can\u2019t keep up at '+res.runtime+'h/day'):(v+'% output');
+    b.innerHTML=`<div class="cmp-row">`+
+      `<div><div class="cmp-lbl">Your current cell</div><div class="cmp-model">${cm.current.model}</div>`+
+        `<div class="cmp-size">${cm.current.lbs} lb/day \u00b7 ${pctTxt(cm.current.pct)}</div></div>`+
+      `<div class="cmp-arrow">\u2192</div>`+
+      `<div><div class="cmp-lbl">Recommended</div><div class="cmp-model">${cm.recommended.model}</div>`+
+        `<div class="cmp-size">${cm.recommended.lbs} lb/day \u00b7 ${cm.recommended.pct}% output</div></div>`+
+      `</div>`+
+      (cm.capacityFactor&&cm.capacityFactor>=1.15
+        ? `<div class="cmp-note">About ${cm.capacityFactor}\u00d7 the chlorine capacity${cm.pctDrop>0?(cm.current.pct>100?(' \u2014 your current cell can\u2019t keep up at this runtime; this one only needs '+cm.recommended.pct+'% output'):(' \u2014 runs at '+cm.recommended.pct+'% instead of '+cm.current.pct+'%, so the cell works far less hard and lasts longer')):''}.</div>`
+        : (cm.current.meets
+            ? `<div class="cmp-note" style="color:var(--warn)">Your current cell is already sized for this pool \u2014 if it\u2019s failing, a like-for-like replacement cell may be all you need.</div>`
+            : `<div class="cmp-note">Your current cell is undersized for this pool; the recommendation gives you the headroom TFP calls for.</div>`));
+    c.append(b);
   }
   if(S.mode==='pump'&&res.comparison){
     const cm=res.comparison;
@@ -1078,6 +1203,10 @@ function buildSummary(p,res,mode){
     if(p.cycle)L.push('Pump schedule: '+p.cycle);
     if(p.highCH)L.push('High CH: yes');
     if(p.newPlaster)L.push('New plaster (<30d): yes');
+    if(res.comparison){const cm=res.comparison;
+      L.push('Current cell: '+cm.current.model+' ('+cm.current.lbs+' lb/day, '+(cm.current.pct>100?('cannot keep up - would need '+cm.current.pct+'%'):(cm.current.pct+'% output'))+')');
+      L.push('Recommended: '+cm.recommended.model+' ('+cm.recommended.lbs+' lb/day, '+cm.recommended.pct+'% output)');
+      if(cm.capacityFactor)L.push('Capacity change: '+cm.capacityFactor+'x');}
   }
   if(mode==='filter'){
     if(p.replacingType)L.push('Current filter: '+p.replacingType+(p.currentFilterId?(' ('+p.currentFilterId+')'):''));
