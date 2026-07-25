@@ -159,9 +159,41 @@ input[type=number],input[type=text],select{background:var(--panel2);border-radiu
 .section-h{font-family:var(--mono);letter-spacing:1.2px;color:var(--muted2);font-size:11px}
 .foot{margin-top:40px;font-size:11.5px}
 .sumbox{display:flex;flex-direction:column;gap:10px;margin-bottom:6px}
+.sumbtns{display:flex;flex-wrap:wrap;gap:9px}
+.keyterms{display:grid;grid-template-columns:1fr 1fr;gap:9px 18px;margin-bottom:8px}
+@media(max-width:640px){.keyterms{grid-template-columns:1fr}}
+.kt{font-size:12.5px;color:var(--muted);line-height:1.5}
+.kt b{color:var(--ink);display:block;font-size:13px}
+.payback{margin:-6px 0 14px}
+.payback input{max-width:260px}
+.paynote{margin-top:8px;font-size:13.5px;color:var(--ok);font-weight:600}
 .sumta{width:100%;min-height:210px;font-family:var(--mono);font-size:12px;line-height:1.55;background:var(--panel2);border:1px solid var(--line2);border-radius:12px;padding:14px;color:var(--ink);resize:vertical}
 .btn.sm{align-self:flex-start;padding:9px 16px;font-size:13.5px}
 .logo-img{height:54px;width:auto;display:block;transition:opacity .15s}
+/* inline help */
+.hlp{display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;
+  border:1px solid var(--line2);color:var(--muted);font-size:10px;font-weight:700;cursor:help;margin-left:5px;
+  vertical-align:middle;background:var(--panel);font-family:var(--font);line-height:1}
+.hlp:hover{border-color:var(--accent);color:var(--accent)}
+.hlpbox{background:var(--panel2);border:1px solid var(--line);border-left:3px solid var(--accent);
+  border-radius:10px;padding:11px 13px;margin:10px 0 2px;font-size:13px;color:var(--muted);line-height:1.5;display:none}
+.hlpbox.on{display:block}
+.hlpbox b{color:var(--ink)}
+/* print */
+@media print{
+  @page{margin:14mm}
+  html,body{background:#fff !important}
+  .wrap{max-width:100%;padding:0}
+  .noprint,.nav,.sumbox,.editchip,.pathrow,.pbarline{display:none !important}
+  .hidden{display:block !important}
+  .expand{display:none !important}
+  .card,.rec,.compare,.warnbar,.repair{box-shadow:none !important;break-inside:avoid;page-break-inside:avoid}
+  .rec{border:1px solid #bbb !important}
+  .rec.top{border:2px solid #0e6e7e !important}
+  header.top{margin-bottom:14px}
+  .foot{margin-top:18px}
+  a[href]:after{content:""}
+}
 header.top:hover .logo-img{opacity:.82}
 @media(max-width:560px){.logo-img{height:46px}}
 </style>
@@ -264,7 +296,7 @@ function pumpEngine(p){
 
     cands.push({product:pump, score, reasons,
       fit:{meetsCapacity:true,meetsFlow:true,meetsFlowLow:efficientLow,automationMatch:autoMatch&&!superFloBlock,regulatoryOk:true},
-      computed:{requiredGPM:round1(requiredGPM),turnoverGPM:round1(turnoverGPM),gpmAtCurveLow:gLo,gpmAtCurveHigh:gHi,wattsDaily:wattsDaily!=null?Math.round(wattsDaily):null,wattsHigh:wHi,annualCostUSD:annualCost?Math.round(annualCost):null}});
+      computed:{requiredGPM:round1(requiredGPM),turnoverGPM:round1(turnoverGPM),gpmAtCurveLow:gLo,gpmAtCurveHigh:gHi,wattsDaily:wattsDaily!=null?Math.round(wattsDaily):null,wattsHigh:wHi,annualKWh:kWh,annualCostUSD:annualCost?Math.round(annualCost):null}});
   }
   cands.sort((a,b)=>b.score-a.score);
   cands.forEach((c,i)=>c.rank=i+1);
@@ -276,8 +308,34 @@ function pumpEngine(p){
   if(/ecostar/i.test(p.currentPump||'') && p.failure==='dead-motor')
     repairOptions.push({summary:'Hayward EcoStar: the drive unit is separately replaceable from the motor — a drive swap may be far cheaper than a new pump.',ruleId:'AUTOMATION_EXCEPTIONS'});
 
+  // ---- before/after energy vs the user's current pump (no product prices) ----
+  let comparison=null;
+  const curP = p.currentPumpId ? DATA.pumps.find(x=>x.id===p.currentPumpId) : null;
+  if(curP && cands.length){
+    const cgLo=curP.lo.g[ci], cwLo=curP.lo.w[ci], cgHi=curP.hi.g[ci], cwHi=curP.hi.w[ci];
+    const cThrottle = curP.st!=='SS';
+    const cWattsDaily = cThrottle ? estWattsAtGPM(cgLo,cwLo,cgHi,cwHi,turnoverGPM) : cwHi;
+    const curKWh = (((cWattsDaily||0)/1000)*dailyHours + ((cwHi||0)/1000)*featureHours)*365;
+    const top=cands[0];
+    const newKWh = top.computed.annualKWh;
+    if(curKWh>0 && newKWh!=null){
+      const kWhSaved = curKWh-newKWh;
+      const costSaved = p.rate? kWhSaved*p.rate : null;
+      const pct = curKWh>0 ? (kWhSaved/curKWh)*100 : null;
+      let paybackYears=null;
+      if(p.quotedPrice>0 && costSaved>0) paybackYears = p.quotedPrice/costSaved;
+      comparison={
+        current:{model:pumpName(curP), st:curP.st, kWh:Math.round(curKWh),
+                 cost:p.rate?Math.round(curKWh*p.rate):null, watts:Math.round(cWattsDaily||0)},
+        recommended:{model:pumpName(top.product), st:top.product.st,
+                 kWh:Math.round(newKWh), cost:top.computed.annualCostUSD, watts:top.computed.wattsDaily},
+        kWhSaved:Math.round(kWhSaved), costSaved:costSaved!=null?Math.round(costSaved):null,
+        pctSaved:pct!=null?Math.round(pct):null, paybackYears:paybackYears
+      };
+    }
+  }
   return {mode:'pump',requiredGPM:round1(requiredGPM),turnoverGPM:round1(turnoverGPM),featureGPM:round1(featureGPM),
-    recommendations:cands.slice(0,12),warnings,repairOptions,curve:['A','B','C'][ci]};
+    comparison,recommendations:cands.slice(0,12),warnings,repairOptions,curve:['A','B','C'][ci]};
 }
 
 /* ---------------- SWG ENGINE ---------------- */
@@ -374,6 +432,7 @@ function estWattsAtGPM(gLo,wLo,gHi,wHi,target){
   if(gLo!=null&&wLo!=null&&gLo>0) return Math.min(Math.max(wLo*Math.pow(target/gLo,3),0),wHi);
   return wHi;
 }
+const pumpName=x=>{const m=stripBrand(x.model,x.brand);return m.toLowerCase().startsWith(x.brand.toLowerCase())?m:(x.brand+' '+m);};
 const stripBrand=(model,brand)=>model.replace(new RegExp('^'+brand.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'i'),'').trim()||model;
 
 /* ---------------- WIZARD ---------------- */
@@ -419,7 +478,29 @@ function render(){
   cur();
   window.scrollTo(0,0);
 }
-function goHome(){S.step=0;S.mode=null;S.profile={};render();}
+function goHome(){S.step=0;S.mode=null;S.profile={};try{history.replaceState(null,'',location.pathname+location.search);}catch(e){}render();}
+/* ---- shareable link state ---- */
+function encodeState(){
+  try{const payload={m:S.mode,p:S.profile};
+    return btoa(unescape(encodeURIComponent(JSON.stringify(payload)))).replace(/=+$/,'');
+  }catch(e){return '';}
+}
+function shareURL(){
+  const h=encodeState(); if(!h) return location.href;
+  const u=location.origin+location.pathname+location.search+'#r='+h;
+  try{history.replaceState(null,'','#r='+h);}catch(e){}
+  return u;
+}
+function restoreFromHash(){
+  const m=(location.hash||'').match(/^#r=(.+)$/); if(!m) return false;
+  try{
+    const json=decodeURIComponent(escape(atob(m[1])));
+    const d=JSON.parse(json);
+    if(!d||!d.m||!d.p||typeof d.p!=='object') return false;
+    if(['pump','swg','filter'].indexOf(d.m)<0) return false;
+    S.mode=d.m; S.profile=d.p; S.step=999; return true;
+  }catch(e){return false;}
+}
 function nav(canNext,nextLabel){
   const n=el('div','nav');
   const back=el('button','btn ghost','← Back');
@@ -439,6 +520,35 @@ function optGrid(twocol,items,selVal,onPick){
     g.appendChild(o);
   });
   return g;
+}
+const GLOSSARY={
+ 'THP':['THP (total horsepower)','Motor horsepower × its service factor. US rules require variable-speed for pumps above 1.1 THP.'],
+ 'WEF':['WEF (weighted energy factor)','How many gallons a pump moves per watt-hour. Higher is more efficient.'],
+ 'Turnover':['Turnover flow','The flow needed to circulate your pool volume once in about 8 hours. A baseline target, not a hard rule.'],
+ 'Daily watts':['Daily watts','Estimated power draw at the speed used for everyday filtering — the number that drives your running cost.'],
+ 'Max GPM':['Max GPM','Gallons per minute at full speed — what the pump can deliver for a spa or water features.'],
+ 'Max flow':['Max flow','The most water this filter should pass. It must be at least your pump\u2019s flow or it becomes a restriction.'],
+ 'Min req.':['Minimum required','The smallest size TFP guidelines call for on a pool your size.'],
+ 'Oversize':['Oversize','How many times larger than the minimum this filter is. More area means longer between cleanings.'],
+ 'Micron':['Micron','Smallest particle the filter catches. DE ~3\u20135, cartridge ~10, sand ~30 (lower filters finer).'],
+ 'Output':['Output (lbs/day)','Pounds of chlorine the cell can make in 24 hours at 100%.'],
+ 'Needs':['Needed output','Pounds of chlorine per day your pool size calls for, per the TFP 2\u00d7 sizing rule.'],
+ 'Req. output':['Required output %','How hard the cell must work at your pump runtime. Above ~80% leaves little headroom.'],
+ 'Rated':['Rated pool size','The pool volume the maker rates this cell for. TFP advises at least 2\u00d7 your actual volume.'],
+ 'vs current':['vs current','How much less this pump would cost to run each year compared with the pump you have now.'],
+ 'Control':['Output control','Duty-cycle units run in fixed on/off blocks; proportional units adjust continuously and suit short pump runs.']
+};
+function metricTip(label){const g=GLOSSARY[label];return g?(g[0]+' \u2014 '+g[1]):'';}
+/* label with a tappable ? that toggles an inline explainer */
+function fldHelp(text,title,body){
+  const wrap=el('div');
+  const lab=el('label','fld',text);
+  const q=el('span','hlp','?'); q.setAttribute('role','button'); q.setAttribute('tabindex','0');
+  q.setAttribute('aria-label','What is '+title+'?');
+  const box=el('div','hlpbox'); box.innerHTML='<b>'+title+'</b> \u2014 '+body;
+  const tog=()=>box.classList.toggle('on');
+  q.onclick=tog; q.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();tog();}};
+  lab.append(q); wrap.append(lab,box); return wrap;
 }
 function card(inner){const c=el('div','card');c.append(...inner);return c;}
 
@@ -562,11 +672,10 @@ function stepFilterOps(){
     optGrid(true,[{v:'1.5',t:'1.5″'},{v:'2',t:'2″'},{v:'2.5+',t:'2.5″+'},{v:'unknown',t:'Not sure'}],p.pipe,v=>{p.pipe=v;p.pipeIn=({'1.5':1.5,'2':2,'2.5+':2.5})[v]||null;if(!p.pumpMaxGPM){p.pumpMaxGPM=({'1.5':50,'2':80,'2.5+':100})[v]||null;}render();}));
   const g=el('input');g.type='number';g.value=p.pumpMaxGPM||'';g.placeholder='e.g. 80';
   g.oninput=()=>p.pumpMaxGPM=num(g.value);
-  c.append(el('label','fld','Your pump’s max flow (GPM) — the bottleneck check'),g,
-    el('div','hint','Not sure? We prefilled a typical value from your pipe size; adjust if you know it.'));
-  c.append(el('label','fld','Debris load'),
+  c.append(fldHelp('Your pump’s max flow (GPM)','Pump max flow','The most water your pump pushes at full speed. The filter must handle at least this much or it becomes a restriction. Not sure? We prefilled a typical value from your pipe size — adjust if you know it.'),g);
+  c.append(fldHelp('Debris load','Debris load','How much leaf litter, pollen or dust lands in your pool. Heavy debris means you want more filter area so you clean it less often.'),
     optGrid(true,[{v:'low',t:'Low'},{v:'average',t:'Average'},{v:'high',t:'High (trees/dust)'}],p.debris,v=>{p.debris=v;}));
-  c.append(el('label','fld','Water cost concern'),
+  c.append(fldHelp('Water cost concern','Water cost','Sand and DE filters waste water every time you backwash. If water is expensive or limited, a cartridge filter avoids backwashing entirely.'),
     optGrid(true,[{v:'low',t:'Low'},{v:'high',t:'High'}],p.waterCost,v=>{p.waterCost=v;}));
   c.append(chk('Prioritize the finest water clarity (DE)',p.clarity,v=>p.clarity=v));
   c.append(chk('Tight equipment pad space',p.padSpace==='tight',v=>p.padSpace=v?'tight':'normal'));
@@ -671,13 +780,28 @@ function stepClimate(){
 function stepPumpFailure(){
   const p=S.profile;
   const c=card([el('div','q','Your situation'),el('div','hint','Helps flag repair-vs-replace options.')]);
-  const cur=el('input');cur.type='text';cur.placeholder='Current pump model (optional, e.g. Hayward EcoStar)';cur.value=p.currentPump||'';
-  cur.oninput=()=>p.currentPump=cur.value;
   c.append(optGrid(true,[
     {v:'dead-motor',t:'Dead motor'},{v:'leaking',t:'Leaking'},
     {v:'loud',t:'Too loud'},{v:'efficiency',t:'Efficiency upgrade'},
     {v:'wrong-size',t:'Wrong size'}
-  ],p.failure,v=>{p.failure=v;}),el('label','fld','Current pump'),cur);
+  ],p.failure,v=>{p.failure=v;}));
+  c.append(fldHelp('Your current pump (optional)','Current pump','Pick your existing pump and we\u2019ll show how much energy and money a new one would save each year. Skip it if you don\u2019t know \u2014 recommendations still work.'));
+  const sel=el('select');
+  const o0=el('option',null,'\u2014 optional: pick it to see your yearly savings \u2014');o0.value='';sel.append(o0);
+  const order={SS:0,DS:1,MS:2,VS:3}, stName={SS:'Single-speed',DS:'Two-speed',MS:'Multi-speed',VS:'Variable-speed'};
+  const groups={};
+  DATA.pumps.forEach(x=>{(groups[x.st]=groups[x.st]||[]).push(x);});
+  Object.keys(groups).sort((a,b)=>(order[a]??9)-(order[b]??9)).forEach(st=>{
+    const og=document.createElement('optgroup'); og.label=stName[st]||st;
+    groups[st].slice().sort((a,b)=>(a.brand+a.model).localeCompare(b.brand+b.model)).forEach(x=>{
+      const o=el('option',null,x.model+(x.thp!=null?(' \u00b7 '+x.thp+' THP'):''));
+      o.value=x.id; if(p.currentPumpId===x.id)o.selected=true; og.append(o);
+    });
+    sel.append(og);
+  });
+  sel.onchange=()=>{p.currentPumpId=sel.value||null;
+    const f=DATA.pumps.find(z=>z.id===sel.value); p.currentPump=f?pumpName(f):'';};
+  c.append(sel);
   c.append(nav(()=>!!p.failure));
   app.appendChild(c);
 }
@@ -733,7 +857,7 @@ function stepSwgOps(){
   const c=card([el('div','q','How you run the pump'),el('div','hint','Sets runtime %, cycle fit, and install checks.')]);
   const rt=el('input');rt.type='number';rt.value=p.runtime||8;p.runtime=p.runtime||8;rt.oninput=()=>p.runtime=num(rt.value)||8;
   c.append(el('label','fld','Pump runtime (hours/day)'),rt);
-  c.append(el('label','fld','Pump schedule'),
+  c.append(fldHelp('Pump schedule','Pump schedule','Whether your pump runs in one long block or several short bursts. Short cycles suit salt cells that adjust output continuously.'),
     optGrid(true,[{v:'long',t:'Long continuous runs'},{v:'short',t:'Short cycles'}],p.cycle,v=>{p.cycle=v;}));
   c.append(chk('High calcium hardness (CH) water',p.highCH,v=>p.highCH=v));
   c.append(chk('New plaster within the last 30 days',p.newPlaster,v=>p.newPlaster=v));
@@ -752,6 +876,7 @@ function stepResults(){
   const p=S.profile;
   const res = S.mode==='pump'?pumpEngine(p):S.mode==='swg'?swgEngine(p):filterEngine(p);
   S.lastRes=res;
+  try{shareURL();}catch(e){}
   const c=el('div');
   const head=el('div');
   const title = S.mode==='pump'?'Recommended pumps':S.mode==='swg'?'Recommended salt systems':`Recommended ${res.chosenType} filters`;
@@ -764,6 +889,33 @@ function stepResults(){
   c.append(head);
   if(S.mode==='filter'&&res.typeReasons&&res.typeReasons.length){
     res.typeReasons.forEach(r=>{const b=el('div','warnbar info');b.innerHTML=`<b>🧭</b> ${r.text}`;c.append(b);});
+  }
+  if(S.mode==='pump'&&res.comparison){
+    const cm=res.comparison;
+    const b=el('div','compare');
+    const money=v=>v==null?null:'$'+Number(v).toLocaleString();
+    b.innerHTML=`<div class="cmp-row">`+
+      `<div><div class="cmp-lbl">Your current pump</div><div class="cmp-model">${cm.current.model}</div>`+
+        `<div class="cmp-size">${cm.current.kWh.toLocaleString()} kWh/yr${cm.current.cost!=null?(' \u00b7 '+money(cm.current.cost)+'/yr'):''}</div></div>`+
+      `<div class="cmp-arrow">\u2192</div>`+
+      `<div><div class="cmp-lbl">Recommended</div><div class="cmp-model">${cm.recommended.model}</div>`+
+        `<div class="cmp-size">${cm.recommended.kWh.toLocaleString()} kWh/yr${cm.recommended.cost!=null?(' \u00b7 '+money(cm.recommended.cost)+'/yr'):''}</div></div>`+
+      `</div>`+
+      (cm.kWhSaved>0
+        ? `<div class="cmp-note">Saves about ${cm.kWhSaved.toLocaleString()} kWh a year${cm.costSaved!=null?(' \u2014 roughly '+money(cm.costSaved)+' at your electricity rate'):''}${cm.pctSaved!=null?(' ('+cm.pctSaved+'% less energy)'):''}.</div>`
+        : `<div class="cmp-note" style="color:var(--warn)">Your current pump already uses about as little energy \u2014 the case for replacing it is condition or features, not savings.</div>`);
+    c.append(b);
+    // optional, user-entered price -> payback (we never store or maintain prices)
+    if(cm.costSaved>0){
+      const pw=el('div','payback');
+      const lab=el('label','fld','Quoted price for the new pump (optional)');
+      const pin=el('input'); pin.type='number'; pin.placeholder='e.g. 1200'; pin.value=p.quotedPrice||'';
+      const outp=el('div','paynote');
+      const calc=()=>{const v=num(pin.value); p.quotedPrice=v;
+        outp.textContent = (v>0) ? ('At '+money(cm.costSaved)+' saved per year, that pays for itself in about '+(v/cm.costSaved).toFixed(1)+' years (energy only).') : '';};
+      pin.oninput=calc; calc();
+      pw.append(lab,pin,outp); c.append(pw);
+    }
   }
   if(S.mode==='filter'&&res.comparison){
     const cm=res.comparison, f=cm.factor;
@@ -800,13 +952,25 @@ function stepResults(){
       x.innerHTML=`<b>✗ ${d.product.brand} ${d.product.model}</b> — ${d.reason.text}`;c.append(x);});
   }
 
+  // key terms
+  const usedKeys=Object.keys(GLOSSARY).filter(k=>c.textContent.indexOf(k)>=0);
+  if(usedKeys.length){
+    c.append(el('div','section-h','Key terms'));
+    const kt=el('div','keyterms');
+    usedKeys.forEach(k=>{const g=GLOSSARY[k];kt.append(el('div','kt','<b>'+g[0]+'</b> '+g[1]));});
+    c.append(kt);
+  }
+
   // copyable summary for support / debugging
-  c.append(el('div','section-h','Summary — copy for support'));
+  c.append(el('div','section-h noprint','Summary — copy for support'));
   const sb=el('div','sumbox');
   const ta=el('textarea','sumta'); ta.readOnly=true; ta.value=buildSummary(p,res,S.mode);
   const cpb=el('button','btn sm','Copy summary');
   cpb.onclick=()=>{ta.select();let ok=false;try{navigator.clipboard.writeText(ta.value);ok=true;}catch(e){try{ok=document.execCommand('copy');}catch(_){}}cpb.textContent=ok?'Copied ✓':'Press ⌘/Ctrl+C';setTimeout(()=>cpb.textContent='Copy summary',1600);};
-  sb.append(ta,cpb); c.append(sb);
+  const prt=el('button','btn sm ghost','Print / Save PDF');
+  prt.onclick=()=>window.print();
+  const btnrow=el('div','sumbtns'); btnrow.append(cpb,prt);
+  sb.append(ta,btnrow); c.append(sb);
 
   // restart
   const n=el('div','nav');
@@ -851,6 +1015,10 @@ function recCard(rec,isTop,mode){
     m.append(metric('Max GPM',(rec.computed.gpmAtCurveHigh??'—'),''));
     m.append(metric('WEF',pr.wef?round2(pr.wef):'—',''));
     if(rec.computed.annualCostUSD!=null)m.append(metric('~Annual',money(rec.computed.annualCostUSD),'energy'));
+    if(S.lastRes&&S.lastRes.comparison&&S.lastRes.comparison.current.cost!=null&&rec.computed.annualCostUSD!=null){
+      const dz=S.lastRes.comparison.current.cost-rec.computed.annualCostUSD;
+      if(dz>0)m.append(metric('vs current','-$'+Math.round(dz)+'/yr',''));
+    }
     if(pr.thp!=null)m.append(metric('THP',pr.thp,''));
   }else if(mode==='swg'){
     m.append(metric('Output',round2(rec.effLbs)+' lb/d',''));
@@ -897,6 +1065,12 @@ function buildSummary(p,res,mode){
     if(p.rate!=null)L.push('Electric rate: $'+p.rate+'/kWh');
     if(p.runtime)L.push('Runtime: '+p.runtime+' h/day');
     if(p.filterType)L.push('Filter: '+p.filterType+(p.filterSize?(' '+p.filterSize):''));
+    if(p.currentPump)L.push('Current pump: '+p.currentPump);
+    if(res.comparison){const cm=res.comparison;
+      L.push('Current pump energy: '+cm.current.kWh+' kWh/yr'+(cm.current.cost!=null?(' ($'+cm.current.cost+'/yr)'):''));
+      L.push('Recommended energy: '+cm.recommended.kWh+' kWh/yr'+(cm.recommended.cost!=null?(' ($'+cm.recommended.cost+'/yr)'):''));
+      L.push('Estimated savings: '+cm.kWhSaved+' kWh/yr'+(cm.costSaved!=null?(' ($'+cm.costSaved+'/yr)'):'')+(cm.pctSaved!=null?(' , '+cm.pctSaved+'%'):''));
+      if(cm.paybackYears)L.push('Payback at quoted $'+p.quotedPrice+': ~'+cm.paybackYears.toFixed(1)+' yrs (energy only)');}
   }
   if(mode==='swg'){
     if(p.failure)L.push('Situation: '+p.failure);
@@ -933,8 +1107,9 @@ function reasonLi(r){
   li.append(t);return li;
 }
 function mkbadge(kind,text){return el('span','badge '+kind,text);}
-function metric(label,val,kind){const d=el('div','metric');d.innerHTML=`<span>${label}</span><b>${val}</b>`;return d;}
+function metric(label,val,kind){const d=el('div','metric');const t=metricTip(label);if(t)d.title=t;d.innerHTML=`<span>${label}${t?' \u00b7':''}</span><b>${val}</b>`;return d;}
 
+try{restoreFromHash();}catch(e){}
 render();
 </script>
 </body>
