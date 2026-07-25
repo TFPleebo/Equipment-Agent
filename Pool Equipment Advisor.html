@@ -187,6 +187,10 @@ input[type=number],input[type=text],select{background:var(--panel2);border-radiu
 .pick-sel{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--chip);
   border:1px solid var(--accent);border-radius:12px;padding:11px 13px;font-size:14.5px;font-weight:600}
 .pick-x{cursor:pointer;font-family:var(--mono);font-size:11px;letter-spacing:.8px;color:var(--accent);text-transform:uppercase;font-weight:700}
+.variants{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:9px 12px;
+  margin:10px 0 2px;font-size:12.5px;color:var(--muted);line-height:1.5}
+.variants b{color:var(--ink);font-family:var(--mono);font-size:10.5px;letter-spacing:1px;text-transform:uppercase;margin-right:6px}
+.vnote{display:block;margin-top:3px;font-size:11.5px;color:var(--muted2)}
 .payback{margin:-6px 0 14px}
 .payback input{max-width:260px}
 .paynote{margin-top:8px;font-size:13.5px;color:var(--ok);font-weight:600}
@@ -322,6 +326,19 @@ function pumpEngine(p){
       computed:{requiredGPM:round1(requiredGPM),turnoverGPM:round1(turnoverGPM),gpmAtCurveLow:gLo,gpmAtCurveHigh:gHi,wattsDaily:wattsDaily!=null?Math.round(wattsDaily):null,wattsHigh:wHi,annualKWh:kWh,annualCostUSD:annualCost?Math.round(annualCost):null}});
   }
   cands.sort((a,b)=>b.score-a.score);
+  // Collapse identical-performance models AFTER ranking (scoring untouched).
+  // Best-ranked model represents the group; every other name is kept and shown.
+  const seenFP=new Map(); const collapsed=[];
+  for(const cd of cands){
+    const fp=pumpFingerprint(cd.product);
+    if(seenFP.has(fp)){
+      const rep0=seenFP.get(fp);
+      (rep0.variants=rep0.variants||[]).push(pumpName(cd.product));
+      continue;
+    }
+    cd.variants=[]; seenFP.set(fp,cd); collapsed.push(cd);
+  }
+  cands.length=0; cands.push(...collapsed);
   cands.forEach((c,i)=>c.rank=i+1);
 
   // repair options
@@ -471,6 +488,15 @@ function estWattsAtGPM(gLo,wLo,gHi,wHi,target){
   if(target>=gHi) return wHi;
   if(gLo!=null&&wLo!=null&&gLo>0) return Math.min(Math.max(wLo*Math.pow(target/gLo,3),0),wHi);
   return wHi;
+}
+/* Identity fingerprint: EVERY measured field, full precision. Two pumps group
+   only if all of these match exactly — any difference keeps them separate.
+   Nothing is removed from the catalog or the search picker; grouping only
+   affects display, and every variant name is shown on the card. */
+function pumpFingerprint(x){
+  return [x.st,x.mot,x.thp,x.nhp,x.wef,x.frame,
+    x.hi.rpm,(x.hi.g||[]).join('/'),(x.hi.w||[]).join('/'),
+    x.lo.rpm,(x.lo.g||[]).join('/'),(x.lo.w||[]).join('/')].join('|');
 }
 const pumpName=x=>{const m=stripBrand(x.model,x.brand);return m.toLowerCase().startsWith(x.brand.toLowerCase())?m:(x.brand+' '+m);};
 const stripBrand=(model,brand)=>model.replace(new RegExp('^'+brand.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'i'),'').trim()||model;
@@ -1160,6 +1186,12 @@ function recCard(rec,isTop,mode){
   }
   c.append(m);
 
+  if(mode==='pump'&&rec.variants&&rec.variants.length){
+    const v=el('div','variants');
+    v.innerHTML='<b>Also sold as</b> '+rec.variants.join(' \u00b7 ')+
+      ' <span class="vnote">(identical published performance \u2014 same pump, different model numbers)</span>';
+    c.append(v);
+  }
   // reasons (top 3 + expand)
   const ul=el('ul','reasons');
   const shown=rec.reasons.slice(0,4),rest=rec.reasons.slice(4);
@@ -1219,7 +1251,8 @@ function buildSummary(p,res,mode){
   L.push(''); L.push('--- Top recommendations ---');
   (res.recommendations||[]).slice(0,5).forEach(r=>{
     const pr=r.product; const nm=(mode==='swg'?pr.mfr:pr.brand)+' '+pr.model; let ln='#'+r.rank+' '+nm;
-    if(mode==='pump')ln+=' — '+(pr.st||'')+', ~'+(r.computed.wattsDaily==null?'?':r.computed.wattsDaily)+'W daily'+(r.computed.annualCostUSD!=null?(', ~$'+r.computed.annualCostUSD+'/yr'):'');
+    if(mode==='pump'){ln+=' — '+(pr.st||'')+', ~'+(r.computed.wattsDaily==null?'?':r.computed.wattsDaily)+'W daily'+(r.computed.annualCostUSD!=null?(', ~$'+r.computed.annualCostUSD+'/yr'):'');
+      if(r.variants&&r.variants.length)ln+='\n     also sold as: '+r.variants.join(', ');}
     if(mode==='swg')ln+=' — '+r.effLbs+' lb/day, needs '+r.computed.requiredOutputPct+'% output';
     if(mode==='filter')ln+=' — '+(pr.ft==='sand'?pr.tank+'"':pr.area+' sqft')+', max '+r.computed.candidateMaxGPM+' GPM, '+r.computed.oversizeRatio+'x min';
     L.push(ln);
