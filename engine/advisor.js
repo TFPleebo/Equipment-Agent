@@ -81,7 +81,7 @@ function createAdvisor(data) {
     }
 
     const featureHours=featBits.length?FD.featureHoursPerDay:0;
-    const dailyHours=Math.max(0,(p.runtime||8)-featureHours);
+    const dailyHours=Math.max(0,(p.runtime||RULES.DEFAULT_RUNTIME.value.hours)-featureHours);
     const cands=[];
     for(const pump of DATA.pumps){
       const reasons=[];
@@ -222,7 +222,7 @@ function createAdvisor(data) {
     const ppm = measured ?? FC_BY_CLIMATE[p.climate] ?? FC_BY_CLIMATE.warm ?? 3;
     const ppmSource = measured!=null ? 'measured' : 'climate';
     const lbsNeeded = p.gallons * ppm * FD.lbsPerPpmPerGallon; // daily FC demand in lbs Cl2
-    const runtime = p.runtime||8;
+    const runtime = p.runtime||RULES.DEFAULT_RUNTIME.value.hours;
     const warnings=[];
     if(p.newPlaster) warnings.push({code:'NEW_PLASTER_NO_SALT',severity:'blocker',ruleId:'NEW_PLASTER_NO_SALT',text:'New plaster: do NOT add salt or run an SWG until the plaster has cured ~30 days. Use liquid chlorine until then.'});
     if(p.poolType==='agp'&&!p.bonding) warnings.push({code:'BONDING_CHECK',severity:'info',ruleId:'AGP_BONDING_CHECK',text:'Above-ground: confirm equipment bonding and water bond per NEC / local code before install.'});

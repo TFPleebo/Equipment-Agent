@@ -25,7 +25,7 @@ Severity levels used on every reason/warning: `good`, `info`, `warning`, `blocke
 | `voltage` | `115`, `230`, `unknown` | pump voltage note (`PUMP_VOLTAGE_CHECK`); not a filter until the catalog has voltages |
 | `fcLossPpm` | measured daily FC loss, ppm/day (optional, 0.5–10) | SWG chlorine demand: overrides the climate default |
 | `climate` | `cool_temperate`, `warm`, `hot_sunny` | SWG chlorine demand, low-temp notes |
-| `runtime` | hours/day (default 8) | pump energy, SWG output % |
+| `runtime` | hours/day (default 12, `DEFAULT_RUNTIME`) | pump energy, SWG output % |
 | `rate` | $/kWh (page default 0.17) | pump running cost |
 | Pump: `failure`, `currentPumpId`, `spa`, `spaJets`, `cleaner`, `gasHeater`, `hasSWG`, `waterfallWidth` (in), `filterType`, `filterSize`, `quotedPrice` | | pump engine |
 | SWG: `failure`, `currentSwgId`, `cycle` (`long`/`short`), `highCH`, `newPlaster`, `bonding` | | SWG engine |
@@ -226,6 +226,19 @@ value kept next to it, so each one can be reverted by editing data alone.
 | 7 | Measured FC loss input | Uses the owner's real demand instead of a climate guess. This is the key PoolMath link | `FC_DEMAND_DEFAULTS.measuredInput` | New case `swg-measured-fc-loss` |
 | 8 | Current-cell comparison uses the ranking derate | It still applied the retired 0.75 factor to disputed cells | `SWG_OUTPUT_HAIRCUT.comparisonNote` | New case `swg-upgrade-from-disputed` |
 | 9 | 115V voltage check | The answer was collected but never used | `PUMP_VOLTAGE_CHECK` | `pump-agp-small` gets a voltage warning |
+| 10 | Default runtime 8 → 12 h/day | At 8 h a 2×-sized salt cell usually exceeds the 50% scale-control limit (e.g. 87% for 20k gal hot & sunny). At 12 h typical pools land at about 30–45%, for ~$18/yr more pump energy on a 20k pool. Users can still edit it | `DEFAULT_RUNTIME.hours` | New case `swg-default-runtime`: 42% output, no "run longer" warning. Existing cases set runtime explicitly and are unchanged |
+
+Top salt cell's required output % by runtime (current engine):
+
+| Pool | 8 h | 10 h | 12 h | 16 h | 24 h |
+|---|---|---|---|---|---|
+| 15k warm | 49% | 39% | 33% | 24% | 16% |
+| 20k warm | 47% | 38% | 44% | 33% | 22% |
+| 20k hot & sunny | 87% | 70% | 42% | 44% | 29% |
+| 30k hot & sunny | 94% | 76% | 63% | 47% | 31% |
+| 20k cool | 44% | 35% | 29% | 22% | 15% |
+
+(The top pick can change between runtimes, which is why some rows aren't strictly decreasing.)
 
 Text-only fixes (no output change): sand cap text 15 → 20; SuperFlo exception marked superseded; runtime
 tradeoff triggers at 50% (was documented as 80%); filter-type order documented as the engine runs it;
@@ -236,13 +249,10 @@ hard-coded constants moved into `rules.json`.
   can only warn, not filter).
 - **Pump max-flow pre-fill** in the filter step (1.5″ → 50, 2″ → 80, 2.5″+ → 100 GPM) is page-only
   and not a rule yet.
-- **SWG output % at 8 h/day:** most 2×-sized cells land above the 50% threshold at 8 hours, so nearly
-  every result suggests a longer pump schedule. That matches TFP's "run longer at low speed" advice, but it's
-  worth confirming that 8 h is the right default runtime.
 - **Full-size threshold (2.5 THP) and bonus (+15)** are judgment values.
 
 ## 8. Changelog
-- **2026-11 (logic review):** see §7. 25 golden cases (4 new).
+- **2026-11 (logic review):** see §7. 26 golden cases (5 new). Default runtime raised to 12 h/day.
 - **2026-11:** engine moved out of the page into `engine/advisor.js`. **Bug fixed:** in pump mode,
   choosing a current variable-speed or two-speed pump crashed the results page, because of an undefined
   variable `turnoverGPM`. The comparison now uses the daily minimum flow, the same flow the

@@ -1,4 +1,14 @@
 {
+  "DEFAULT_RUNTIME": {
+    "title": "Default pump runtime when the user hasn't entered one",
+    "value": {
+      "hours": 12,
+      "previousHours": 8,
+      "reason": "At 8 h/day a salt cell sized by the 2x rule usually needs more than the 50% scale-control limit (e.g. 87% for 20k gal hot & sunny); at 12 h typical pools land at about 30-45%, matching TFP's run-longer-at-low-speed advice, for roughly $18/yr more pump energy on a 20k pool. Users can edit it; PoolMath can pre-fill the user's real schedule.",
+      "reviewedBy": "pending review (proposed 2026-11)"
+    },
+    "src": "TFP: SWG sizing and cell life; run variable-speed pumps longer at low speed"
+  },
   "TURNOVER_FORMULA": {
     "title": "Minimum flow is set by equipment, not pool volume",
     "value": {

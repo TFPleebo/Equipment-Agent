@@ -1,0 +1,40 @@
+{
+  "id": "swg-default-runtime",
+  "title": "SWG: 20k gal hot & sunny with no runtime entered (uses DEFAULT_RUNTIME)",
+  "mode": "swg",
+  "profile": {
+    "poolType": "inground-plaster",
+    "pipe": "2",
+    "automation": "none",
+    "voltage": "230",
+    "climate": "hot_sunny",
+    "gallons": 20000,
+    "failure": "first",
+    "cycle": "long"
+  },
+  "expect": {
+    "requiredLbs": 1.4,
+    "lbsNeeded": 0.667,
+    "ppm": 4,
+    "runtime": 12,
+    "top": [
+      "pureline-crystal-pure-60",
+      "circupool-rj60",
+      "circupool-rj60p",
+      "circupool-core55",
+      "pentair-ic-60"
+    ],
+    "topRequiredOutputPct": 42,
+    "comparison": null,
+    "warnings": [
+      "PIPE_OK",
+      "DATA_QUALITY_FLAG",
+      "SWG_FLOW_SWITCH",
+      "SWG_CYA_CELL_LIFE",
+      "CELL_LIFE",
+      "FC_LOSS_ESTIMATED",
+      "WARRANTY_CHECK"
+    ],
+    "repairOptions": []
+  }
+}

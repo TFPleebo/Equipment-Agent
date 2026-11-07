@@ -21,7 +21,7 @@ Live page: https://tfpleebo.github.io/Equipment-Agent/Pool%20Equipment%20Advisor
 | `engine/advisor.js` | the sizing engine, no screen code. Plain JavaScript: works in a browser `<script>`, Node, or a JS bridge |
 | `data/*.json` | pumps, SWGs, filters, rules (see `docs/DATA.md`) |
 | `docs/RULES.md` | every rule and formula in plain English, plus **open questions for review** |
-| `tests/cases/*.json` | 25 golden cases: input profile → expected numbers, top models and warnings |
+| `tests/cases/*.json` | 26 golden cases: input profile → expected numbers, top models and warnings |
 | `tests/run.mjs` | runs the engine on every case (`node tests/run.mjs`) |
 | `Pool Equipment Advisor.html` | the standalone web page, which uses the engine above |
 

@@ -1,0 +1,847 @@
+{
+ "mode": "swg",
+ "requiredLbs": 1.4,
+ "lbsNeeded": 0.667,
+ "ppm": 4,
+ "ppmSource": "climate",
+ "runtime": 12,
+ "comparison": null,
+ "recommendations": [
+  {
+   "product": {
+    "id": "pureline-crystal-pure-60",
+    "mfr": "Pureline",
+    "model": "Crystal Pure 60,000",
+    "lbs": 3.18,
+    "rated": 60000,
+    "ratedQ": "inferred-from-model-name",
+    "ctrl": null,
+    "cyc": null,
+    "polH": null,
+    "ltCut": null,
+    "ltRed": null,
+    "auto": [],
+    "cell": null,
+    "fam": null,
+    "dq": "base-only",
+    "notes": [],
+    "msrp": null
+   },
+   "fkey": "pureline-crystal-pure-60",
+   "score": 79.88000000000001,
+   "reasons": [
+    {
+     "code": "CAPACITY",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Meets the ≥2× rule: 3.18 lbs/day vs 1.4 needed."
+    },
+    {
+     "code": "RATED_GALLONS",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Rated for 60,000 gal ≥ 2× your pool."
+    },
+    {
+     "code": "REQ_OUTPUT",
+     "severity": "info",
+     "ruleId": "SWG_MAX_OUTPUT_PCT",
+     "text": "Needs ~42% output at 12h/day."
+    }
+   ],
+   "derated": false,
+   "effLbs": 3.18,
+   "fit": {
+    "meetsCapacity": true,
+    "automationMatch": false,
+    "regulatoryOk": true,
+    "secondary": true
+   },
+   "computed": {
+    "requiredLbs": 1.4,
+    "deratedLbsPerDay": 3.18,
+    "requiredOutputPct": 42,
+    "lbsNeeded": 0.667,
+    "estRuntimeHours": 12,
+    "ratedPoolGallons": 60000
+   },
+   "rank": 1
+  },
+  {
+   "product": {
+    "id": "circupool-rj60",
+    "mfr": "CircuPool",
+    "model": "RJ-60",
+    "lbs": 3.1,
+    "rated": 60000,
+    "ratedQ": "inferred-from-model-name",
+    "ctrl": null,
+    "cyc": null,
+    "polH": null,
+    "ltCut": null,
+    "ltRed": null,
+    "auto": [],
+    "cell": null,
+    "fam": null,
+    "dq": "base-only",
+    "notes": [],
+    "msrp": null
+   },
+   "fkey": "circupool-rj60",
+   "score": 79.4,
+   "reasons": [
+    {
+     "code": "CAPACITY",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Meets the ≥2× rule: 3.1 lbs/day vs 1.4 needed."
+    },
+    {
+     "code": "RATED_GALLONS",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Rated for 60,000 gal ≥ 2× your pool."
+    },
+    {
+     "code": "REQ_OUTPUT",
+     "severity": "info",
+     "ruleId": "SWG_MAX_OUTPUT_PCT",
+     "text": "Needs ~43% output at 12h/day."
+    }
+   ],
+   "derated": false,
+   "effLbs": 3.1,
+   "fit": {
+    "meetsCapacity": true,
+    "automationMatch": false,
+    "regulatoryOk": true,
+    "secondary": true
+   },
+   "computed": {
+    "requiredLbs": 1.4,
+    "deratedLbsPerDay": 3.1,
+    "requiredOutputPct": 43,
+    "lbsNeeded": 0.667,
+    "estRuntimeHours": 12,
+    "ratedPoolGallons": 60000
+   },
+   "rank": 2
+  },
+  {
+   "product": {
+    "id": "circupool-rj60p",
+    "mfr": "CircuPool",
+    "model": "RJ-60 Plus",
+    "lbs": 3.1,
+    "rated": 60000,
+    "ratedQ": "verified",
+    "ctrl": "duty-cycle",
+    "cyc": 200,
+    "polH": null,
+    "ltCut": 60,
+    "ltRed": null,
+    "auto": [],
+    "cell": "RJ-60RC",
+    "fam": null,
+    "dq": "conflicting-sources",
+    "notes": [
+     "Output conflict: base 3.1 lbs/day vs overlay 2.7 lbs/day. Base value kept.",
+     "Low-temp cutoff ~60F."
+    ],
+    "msrp": 1649
+   },
+   "fkey": "circupool-rj60p",
+   "score": 79.4,
+   "reasons": [
+    {
+     "code": "DATA_QUALITY_FLAG",
+     "severity": "info",
+     "ruleId": "SWG_OUTPUT_HAIRCUT",
+     "text": "Published output for this model is disputed between sources. Measurement generally matches published figures, so it is used as-is — but verify against the manufacturer before buying."
+    },
+    {
+     "code": "CAPACITY",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Meets the ≥2× rule: 3.1 lbs/day vs 1.4 needed."
+    },
+    {
+     "code": "RATED_GALLONS",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Rated for 60,000 gal ≥ 2× your pool."
+    },
+    {
+     "code": "REQ_OUTPUT",
+     "severity": "info",
+     "ruleId": "SWG_MAX_OUTPUT_PCT",
+     "text": "Needs ~43% output at 12h/day."
+    },
+    {
+     "code": "LOW_TEMP_NOTE",
+     "severity": "info",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Known sticky low-temp behavior — check winter operation."
+    }
+   ],
+   "derated": true,
+   "effLbs": 3.1,
+   "fit": {
+    "meetsCapacity": true,
+    "automationMatch": false,
+    "regulatoryOk": true,
+    "secondary": true
+   },
+   "computed": {
+    "requiredLbs": 1.4,
+    "deratedLbsPerDay": 3.1,
+    "requiredOutputPct": 43,
+    "lbsNeeded": 0.667,
+    "estRuntimeHours": 12,
+    "ratedPoolGallons": 60000
+   },
+   "rank": 3
+  },
+  {
+   "product": {
+    "id": "circupool-core55",
+    "mfr": "CircuPool",
+    "model": "Core-55",
+    "lbs": 2.3,
+    "rated": 55000,
+    "ratedQ": "verified",
+    "ctrl": "duty-cycle",
+    "cyc": null,
+    "polH": null,
+    "ltCut": null,
+    "ltRed": null,
+    "auto": [],
+    "cell": "CORE55-RC",
+    "fam": null,
+    "dq": "verified",
+    "notes": [],
+    "msrp": null
+   },
+   "fkey": "circupool-core55",
+   "score": 74.60000000000001,
+   "reasons": [
+    {
+     "code": "CAPACITY",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Meets the ≥2× rule: 2.3 lbs/day vs 1.4 needed."
+    },
+    {
+     "code": "RATED_GALLONS",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Rated for 55,000 gal ≥ 2× your pool."
+    },
+    {
+     "code": "REQ_OUTPUT",
+     "severity": "warning",
+     "ruleId": "SWG_MAX_OUTPUT_PCT",
+     "text": "Needs ~58% output at 12h/day — above about 50%, so longer off periods would help keep scale down."
+    }
+   ],
+   "derated": false,
+   "effLbs": 2.3,
+   "fit": {
+    "meetsCapacity": true,
+    "automationMatch": false,
+    "regulatoryOk": true,
+    "secondary": true
+   },
+   "computed": {
+    "requiredLbs": 1.4,
+    "deratedLbsPerDay": 2.3,
+    "requiredOutputPct": 58,
+    "lbsNeeded": 0.667,
+    "estRuntimeHours": 12,
+    "ratedPoolGallons": 55000
+   },
+   "rank": 4
+  },
+  {
+   "product": {
+    "id": "pentair-ic-60",
+    "mfr": "Pentair",
+    "model": "Intellichlor IC-60",
+    "lbs": 2,
+    "rated": 60000,
+    "ratedQ": "verified",
+    "ctrl": "duty-cycle",
+    "cyc": 5,
+    "polH": 3,
+    "ltCut": null,
+    "ltRed": null,
+    "auto": [
+     "Pentair IntelliCenter",
+     "Pentair IntelliTouch",
+     "Pentair EasyTouch",
+     "Pentair SunTouch"
+    ],
+    "cell": "IC60",
+    "fam": null,
+    "dq": "verified",
+    "notes": [],
+    "msrp": null
+   },
+   "fkey": "pentair-ic-60",
+   "score": 72.8,
+   "reasons": [
+    {
+     "code": "CAPACITY",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Meets the ≥2× rule: 2 lbs/day vs 1.4 needed."
+    },
+    {
+     "code": "RATED_GALLONS",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Rated for 60,000 gal ≥ 2× your pool."
+    },
+    {
+     "code": "REQ_OUTPUT",
+     "severity": "warning",
+     "ruleId": "SWG_MAX_OUTPUT_PCT",
+     "text": "Needs ~67% output at 12h/day — above about 50%, so longer off periods would help keep scale down."
+    }
+   ],
+   "derated": false,
+   "effLbs": 2,
+   "fit": {
+    "meetsCapacity": true,
+    "automationMatch": false,
+    "regulatoryOk": true,
+    "secondary": true
+   },
+   "computed": {
+    "requiredLbs": 1.4,
+    "deratedLbsPerDay": 2,
+    "requiredOutputPct": 67,
+    "lbsNeeded": 0.667,
+    "estRuntimeHours": 12,
+    "ratedPoolGallons": 60000
+   },
+   "rank": 5
+  },
+  {
+   "product": {
+    "id": "pentair-plus-60",
+    "mfr": "Pentair",
+    "model": "PLUS60",
+    "lbs": 2,
+    "rated": 60000,
+    "ratedQ": "verified",
+    "ctrl": "duty-cycle",
+    "cyc": null,
+    "polH": null,
+    "ltCut": null,
+    "ltRed": null,
+    "auto": [
+     "Pentair IntelliCenter",
+     "Pentair IntelliTouch",
+     "Pentair EasyTouch"
+    ],
+    "cell": "PLUS60",
+    "fam": null,
+    "dq": "verified",
+    "notes": [],
+    "msrp": null
+   },
+   "fkey": "pentair-plus-60",
+   "score": 72.8,
+   "reasons": [
+    {
+     "code": "CAPACITY",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Meets the ≥2× rule: 2 lbs/day vs 1.4 needed."
+    },
+    {
+     "code": "RATED_GALLONS",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Rated for 60,000 gal ≥ 2× your pool."
+    },
+    {
+     "code": "REQ_OUTPUT",
+     "severity": "warning",
+     "ruleId": "SWG_MAX_OUTPUT_PCT",
+     "text": "Needs ~67% output at 12h/day — above about 50%, so longer off periods would help keep scale down."
+    }
+   ],
+   "derated": false,
+   "effLbs": 2,
+   "fit": {
+    "meetsCapacity": true,
+    "automationMatch": false,
+    "regulatoryOk": true,
+    "secondary": true
+   },
+   "computed": {
+    "requiredLbs": 1.4,
+    "deratedLbsPerDay": 2,
+    "requiredOutputPct": 67,
+    "lbsNeeded": 0.667,
+    "estRuntimeHours": 12,
+    "ratedPoolGallons": 60000
+   },
+   "rank": 6
+  },
+  {
+   "product": {
+    "id": "circupool-corecontrol55",
+    "mfr": "CircuPool",
+    "model": "CORE CONTROL 55",
+    "lbs": 2,
+    "rated": 55000,
+    "ratedQ": "verified",
+    "ctrl": "duty-cycle",
+    "cyc": null,
+    "polH": null,
+    "ltCut": null,
+    "ltRed": null,
+    "auto": [
+     "built-in app/WiFi automation platform (self)"
+    ],
+    "cell": null,
+    "fam": null,
+    "dq": "verified",
+    "notes": [],
+    "msrp": null
+   },
+   "fkey": "circupool-corecontrol55",
+   "score": 72.8,
+   "reasons": [
+    {
+     "code": "CAPACITY",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Meets the ≥2× rule: 2 lbs/day vs 1.4 needed."
+    },
+    {
+     "code": "RATED_GALLONS",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Rated for 55,000 gal ≥ 2× your pool."
+    },
+    {
+     "code": "REQ_OUTPUT",
+     "severity": "warning",
+     "ruleId": "SWG_MAX_OUTPUT_PCT",
+     "text": "Needs ~67% output at 12h/day — above about 50%, so longer off periods would help keep scale down."
+    }
+   ],
+   "derated": false,
+   "effLbs": 2,
+   "fit": {
+    "meetsCapacity": true,
+    "automationMatch": false,
+    "regulatoryOk": true,
+    "secondary": true
+   },
+   "computed": {
+    "requiredLbs": 1.4,
+    "deratedLbsPerDay": 2,
+    "requiredOutputPct": 67,
+    "lbsNeeded": 0.667,
+    "estRuntimeHours": 12,
+    "ratedPoolGallons": 55000
+   },
+   "rank": 7
+  },
+  {
+   "product": {
+    "id": "circupool-edge40",
+    "mfr": "CircuPool",
+    "model": "Edge-40",
+    "lbs": 1.7,
+    "rated": 40000,
+    "ratedQ": "verified",
+    "ctrl": "proportional",
+    "cyc": null,
+    "polH": null,
+    "ltCut": null,
+    "ltRed": null,
+    "auto": [],
+    "cell": "EDGE40-RC",
+    "fam": null,
+    "dq": "verified",
+    "notes": [
+     "Proportional output control — suits short pump cycles."
+    ],
+    "msrp": 1009
+   },
+   "fkey": "circupool-edge40",
+   "score": 71,
+   "reasons": [
+    {
+     "code": "CAPACITY",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Meets the ≥2× rule: 1.7 lbs/day vs 1.4 needed."
+    },
+    {
+     "code": "RATED_GALLONS",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Rated for 40,000 gal ≥ 2× your pool."
+    },
+    {
+     "code": "REQ_OUTPUT",
+     "severity": "warning",
+     "ruleId": "SWG_MAX_OUTPUT_PCT",
+     "text": "Needs ~78% output at 12h/day — above about 50%, so longer off periods would help keep scale down."
+    }
+   ],
+   "derated": false,
+   "effLbs": 1.7,
+   "fit": {
+    "meetsCapacity": true,
+    "automationMatch": false,
+    "regulatoryOk": true,
+    "secondary": true
+   },
+   "computed": {
+    "requiredLbs": 1.4,
+    "deratedLbsPerDay": 1.7,
+    "requiredOutputPct": 78,
+    "lbsNeeded": 0.667,
+    "estRuntimeHours": 12,
+    "ratedPoolGallons": 40000
+   },
+   "rank": 8
+  },
+  {
+   "product": {
+    "id": "hayward-aquarite-t15",
+    "mfr": "Hayward",
+    "model": "Aqua Rite (T-15)",
+    "lbs": 1.47,
+    "rated": 40000,
+    "ratedQ": "verified",
+    "ctrl": "duty-cycle",
+    "cyc": 180,
+    "polH": 3,
+    "ltCut": 50,
+    "ltRed": 60,
+    "auto": [
+     "Hayward OmniLogic",
+     "Hayward OmniPL",
+     "Hayward OmniHub",
+     "Hayward ProLogic",
+     "Jandy AquaLink (set AL-5)"
+    ],
+    "cell": "T-CELL-15",
+    "fam": null,
+    "dq": "verified",
+    "notes": [
+     "Jandy AquaLink control requires AquaRite AL-5 setting.",
+     "Low-temp cutoff ~50F."
+    ],
+    "msrp": 2199
+   },
+   "fkey": "hayward-aquarite-t15",
+   "score": 69.62,
+   "reasons": [
+    {
+     "code": "CAPACITY",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Meets the ≥2× rule: 1.47 lbs/day vs 1.4 needed."
+    },
+    {
+     "code": "RATED_GALLONS",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Rated for 40,000 gal ≥ 2× your pool."
+    },
+    {
+     "code": "REQ_OUTPUT",
+     "severity": "warning",
+     "ruleId": "SWG_MAX_OUTPUT_PCT",
+     "text": "Needs ~91% output at 12h/day — above about 50%, so longer off periods would help keep scale down."
+    },
+    {
+     "code": "LOW_TEMP_NOTE",
+     "severity": "info",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Known sticky low-temp behavior — check winter operation."
+    }
+   ],
+   "derated": false,
+   "effLbs": 1.47,
+   "fit": {
+    "meetsCapacity": true,
+    "automationMatch": false,
+    "regulatoryOk": true,
+    "secondary": true
+   },
+   "computed": {
+    "requiredLbs": 1.4,
+    "deratedLbsPerDay": 1.47,
+    "requiredOutputPct": 91,
+    "lbsNeeded": 0.667,
+    "estRuntimeHours": 12,
+    "ratedPoolGallons": 40000
+   },
+   "rank": 9
+  },
+  {
+   "product": {
+    "id": "hayward-aquarite900-tcell940",
+    "mfr": "Hayward",
+    "model": "AquaRite 900 w/ T-CELL-940",
+    "lbs": 1.47,
+    "rated": 40000,
+    "ratedQ": "verified",
+    "ctrl": "duty-cycle",
+    "cyc": 180,
+    "polH": 3,
+    "ltCut": 50,
+    "ltRed": 60,
+    "auto": [
+     "Hayward OmniLogic",
+     "Hayward OmniPL",
+     "Hayward ProLogic"
+    ],
+    "cell": "T-CELL-940",
+    "fam": "hayward-aquarite900",
+    "dq": "verified",
+    "notes": [
+     "Low-temp cutoff ~50F."
+    ],
+    "msrp": null
+   },
+   "fkey": "hayward-aquarite900",
+   "score": 69.62,
+   "reasons": [
+    {
+     "code": "CAPACITY",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Meets the ≥2× rule: 1.47 lbs/day vs 1.4 needed."
+    },
+    {
+     "code": "RATED_GALLONS",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Rated for 40,000 gal ≥ 2× your pool."
+    },
+    {
+     "code": "REQ_OUTPUT",
+     "severity": "warning",
+     "ruleId": "SWG_MAX_OUTPUT_PCT",
+     "text": "Needs ~91% output at 12h/day — above about 50%, so longer off periods would help keep scale down."
+    },
+    {
+     "code": "LOW_TEMP_NOTE",
+     "severity": "info",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Known sticky low-temp behavior — check winter operation."
+    }
+   ],
+   "derated": false,
+   "effLbs": 1.47,
+   "fit": {
+    "meetsCapacity": true,
+    "automationMatch": false,
+    "regulatoryOk": true,
+    "secondary": true
+   },
+   "computed": {
+    "requiredLbs": 1.4,
+    "deratedLbsPerDay": 1.47,
+    "requiredOutputPct": 91,
+    "lbsNeeded": 0.667,
+    "estRuntimeHours": 12,
+    "ratedPoolGallons": 40000
+   },
+   "rank": 10
+  },
+  {
+   "product": {
+    "id": "hayward-aquarite-s3-tcells340",
+    "mfr": "Hayward",
+    "model": "AquaRite S3 w/ TCELLS340",
+    "lbs": 1.45,
+    "rated": 40000,
+    "ratedQ": "verified",
+    "ctrl": "proportional",
+    "cyc": null,
+    "polH": 3,
+    "ltCut": 50,
+    "ltRed": 60,
+    "auto": [
+     "Hayward Omni (select platforms)"
+    ],
+    "cell": "TCELLS340",
+    "fam": null,
+    "dq": "verified",
+    "notes": [
+     "Proportional output control — suits short pump cycles.",
+     "Low-temp cutoff ~50F."
+    ],
+    "msrp": null
+   },
+   "fkey": "hayward-aquarite-s3-tcells340",
+   "score": 69.5,
+   "reasons": [
+    {
+     "code": "CAPACITY",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Meets the ≥2× rule: 1.45 lbs/day vs 1.4 needed."
+    },
+    {
+     "code": "RATED_GALLONS",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Rated for 40,000 gal ≥ 2× your pool."
+    },
+    {
+     "code": "REQ_OUTPUT",
+     "severity": "warning",
+     "ruleId": "SWG_MAX_OUTPUT_PCT",
+     "text": "Needs ~92% output at 12h/day — above about 50%, so longer off periods would help keep scale down."
+    },
+    {
+     "code": "LOW_TEMP_NOTE",
+     "severity": "info",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Known sticky low-temp behavior — check winter operation."
+    }
+   ],
+   "derated": false,
+   "effLbs": 1.45,
+   "fit": {
+    "meetsCapacity": true,
+    "automationMatch": false,
+    "regulatoryOk": true,
+    "secondary": true
+   },
+   "computed": {
+    "requiredLbs": 1.4,
+    "deratedLbsPerDay": 1.45,
+    "requiredOutputPct": 92,
+    "lbsNeeded": 0.667,
+    "estRuntimeHours": 12,
+    "ratedPoolGallons": 40000
+   },
+   "rank": 11
+  },
+  {
+   "product": {
+    "id": "pentair-ic-40",
+    "mfr": "Pentair",
+    "model": "Intellichlor IC-40",
+    "lbs": 1.4,
+    "rated": 40000,
+    "ratedQ": "verified",
+    "ctrl": "duty-cycle",
+    "cyc": 5,
+    "polH": 3,
+    "ltCut": null,
+    "ltRed": null,
+    "auto": [
+     "Pentair IntelliCenter",
+     "Pentair IntelliTouch",
+     "Pentair EasyTouch",
+     "Pentair SunTouch"
+    ],
+    "cell": "IC40",
+    "fam": null,
+    "dq": "verified",
+    "notes": [],
+    "msrp": null
+   },
+   "fkey": "pentair-ic-40",
+   "score": 69.2,
+   "reasons": [
+    {
+     "code": "CAPACITY",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Meets the ≥2× rule: 1.4 lbs/day vs 1.4 needed."
+    },
+    {
+     "code": "RATED_GALLONS",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Rated for 40,000 gal ≥ 2× your pool."
+    },
+    {
+     "code": "REQ_OUTPUT",
+     "severity": "warning",
+     "ruleId": "SWG_MAX_OUTPUT_PCT",
+     "text": "Needs ~95% output at 12h/day — above about 50%, so longer off periods would help keep scale down."
+    }
+   ],
+   "derated": false,
+   "effLbs": 1.4,
+   "fit": {
+    "meetsCapacity": true,
+    "automationMatch": false,
+    "regulatoryOk": true,
+    "secondary": true
+   },
+   "computed": {
+    "requiredLbs": 1.4,
+    "deratedLbsPerDay": 1.4,
+    "requiredOutputPct": 95,
+    "lbsNeeded": 0.667,
+    "estRuntimeHours": 12,
+    "ratedPoolGallons": 40000
+   },
+   "rank": 12
+  }
+ ],
+ "warnings": [
+  {
+   "code": "PIPE_OK",
+   "severity": "info",
+   "ruleId": "PLUMBING_SIZE_GUIDANCE",
+   "text": "2″ plumbing carries about 63 GPM suction / 84 GPM return within the velocity limits."
+  },
+  {
+   "code": "DATA_QUALITY_FLAG",
+   "severity": "info",
+   "ruleId": "SWG_OUTPUT_HAIRCUT",
+   "text": "Some models have disputed published output (badged below). Measured output generally matches published figures, so no derating is applied — but confirm with the manufacturer."
+  },
+  {
+   "code": "SWG_FLOW_SWITCH",
+   "severity": "info",
+   "ruleId": "SWG_FLOW_SWITCH",
+   "text": "If you run a variable-speed pump, keep the lowest speed above roughly 25 GPM (2″ tee). The flow switch reacts to water velocity, so too slow a speed stops chlorine production without any obvious fault."
+  },
+  {
+   "code": "SWG_CYA_CELL_LIFE",
+   "severity": "info",
+   "ruleId": "SWG_CYA_CELL_LIFE",
+   "text": "Hold CYA at 70–80 once you are running on salt. Higher CYA shields chlorine from sunlight, so the cell makes less to hold the same FC and lasts longer. Note the output percentage is a share of pump run time — change your schedule and you will need to re-tune it."
+  },
+  {
+   "code": "CELL_LIFE",
+   "severity": "info",
+   "ruleId": "CELL_LIFE",
+   "text": "Cell life is measured in generating hours — roughly 10,000 for OEM cells, nearer 7,000 for generics (some offshore cells as low as 3,000). At about 42% output the top pick spends most of the day idle, which is exactly why TFP says to oversize."
+  },
+  {
+   "code": "FC_LOSS_ESTIMATED",
+   "severity": "info",
+   "ruleId": "FC_DEMAND_DEFAULTS",
+   "text": "Chlorine demand is estimated at 4 ppm/day for your climate. If you track your daily FC loss (an overnight FC loss test, or your PoolMath logs), entering it makes the output percentages specific to your pool."
+  },
+  {
+   "code": "WARRANTY_CHECK",
+   "severity": "info",
+   "ruleId": "WARRANTY_CHECK",
+   "text": "Before you buy: check the warranty. Internet purchases and owner installation can void coverage on some brands, a few require a certified installer, and most require product registration. Bundled purchases with professional install sometimes carry a longer warranty."
+  }
+ ],
+ "repairOptions": []
+}
