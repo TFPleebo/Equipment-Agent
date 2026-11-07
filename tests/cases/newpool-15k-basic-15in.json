@@ -46,6 +46,7 @@
       "AQUARITE_CELL_TYPE",
       "SWG_CYA_CELL_LIFE",
       "CELL_LIFE",
+      "FC_LOSS_ESTIMATED",
       "WARRANTY_CHECK"
     ]
   }

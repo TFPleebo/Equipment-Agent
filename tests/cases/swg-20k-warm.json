@@ -33,6 +33,7 @@
       "SWG_FLOW_SWITCH",
       "SWG_CYA_CELL_LIFE",
       "CELL_LIFE",
+      "FC_LOSS_ESTIMATED",
       "WARRANTY_CHECK"
     ],
     "repairOptions": []

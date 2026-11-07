@@ -1,0 +1,1017 @@
+{
+ "mode": "pump",
+ "requiredGPM": 90,
+ "dailyGPM": 15,
+ "minDriver": "skimmer 15 GPM",
+ "featureGPM": 90,
+ "comparison": null,
+ "recommendations": [
+  {
+   "product": {
+    "id": "speck-badu-ecomv-72-v-2-7",
+    "brand": "Speck",
+    "model": "Speck Badu EcoMV/72-V 2.7",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 2.7,
+    "nhp": 2.7,
+    "wef": 7.774924979,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      66,
+      40,
+      90
+     ],
+     "w": [
+      1874,
+      1659,
+      2049
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      23,
+      7,
+      16
+     ],
+     "w": [
+      39,
+      37,
+      40
+     ]
+    }
+   },
+   "score": 74.3675229418951,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW",
+     "severity": "good",
+     "ruleId": "FEATURE_FLOW_DEMANDS",
+     "text": "Reaches 6 spa jets peak (~90 GPM) at full speed."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 90,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 16,
+    "gpmAtCurveHigh": 90,
+    "wattsDaily": 38,
+    "wattsHigh": 2049,
+    "annualKWh": 844.9796489535166,
+    "annualCostUSD": 144
+   },
+   "variants": [],
+   "rank": 1
+  },
+  {
+   "product": {
+    "id": "jandy-epump-vs-jep-2-0",
+    "brand": "Jandy",
+    "model": "Jandy ePump VS JEP 2.0",
+    "st": "VS",
+    "mot": "PSC",
+    "thp": 2.7,
+    "nhp": 2,
+    "wef": 7.754788034,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      69,
+      41,
+      94
+     ],
+     "w": [
+      1911,
+      1542,
+      2149
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      11,
+      6,
+      15
+     ],
+     "w": [
+      38,
+      36,
+      39
+     ]
+    }
+   },
+   "score": 73.995321068,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW",
+     "severity": "good",
+     "ruleId": "FEATURE_FLOW_DEMANDS",
+     "text": "Reaches 6 spa jets peak (~90 GPM) at full speed."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 90,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 15,
+    "gpmAtCurveHigh": 94,
+    "wattsDaily": 39,
+    "wattsHigh": 2149,
+    "annualKWh": 884.0300000000001,
+    "annualCostUSD": 150
+   },
+   "variants": [],
+   "rank": 2
+  },
+  {
+   "product": {
+    "id": "hayward-tristar-sp32950vsp",
+    "brand": "Hayward",
+    "model": "Hayward TriStar SP32950VSP",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 2.7,
+    "nhp": 2,
+    "wef": 7.7918995,
+    "frame": "48",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      70,
+      41,
+      97
+     ],
+     "w": [
+      1923,
+      1533,
+      2237
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      13,
+      8,
+      17
+     ],
+     "w": [
+      35,
+      34,
+      36
+     ]
+    }
+   },
+   "score": 73.94266347289482,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW",
+     "severity": "good",
+     "ruleId": "FEATURE_FLOW_DEMANDS",
+     "text": "Reaches 6 spa jets peak (~90 GPM) at full speed."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 90,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 17,
+    "gpmAtCurveHigh": 97,
+    "wattsDaily": 32,
+    "wattsHigh": 2237,
+    "annualKWh": 898.9571208359039,
+    "annualCostUSD": 153
+   },
+   "variants": [
+    "Hayward TriStar VS 950 HL32950VSP"
+   ],
+   "rank": 3
+  },
+  {
+   "product": {
+    "id": "pentair-011060",
+    "brand": "Pentair",
+    "model": "Pentair 011060",
+    "st": "VS",
+    "mot": "PSC",
+    "thp": 3.96,
+    "nhp": 2,
+    "wef": 6.762613156,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      68.34,
+      41.45,
+      92.22
+     ],
+     "w": [
+      2002.73,
+      1682.56,
+      2267.03
+     ]
+    },
+    "lo": {
+     "rpm": 450,
+     "g": [
+      9.23,
+      5.54,
+      12.33
+     ],
+     "w": [
+      61.41,
+      60.62,
+      61.94
+     ]
+    }
+   },
+   "score": 71.05474390607306,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW",
+     "severity": "good",
+     "ruleId": "FEATURE_FLOW_DEMANDS",
+     "text": "Reaches 6 spa jets peak (~90 GPM) at full speed."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 90,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 12.33,
+    "gpmAtCurveHigh": 92.22,
+    "wattsDaily": 66,
+    "wattsHigh": 2267.03,
+    "annualKWh": 996.5273418737576,
+    "annualCostUSD": 169
+   },
+   "variants": [],
+   "rank": 4
+  },
+  {
+   "product": {
+    "id": "pentair-intelliflo-i2-vs-011060",
+    "brand": "Pentair",
+    "model": "Pentair IntelliFlo i2 VS 011060",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 3.96,
+    "nhp": 2,
+    "wef": 6.74696612,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      68,
+      41,
+      92
+     ],
+     "w": [
+      2003,
+      1683,
+      2267
+     ]
+    },
+    "lo": {
+     "rpm": 450,
+     "g": [
+      9,
+      6,
+      12
+     ],
+     "w": [
+      61,
+      61,
+      62
+     ]
+    }
+   },
+   "score": 71.01256868008377,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW",
+     "severity": "good",
+     "ruleId": "FEATURE_FLOW_DEMANDS",
+     "text": "Reaches 6 spa jets peak (~90 GPM) at full speed."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 90,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 12,
+    "gpmAtCurveHigh": 92,
+    "wattsDaily": 67,
+    "wattsHigh": 2267,
+    "annualKWh": 997.8074776372015,
+    "annualCostUSD": 170
+   },
+   "variants": [],
+   "rank": 5
+  },
+  {
+   "product": {
+    "id": "pentair-intellipro-vs-p6e6vs4h-209l",
+    "brand": "Pentair",
+    "model": "Pentair IntelliPro VS P6E6VS4H-209L",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 3.96,
+    "nhp": 3,
+    "wef": 6.352328987,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      71,
+      42,
+      97
+     ],
+     "w": [
+      2242,
+      1836,
+      2578
+     ]
+    },
+    "lo": {
+     "rpm": 450,
+     "g": [
+      10,
+      6,
+      13
+     ],
+     "w": [
+      61,
+      61,
+      61
+     ]
+    }
+   },
+   "score": 69.31092098246481,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW",
+     "severity": "good",
+     "ruleId": "FEATURE_FLOW_DEMANDS",
+     "text": "Reaches 6 spa jets peak (~90 GPM) at full speed."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 90,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 13,
+    "gpmAtCurveHigh": 97,
+    "wattsDaily": 64,
+    "wattsHigh": 2578,
+    "annualKWh": 1105.1455284159053,
+    "annualCostUSD": 188
+   },
+   "variants": [],
+   "rank": 6
+  },
+  {
+   "product": {
+    "id": "pentair-sta-rite-013001",
+    "brand": "Pentair",
+    "model": "Pentair Sta-Rite 013001",
+    "st": "VS",
+    "mot": "PSC",
+    "thp": 3.96,
+    "nhp": 3,
+    "wef": 6.274547872,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      70.45,
+      42.29,
+      95.14
+     ],
+     "w": [
+      2222.35,
+      1818.88,
+      2552.88
+     ]
+    },
+    "lo": {
+     "rpm": 450,
+     "g": [
+      9.35,
+      5.63,
+      12.64
+     ],
+     "w": [
+      62.5,
+      61.58,
+      63.18
+     ]
+    }
+   },
+   "score": 69.17136574979301,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW",
+     "severity": "good",
+     "ruleId": "FEATURE_FLOW_DEMANDS",
+     "text": "Reaches 6 spa jets peak (~90 GPM) at full speed."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 90,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 12.64,
+    "gpmAtCurveHigh": 95.14,
+    "wattsDaily": 67,
+    "wattsHigh": 2552.88,
+    "annualKWh": 1103.2623522596461,
+    "annualCostUSD": 188
+   },
+   "variants": [
+    "Pentair Sta-Rite 013004",
+    "Pentair Sta-Rite 013028"
+   ],
+   "rank": 7
+  },
+  {
+   "product": {
+    "id": "pentair-intellipro-2-vst-13001",
+    "brand": "Pentair",
+    "model": "Pentair IntelliPro 2 VST 13001",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 3.96,
+    "nhp": 3,
+    "wef": 6.260168351,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      70,
+      42,
+      95
+     ],
+     "w": [
+      2222,
+      1819,
+      2553
+     ]
+    },
+    "lo": {
+     "rpm": 450,
+     "g": [
+      9,
+      6,
+      13
+     ],
+     "w": [
+      63,
+      62,
+      63
+     ]
+    }
+   },
+   "score": 69.15696170652537,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW",
+     "severity": "good",
+     "ruleId": "FEATURE_FLOW_DEMANDS",
+     "text": "Reaches 6 spa jets peak (~90 GPM) at full speed."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 90,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 13,
+    "gpmAtCurveHigh": 95,
+    "wattsDaily": 66,
+    "wattsHigh": 2553,
+    "annualKWh": 1101.5735288793678,
+    "annualCostUSD": 187
+   },
+   "variants": [
+    "Pentair IntelliPro VS 13028",
+    "Pentair IntelliPro VSF 13004"
+   ],
+   "rank": 8
+  },
+  {
+   "product": {
+    "id": "pentair-intelliflo-2-vst-011055",
+    "brand": "Pentair",
+    "model": "Pentair IntelliFlo 2 VST 011055",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 3.96,
+    "nhp": 3,
+    "wef": 6.09270848,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      73,
+      43,
+      99
+     ],
+     "w": [
+      2410,
+      1945,
+      2776
+     ]
+    },
+    "lo": {
+     "rpm": 450,
+     "g": [
+      10,
+      6,
+      13
+     ],
+     "w": [
+      59,
+      58,
+      60
+     ]
+    }
+   },
+   "score": 68.19805351883367,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW",
+     "severity": "good",
+     "ruleId": "FEATURE_FLOW_DEMANDS",
+     "text": "Reaches 6 spa jets peak (~90 GPM) at full speed."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 90,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 13,
+    "gpmAtCurveHigh": 99,
+    "wattsDaily": 63,
+    "wattsHigh": 2776,
+    "annualKWh": 1174.9839342548614,
+    "annualCostUSD": 200
+   },
+   "variants": [
+    "Pentair IntelliFlo VS 011028",
+    "Pentair S-013003",
+    "Pentair Shasta IntelliFlo 2 VST S-011058"
+   ],
+   "rank": 9
+  },
+  {
+   "product": {
+    "id": "pentair-011028",
+    "brand": "Pentair",
+    "model": "Pentair 011028",
+    "st": "VS",
+    "mot": "PSC",
+    "thp": 3.96,
+    "nhp": 3,
+    "wef": 6.066459049,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      72.56,
+      43.47,
+      98.67
+     ],
+     "w": [
+      2409.51,
+      1945,
+      2776.01
+     ]
+    },
+    "lo": {
+     "rpm": 450,
+     "g": [
+      9.82,
+      5.86,
+      13.18
+     ],
+     "w": [
+      59.37,
+      58.42,
+      60.04
+     ]
+    }
+   },
+   "score": 68.14961955552175,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW",
+     "severity": "good",
+     "ruleId": "FEATURE_FLOW_DEMANDS",
+     "text": "Reaches 6 spa jets peak (~90 GPM) at full speed."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 90,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 13.18,
+    "gpmAtCurveHigh": 98.67,
+    "wattsDaily": 63,
+    "wattsHigh": 2776.01,
+    "annualKWh": 1174.5057108797948,
+    "annualCostUSD": 200
+   },
+   "variants": [
+    "Pentair 011055",
+    "Pentair 011056",
+    "Pentair S-011056",
+    "Pentair S-011058"
+   ],
+   "rank": 10
+  },
+  {
+   "product": {
+    "id": "pentair-intelliflo-xf-vsf-22056",
+    "brand": "Pentair",
+    "model": "Pentair IntelliFlo XF VSF 22056",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 3.96,
+    "nhp": 3,
+    "wef": 6.092818989,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      74,
+      44,
+      101
+     ],
+     "w": [
+      2545,
+      2138,
+      2837
+     ]
+    },
+    "lo": {
+     "rpm": 450,
+     "g": [
+      9,
+      6,
+      13
+     ],
+     "w": [
+      58,
+      57,
+      58
+     ]
+    }
+   },
+   "score": 68.05507817970624,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW",
+     "severity": "good",
+     "ruleId": "FEATURE_FLOW_DEMANDS",
+     "text": "Reaches 6 spa jets peak (~90 GPM) at full speed."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 90,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 13,
+    "gpmAtCurveHigh": 101,
+    "wattsDaily": 61,
+    "wattsHigh": 2837,
+    "annualKWh": 1191.8305645051473,
+    "annualCostUSD": 203
+   },
+   "variants": [
+    "Pentair IntelliPro XF VSF 23056",
+    "Pentair IntelliProXF VS 22055",
+    "Pentair IntelliProXF VS 23055"
+   ],
+   "rank": 11
+  },
+  {
+   "product": {
+    "id": "pentair-022055",
+    "brand": "Pentair",
+    "model": "Pentair 022055",
+    "st": "VS",
+    "mot": "PSC",
+    "thp": 3.96,
+    "nhp": 3,
+    "wef": 6.091413023,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      74.17,
+      44.01,
+      100.94
+     ],
+     "w": [
+      2544.81,
+      2138.2,
+      2837.4
+     ]
+    },
+    "lo": {
+     "rpm": 450,
+     "g": [
+      9.22,
+      5.55,
+      12.58
+     ],
+     "w": [
+      57.64,
+      56.82,
+      58.37
+     ]
+    }
+   },
+   "score": 68.03075920882087,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW",
+     "severity": "good",
+     "ruleId": "FEATURE_FLOW_DEMANDS",
+     "text": "Reaches 6 spa jets peak (~90 GPM) at full speed."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 90,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 12.58,
+    "gpmAtCurveHigh": 100.94,
+    "wattsDaily": 62,
+    "wattsHigh": 2837.4,
+    "annualKWh": 1194.360804374015,
+    "annualCostUSD": 203
+   },
+   "variants": [
+    "Pentair 022056",
+    "Pentair Sta-Rite 023055",
+    "Pentair Sta-Rite 023056"
+   ],
+   "rank": 12
+  }
+ ],
+ "warnings": [
+  {
+   "code": "PIPE_OK",
+   "severity": "info",
+   "ruleId": "PLUMBING_SIZE_GUIDANCE",
+   "text": "2″ plumbing carries about 63 GPM suction / 84 GPM return within the velocity limits."
+  },
+  {
+   "code": "FILTER_FLOW_GUIDELINE",
+   "severity": "info",
+   "ruleId": "FILTER_FLOW_CAP",
+   "text": "Peak flow of ~90 GPM is within your filter's rating but above the ~56 GPM efficiency guideline (0.375 GPM per sq ft). That's fine for short spa or feature runs; keep everyday filtering at low speed."
+  },
+  {
+   "code": "WARRANTY_CHECK",
+   "severity": "info",
+   "ruleId": "WARRANTY_CHECK",
+   "text": "Before you buy: check the warranty. Internet purchases and owner installation can void coverage on some brands, a few require a certified installer, and most require product registration. Bundled purchases with professional install sometimes carry a longer warranty."
+  }
+ ],
+ "repairOptions": [],
+ "curve": "C"
+}

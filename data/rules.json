@@ -63,7 +63,8 @@
         "conflicting-sources"
       ],
       "appliedBefore": "capacity math",
-      "configurable": true
+      "configurable": true,
+      "comparisonNote": "2026-11: the current-cell comparison previously hard-coded the old 0.75 factor for disputed cells while rankings used 1, understating the user's current cell. Both now use defaultDeratingFactor."
     },
     "src": "TFP member OCLT testing: CircuPool RJ+ measured ~71% of advertised output"
   },
@@ -80,7 +81,13 @@
       "range": [
         2,
         4
-      ]
+      ],
+      "measuredInput": "profile.fcLossPpm (ppm/day) overrides byClimate when present",
+      "measuredRange": [
+        0.5,
+        10
+      ],
+      "note": "2026-11 (pending review): measured loss affects demand and output %, not the 2x capacity rule (requiredLbs), which stays volume-based."
     },
     "src": "TFP methodology: typical FC loss 2-4 ppm/day depending on sun/temperature"
   },

@@ -3,6 +3,7 @@
  "requiredLbs": 2.1,
  "lbsNeeded": 1.001,
  "ppm": 4,
+ "ppmSource": "climate",
  "runtime": 6,
  "comparison": null,
  "recommendations": [
@@ -804,6 +805,12 @@
    "severity": "info",
    "ruleId": "SWG_RUNTIME_TRADEOFF",
    "text": "Top pick needs about 126% output at 6h/day. Running the pump roughly 17h/day at low RPM would drop it to about 45% — usually cheaper than buying a larger cell, keeps scale down, and the cell lasts longer when it works less hard."
+  },
+  {
+   "code": "FC_LOSS_ESTIMATED",
+   "severity": "info",
+   "ruleId": "FC_DEMAND_DEFAULTS",
+   "text": "Chlorine demand is estimated at 4 ppm/day for your climate. If you track your daily FC loss (an overnight FC loss test, or your PoolMath logs), entering it makes the output percentages specific to your pool."
   },
   {
    "code": "WARRANTY_CHECK",

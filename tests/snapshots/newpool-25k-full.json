@@ -1824,6 +1824,7 @@
   "requiredLbs": 1.75,
   "lbsNeeded": 0.626,
   "ppm": 3,
+  "ppmSource": "climate",
   "runtime": 8,
   "comparison": null,
   "recommendations": [
@@ -2592,6 +2593,12 @@
     "severity": "info",
     "ruleId": "SWG_RUNTIME_TRADEOFF",
     "text": "Top pick needs about 94% output at 8h/day. Running the pump roughly 17h/day at low RPM would drop it to about 45% — usually cheaper than buying a larger cell, keeps scale down, and the cell lasts longer when it works less hard."
+   },
+   {
+    "code": "FC_LOSS_ESTIMATED",
+    "severity": "info",
+    "ruleId": "FC_DEMAND_DEFAULTS",
+    "text": "Chlorine demand is estimated at 3 ppm/day for your climate. If you track your daily FC loss (an overnight FC loss test, or your PoolMath logs), entering it makes the output percentages specific to your pool."
    }
   ],
   "repairOptions": []
@@ -2653,6 +2660,12 @@
    "severity": "info",
    "ruleId": "SWG_RUNTIME_TRADEOFF",
    "text": "Top pick needs about 94% output at 8h/day. Running the pump roughly 17h/day at low RPM would drop it to about 45% — usually cheaper than buying a larger cell, keeps scale down, and the cell lasts longer when it works less hard."
+  },
+  {
+   "code": "FC_LOSS_ESTIMATED",
+   "severity": "info",
+   "ruleId": "FC_DEMAND_DEFAULTS",
+   "text": "Chlorine demand is estimated at 3 ppm/day for your climate. If you track your daily FC loss (an overnight FC loss test, or your PoolMath logs), entering it makes the output percentages specific to your pool."
   }
  ],
  "advice": [
@@ -2715,6 +2728,12 @@
    "severity": "info",
    "ruleId": "SWG_RUNTIME_TRADEOFF",
    "text": "Top pick needs about 94% output at 8h/day. Running the pump roughly 17h/day at low RPM would drop it to about 45% — usually cheaper than buying a larger cell, keeps scale down, and the cell lasts longer when it works less hard."
+  },
+  {
+   "code": "FC_LOSS_ESTIMATED",
+   "severity": "info",
+   "ruleId": "FC_DEMAND_DEFAULTS",
+   "text": "Chlorine demand is estimated at 3 ppm/day for your climate. If you track your daily FC loss (an overnight FC loss test, or your PoolMath logs), entering it makes the output percentages specific to your pool."
   },
   {
    "code": "HEATER_BYPASS",

@@ -1,0 +1,958 @@
+{
+ "mode": "pump",
+ "requiredGPM": 25,
+ "dailyGPM": 25,
+ "minDriver": "salt cell flow switch 25 GPM",
+ "featureGPM": 0,
+ "comparison": {
+  "current": {
+   "model": "Hayward EF2002",
+   "st": "DS",
+   "kWh": 1369,
+   "cost": 274,
+   "watts": 375
+  },
+  "recommended": {
+   "model": "Speck BADU Pro-II E VSP",
+   "st": "VS",
+   "kWh": 268,
+   "cost": 54,
+   "watts": 74
+  },
+  "kWhSaved": 1100,
+  "costSaved": 220,
+  "pctSaved": 80,
+  "paybackYears": null
+ },
+ "recommendations": [
+  {
+   "product": {
+    "id": "speck-badu-pro-ii-e-vsp",
+    "brand": "Speck",
+    "model": "Speck BADU Pro-II E VSP",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1,
+    "nhp": 1,
+    "wef": 11.33548476,
+    "frame": null,
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      52.14,
+      33.25,
+      67.48
+     ],
+     "w": [
+      991.89,
+      985.27,
+      994.36
+     ]
+    },
+    "lo": {
+     "rpm": 1311,
+     "g": [
+      19.813,
+      12.635,
+      25.65
+     ],
+     "w": [
+      77.354,
+      76.991,
+      77.49
+     ]
+    }
+   },
+   "score": 85.9867178971287,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 25,
+    "dailyGPM": 25,
+    "gpmAtCurveLow": 25.65,
+    "gpmAtCurveHigh": 67.48,
+    "wattsDaily": 74,
+    "wattsHigh": 994.36,
+    "annualKWh": 268.4251622871296,
+    "annualCostUSD": 54
+   },
+   "variants": [
+    "Speck ES90-II VSP",
+    "Speck MasterFlo-II EVSP",
+    "Speck PES90-II VSP"
+   ],
+   "rank": 1
+  },
+  {
+   "product": {
+    "id": "hayward-hl2350020vsp",
+    "brand": "Hayward",
+    "model": "Hayward HL2350020VSP",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1.65,
+    "nhp": 1.65,
+    "wef": 11.15358737,
+    "frame": "48",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      52,
+      33,
+      66
+     ],
+     "w": [
+      938,
+      837,
+      976
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      9,
+      6,
+      12
+     ],
+     "w": [
+      29,
+      29,
+      30
+     ]
+    }
+   },
+   "score": 85.5330171261314,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 25,
+    "dailyGPM": 25,
+    "gpmAtCurveLow": 12,
+    "gpmAtCurveHigh": 66,
+    "wattsDaily": 76,
+    "wattsHigh": 976,
+    "annualKWh": 277.4157613868593,
+    "annualCostUSD": 55
+   },
+   "variants": [
+    "Hayward MaxFlo VS 500 HL2350020VSP",
+    "Hayward MaxFlo XL SP2303VSP",
+    "Hayward MaxFlo XL SP23520VSP"
+   ],
+   "rank": 2
+  },
+  {
+   "product": {
+    "id": "davey-silensor-sp200btp",
+    "brand": "Davey",
+    "model": "Davey Silensor SP200BTP",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1,
+    "nhp": 1,
+    "wef": 11.37613328,
+    "frame": null,
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      46.95,
+      29.51,
+      59.13
+     ],
+     "w": [
+      737.9,
+      662.4,
+      766.1
+     ]
+    },
+    "lo": {
+     "rpm": 1444,
+     "g": [
+      19.651,
+      12.351,
+      24.75
+     ],
+     "w": [
+      87.332,
+      81.796,
+      89.4
+     ]
+    }
+   },
+   "score": 85.42933463114478,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 25,
+    "dailyGPM": 25,
+    "gpmAtCurveLow": 24.75,
+    "gpmAtCurveHigh": 59.13,
+    "wattsDaily": 91,
+    "wattsHigh": 766.1,
+    "annualKWh": 332.2931928855209,
+    "annualCostUSD": 66
+   },
+   "variants": [],
+   "rank": 3
+  },
+  {
+   "product": {
+    "id": "bluewave-ne9882",
+    "brand": "BlueWave",
+    "model": "BlueWave NE9882",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1,
+    "nhp": 1,
+    "wef": 11.35926281,
+    "frame": null,
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      44.4,
+      28,
+      56.6
+     ],
+     "w": [
+      712,
+      640,
+      723
+     ]
+    },
+    "lo": {
+     "rpm": 1518,
+     "g": [
+      19.536,
+      12.32,
+      24.9
+     ],
+     "w": [
+      92.063,
+      85.93,
+      93
+     ]
+    }
+   },
+   "score": 85.29813789883067,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 25,
+    "dailyGPM": 25,
+    "gpmAtCurveLow": 24.9,
+    "gpmAtCurveHigh": 56.6,
+    "wattsDaily": 94,
+    "wattsHigh": 723,
+    "annualKWh": 342.03877211693367,
+    "annualCostUSD": 68
+   },
+   "variants": [
+    "Starmatrix SMP7502A"
+   ],
+   "rank": 4
+  },
+  {
+   "product": {
+    "id": "bluewave-ne9881",
+    "brand": "BlueWave",
+    "model": "BlueWave NE9881",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1,
+    "nhp": 1,
+    "wef": 11.30910452,
+    "frame": null,
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      45,
+      28.5,
+      56.9
+     ],
+     "w": [
+      735,
+      663,
+      742
+     ]
+    },
+    "lo": {
+     "rpm": 1528,
+     "g": [
+      19.93,
+      12.623,
+      25.2
+     ],
+     "w": [
+      93.392,
+      87.137,
+      94
+     ]
+    }
+   },
+   "score": 85.2403585145647,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 25,
+    "dailyGPM": 25,
+    "gpmAtCurveLow": 25.2,
+    "gpmAtCurveHigh": 56.9,
+    "wattsDaily": 93,
+    "wattsHigh": 742,
+    "annualKWh": 337.7850525435298,
+    "annualCostUSD": 68
+   },
+   "variants": [
+    "Starmatrix SMP7501A"
+   ],
+   "rank": 5
+  },
+  {
+   "product": {
+    "id": "hayward-powerflo-lx-sp1580x15vsp-ag",
+    "brand": "Hayward",
+    "model": "Hayward PowerFlo LX SP1580X15VSP AG",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1.1,
+    "nhp": 1,
+    "wef": 11.13348767,
+    "frame": "48",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3400,
+     "g": [
+      48.95,
+      30,
+      64.34
+     ],
+     "w": [
+      784.12,
+      662.49,
+      861.28
+     ]
+    },
+    "lo": {
+     "rpm": 1350,
+     "g": [
+      19.05,
+      11.58,
+      25.22
+     ],
+     "w": [
+      81.71,
+      74,
+      86.05
+     ]
+    }
+   },
+   "score": 85.17319360927448,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 25,
+    "dailyGPM": 25,
+    "gpmAtCurveLow": 25.22,
+    "gpmAtCurveHigh": 64.34,
+    "wattsDaily": 85,
+    "wattsHigh": 861.28,
+    "annualKWh": 309.3781730725527,
+    "annualCostUSD": 62
+   },
+   "variants": [],
+   "rank": 6
+  },
+  {
+   "product": {
+    "id": "waterway-power-defender-140-pd-140abg",
+    "brand": "Waterway",
+    "model": "Waterway Power Defender 140 PD-140ABG",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1.4,
+    "nhp": 1.4,
+    "wef": 10.91359577,
+    "frame": null,
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      52.44,
+      31.7,
+      69.07
+     ],
+     "w": [
+      917.61,
+      745.86,
+      1048.21
+     ]
+    },
+    "lo": {
+     "rpm": 1238,
+     "g": [
+      18.818,
+      11.375,
+      24.79
+     ],
+     "w": [
+      68.435,
+      60.499,
+      74.47
+     ]
+    }
+   },
+   "score": 85.06488020251496,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 25,
+    "dailyGPM": 25,
+    "gpmAtCurveLow": 24.79,
+    "gpmAtCurveHigh": 69.07,
+    "wattsDaily": 76,
+    "wattsHigh": 1048.21,
+    "annualKWh": 276.23113374850396,
+    "annualCostUSD": 55
+   },
+   "variants": [],
+   "rank": 7
+  },
+  {
+   "product": {
+    "id": "hayward-maxflo-vs-w3sp2303vsp",
+    "brand": "Hayward",
+    "model": "Hayward MaxFlo VS W3SP2303VSP",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1.65,
+    "nhp": 1.65,
+    "wef": 11.00407031,
+    "frame": "48",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      51.15,
+      31.73,
+      64.78
+     ],
+     "w": [
+      933.13,
+      834.42,
+      956.42
+     ]
+    },
+    "lo": {
+     "rpm": 1350,
+     "g": [
+      19.57,
+      12.34,
+      24.88
+     ],
+     "w": [
+      80.07,
+      74.81,
+      82.26
+     ]
+    }
+   },
+   "score": 84.97779030315819,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 25,
+    "dailyGPM": 25,
+    "gpmAtCurveLow": 24.88,
+    "gpmAtCurveHigh": 64.78,
+    "wattsDaily": 83,
+    "wattsHigh": 956.42,
+    "annualKWh": 303.03503168418126,
+    "annualCostUSD": 61
+   },
+   "variants": [],
+   "rank": 8
+  },
+  {
+   "product": {
+    "id": "hayward-energyflo-rs-ef200vs",
+    "brand": "Hayward",
+    "model": "Hayward EnergyFlo RS EF200VS",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1.85,
+    "nhp": 1.85,
+    "wef": 9.889093357,
+    "frame": "48",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      63,
+      37,
+      85
+     ],
+     "w": [
+      1407,
+      1128,
+      1543
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      10,
+      6,
+      14
+     ],
+     "w": [
+      22,
+      20,
+      22
+     ]
+    }
+   },
+   "score": 83.80552649148736,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 25,
+    "dailyGPM": 25,
+    "gpmAtCurveLow": 14,
+    "gpmAtCurveHigh": 85,
+    "wattsDaily": 54,
+    "wattsHigh": 1543,
+    "annualKWh": 197.26602225126396,
+    "annualCostUSD": 39
+   },
+   "variants": [],
+   "rank": 9
+  },
+  {
+   "product": {
+    "id": "hayward-tristar-sp3200vsp",
+    "brand": "Hayward",
+    "model": "Hayward TriStar SP3200VSP",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1.85,
+    "nhp": 1.85,
+    "wef": 9.878303306,
+    "frame": "48",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      64,
+      38,
+      85
+     ],
+     "w": [
+      1408,
+      1128,
+      1544
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      11,
+      7,
+      14
+     ],
+     "w": [
+      22,
+      21,
+      22
+     ]
+    }
+   },
+   "score": 83.78317738210899,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 25,
+    "dailyGPM": 25,
+    "gpmAtCurveLow": 14,
+    "gpmAtCurveHigh": 85,
+    "wattsDaily": 54,
+    "wattsHigh": 1544,
+    "annualKWh": 197.34292298910168,
+    "annualCostUSD": 39
+   },
+   "variants": [],
+   "rank": 10
+  },
+  {
+   "product": {
+    "id": "hayward-hl32900vsp",
+    "brand": "Hayward",
+    "model": "Hayward HL32900VSP",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1.85,
+    "nhp": 1.85,
+    "wef": 9.870840606,
+    "frame": "48",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      64,
+      38,
+      85
+     ],
+     "w": [
+      1408,
+      1128,
+      1543
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      11,
+      7,
+      14
+     ],
+     "w": [
+      22,
+      21,
+      23
+     ]
+    }
+   },
+   "score": 83.73328999686574,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 25,
+    "dailyGPM": 25,
+    "gpmAtCurveLow": 14,
+    "gpmAtCurveHigh": 85,
+    "wattsDaily": 55,
+    "wattsHigh": 1543,
+    "annualKWh": 200.8391215134262,
+    "annualCostUSD": 40
+   },
+   "variants": [
+    "Hayward TriStar SP3200VSPND"
+   ],
+   "rank": 11
+  },
+  {
+   "product": {
+    "id": "hayward-tristar-sp3202vsp",
+    "brand": "Hayward",
+    "model": "Hayward TriStar SP3202VSP",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1.85,
+    "nhp": 1.85,
+    "wef": 9.866146174,
+    "frame": "48",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      64,
+      38,
+      85
+     ],
+     "w": [
+      1408,
+      1128,
+      1544
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      11,
+      7,
+      14
+     ],
+     "w": [
+      22,
+      21,
+      23
+     ]
+    }
+   },
+   "score": 83.72313212548737,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 25,
+    "dailyGPM": 25,
+    "gpmAtCurveLow": 14,
+    "gpmAtCurveHigh": 85,
+    "wattsDaily": 55,
+    "wattsHigh": 1544,
+    "annualKWh": 200.91602225126397,
+    "annualCostUSD": 40
+   },
+   "variants": [
+    "Hayward TriStar SP3202VSPBH",
+    "Hayward TriStar SP3202VSPND",
+    "Hayward TriStar SP32900VSP",
+    "Hayward TriStar VS 900 HL32900VSP"
+   ],
+   "rank": 12
+  }
+ ],
+ "warnings": [
+  {
+   "code": "PIPE_OK",
+   "severity": "info",
+   "ruleId": "PLUMBING_SIZE_GUIDANCE",
+   "text": "2″ plumbing carries about 63 GPM suction / 84 GPM return within the velocity limits."
+  },
+  {
+   "code": "SWG_FLOW_SWITCH_OK",
+   "severity": "info",
+   "ruleId": "SWG_FLOW_SWITCH",
+   "text": "Salt cell flow switch needs roughly 25 GPM through a 2″ tee; this pump stays above that even at low speed."
+  },
+  {
+   "code": "WARRANTY_CHECK",
+   "severity": "info",
+   "ruleId": "WARRANTY_CHECK",
+   "text": "Before you buy: check the warranty. Internet purchases and owner installation can void coverage on some brands, a few require a certified installer, and most require product registration. Bundled purchases with professional install sometimes carry a longer warranty."
+  }
+ ],
+ "repairOptions": [],
+ "curve": "C"
+}

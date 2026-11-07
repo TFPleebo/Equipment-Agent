@@ -1,0 +1,42 @@
+{
+  "id": "swg-measured-fc-loss",
+  "title": "SWG: 20k gal with measured FC loss of 2.5 ppm/day (PoolMath input)",
+  "mode": "swg",
+  "profile": {
+    "poolType": "inground-plaster",
+    "pipe": "2",
+    "automation": "none",
+    "voltage": "230",
+    "climate": "hot_sunny",
+    "gallons": 20000,
+    "fcLossPpm": 2.5,
+    "failure": "first",
+    "runtime": 8,
+    "cycle": "long"
+  },
+  "expect": {
+    "requiredLbs": 1.4,
+    "lbsNeeded": 0.417,
+    "ppm": 2.5,
+    "runtime": 8,
+    "top": [
+      "pureline-crystal-pure-60",
+      "circupool-rj60",
+      "circupool-rj60p",
+      "circupool-core55",
+      "pentair-ic-60"
+    ],
+    "topRequiredOutputPct": 39,
+    "comparison": null,
+    "warnings": [
+      "PIPE_OK",
+      "DATA_QUALITY_FLAG",
+      "SWG_FLOW_SWITCH",
+      "SWG_CYA_CELL_LIFE",
+      "CELL_LIFE",
+      "FC_LOSS_MEASURED",
+      "WARRANTY_CHECK"
+    ],
+    "repairOptions": []
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "pump-cartridge-guideline",
+  "title": "Pump: 6-jet spa on a 150 sq ft cartridge (rated OK, above 0.375 guideline)",
+  "mode": "pump",
+  "profile": {
+    "poolType": "inground-plaster",
+    "pipe": "2",
+    "automation": "none",
+    "voltage": "230",
+    "climate": "warm",
+    "gallons": 18000,
+    "spa": true,
+    "spaJets": 6,
+    "failure": "efficiency",
+    "rate": 0.17,
+    "runtime": 8,
+    "filterType": "cartridge",
+    "filterSize": 150
+  },
+  "expect": {
+    "requiredGPM": 90,
+    "dailyGPM": 15,
+    "featureGPM": 90,
+    "minDriver": "skimmer 15 GPM",
+    "curve": "C",
+    "top": [
+      "speck-badu-ecomv-72-v-2-7",
+      "jandy-epump-vs-jep-2-0",
+      "hayward-tristar-sp32950vsp",
+      "pentair-011060",
+      "pentair-intelliflo-i2-vs-011060"
+    ],
+    "topAnnualCostUSD": 144,
+    "comparison": null,
+    "warnings": [
+      "PIPE_OK",
+      "FILTER_FLOW_GUIDELINE",
+      "WARRANTY_CHECK"
+    ],
+    "repairOptions": []
+  }
+}

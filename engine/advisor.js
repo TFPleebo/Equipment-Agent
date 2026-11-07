@@ -210,7 +210,12 @@ function createAdvisor(data) {
   /* ---------------- SWG ENGINE ---------------- */
   function swgEngine(p){
     const requiredLbs = 0.7 * (p.gallons/10000);
-    const ppm = FC_BY_CLIMATE[p.climate] ?? FC_BY_CLIMATE.warm ?? 3;
+    // Daily chlorine demand: the owner's MEASURED daily FC loss (e.g. from PoolMath logs) beats the
+    // regional default. Accepts ppm/day; ignored if missing or out of a sane range.
+    const FD=RULES.FC_DEMAND_DEFAULTS.value;
+    const measured = (typeof p.fcLossPpm==='number' && p.fcLossPpm>=FD.measuredRange[0] && p.fcLossPpm<=FD.measuredRange[1]) ? p.fcLossPpm : null;
+    const ppm = measured ?? FC_BY_CLIMATE[p.climate] ?? FC_BY_CLIMATE.warm ?? 3;
+    const ppmSource = measured!=null ? 'measured' : 'climate';
     const lbsNeeded = p.gallons * ppm * 8.34e-6; // daily FC demand in lbs Cl2
     const runtime = p.runtime||8;
     const warnings=[];
@@ -335,7 +340,8 @@ function createAdvisor(data) {
     let comparison=null;
     const curS = p.currentSwgId ? DATA.swg.find(x=>x.id===p.currentSwgId) : null;
     if(curS && out.length){
-      const curDerate=(curS.dq==='conflicting-sources'||curS.dq==='advertised-output-disputed')?0.75:1;
+      // Same output basis as the rankings, so the before/after is apples to apples.
+      const curDerate=RULES.SWG_OUTPUT_HAIRCUT.value.defaultDeratingFactor;
       const curEff=curS.lbs*curDerate;
       const curPct = curEff>0 ? (lbsNeeded/(curEff*(runtime/24)))*100 : 999;
       const top=out[0];
@@ -348,7 +354,11 @@ function createAdvisor(data) {
         pctDrop: (curPct<900&&top.computed.requiredOutputPct!=null) ? Math.round(curPct-top.computed.requiredOutputPct) : null
       };
     }
-    return {mode:'swg',requiredLbs:round2(requiredLbs),lbsNeeded:round3(lbsNeeded),ppm,runtime,
+    if(measured!=null) warnings.push({code:'FC_LOSS_MEASURED',severity:'good',ruleId:'FC_DEMAND_DEFAULTS',
+      text:`Using your measured chlorine loss of ${measured} ppm/day instead of the regional default, so output percentages reflect your pool.`});
+    else warnings.push({code:'FC_LOSS_ESTIMATED',severity:'info',ruleId:'FC_DEMAND_DEFAULTS',
+      text:`Chlorine demand is estimated at ${ppm} ppm/day for your climate. If you track your daily FC loss (an overnight FC loss test, or your PoolMath logs), entering it makes the output percentages specific to your pool.`});
+    return {mode:'swg',requiredLbs:round2(requiredLbs),lbsNeeded:round3(lbsNeeded),ppm,ppmSource,runtime,
       comparison,recommendations:out.slice(0,12),warnings,repairOptions};
   }
 

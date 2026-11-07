@@ -3,6 +3,7 @@
  "requiredLbs": 1.26,
  "lbsNeeded": 0.45,
  "ppm": 3,
+ "ppmSource": "climate",
  "runtime": 8,
  "comparison": null,
  "recommendations": [
@@ -834,6 +835,12 @@
    "severity": "info",
    "ruleId": "CELL_LIFE",
    "text": "Cell life is measured in generating hours — roughly 10,000 for OEM cells, nearer 7,000 for generics (some offshore cells as low as 3,000). At about 42% output the top pick spends most of the day idle, which is exactly why TFP says to oversize."
+  },
+  {
+   "code": "FC_LOSS_ESTIMATED",
+   "severity": "info",
+   "ruleId": "FC_DEMAND_DEFAULTS",
+   "text": "Chlorine demand is estimated at 3 ppm/day for your climate. If you track your daily FC loss (an overnight FC loss test, or your PoolMath logs), entering it makes the output percentages specific to your pool."
   },
   {
    "code": "WARRANTY_CHECK",

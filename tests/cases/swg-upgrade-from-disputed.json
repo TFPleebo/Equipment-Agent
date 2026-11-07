@@ -1,0 +1,47 @@
+{
+  "id": "swg-upgrade-from-disputed",
+  "title": "SWG: replacing a CircuPool RJ30+ (output disputed) on 25k gal",
+  "mode": "swg",
+  "profile": {
+    "poolType": "inground-plaster",
+    "pipe": "2",
+    "automation": "none",
+    "voltage": "230",
+    "climate": "warm",
+    "gallons": 25000,
+    "failure": "more-capacity",
+    "currentSwgId": "circupool-rj30p",
+    "runtime": 8,
+    "cycle": "long"
+  },
+  "expect": {
+    "requiredLbs": 1.75,
+    "lbsNeeded": 0.626,
+    "ppm": 3,
+    "runtime": 8,
+    "top": [
+      "circupool-core55",
+      "pureline-crystal-pure-60",
+      "circupool-rj60",
+      "circupool-rj60p",
+      "pentair-ic-60"
+    ],
+    "topRequiredOutputPct": 82,
+    "comparison": {
+      "capacityFactor": 1.53,
+      "pctDrop": 43
+    },
+    "warnings": [
+      "PIPE_OK",
+      "DATA_QUALITY_FLAG",
+      "SWG_FLOW_SWITCH",
+      "AQUARITE_CELL_TYPE",
+      "SWG_CYA_CELL_LIFE",
+      "CELL_LIFE",
+      "SWG_RUNTIME_TRADEOFF",
+      "FC_LOSS_ESTIMATED",
+      "WARRANTY_CHECK"
+    ],
+    "repairOptions": []
+  }
+}

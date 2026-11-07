@@ -1,0 +1,45 @@
+{
+  "id": "pump-replace-two-speed",
+  "title": "Pump: replacing a two-speed pump (fixed speeds, no throttling), salt cell",
+  "mode": "pump",
+  "profile": {
+    "poolType": "inground-plaster",
+    "pipe": "2",
+    "automation": "none",
+    "voltage": "230",
+    "climate": "warm",
+    "gallons": 20000,
+    "hasSWG": true,
+    "failure": "dead-motor",
+    "currentPumpId": "hayward-ef2002",
+    "currentPump": "Hayward EF2002",
+    "rate": 0.2,
+    "runtime": 10
+  },
+  "expect": {
+    "requiredGPM": 25,
+    "dailyGPM": 25,
+    "featureGPM": 0,
+    "minDriver": "salt cell flow switch 25 GPM",
+    "curve": "C",
+    "top": [
+      "speck-badu-pro-ii-e-vsp",
+      "hayward-hl2350020vsp",
+      "davey-silensor-sp200btp",
+      "bluewave-ne9882",
+      "bluewave-ne9881"
+    ],
+    "topAnnualCostUSD": 54,
+    "comparison": {
+      "kWhSaved": 1100,
+      "costSaved": 220,
+      "pctSaved": 80
+    },
+    "warnings": [
+      "PIPE_OK",
+      "SWG_FLOW_SWITCH_OK",
+      "WARRANTY_CHECK"
+    ],
+    "repairOptions": []
+  }
+}
