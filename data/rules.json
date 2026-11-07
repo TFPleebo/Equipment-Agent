@@ -1,4 +1,35 @@
 {
+  "PUMP_CLASS_USE": {
+    "title": "Which kinds of pump can be recommended for which pool",
+    "value": {
+      "defaultClass": "inground",
+      "inground": [
+        "inground"
+      ],
+      "agp": [
+        "agp",
+        "inground",
+        "inflatable"
+      ],
+      "inflatableMaxGallons": 5000,
+      "neverRecommended": [
+        "booster",
+        "waterfall",
+        "pond"
+      ],
+      "classes": {
+        "inground": "self-priming pool filter pump",
+        "agp": "non-self-priming (above-ground) pool filter pump",
+        "inflatable": "integral cartridge/sand-filter pump for inflatable and frame pools",
+        "booster": "pressure-cleaner booster pump",
+        "waterfall": "waterfall pump",
+        "pond": "pond/water-feature pump"
+      },
+      "note": "Class comes from the CEC 'Dedicated-Purpose Pool Pump Product Group' on import. Records with sameAs (older certifications of the same model) and status 'discontinued' remain selectable as the user's current pump but are never recommended. Legacy records without a class count as defaultClass.",
+      "reviewedBy": "pending review (proposed 2026-11)"
+    },
+    "src": "CEC/DOE dedicated-purpose pool pump product groups (10 CFR 431.462)"
+  },
   "INPUT_SCHEMA": {
     "title": "Profile fields accepted by recommend() (validation and defaults)",
     "value": {

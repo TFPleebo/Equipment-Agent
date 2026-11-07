@@ -92,6 +92,10 @@ function createAdvisor(data) {
      if(pass===2){ if(cands.length||featureGPM<=dailyGPM) break; shortfall=true; }
      for(const pump of DATA.pumps){
       const reasons=[];
+      // Only buyable, current records of a class that suits this pool (rule PUMP_CLASS_USE):
+      // older certifications of the same model (sameAs) and discontinued models stay in the
+      // catalog for "your current pump" but are never recommended.
+      if(!pumpUsable(pump,p)) continue;
       // DOE: the specification is hydraulic horsepower, not THP. Use HHP where published;
       // fall back to the rough THP proxy only when HHP is missing.
       const DOE=RULES.VS_REQUIRED_ABOVE_THP.value;
@@ -441,6 +445,16 @@ function createAdvisor(data) {
     return Math.min(Math.max(wLo*Math.pow(target/gLo,3),0),wHi);
   }
   // Can this pump run at (or near) the daily minimum flow, rather than well above it?
+  // Can this catalog pump be recommended for this pool? (rule PUMP_CLASS_USE)
+  function pumpUsable(pump,p){
+    if(pump.sameAs) return false;                       // an older certification of another record
+    if(pump.status==='discontinued') return false;      // can't be bought new
+    const U=RULES.PUMP_CLASS_USE.value, cls=pump.class||U.defaultClass;
+    const allowed = p.poolType==='agp' ? U.agp : U.inground;
+    if(!allowed.includes(cls)) return false;
+    if(cls==='inflatable' && !(p.gallons<=U.inflatableMaxGallons)) return false;
+    return true;
+  }
   function canRunAtDailyFlow(st,gLo,dailyGPM){
     if(gLo==null) return false;
     if(st==='VS') return gLo<=dailyGPM+2;              // VS can slow down to it

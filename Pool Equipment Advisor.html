@@ -627,8 +627,9 @@ function stepPumpFailure(){
   sc.append(fldHelp('Search your current pump (optional)','Current pump','Pick your existing pump and we\u2019ll show how much energy and money a new one would save each year. Skip it if you don\u2019t know \u2014 recommendations still work.'));
   const stName={SS:'Single-speed',DS:'Two-speed',MS:'Multi-speed',VS:'Variable-speed'};
   sc.append(modelPicker(
-    DATA.pumps.map(x=>({id:x.id,brand:x.brand,label:stripBrand(x.model,x.brand),
-      sub:(stName[x.st]||x.st)+(x.thp!=null?(' \u00b7 '+x.thp+' THP'):'')})),
+    // One entry per model: older certifications of the same model (sameAs) are hidden.
+    DATA.pumps.filter(x=>!x.sameAs).map(x=>({id:x.id,brand:x.brand,label:stripBrand(x.model,x.brand),
+      sub:(stName[x.st]||x.st)+(x.thp!=null?(' \u00b7 '+x.thp+' THP'):'')+(x.status==='discontinued'?' \u00b7 discontinued':'')})),
     p.currentPumpId||null,'Type a brand or model \u2014 e.g. Hayward Super Pump',
     id=>{p.currentPumpId=id; const f=id?DATA.pumps.find(z=>z.id===id):null; p.currentPump=f?pumpName(f):''; render();}));
   c.append(sc);

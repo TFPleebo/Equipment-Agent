@@ -36,7 +36,7 @@ function common(cat, list, brandKey) {
 common("pump", pumps, "brand");
 for (const p of pumps) {
   if (!["VS", "DS", "MS", "SS"].includes(p.st)) err("pump", p.id, `st must be VS/DS/MS/SS (got ${p.st})`);
-  if (p.class && !["inground", "agp", "inflatable", "pond", "booster"].includes(p.class)) err("pump", p.id, `class ${p.class} not allowed`);
+  if (p.class && !["inground", "agp", "inflatable", "pond", "booster", "waterfall"].includes(p.class)) err("pump", p.id, `class ${p.class} not allowed`);
   for (const k of ["hi", "lo"]) {
     const pt = p[k];
     if (!pt || !Array.isArray(pt.g) || !Array.isArray(pt.w) || pt.g.length !== 3 || pt.w.length !== 3) { err("pump", p.id, `${k} must have g[3] and w[3] (curves A,B,C)`); continue; }
