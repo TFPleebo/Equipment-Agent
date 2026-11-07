@@ -1,0 +1,51 @@
+{
+  "id": "filter-large-pool-parallel",
+  "title": "Filter: 60k gal pool - no single cartridge is big enough, so pairs in parallel",
+  "mode": "filter",
+  "profile": {
+    "poolType": "inground-plaster",
+    "pipe": "2",
+    "pipeIn": 2,
+    "automation": "none",
+    "climate": "warm",
+    "gallons": 60000,
+    "replacingType": "cartridge",
+    "desiredType": "recommend",
+    "failureMode": "too-small",
+    "pumpMaxGPM": 80,
+    "debris": "average",
+    "waterCost": "low"
+  },
+  "expect": {
+    "chosenType": "cartridge",
+    "min": {
+      "kind": "sqft",
+      "value": 900,
+      "target": 1200,
+      "ruleId": "FILTER_SIZING"
+    },
+    "pumpMaxGPM": 80,
+    "top": [
+      "sta-rite-system-3-s8m500",
+      "pentair-clean-clear-plus-ccp520",
+      "hayward-swimclear-c5030",
+      "sta-rite-system-3-s8m150",
+      "jandy-cv460"
+    ],
+    "sizeUp": [
+      "pentair-clean-clear-plus-ccp520"
+    ],
+    "disqualified": 6,
+    "comparison": null,
+    "warnings": [
+      "PIPE_OK",
+      "FILTER_AUTOMATION_AGNOSTIC",
+      "PARALLEL_FILTERS",
+      "WARRANTY_CHECK"
+    ],
+    "typeReasons": [
+      "FILTER_TYPE_DEFAULT_CARTRIDGE"
+    ],
+    "repairOptions": []
+  }
+}

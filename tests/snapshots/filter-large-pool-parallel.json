@@ -1,0 +1,714 @@
+{
+ "mode": "filter",
+ "chosenType": "cartridge",
+ "typeReasons": [
+  {
+   "code": "FILTER_TYPE_DEFAULT_CARTRIDGE",
+   "severity": "good",
+   "ruleId": "FILTER_TYPE_RECOMMENDATION",
+   "text": "Cartridge is TFP’s general-purpose pick: good clarity, no backwash, pairs well with VS pumps."
+  }
+ ],
+ "min": {
+  "kind": "sqft",
+  "value": 900,
+  "target": 1200,
+  "ruleId": "FILTER_SIZING"
+ },
+ "pumpMaxGPM": 80,
+ "comparison": null,
+ "recommendations": [
+  {
+   "product": {
+    "id": "sta-rite-system-3-s8m500",
+    "brand": "Sta-Rite",
+    "model": "System 3 S8M500",
+    "ft": "cartridge",
+    "area": 500,
+    "tank": null,
+    "bed": null,
+    "gpm": 130,
+    "mic": null,
+    "port": 2,
+    "cart": "Pentair 170148; inner 25021-0224S (209 sq ft) + outer 25022-0225S (291 sq ft)",
+    "psi": 50,
+    "dq": "verified"
+   },
+   "units": 2,
+   "score": 105.22222222222221,
+   "reasons": [
+    {
+     "code": "FILTER_PARALLEL",
+     "severity": "info",
+     "ruleId": "FILTER_PARALLEL_UNITS",
+     "text": "Two of these plumbed in parallel: 1000 sq ft in total, handling ~260 GPM combined."
+    },
+    {
+     "code": "FILTER_SIZE_OK",
+     "severity": "good",
+     "ruleId": "FILTER_SIZING",
+     "text": "Together meet the 900 sq ft minimum."
+    },
+    {
+     "code": "FILTER_FLOW_OK",
+     "severity": "good",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Handles ~260 GPM ≥ your pump's ~80 GPM."
+    },
+    {
+     "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "severity": "info",
+     "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+    },
+    {
+     "code": "CART_ELEMENT",
+     "severity": "info",
+     "ruleId": "FILTER_REPAIR_FACTS",
+     "text": "Replacement element: Pentair 170148; inner 25021-0224S (209 sq ft) + outer 25022-0225S (291 sq ft)."
+    }
+   ],
+   "fit": {
+    "meetsMinSize": true,
+    "flowOk": true,
+    "portOk": true,
+    "withinBudget": true
+   },
+   "derated": false,
+   "computed": {
+    "minRequired": 900,
+    "candidateSize": 1000,
+    "candidateMaxGPM": 260,
+    "pumpMaxGPM": 80,
+    "oversizeRatio": 1.11
+   },
+   "rank": 1
+  },
+  {
+   "product": {
+    "id": "pentair-clean-clear-plus-ccp520",
+    "brand": "Pentair",
+    "model": "Clean & Clear Plus CCP520",
+    "ft": "cartridge",
+    "area": 520,
+    "tank": null,
+    "bed": null,
+    "gpm": 150,
+    "mic": null,
+    "port": 2,
+    "cart": "Pentair 179136 / Pleatco ULTRA-A7-PAK4 / Unicel C-7472-4",
+    "psi": 50,
+    "dq": "verified"
+   },
+   "units": 2,
+   "score": 104.11111111111111,
+   "reasons": [
+    {
+     "code": "FILTER_PARALLEL",
+     "severity": "info",
+     "ruleId": "FILTER_PARALLEL_UNITS",
+     "text": "Two of these plumbed in parallel: 1040 sq ft in total, handling ~300 GPM combined."
+    },
+    {
+     "code": "FILTER_SIZE_OK",
+     "severity": "good",
+     "ruleId": "FILTER_SIZING",
+     "text": "Together meet the 900 sq ft minimum."
+    },
+    {
+     "code": "FILTER_FLOW_OK",
+     "severity": "good",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Handles ~300 GPM ≥ your pump's ~80 GPM."
+    },
+    {
+     "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "severity": "info",
+     "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+    },
+    {
+     "code": "CART_ELEMENT",
+     "severity": "info",
+     "ruleId": "FILTER_REPAIR_FACTS",
+     "text": "Replacement element: Pentair 179136 / Pleatco ULTRA-A7-PAK4 / Unicel C-7472-4."
+    }
+   ],
+   "fit": {
+    "meetsMinSize": true,
+    "flowOk": true,
+    "portOk": true,
+    "withinBudget": true
+   },
+   "derated": false,
+   "computed": {
+    "minRequired": 900,
+    "candidateSize": 1040,
+    "candidateMaxGPM": 300,
+    "pumpMaxGPM": 80,
+    "oversizeRatio": 1.16
+   },
+   "rank": 2,
+   "sizeUp": true
+  },
+  {
+   "product": {
+    "id": "hayward-swimclear-c5030",
+    "brand": "Hayward",
+    "model": "SwimClear C5030",
+    "ft": "cartridge",
+    "area": 525,
+    "tank": null,
+    "bed": null,
+    "gpm": 150,
+    "mic": null,
+    "port": 2,
+    "cart": "Hayward CX1280XREPAK4",
+    "psi": 50,
+    "dq": "verified"
+   },
+   "units": 2,
+   "score": 103.83333333333333,
+   "reasons": [
+    {
+     "code": "FILTER_PARALLEL",
+     "severity": "info",
+     "ruleId": "FILTER_PARALLEL_UNITS",
+     "text": "Two of these plumbed in parallel: 1050 sq ft in total, handling ~300 GPM combined."
+    },
+    {
+     "code": "FILTER_SIZE_OK",
+     "severity": "good",
+     "ruleId": "FILTER_SIZING",
+     "text": "Together meet the 900 sq ft minimum."
+    },
+    {
+     "code": "FILTER_FLOW_OK",
+     "severity": "good",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Handles ~300 GPM ≥ your pump's ~80 GPM."
+    },
+    {
+     "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "severity": "info",
+     "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+    },
+    {
+     "code": "CART_ELEMENT",
+     "severity": "info",
+     "ruleId": "FILTER_REPAIR_FACTS",
+     "text": "Replacement element: Hayward CX1280XREPAK4."
+    }
+   ],
+   "fit": {
+    "meetsMinSize": true,
+    "flowOk": true,
+    "portOk": true,
+    "withinBudget": true
+   },
+   "derated": false,
+   "computed": {
+    "minRequired": 900,
+    "candidateSize": 1050,
+    "candidateMaxGPM": 300,
+    "pumpMaxGPM": 80,
+    "oversizeRatio": 1.17
+   },
+   "rank": 3
+  },
+  {
+   "product": {
+    "id": "sta-rite-system-3-s8m150",
+    "brand": "Sta-Rite",
+    "model": "System 3 S8M150",
+    "ft": "cartridge",
+    "area": 450,
+    "tank": null,
+    "bed": null,
+    "gpm": 124,
+    "mic": null,
+    "port": 2,
+    "cart": "Pentair 170147; inner 25021-0202S (191 sq ft) + outer 25022-0203S (259 sq ft)",
+    "psi": 50,
+    "dq": "verified"
+   },
+   "units": 2,
+   "score": 102,
+   "reasons": [
+    {
+     "code": "FILTER_PARALLEL",
+     "severity": "info",
+     "ruleId": "FILTER_PARALLEL_UNITS",
+     "text": "Two of these plumbed in parallel: 900 sq ft in total, handling ~248 GPM combined."
+    },
+    {
+     "code": "FILTER_SIZE_OK",
+     "severity": "good",
+     "ruleId": "FILTER_SIZING",
+     "text": "Together meet the 900 sq ft minimum."
+    },
+    {
+     "code": "FILTER_FLOW_OK",
+     "severity": "good",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Handles ~248 GPM ≥ your pump's ~80 GPM."
+    },
+    {
+     "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "severity": "info",
+     "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+    },
+    {
+     "code": "CART_ELEMENT",
+     "severity": "info",
+     "ruleId": "FILTER_REPAIR_FACTS",
+     "text": "Replacement element: Pentair 170147; inner 25021-0202S (191 sq ft) + outer 25022-0203S (259 sq ft)."
+    }
+   ],
+   "fit": {
+    "meetsMinSize": true,
+    "flowOk": true,
+    "portOk": true,
+    "withinBudget": true
+   },
+   "derated": false,
+   "computed": {
+    "minRequired": 900,
+    "candidateSize": 900,
+    "candidateMaxGPM": 248,
+    "pumpMaxGPM": 80,
+    "oversizeRatio": 1
+   },
+   "rank": 4
+  },
+  {
+   "product": {
+    "id": "jandy-cv460",
+    "brand": "Jandy",
+    "model": "CV460",
+    "ft": "cartridge",
+    "area": 460,
+    "tank": null,
+    "bed": null,
+    "gpm": 150,
+    "mic": null,
+    "port": 2,
+    "cart": null,
+    "psi": 50,
+    "dq": "partial"
+   },
+   "units": 2,
+   "score": 96.64444444444445,
+   "reasons": [
+    {
+     "code": "FILTER_PARALLEL",
+     "severity": "info",
+     "ruleId": "FILTER_PARALLEL_UNITS",
+     "text": "Two of these plumbed in parallel: 920 sq ft in total, handling ~300 GPM combined."
+    },
+    {
+     "code": "FILTER_SIZE_OK",
+     "severity": "good",
+     "ruleId": "FILTER_SIZING",
+     "text": "Together meet the 900 sq ft minimum."
+    },
+    {
+     "code": "FILTER_FLOW_OK",
+     "severity": "good",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Handles ~300 GPM ≥ your pump's ~80 GPM."
+    },
+    {
+     "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "severity": "info",
+     "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+    }
+   ],
+   "fit": {
+    "meetsMinSize": true,
+    "flowOk": true,
+    "portOk": true,
+    "withinBudget": true
+   },
+   "derated": false,
+   "computed": {
+    "minRequired": 900,
+    "candidateSize": 920,
+    "candidateMaxGPM": 300,
+    "pumpMaxGPM": 80,
+    "oversizeRatio": 1.02
+   },
+   "rank": 5
+  },
+  {
+   "product": {
+    "id": "jandy-cl460",
+    "brand": "Jandy",
+    "model": "CL460",
+    "ft": "cartridge",
+    "area": 460,
+    "tank": null,
+    "bed": null,
+    "gpm": 150,
+    "mic": null,
+    "port": 2,
+    "cart": null,
+    "psi": 50,
+    "dq": "partial"
+   },
+   "units": 2,
+   "score": 96.64444444444445,
+   "reasons": [
+    {
+     "code": "FILTER_PARALLEL",
+     "severity": "info",
+     "ruleId": "FILTER_PARALLEL_UNITS",
+     "text": "Two of these plumbed in parallel: 920 sq ft in total, handling ~300 GPM combined."
+    },
+    {
+     "code": "FILTER_SIZE_OK",
+     "severity": "good",
+     "ruleId": "FILTER_SIZING",
+     "text": "Together meet the 900 sq ft minimum."
+    },
+    {
+     "code": "FILTER_FLOW_OK",
+     "severity": "good",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Handles ~300 GPM ≥ your pump's ~80 GPM."
+    },
+    {
+     "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "severity": "info",
+     "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+    }
+   ],
+   "fit": {
+    "meetsMinSize": true,
+    "flowOk": true,
+    "portOk": true,
+    "withinBudget": true
+   },
+   "derated": false,
+   "computed": {
+    "minRequired": 900,
+    "candidateSize": 920,
+    "candidateMaxGPM": 300,
+    "pumpMaxGPM": 80,
+    "oversizeRatio": 1.02
+   },
+   "rank": 6
+  },
+  {
+   "product": {
+    "id": "jandy-cv580",
+    "brand": "Jandy",
+    "model": "CV580",
+    "ft": "cartridge",
+    "area": 580,
+    "tank": null,
+    "bed": null,
+    "gpm": 150,
+    "mic": null,
+    "port": 2,
+    "cart": null,
+    "psi": 50,
+    "dq": "partial"
+   },
+   "units": 2,
+   "score": 95.97777777777777,
+   "reasons": [
+    {
+     "code": "FILTER_PARALLEL",
+     "severity": "info",
+     "ruleId": "FILTER_PARALLEL_UNITS",
+     "text": "Two of these plumbed in parallel: 1160 sq ft in total, handling ~300 GPM combined."
+    },
+    {
+     "code": "FILTER_SIZE_OK",
+     "severity": "good",
+     "ruleId": "FILTER_SIZING",
+     "text": "Together meet the 900 sq ft minimum."
+    },
+    {
+     "code": "FILTER_FLOW_OK",
+     "severity": "good",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Handles ~300 GPM ≥ your pump's ~80 GPM."
+    },
+    {
+     "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "severity": "info",
+     "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+    }
+   ],
+   "fit": {
+    "meetsMinSize": true,
+    "flowOk": true,
+    "portOk": true,
+    "withinBudget": true
+   },
+   "derated": false,
+   "computed": {
+    "minRequired": 900,
+    "candidateSize": 1160,
+    "candidateMaxGPM": 300,
+    "pumpMaxGPM": 80,
+    "oversizeRatio": 1.29
+   },
+   "rank": 7
+  },
+  {
+   "product": {
+    "id": "jandy-cl580",
+    "brand": "Jandy",
+    "model": "CL580",
+    "ft": "cartridge",
+    "area": 580,
+    "tank": null,
+    "bed": null,
+    "gpm": 150,
+    "mic": null,
+    "port": 2,
+    "cart": null,
+    "psi": 50,
+    "dq": "partial"
+   },
+   "units": 2,
+   "score": 95.97777777777777,
+   "reasons": [
+    {
+     "code": "FILTER_PARALLEL",
+     "severity": "info",
+     "ruleId": "FILTER_PARALLEL_UNITS",
+     "text": "Two of these plumbed in parallel: 1160 sq ft in total, handling ~300 GPM combined."
+    },
+    {
+     "code": "FILTER_SIZE_OK",
+     "severity": "good",
+     "ruleId": "FILTER_SIZING",
+     "text": "Together meet the 900 sq ft minimum."
+    },
+    {
+     "code": "FILTER_FLOW_OK",
+     "severity": "good",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Handles ~300 GPM ≥ your pump's ~80 GPM."
+    },
+    {
+     "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "severity": "info",
+     "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+    }
+   ],
+   "fit": {
+    "meetsMinSize": true,
+    "flowOk": true,
+    "portOk": true,
+    "withinBudget": true
+   },
+   "derated": false,
+   "computed": {
+    "minRequired": 900,
+    "candidateSize": 1160,
+    "candidateMaxGPM": 300,
+    "pumpMaxGPM": 80,
+    "oversizeRatio": 1.29
+   },
+   "rank": 8
+  }
+ ],
+ "disqualified": [
+  {
+   "product": {
+    "id": "hayward-swimclear-c7030",
+    "brand": "Hayward",
+    "model": "SwimClear C7030",
+    "ft": "cartridge",
+    "area": 700,
+    "tank": null,
+    "bed": null,
+    "gpm": 150,
+    "mic": null,
+    "port": 2,
+    "cart": "Hayward CX591XREPAK4 (two four-packs / eight elements)",
+    "psi": 50,
+    "dq": "verified"
+   },
+   "reason": {
+    "code": "FILTER_UNDERSIZED",
+    "severity": "blocker",
+    "ruleId": "FILTER_SIZING",
+    "text": "Below the 900 sq ft minimum (this is 700 sq ft)."
+   }
+  },
+  {
+   "product": {
+    "id": "jandy-cv580",
+    "brand": "Jandy",
+    "model": "CV580",
+    "ft": "cartridge",
+    "area": 580,
+    "tank": null,
+    "bed": null,
+    "gpm": 150,
+    "mic": null,
+    "port": 2,
+    "cart": null,
+    "psi": 50,
+    "dq": "partial"
+   },
+   "reason": {
+    "code": "FILTER_UNDERSIZED",
+    "severity": "blocker",
+    "ruleId": "FILTER_SIZING",
+    "text": "Below the 900 sq ft minimum (this is 580 sq ft)."
+   }
+  },
+  {
+   "product": {
+    "id": "jandy-cl580",
+    "brand": "Jandy",
+    "model": "CL580",
+    "ft": "cartridge",
+    "area": 580,
+    "tank": null,
+    "bed": null,
+    "gpm": 150,
+    "mic": null,
+    "port": 2,
+    "cart": null,
+    "psi": 50,
+    "dq": "partial"
+   },
+   "reason": {
+    "code": "FILTER_UNDERSIZED",
+    "severity": "blocker",
+    "ruleId": "FILTER_SIZING",
+    "text": "Below the 900 sq ft minimum (this is 580 sq ft)."
+   }
+  },
+  {
+   "product": {
+    "id": "hayward-swimclear-c5030",
+    "brand": "Hayward",
+    "model": "SwimClear C5030",
+    "ft": "cartridge",
+    "area": 525,
+    "tank": null,
+    "bed": null,
+    "gpm": 150,
+    "mic": null,
+    "port": 2,
+    "cart": "Hayward CX1280XREPAK4",
+    "psi": 50,
+    "dq": "verified"
+   },
+   "reason": {
+    "code": "FILTER_UNDERSIZED",
+    "severity": "blocker",
+    "ruleId": "FILTER_SIZING",
+    "text": "Below the 900 sq ft minimum (this is 525 sq ft)."
+   }
+  },
+  {
+   "product": {
+    "id": "pentair-clean-clear-plus-ccp520",
+    "brand": "Pentair",
+    "model": "Clean & Clear Plus CCP520",
+    "ft": "cartridge",
+    "area": 520,
+    "tank": null,
+    "bed": null,
+    "gpm": 150,
+    "mic": null,
+    "port": 2,
+    "cart": "Pentair 179136 / Pleatco ULTRA-A7-PAK4 / Unicel C-7472-4",
+    "psi": 50,
+    "dq": "verified"
+   },
+   "reason": {
+    "code": "FILTER_UNDERSIZED",
+    "severity": "blocker",
+    "ruleId": "FILTER_SIZING",
+    "text": "Below the 900 sq ft minimum (this is 520 sq ft)."
+   }
+  },
+  {
+   "product": {
+    "id": "sta-rite-system-3-s8m500",
+    "brand": "Sta-Rite",
+    "model": "System 3 S8M500",
+    "ft": "cartridge",
+    "area": 500,
+    "tank": null,
+    "bed": null,
+    "gpm": 130,
+    "mic": null,
+    "port": 2,
+    "cart": "Pentair 170148; inner 25021-0224S (209 sq ft) + outer 25022-0225S (291 sq ft)",
+    "psi": 50,
+    "dq": "verified"
+   },
+   "reason": {
+    "code": "FILTER_UNDERSIZED",
+    "severity": "blocker",
+    "ruleId": "FILTER_SIZING",
+    "text": "Below the 900 sq ft minimum (this is 500 sq ft)."
+   }
+  }
+ ],
+ "alternatives": [
+  {
+   "product": {
+    "id": "pentair-clean-clear-plus-ccp520",
+    "brand": "Pentair",
+    "model": "Clean & Clear Plus CCP520",
+    "ft": "cartridge",
+    "area": 520,
+    "tank": null,
+    "bed": null,
+    "gpm": 150,
+    "mic": null,
+    "port": 2,
+    "cart": "Pentair 179136 / Pleatco ULTRA-A7-PAK4 / Unicel C-7472-4",
+    "psi": 50,
+    "dq": "verified"
+   },
+   "label": "size-up"
+  }
+ ],
+ "repairOptions": [],
+ "warnings": [
+  {
+   "code": "PIPE_OK",
+   "severity": "info",
+   "ruleId": "PLUMBING_SIZE_GUIDANCE",
+   "text": "2″ plumbing carries about 63 GPM suction / 84 GPM return within the velocity limits."
+  },
+  {
+   "code": "FILTER_AUTOMATION_AGNOSTIC",
+   "severity": "info",
+   "ruleId": "AUTOMATION_SAME_BRAND",
+   "text": "Filters aren’t controlled by automation, so brand match doesn’t matter here."
+  },
+  {
+   "code": "PARALLEL_FILTERS",
+   "severity": "warning",
+   "ruleId": "FILTER_PARALLEL_UNITS",
+   "text": "No single cartridge filter is big enough for 60,000 gallons at ~80 GPM, so these are pairs of identical filters plumbed in parallel. That's the usual setup on large pools: the flow splits between them, and you clean 2 units."
+  },
+  {
+   "code": "WARRANTY_CHECK",
+   "severity": "info",
+   "ruleId": "WARRANTY_CHECK",
+   "text": "Before you buy: check the warranty. Internet purchases and owner installation can void coverage on some brands, a few require a certified installer, and most require product registration. Bundled purchases with professional install sometimes carry a longer warranty."
+  }
+ ]
+}

@@ -1,4 +1,15 @@
 {
+  "FILTER_PARALLEL_UNITS": {
+    "title": "Multiple filters in parallel when no single unit is big enough",
+    "value": {
+      "maxUnits": 3,
+      "extraUnitPenalty": 10,
+      "largePoolGallons": 50000,
+      "behaviour": "If no single filter of the chosen type clears both the size minimum and the pump-flow gate, evaluate 2 (then up to maxUnits) identical units in parallel (area / sand bed and allowable flow multiply). Sand is compared on total bed area, since two tanks don't make a larger diameter. Above largePoolGallons, sand/DE results note that TFP's minimum stops growing at 25k gallons.",
+      "reviewedBy": "pending review (proposed 2026-11)"
+    },
+    "src": "Common large-pool practice; catalog's largest single cartridge is 700 sq ft (covers ~46k gal at the 150 sq ft/10k minimum)"
+  },
   "FEATURE_FLOW_SHORTFALL": {
     "title": "When no single pump reaches a feature's peak flow",
     "value": {

@@ -923,7 +923,7 @@ function buildPadSummary(p,plan){
   L.push(''); L.push('--- Recommended pad ---');
   const t=(r,mode)=>{const x=r.recommendations[0]; if(!x)return 'none';
     const nm=(mode==='swg')?(x.product.mfr+' '+x.product.model)
-            :(mode==='pump'?pumpName(x.product):(x.product.brand+' '+stripBrand(x.product.model,x.product.brand)));
+            :(mode==='pump'?pumpName(x.product):((x.units>1?x.units+' × ':'')+x.product.brand+' '+stripBrand(x.product.model,x.product.brand)));
     if(mode==='pump')return nm+' ('+x.product.st+', ~'+x.computed.wattsDaily+'W daily'+(x.computed.annualCostUSD!=null?(', ~$'+x.computed.annualCostUSD+'/yr'):'')+')';
     if(mode==='filter')return nm+' ('+(x.product.ft==='sand'?x.product.tank+'in tank':x.product.area+' sq ft')+', max '+x.computed.candidateMaxGPM+' GPM)';
     return nm+' ('+x.effLbs+' lb/day, '+x.computed.requiredOutputPct+'% output)';};
@@ -942,7 +942,7 @@ function recCard(rec,isTop,mode){
   const h=el('div');h.style.display='flex';h.style.gap='10px';h.style.alignItems='baseline';
   h.append(el('span','rank','#'+rec.rank));
   const tt=el('div');
-  tt.append(el('div','brand',mode==='swg'?pr.mfr:pr.brand),el('h3',null,mode==='pump'?stripBrand(pr.model,pr.brand):pr.model));
+  tt.append(el('div','brand',mode==='swg'?pr.mfr:pr.brand),el('h3',null,(rec.units>1?rec.units+' × ':'')+(mode==='pump'?stripBrand(pr.model,pr.brand):pr.model)));
   h.append(tt);c.append(h);
 
   // badges
@@ -1055,7 +1055,7 @@ function buildSummary(p,res,mode){
   }
   L.push(''); L.push('--- Top recommendations ---');
   (res.recommendations||[]).slice(0,5).forEach(r=>{
-    const pr=r.product; const nm=(mode==='swg'?pr.mfr:pr.brand)+' '+pr.model; let ln='#'+r.rank+' '+nm;
+    const pr=r.product; const nm=(r.units>1?r.units+' × ':'')+(mode==='swg'?pr.mfr:pr.brand)+' '+pr.model; let ln='#'+r.rank+' '+nm;
     if(mode==='pump'){ln+=' — '+(pr.st||'')+', ~'+(r.computed.wattsDaily==null?'?':r.computed.wattsDaily)+'W daily'+(r.computed.annualCostUSD!=null?(', ~$'+r.computed.annualCostUSD+'/yr'):'');
       if(r.variants&&r.variants.length)ln+='\n     also sold as: '+r.variants.join(', ');}
     if(mode==='swg')ln+=' — '+r.effLbs+' lb/day, needs '+r.computed.requiredOutputPct+'% output';

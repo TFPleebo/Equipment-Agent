@@ -34,6 +34,7 @@
     "psi": 50,
     "dq": "verified"
    },
+   "units": 1,
    "score": 116.33333333333333,
    "reasons": [
     {
@@ -93,6 +94,7 @@
     "psi": 50,
     "dq": "verified"
    },
+   "units": 1,
    "score": 115.22222222222221,
    "reasons": [
     {
@@ -153,6 +155,7 @@
     "psi": 50,
     "dq": "verified"
    },
+   "units": 1,
    "score": 112,
    "reasons": [
     {
@@ -212,6 +215,7 @@
     "psi": 50,
     "dq": "verified"
    },
+   "units": 1,
    "score": 109.66666666666667,
    "reasons": [
     {
@@ -271,6 +275,7 @@
     "psi": 50,
     "dq": "verified"
    },
+   "units": 1,
    "score": 109.66666666666667,
    "reasons": [
     {
@@ -330,6 +335,7 @@
     "psi": 50,
     "dq": "verified"
    },
+   "units": 1,
    "score": 105.44444444444444,
    "reasons": [
     {
@@ -395,6 +401,7 @@
     "psi": 50,
     "dq": "verified"
    },
+   "units": 1,
    "score": 104.38888888888889,
    "reasons": [
     {
@@ -460,6 +467,7 @@
     "psi": 50,
     "dq": "partial"
    },
+   "units": 1,
    "score": 96.42222222222223,
    "reasons": [
     {

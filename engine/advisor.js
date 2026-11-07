@@ -489,21 +489,30 @@ function createAdvisor(data) {
     const min=filterMinRequired(chosenType,p);
     const pumpMaxGPM=p.pumpMaxGPM||null;
     const cands=[], disq=[];
-    for(const f of DATA.filters){
-      if(f.ft!==chosenType) continue;
+    // units = 1 normally. If no single filter clears both gates (very large pools), pass 2 tries
+    // two identical filters plumbed in parallel: area/bed and allowable flow double
+    // (rule FILTER_PARALLEL_UNITS).
+    const minBed = min.kind==='diam'?Math.PI*Math.pow(min.value/2/12,2):null;
+    const PU=RULES.FILTER_PARALLEL_UNITS.value;
+    const evalFilter=(f,units)=>{
       const reasons=[]; let blocker=null;
-      const size=f.ft==='sand'?f.tank:f.area;
-      const meetsMin = size!=null && size>=min.value;
-      if(!meetsMin) blocker={code:'FILTER_UNDERSIZED',severity:'blocker',ruleId:'FILTER_SIZING',text:`Below the ${min.value}${min.kind==='diam'?'″':' sq ft'} minimum (this is ${size??'?'}${min.kind==='diam'?'″':' sq ft'}).`};
-      const allow=filterAllowGPM(f);
+      const one=f.ft==='sand'?f.tank:f.area;
+      // For sand, two tanks don't make a bigger diameter, so compare total bed area.
+      const meetsMin = one!=null && (units===1 ? one>=min.value
+        : (min.kind==='diam' ? (bedAreaOf(f)||0)*units>=minBed : one*units>=min.value));
+      const size = min.kind==='diam' ? one : (one!=null?one*units:null);   // reported size: tank dia, or total area
+      if(!meetsMin) blocker={code:'FILTER_UNDERSIZED',severity:'blocker',ruleId:'FILTER_SIZING',text:`Below the ${min.value}${min.kind==='diam'?'″':' sq ft'} minimum (this is ${one??'?'}${min.kind==='diam'?'″':' sq ft'}).`};
+      const allow1=filterAllowGPM(f), allow=allow1!=null?allow1*units:null;
       let flowOk=true;
       if(!blocker && pumpMaxGPM!=null && allow!=null && allow<pumpMaxGPM){ flowOk=false; blocker={code:'FILTER_FLOW_BOTTLENECK',severity:'blocker',ruleId:'FILTER_MUST_NOT_BOTTLENECK_PUMP',text:`Allows only ~${Math.round(allow)} GPM but your pump pushes ~${pumpMaxGPM} GPM — it would choke the flow.`}; }
-      if(blocker){ disq.push({product:f,reason:blocker}); continue; }
+      if(blocker){ if(units===1) disq.push({product:f,reason:blocker}); return; }
       let portOk=true;
       if(p.pipeIn!=null && f.port!=null && f.port<p.pipeIn){ portOk=false; reasons.push({code:'FILTER_PORT_UNDERSIZED',severity:'warning',ruleId:'FILTER_MUST_NOT_BOTTLENECK_PUMP',text:`Ports are ${f.port}″ vs your ${p.pipeIn}″ plumbing — a reducer adds some restriction.`}); }
-      const minBed = min.kind==='diam'?Math.PI*Math.pow(min.value/2/12,2):null;
-      const oversize = min.kind==='diam' ? (bedAreaOf(f)/minBed) : (f.area/min.value);
-      reasons.push({code:'FILTER_SIZE_OK',severity:'good',ruleId:'FILTER_SIZING',text:`${min.kind==='diam'?f.tank+'″ tank':f.area+' sq ft'} — ${oversize>=1.5?'comfortably above':'meets'} the ${min.value}${min.kind==='diam'?'″':' sq ft'} minimum.`});
+      const oversize = min.kind==='diam' ? ((bedAreaOf(f)||0)*units/minBed) : (one*units/min.value);
+      if(units>1) reasons.push({code:'FILTER_PARALLEL',severity:'info',ruleId:'FILTER_PARALLEL_UNITS',text:`${units===2?'Two':units===3?'Three':units} of these plumbed in parallel: ${min.kind==='diam'?round1((bedAreaOf(f)||0)*units)+' sq ft of sand bed':one*units+' sq ft'} in total, handling ~${Math.round(allow)} GPM combined.`});
+      reasons.push({code:'FILTER_SIZE_OK',severity:'good',ruleId:'FILTER_SIZING',text: units>1
+        ? `Together ${oversize>=1.5?'comfortably above':'meet'} the ${min.value}${min.kind==='diam'?'″ (single-tank) minimum':' sq ft minimum'}.`
+        : `${min.kind==='diam'?f.tank+'″ tank':f.area+' sq ft'} — ${oversize>=1.5?'comfortably above':'meets'} the ${min.value}${min.kind==='diam'?'″':' sq ft'} minimum.`});
       if(oversize>=1.5) reasons.push({code:'FILTER_BIGGER_IS_BETTER',severity:'good',ruleId:'FILTER_BIGGER_IS_BETTER',text:`~${oversize.toFixed(1)}× minimum → longer runs between cleanings.`});
       if(pumpMaxGPM!=null&&allow!=null) reasons.push({code:'FILTER_FLOW_OK',severity:'good',ruleId:'FILTER_MUST_NOT_BOTTLENECK_PUMP',text:`Handles ~${Math.round(allow)} GPM ≥ your pump's ~${pumpMaxGPM} GPM.`});
       reasons.push({code:'FILTER_TURNOVER_NOT_A_FACTOR',severity:'info',ruleId:'FILTER_TURNOVER_NOT_A_FACTOR',text:'Sized for dirt-holding + low cleaning frequency, not turnover.'});
@@ -518,7 +527,7 @@ function createAdvisor(data) {
       score -= (p.newBuild?12:25)*clamp(oversize-1,0,2);   // new builds tolerate more headroom
       // Cartridge filters CAN be oversized — beyond ~200 sq ft per 10,000 gal you are paying
       // for area you will never use. Sand and DE do not have this problem.
-      if(chosenType==='cartridge' && min.target && size>min.target){
+      if(chosenType==='cartridge' && min.target && size>min.target && units===1){
         const over=(size-min.target)/min.target;
         score -= 30*clamp(over,0,1);
         reasons.push({code:'FILTER_OVER_TARGET',severity:'info',ruleId:'FILTER_SIZING',
@@ -528,9 +537,14 @@ function createAdvisor(data) {
       score += (W.flowHeadroom/2)*flowComfort; // capped flow-margin comfort (medium weight)
       score += W.dataQuality*dq;           // verified over partial
       score -= portOk?0:5;
-      cands.push({product:f,score,reasons,fit:{meetsMinSize:true,flowOk,portOk,withinBudget:true},derated:false,
+      score -= (units-1)*PU.extraUnitPenalty;   // more plumbing, more units to clean
+      cands.push({product:f,units,score,reasons,fit:{meetsMinSize:true,flowOk,portOk,withinBudget:true},derated:false,
         computed:{minRequired:min.value,candidateSize:size,candidateMaxGPM:allow!=null?Math.round(allow):null,pumpMaxGPM,oversizeRatio:Math.round(oversize*100)/100}});
-    }
+    };
+    for(const f of DATA.filters) if(f.ft===chosenType) evalFilter(f,1);
+    const parallel = !cands.length;
+    for(let n=2; parallel && !cands.length && n<=PU.maxUnits; n++)
+      for(const f of DATA.filters) if(f.ft===chosenType) evalFilter(f,n);
     cands.sort((a,b)=> (b.score-a.score) || ((a.computed.candidateSize||0)-(b.computed.candidateSize||0)) );
     cands.forEach((c,i)=>c.rank=i+1);
     const alternatives=[];
@@ -544,7 +558,15 @@ function createAdvisor(data) {
     }
     if(cands[0]&&cands[0].product.dq!=='verified') warnings.push({code:'FILTER_DATA_UNVERIFIED',severity:'warning',ruleId:'FILTER_RANKING_WEIGHTS',text:'Top pick has a partially-verified spec — confirm dimensions before buying.'});
     warnings.push({code:'FILTER_AUTOMATION_AGNOSTIC',severity:'info',ruleId:'AUTOMATION_SAME_BRAND',text:'Filters aren’t controlled by automation, so brand match doesn’t matter here.'});
-    if(!cands.length) warnings.push({code:'NO_FILTER',severity:'warning',ruleId:'FILTER_MUST_NOT_BOTTLENECK_PUMP',text:`No ${chosenType} filter cleared both the size minimum and your pump flow — try a larger type or re-check the pump flow.`});
+    if(!cands.length) warnings.push({code:'NO_FILTER',severity:'warning',ruleId:'FILTER_MUST_NOT_BOTTLENECK_PUMP',text:`No ${chosenType} filter cleared both the size minimum and your pump flow, even two in parallel. Try a larger type or re-check the pump flow.`});
+    else if(parallel) warnings.push({code:'PARALLEL_FILTERS',severity:'warning',ruleId:'FILTER_PARALLEL_UNITS',
+      text:`No single ${chosenType} filter is big enough for ${Number(p.gallons).toLocaleString()} gallons${pumpMaxGPM?` at ~${pumpMaxGPM} GPM`:''}, so these are ${cands[0].units===2?'pairs of':'sets of '+(cands[0].units===3?'three':cands[0].units)} identical filters plumbed in parallel. That's the usual setup on large pools: the flow splits between them, and you clean ${cands[0].units} units.`});
+    // TFP's sand and DE minimums stop growing above 25k gallons. On much larger pools, flag that the
+    // minimum is a floor, not a fit.
+    if(cands.length && !parallel && chosenType!=='cartridge' && p.gallons>PU.largePoolGallons){
+      warnings.push({code:'LARGE_POOL_MINIMUM',severity:'info',ruleId:'FILTER_SIZING',
+        text:`TFP's ${chosenType==='sand'?'sand':'DE'} minimum doesn't grow beyond 25,000 gallons, so at ${Number(p.gallons).toLocaleString()} gallons treat it as a floor. Pick from the larger units below, or plan two filters in parallel, so you're not cleaning constantly.`});
+    }
     const repairOptions=[]; const RF=RULES.FILTER_REPAIR_FACTS.value; const fm=p.failureMode, rt=p.replacingType;
     if(fm==='worn-out-media'&&rt==='sand') repairOptions.push({ruleId:'FILTER_REPAIR_FACTS',summary:RF[0].fact});
     if(fm==='worn-out-media'&&rt==='cartridge') repairOptions.push({ruleId:'FILTER_REPAIR_FACTS',summary:RF[1].fact});
@@ -557,11 +579,11 @@ function createAdvisor(data) {
       const cur=DATA.filters.find(f=>f.id===p.currentFilterId), top=cands[0].product;
       if(cur){
         const curArea = cur.ft==='sand'?bedAreaOf(cur):cur.area;
-        const recArea = top.ft==='sand'?bedAreaOf(top):top.area;
+        const recArea = (top.ft==='sand'?bedAreaOf(top):top.area)*(cands[0].units||1);
         const factor = (curArea&&recArea)?recArea/curArea:null;
         const sz=(f)=>f.ft==='sand'?`${f.tank}″ (${round1(bedAreaOf(f))} ft² bed)`:`${f.area} sq ft`;
         comparison={current:{model:`${cur.brand} ${cur.model}`,size:sz(cur)},
-          recommended:{model:`${top.brand} ${top.model}`,size:sz(top)},factor};
+          recommended:{model:`${(cands[0].units||1)>1?cands[0].units+' × ':''}${top.brand} ${top.model}`,size:((cands[0].units||1)>1?cands[0].units+' × ':'')+sz(top)},factor};
       }
     }
     return {mode:'filter',chosenType,typeReasons,min,pumpMaxGPM,comparison,recommendations:cands.slice(0,8),disqualified:disq.slice(0,6),alternatives,repairOptions,warnings};

@@ -26,6 +26,7 @@
     "psi": null,
     "dq": "verified"
    },
+   "units": 1,
    "score": 101.52581825142256,
    "reasons": [
     {
@@ -85,6 +86,7 @@
     "psi": null,
     "dq": "verified"
    },
+   "units": 1,
    "score": 101.51079480427302,
    "reasons": [
     {
@@ -144,6 +146,7 @@
     "psi": 50,
     "dq": "verified"
    },
+   "units": 1,
    "score": 101.50703894248564,
    "reasons": [
     {
@@ -203,6 +206,7 @@
     "psi": 50,
     "dq": "verified"
    },
+   "units": 1,
    "score": 101.50703894248564,
    "reasons": [
     {
@@ -262,6 +266,7 @@
     "psi": 50,
     "dq": "verified"
    },
+   "units": 1,
    "score": 96.51079480427302,
    "reasons": [
     {
@@ -327,6 +332,7 @@
     "psi": null,
     "dq": "verified"
    },
+   "units": 1,
    "score": 91.27464349513401,
    "reasons": [
     {
@@ -387,6 +393,7 @@
     "psi": null,
     "dq": "verified"
    },
+   "units": 1,
    "score": 91.27464349513401,
    "reasons": [
     {
@@ -446,6 +453,7 @@
     "psi": 50,
     "dq": "verified"
    },
+   "units": 1,
    "score": 81.81830508856095,
    "reasons": [
     {

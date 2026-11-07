@@ -33,6 +33,7 @@
     "psi": 50,
     "dq": "verified"
    },
+   "units": 1,
    "score": 108,
    "reasons": [
     {
@@ -92,6 +93,7 @@
     "psi": 50,
     "dq": "verified"
    },
+   "units": 1,
    "score": 103.66666666666667,
    "reasons": [
     {
@@ -151,6 +153,7 @@
     "psi": 50,
     "dq": "verified"
    },
+   "units": 1,
    "score": 103.66666666666667,
    "reasons": [
     {
@@ -210,6 +213,7 @@
     "psi": 50,
     "dq": "partial"
    },
+   "units": 1,
    "score": 98.86666666666667,
    "reasons": [
     {
