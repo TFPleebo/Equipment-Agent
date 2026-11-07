@@ -22,11 +22,11 @@
     "waterCost": "low"
   },
   "expect": {
-    "pumpMaxGPM": 92.52,
+    "pumpMaxGPM": 92.22,
     "pumpTop": [
-      "pentair-whisperflo-vst-011532",
-      "pentair-intelliflo-3-vsf-011075",
-      "pentair-intelliflo-vs-ec-011028"
+      "pentair-011060",
+      "pentair-intelliflo-i2-vs-011060",
+      "pentair-intellipro-vs-p6e6vs4h-209l"
     ],
     "filterType": "cartridge",
     "filterTop": [
@@ -44,7 +44,7 @@
       "PAD_FLOW_OK",
       "PAD_SWG",
       "PAD_AUTOMATION",
-      "SWG_FLOW_SWITCH_OK",
+      "SWG_FLOW_SWITCH",
       "DATA_QUALITY_FLAG",
       "SWG_FLOW_SWITCH",
       "SWG_CYA_CELL_LIFE",

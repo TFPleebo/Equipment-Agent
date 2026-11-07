@@ -5,15 +5,19 @@
       "basis": "equipment-driven",
       "skimmerMinGpm": 15,
       "skimmerNote": "A single skimmer works properly down to about 15 GPM on most designs.",
-      "swgFlowSwitchGpm": {
+      "gasHeaterMinGpm": 40,
+      "formula": "minimumGPM = max(skimmer 15, SWG flow switch if fitted (SWG_FLOW_SWITCH.byTee)); the gas heater minimum is a peak demand (FEATURE_FLOW_DEMANDS) unless heaterSetsDailyMinimum",
+      "supersedes": "poolGallons / 8 turnover. Turnover does not determine minimum flow for a residential pool.",
+      "commercialCaveat": "Commercial pools DO have firm turnover requirements. This tool is residential-only.",
+      "reviewedBy": "pending review (proposed 2026-11)",
+      "previousSwgFlowSwitchGpm": {
         "2": 22,
         "1.5": 14
       },
-      "gasHeaterMinGpm": 40,
-      "formula": "minimumGPM = max(skimmer 15, SWG flow switch if fitted, heater minimum if fitted)",
-      "supersedes": "poolGallons / 8 turnover. Turnover does not determine minimum flow for a residential pool.",
-      "commercialCaveat": "Commercial pools DO have firm turnover requirements. This tool is residential-only.",
-      "reviewedBy": "Mark S (TFP), 2026-07"
+      "swgFlowSwitchSource": "SWG_FLOW_SWITCH.byTee (single source of truth)",
+      "heaterSetsDailyMinimum": false,
+      "previousHeaterSetsDailyMinimum": true,
+      "changeReason": "2026-11 (pending review): the SWG threshold was 22 GPM here but 25 GPM in SWG_FLOW_SWITCH, so the engine could say a pump 'idles down to 22 GPM' and then warn it needs 25. Unified on SWG_FLOW_SWITCH. The gas heater only needs ~40 GPM while firing (the heater-bypass rule notes it is idle ~95% of the time), so forcing 40 GPM all day overstated running cost by several times for every pool with a heater."
     },
     "src": "TFP: 'turnover is not a factor' — Turnover_of_Pool_Water"
   },
@@ -128,7 +132,9 @@
         "diameter24inSqFt": 3.14,
         "pentairTR140SqFt": 7.06
       },
-      "note": "Pump max flow can dictate minimum filter size rather than pool size — check BOTH."
+      "note": "Pump max flow can dictate minimum filter size rather than pool size — check BOTH.",
+      "cartridgeTypicalRatedGpmPerSqFt": 0.75,
+      "cartridgeNote": "cartridgeGpmPerSqFt (0.375) is the APSP-15 efficiency guideline, reported as info. The hard limit is the manufacturer rating: the 61 rated cartridge models in filters.json have a median 0.75 GPM/sq ft (range 0.21-1.0), used when only the area is known. 2026-11, pending review."
     },
     "src": "TFP: How to select pool equipment > Pool Filter Sizing"
   },

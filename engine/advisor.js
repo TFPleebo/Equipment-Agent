@@ -44,9 +44,13 @@ function createAdvisor(data) {
     const TF=RULES.TURNOVER_FORMULA.value;
     const minBits=[];
     let dailyGPM=TF.skimmerMinGpm; minBits.push('skimmer '+TF.skimmerMinGpm+' GPM');
-    if(p.hasSWG){const t=(p.pipe==='1.5')?'1.5':'2'; const need=TF.swgFlowSwitchGpm[t];
+    // Salt cell: the flow switch must close or the cell stops making chlorine. One source of
+    // truth for the threshold: SWG_FLOW_SWITCH (tee size sets it, since the switch reads velocity).
+    if(p.hasSWG){const t=(p.pipe==='1.5')?'1.5':'2'; const need=RULES.SWG_FLOW_SWITCH.value.byTee[t];
       if(need>dailyGPM){dailyGPM=need; minBits.length=0; minBits.push('salt cell flow switch '+need+' GPM');}}
-    if(p.gasHeater&&TF.gasHeaterMinGpm>dailyGPM){dailyGPM=TF.gasHeaterMinGpm; minBits.length=0; minBits.push('gas heater '+TF.gasHeaterMinGpm+' GPM');}
+    // A gas heater needs its minimum flow only while it is firing, so by default it is a peak
+    // (feature) demand, not an all-day one (TURNOVER_FORMULA.heaterSetsDailyMinimum).
+    if(p.gasHeater&&TF.heaterSetsDailyMinimum&&TF.gasHeaterMinGpm>dailyGPM){dailyGPM=TF.gasHeaterMinGpm; minBits.length=0; minBits.push('gas heater '+TF.gasHeaterMinGpm+' GPM');}
     let featureGPM=0; const featBits=[];
     if(p.spa){
       const jets=p.spaJets>0?p.spaJets:4;                    // typical small spa if unspecified
@@ -60,13 +64,20 @@ function createAdvisor(data) {
 
     // filter flow cap
     const warnings=[];
-    let filterCap=null;
-    if(p.filterType==='sand'&&p.filterSize){const r=(p.filterSize/2)/12;filterCap=Math.PI*r*r*RULES.FILTER_FLOW_CAP.value.sandGpmPerSqFt;}
-    else if(p.filterType==='cartridge'&&p.filterSize){filterCap=p.filterSize*RULES.FILTER_FLOW_CAP.value.cartridgeGpmPerSqFt;}
-    else if(p.filterType==='de'&&p.filterSize){filterCap=p.filterSize*RULES.FILTER_FLOW_CAP.value.deGpmPerSqFt.max;}
+    // Same allowable-flow basis as the filter engine: the filter's rated maximum is the hard
+    // limit. For cartridges we only know area here, so use the catalog's typical rating per sq ft;
+    // the stricter APSP-15 0.375 GPM/sq ft is an efficiency guideline, reported as info.
+    const FC=RULES.FILTER_FLOW_CAP.value;
+    let filterCap=null, filterGuide=null;
+    if(p.filterType==='sand'&&p.filterSize){const r=(p.filterSize/2)/12;filterCap=Math.PI*r*r*FC.sandGpmPerSqFt;}
+    else if(p.filterType==='cartridge'&&p.filterSize){filterCap=p.filterSize*FC.cartridgeTypicalRatedGpmPerSqFt;filterGuide=p.filterSize*FC.cartridgeGpmPerSqFt;}
+    else if(p.filterType==='de'&&p.filterSize){filterCap=p.filterSize*FC.deGpmPerSqFt.max;}
     if(filterCap!=null&&requiredGPM>filterCap){
       warnings.push({code:'FILTER_FLOW_CAP',severity:'warning',ruleId:'FILTER_FLOW_CAP',
-        text:`Required ~${Math.round(requiredGPM)} GPM exceeds your filter's ~${Math.round(filterCap)} GPM cap. A bigger filter is advised.`});
+        text:`Required ~${Math.round(requiredGPM)} GPM exceeds what your filter is rated for (~${Math.round(filterCap)} GPM). A bigger filter is advised.`});
+    } else if(filterGuide!=null&&requiredGPM>filterGuide){
+      warnings.push({code:'FILTER_FLOW_GUIDELINE',severity:'info',ruleId:'FILTER_FLOW_CAP',
+        text:`Peak flow of ~${Math.round(requiredGPM)} GPM is within your filter's rating but above the ~${Math.round(filterGuide)} GPM efficiency guideline (0.375 GPM per sq ft). That's fine for short spa or feature runs; keep everyday filtering at low speed.`});
     }
 
     const featureHours=featBits.length?1:0;

@@ -3,288 +3,11 @@
  "pump": {
   "mode": "pump",
   "requiredGPM": 90,
-  "dailyGPM": 40,
-  "minDriver": "gas heater 40 GPM",
+  "dailyGPM": 25,
+  "minDriver": "salt cell flow switch 25 GPM",
   "featureGPM": 90,
   "comparison": null,
   "recommendations": [
-   {
-    "product": {
-     "id": "pentair-whisperflo-vst-011532",
-     "brand": "Pentair",
-     "model": "Pentair WhisperFlo VST 011532",
-     "st": "VS",
-     "mot": "ECM",
-     "thp": 2.6,
-     "nhp": 2.6,
-     "wef": 8.387540226,
-     "frame": null,
-     "dq": "ok",
-     "hi": {
-      "rpm": 3450,
-      "g": [
-       68.87,
-       41.3,
-       92.52
-      ],
-      "w": [
-       1816.11,
-       1479.11,
-       2047.72
-      ]
-     },
-     "lo": {
-      "rpm": 1163,
-      "g": [
-       23.216,
-       13.922,
-       31.19
-      ],
-      "w": [
-       81.208,
-       68.298,
-       90.08
-      ]
-     }
-    },
-    "score": 84.58688304648064,
-    "reasons": [
-     {
-      "code": "AUTOMATION_SAME_BRAND",
-      "severity": "good",
-      "ruleId": "AUTOMATION_SAME_BRAND",
-      "text": "Same brand as your Pentair automation — simplest to control."
-     },
-     {
-      "code": "AUTOMATION_SUPERFLO_NUANCE",
-      "severity": "warning",
-      "ruleId": "SUPERFLO_AUTOMATION",
-      "text": "Check the build date on this one. Units made after 11/20/2020 have RS-485 and talk to IntelliCenter, IntelliSync, EasyTouch and IntelliTouch; earlier ones need an external low-voltage relay for each speed. Either way its scheduler is limited — one start time with up to three speeds, where an IntelliFlo allows four independent schedules."
-     },
-     {
-      "code": "VS_PREFERRED",
-      "severity": "good",
-      "ruleId": "VS_REQUIRED_ABOVE_THP",
-      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
-     },
-     {
-      "code": "FLOW_MINIMUM",
-      "severity": "good",
-      "ruleId": "TURNOVER_FORMULA",
-      "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
-     },
-     {
-      "code": "FEATURE_FLOW",
-      "severity": "good",
-      "ruleId": "FEATURE_FLOW_DEMANDS",
-      "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
-     }
-    ],
-    "fit": {
-     "meetsCapacity": true,
-     "meetsFlow": true,
-     "meetsFlowLow": true,
-     "automationMatch": true,
-     "regulatoryOk": true
-    },
-    "computed": {
-     "requiredGPM": 90,
-     "dailyGPM": 40,
-     "gpmAtCurveLow": 31.19,
-     "gpmAtCurveHigh": 92.52,
-     "wattsDaily": 177,
-     "wattsHigh": 2047.72,
-     "annualKWh": 1198.6114594728658,
-     "annualCostUSD": 204
-    },
-    "variants": [
-     "Pentair WhisperFlo VST 011533",
-     "Pentair WhisperFlo VST EC-011533"
-    ],
-    "rank": 1
-   },
-   {
-    "product": {
-     "id": "pentair-intelliflo-3-vsf-011075",
-     "brand": "Pentair",
-     "model": "Pentair INTELLIFLO 3 VSF 011075",
-     "st": "VS",
-     "mot": "ECM",
-     "thp": 3,
-     "nhp": 3,
-     "wef": 7.256038231,
-     "frame": null,
-     "dq": "ok",
-     "hi": {
-      "rpm": 3450,
-      "g": [
-       69.84,
-       41.35,
-       94.22
-      ],
-      "w": [
-       1987.25,
-       1635.28,
-       2253.48
-      ]
-     },
-     "lo": {
-      "rpm": 1142,
-      "g": [
-       23.118,
-       13.687,
-       31.19
-      ],
-      "w": [
-       109.694,
-       96.928,
-       119.35
-      ]
-     }
-    },
-    "score": 80.99342947437584,
-    "reasons": [
-     {
-      "code": "AUTOMATION_SAME_BRAND",
-      "severity": "good",
-      "ruleId": "AUTOMATION_SAME_BRAND",
-      "text": "Same brand as your Pentair automation — simplest to control."
-     },
-     {
-      "code": "VS_PREFERRED",
-      "severity": "good",
-      "ruleId": "VS_REQUIRED_ABOVE_THP",
-      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
-     },
-     {
-      "code": "FLOW_MINIMUM",
-      "severity": "good",
-      "ruleId": "TURNOVER_FORMULA",
-      "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
-     },
-     {
-      "code": "FEATURE_FLOW",
-      "severity": "good",
-      "ruleId": "FEATURE_FLOW_DEMANDS",
-      "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
-     }
-    ],
-    "fit": {
-     "meetsCapacity": true,
-     "meetsFlow": true,
-     "meetsFlowLow": true,
-     "automationMatch": true,
-     "regulatoryOk": true
-    },
-    "computed": {
-     "requiredGPM": 90,
-     "dailyGPM": 40,
-     "gpmAtCurveLow": 31.19,
-     "gpmAtCurveHigh": 94.22,
-     "wattsDaily": 208,
-     "wattsHigh": 2253.48,
-     "annualKWh": 1355.1349397204885,
-     "annualCostUSD": 230
-    },
-    "variants": [
-     "Pentair INTELLIFLO 3 VSF, IO BOARD 011076",
-     "Pentair INTELLIPRO 3 VSF 13075",
-     "Pentair INTELLIPRO 3 VSF, IO BOARD 13076"
-    ],
-    "rank": 2
-   },
-   {
-    "product": {
-     "id": "pentair-intelliflo-vs-ec-011028",
-     "brand": "Pentair",
-     "model": "Pentair IntelliFlo VS EC-011028",
-     "st": "VS",
-     "mot": "ECM",
-     "thp": 3.95,
-     "nhp": 3.95,
-     "wef": 6.891234561,
-     "frame": null,
-     "dq": "ok",
-     "hi": {
-      "rpm": 3450,
-      "g": [
-       71.08,
-       41.8,
-       96.89
-      ],
-      "w": [
-       2157.8,
-       1710.55,
-       2502.49
-      ]
-     },
-     "lo": {
-      "rpm": 1112,
-      "g": [
-       22.91,
-       13.473,
-       31.24
-      ],
-      "w": [
-       103.248,
-       88.271,
-       114.79
-      ]
-     }
-    },
-    "score": 79.54877198307688,
-    "reasons": [
-     {
-      "code": "AUTOMATION_SAME_BRAND",
-      "severity": "good",
-      "ruleId": "AUTOMATION_SAME_BRAND",
-      "text": "Same brand as your Pentair automation — simplest to control."
-     },
-     {
-      "code": "VS_PREFERRED",
-      "severity": "good",
-      "ruleId": "VS_REQUIRED_ABOVE_THP",
-      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
-     },
-     {
-      "code": "FLOW_MINIMUM",
-      "severity": "good",
-      "ruleId": "TURNOVER_FORMULA",
-      "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
-     },
-     {
-      "code": "FEATURE_FLOW",
-      "severity": "good",
-      "ruleId": "FEATURE_FLOW_DEMANDS",
-      "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
-     }
-    ],
-    "fit": {
-     "meetsCapacity": true,
-     "meetsFlow": true,
-     "meetsFlowLow": true,
-     "automationMatch": true,
-     "regulatoryOk": true
-    },
-    "computed": {
-     "requiredGPM": 90,
-     "dailyGPM": 40,
-     "gpmAtCurveLow": 31.24,
-     "gpmAtCurveHigh": 96.89,
-     "wattsDaily": 206,
-     "wattsHigh": 2502.49,
-     "annualKWh": 1439.2584869321308,
-     "annualCostUSD": 245
-    },
-    "variants": [
-     "Pentair IntelliFlo VS+SVRS 011057",
-     "Pentair IntelliFlo VS+SVRS EC-011057",
-     "Pentair IntelliFlo VSF 011056",
-     "Pentair IntelliPro VS+SVRS 13002",
-     "Pentair Shasta IntelliFlo VSF S-011056"
-    ],
-    "rank": 3
-   },
    {
     "product": {
      "id": "pentair-011060",
@@ -324,7 +47,7 @@
       ]
      }
     },
-    "score": 79.34407852630895,
+    "score": 82.30495997366711,
     "reasons": [
      {
       "code": "AUTOMATION_SAME_BRAND",
@@ -342,7 +65,7 @@
       "code": "FLOW_MINIMUM",
       "severity": "good",
       "ruleId": "TURNOVER_FORMULA",
-      "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
+      "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
      },
      {
       "code": "FEATURE_FLOW",
@@ -360,16 +83,16 @@
     },
     "computed": {
      "requiredGPM": 90,
-     "dailyGPM": 40,
+     "dailyGPM": 25,
      "gpmAtCurveLow": 12.33,
      "gpmAtCurveHigh": 92.22,
-     "wattsDaily": 237,
+     "wattsDaily": 101,
      "wattsHigh": 2267.03,
-     "annualKWh": 1433.0762100813001,
-     "annualCostUSD": 244
+     "annualKWh": 1084.7372162744568,
+     "annualCostUSD": 184
     },
     "variants": [],
-    "rank": 4
+    "rank": 1
    },
    {
     "product": {
@@ -410,7 +133,7 @@
       ]
      }
     },
-    "score": 79.27601251285832,
+    "score": 82.25755320711863,
     "reasons": [
      {
       "code": "AUTOMATION_SAME_BRAND",
@@ -428,7 +151,7 @@
       "code": "FLOW_MINIMUM",
       "severity": "good",
       "ruleId": "TURNOVER_FORMULA",
-      "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
+      "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
      },
      {
       "code": "FEATURE_FLOW",
@@ -446,16 +169,16 @@
     },
     "computed": {
      "requiredGPM": 90,
-     "dailyGPM": 40,
+     "dailyGPM": 25,
      "gpmAtCurveLow": 12,
      "gpmAtCurveHigh": 92,
-     "wattsDaily": 239,
+     "wattsDaily": 101,
      "wattsHigh": 2267,
-     "annualKWh": 1437.4023208401977,
-     "annualCostUSD": 244
+     "annualKWh": 1086.6328273978068,
+     "annualCostUSD": 185
     },
     "variants": [],
-    "rank": 5
+    "rank": 2
    },
    {
     "product": {
@@ -496,7 +219,7 @@
       ]
      }
     },
-    "score": 77.6711312546878,
+    "score": 80.57545831582121,
     "reasons": [
      {
       "code": "AUTOMATION_SAME_BRAND",
@@ -514,7 +237,7 @@
       "code": "FLOW_MINIMUM",
       "severity": "good",
       "ruleId": "TURNOVER_FORMULA",
-      "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
+      "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
      },
      {
       "code": "FEATURE_FLOW",
@@ -532,16 +255,16 @@
     },
     "computed": {
      "requiredGPM": 90,
-     "dailyGPM": 40,
+     "dailyGPM": 25,
      "gpmAtCurveLow": 13,
      "gpmAtCurveHigh": 97,
-     "wattsDaily": 232,
+     "wattsDaily": 98,
      "wattsHigh": 2578,
-     "annualKWh": 1533.3560846249654,
-     "annualCostUSD": 261
+     "annualKWh": 1191.670548021035,
+     "annualCostUSD": 203
     },
     "variants": [],
-    "rank": 6
+    "rank": 3
    },
    {
     "product": {
@@ -582,7 +305,7 @@
       ]
      }
     },
-    "score": 77.35597697727793,
+    "score": 80.40042121431573,
     "reasons": [
      {
       "code": "AUTOMATION_SAME_BRAND",
@@ -600,7 +323,7 @@
       "code": "FLOW_MINIMUM",
       "severity": "good",
       "ruleId": "TURNOVER_FORMULA",
-      "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
+      "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
      },
      {
       "code": "FEATURE_FLOW",
@@ -618,19 +341,19 @@
     },
     "computed": {
      "requiredGPM": 90,
-     "dailyGPM": 40,
+     "dailyGPM": 25,
      "gpmAtCurveLow": 12.64,
      "gpmAtCurveHigh": 95.14,
-     "wattsDaily": 243,
+     "wattsDaily": 103,
      "wattsHigh": 2552.88,
-     "annualKWh": 1552.131619614361,
-     "annualCostUSD": 264
+     "annualKWh": 1193.9617093746197,
+     "annualCostUSD": 203
     },
     "variants": [
      "Pentair Sta-Rite 013004",
      "Pentair Sta-Rite 013028"
     ],
-    "rank": 7
+    "rank": 4
    },
    {
     "product": {
@@ -671,7 +394,7 @@
       ]
      }
     },
-    "score": 77.32338277982824,
+    "score": 80.38234163473915,
     "reasons": [
      {
       "code": "AUTOMATION_SAME_BRAND",
@@ -689,7 +412,7 @@
       "code": "FLOW_MINIMUM",
       "severity": "good",
       "ruleId": "TURNOVER_FORMULA",
-      "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
+      "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
      },
      {
       "code": "FEATURE_FLOW",
@@ -707,30 +430,30 @@
     },
     "computed": {
      "requiredGPM": 90,
-     "dailyGPM": 40,
+     "dailyGPM": 25,
      "gpmAtCurveLow": 13,
      "gpmAtCurveHigh": 95,
-     "wattsDaily": 243,
+     "wattsDaily": 102,
      "wattsHigh": 2553,
-     "annualKWh": 1552.582814373148,
-     "annualCostUSD": 264
+     "annualKWh": 1192.7053020306882,
+     "annualCostUSD": 203
     },
     "variants": [
      "Pentair IntelliPro VS 13028",
      "Pentair IntelliPro VSF 13004"
     ],
-    "rank": 8
+    "rank": 5
    },
    {
     "product": {
-     "id": "pentair-intellipro-shasta-vs-svrs-s-013003",
+     "id": "pentair-intelliflo-2-vst-011055",
      "brand": "Pentair",
-     "model": "Pentair IntelliPro Shasta VS+SVRS S-013003",
+     "model": "Pentair IntelliFlo 2 VST 011055",
      "st": "VS",
      "mot": "ECM",
      "thp": 3.96,
      "nhp": 3,
-     "wef": 6.182842494,
+     "wef": 6.09270848,
      "frame": "56",
      "dq": "ok",
      "hi": {
@@ -747,20 +470,20 @@
       ]
      },
      "lo": {
-      "rpm": 1100,
+      "rpm": 450,
       "g": [
-       24,
-       14,
-       32
+       10,
+       6,
+       13
       ],
       "w": [
-       124,
-       109,
-       135
+       59,
+       58,
+       60
       ]
      }
     },
-    "score": 76.91058298541287,
+    "score": 79.45168284456588,
     "reasons": [
      {
       "code": "AUTOMATION_SAME_BRAND",
@@ -778,7 +501,7 @@
       "code": "FLOW_MINIMUM",
       "severity": "good",
       "ruleId": "TURNOVER_FORMULA",
-      "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
+      "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
      },
      {
       "code": "FEATURE_FLOW",
@@ -796,115 +519,31 @@
     },
     "computed": {
      "requiredGPM": 90,
-     "dailyGPM": 40,
-     "gpmAtCurveLow": 32,
+     "dailyGPM": 25,
+     "gpmAtCurveLow": 13,
      "gpmAtCurveHigh": 99,
-     "wattsDaily": 223,
+     "wattsDaily": 98,
      "wattsHigh": 2776,
-     "annualKWh": 1582.9531767749547,
-     "annualCostUSD": 269
-    },
-    "variants": [],
-    "rank": 9
-   },
-   {
-    "product": {
-     "id": "pentair-intelliflo-xf-vs-svrs-22057",
-     "brand": "Pentair",
-     "model": "Pentair IntelliFlo XF VS+SVRS 22057",
-     "st": "VS",
-     "mot": "ECM",
-     "thp": 3.96,
-     "nhp": 3,
-     "wef": 6.153993447,
-     "frame": "56",
-     "dq": "ok",
-     "hi": {
-      "rpm": 3450,
-      "g": [
-       74,
-       44,
-       101
-      ],
-      "w": [
-       2545,
-       2138,
-       2837
-      ]
-     },
-     "lo": {
-      "rpm": 1100,
-      "g": [
-       24,
-       14,
-       33
-      ],
-      "w": [
-       129,
-       116,
-       137
-      ]
-     }
-    },
-    "score": 76.87603293397127,
-    "reasons": [
-     {
-      "code": "AUTOMATION_SAME_BRAND",
-      "severity": "good",
-      "ruleId": "AUTOMATION_SAME_BRAND",
-      "text": "Same brand as your Pentair automation — simplest to control."
-     },
-     {
-      "code": "VS_PREFERRED",
-      "severity": "good",
-      "ruleId": "VS_REQUIRED_ABOVE_THP",
-      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
-     },
-     {
-      "code": "FLOW_MINIMUM",
-      "severity": "good",
-      "ruleId": "TURNOVER_FORMULA",
-      "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
-     },
-     {
-      "code": "FEATURE_FLOW",
-      "severity": "good",
-      "ruleId": "FEATURE_FLOW_DEMANDS",
-      "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
-     }
-    ],
-    "fit": {
-     "meetsCapacity": true,
-     "meetsFlow": true,
-     "meetsFlowLow": true,
-     "automationMatch": true,
-     "regulatoryOk": true
-    },
-    "computed": {
-     "requiredGPM": 90,
-     "dailyGPM": 40,
-     "gpmAtCurveLow": 33,
-     "gpmAtCurveHigh": 101,
-     "wattsDaily": 213,
-     "wattsHigh": 2837,
-     "annualKWh": 1580.2298776504379,
-     "annualCostUSD": 269
+     "annualKWh": 1262.7922488746021,
+     "annualCostUSD": 215
     },
     "variants": [
-     "Pentair IntelliPro XF VS+SVRS 23057"
+     "Pentair IntelliFlo VS 011028",
+     "Pentair S-013003",
+     "Pentair Shasta IntelliFlo 2 VST S-011058"
     ],
-    "rank": 10
+    "rank": 6
    },
    {
     "product": {
-     "id": "pentair-011057",
+     "id": "pentair-011028",
      "brand": "Pentair",
-     "model": "Pentair 011057",
+     "model": "Pentair 011028",
      "st": "VS",
      "mot": "PSC",
      "thp": 3.96,
      "nhp": 3,
-     "wef": 6.159167225,
+     "wef": 6.066459049,
      "frame": "56",
      "dq": "ok",
      "hi": {
@@ -921,20 +560,20 @@
       ]
      },
      "lo": {
-      "rpm": 1100,
+      "rpm": 450,
       "g": [
-       23.73,
-       14.15,
-       31.94
+       9.82,
+       5.86,
+       13.18
       ],
       "w": [
-       123.98,
-       108.93,
-       135.18
+       59.37,
+       58.42,
+       60.04
       ]
      }
     },
-    "score": 76.82851540707543,
+    "score": 79.39565345249183,
     "reasons": [
      {
       "code": "AUTOMATION_SAME_BRAND",
@@ -952,7 +591,7 @@
       "code": "FLOW_MINIMUM",
       "severity": "good",
       "ruleId": "TURNOVER_FORMULA",
-      "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
+      "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
      },
      {
       "code": "FEATURE_FLOW",
@@ -970,30 +609,122 @@
     },
     "computed": {
      "requiredGPM": 90,
-     "dailyGPM": 40,
-     "gpmAtCurveLow": 31.94,
+     "dailyGPM": 25,
+     "gpmAtCurveLow": 13.18,
      "gpmAtCurveHigh": 98.67,
-     "wattsDaily": 225,
+     "wattsDaily": 98,
      "wattsHigh": 2776.01,
-     "annualKWh": 1587.037534461713,
-     "annualCostUSD": 270
+     "annualKWh": 1263.2076053539029,
+     "annualCostUSD": 215
     },
     "variants": [
-     "Pentair Sta-Rite 013002",
-     "Pentair Sta-Rite S-013003"
+     "Pentair 011055",
+     "Pentair 011056",
+     "Pentair S-011056",
+     "Pentair S-011058"
     ],
-    "rank": 11
+    "rank": 7
    },
    {
     "product": {
-     "id": "pentair-022057",
+     "id": "pentair-intelliflo-xf-vsf-22056",
      "brand": "Pentair",
-     "model": "Pentair 022057",
+     "model": "Pentair IntelliFlo XF VSF 22056",
+     "st": "VS",
+     "mot": "ECM",
+     "thp": 3.96,
+     "nhp": 3,
+     "wef": 6.092818989,
+     "frame": "56",
+     "dq": "ok",
+     "hi": {
+      "rpm": 3450,
+      "g": [
+       74,
+       44,
+       101
+      ],
+      "w": [
+       2545,
+       2138,
+       2837
+      ]
+     },
+     "lo": {
+      "rpm": 450,
+      "g": [
+       9,
+       6,
+       13
+      ],
+      "w": [
+       58,
+       57,
+       58
+      ]
+     }
+    },
+    "score": 79.33596472121859,
+    "reasons": [
+     {
+      "code": "AUTOMATION_SAME_BRAND",
+      "severity": "good",
+      "ruleId": "AUTOMATION_SAME_BRAND",
+      "text": "Same brand as your Pentair automation — simplest to control."
+     },
+     {
+      "code": "VS_PREFERRED",
+      "severity": "good",
+      "ruleId": "VS_REQUIRED_ABOVE_THP",
+      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+     },
+     {
+      "code": "FLOW_MINIMUM",
+      "severity": "good",
+      "ruleId": "TURNOVER_FORMULA",
+      "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
+     },
+     {
+      "code": "FEATURE_FLOW",
+      "severity": "good",
+      "ruleId": "FEATURE_FLOW_DEMANDS",
+      "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+     }
+    ],
+    "fit": {
+     "meetsCapacity": true,
+     "meetsFlow": true,
+     "meetsFlowLow": true,
+     "automationMatch": true,
+     "regulatoryOk": true
+    },
+    "computed": {
+     "requiredGPM": 90,
+     "dailyGPM": 25,
+     "gpmAtCurveLow": 13,
+     "gpmAtCurveHigh": 101,
+     "wattsDaily": 94,
+     "wattsHigh": 2837,
+     "annualKWh": 1276.4321478566371,
+     "annualCostUSD": 217
+    },
+    "variants": [
+     "Pentair IntelliPro XF VSF 23056",
+     "Pentair IntelliProXF VS 22055",
+     "Pentair IntelliProXF VS 23055"
+    ],
+    "rank": 8
+   },
+   {
+    "product": {
+     "id": "pentair-022055",
+     "brand": "Pentair",
+     "model": "Pentair 022055",
      "st": "VS",
      "mot": "PSC",
      "thp": 3.96,
      "nhp": 3,
-     "wef": 6.152020646,
+     "wef": 6.091413023,
      "frame": "56",
      "dq": "ok",
      "hi": {
@@ -1010,20 +741,20 @@
       ]
      },
      "lo": {
-      "rpm": 1100,
+      "rpm": 450,
       "g": [
-       24.02,
-       14.44,
-       32.68
+       9.22,
+       5.55,
+       12.58
       ],
       "w": [
-       128.5,
-       116.48,
-       136.99
+       57.64,
+       56.82,
+       58.37
       ]
      }
     },
-    "score": 76.80836822732874,
+    "score": 79.310496784658,
     "reasons": [
      {
       "code": "AUTOMATION_SAME_BRAND",
@@ -1041,7 +772,7 @@
       "code": "FLOW_MINIMUM",
       "severity": "good",
       "ruleId": "TURNOVER_FORMULA",
-      "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
+      "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
      },
      {
       "code": "FEATURE_FLOW",
@@ -1059,26 +790,288 @@
     },
     "computed": {
      "requiredGPM": 90,
-     "dailyGPM": 40,
-     "gpmAtCurveLow": 32.68,
+     "dailyGPM": 25,
+     "gpmAtCurveLow": 12.58,
      "gpmAtCurveHigh": 100.94,
-     "wattsDaily": 216,
+     "wattsDaily": 95,
      "wattsHigh": 2837.4,
-     "annualKWh": 1587.726242902501,
-     "annualCostUSD": 270
+     "annualKWh": 1279.097560157882,
+     "annualCostUSD": 217
     },
     "variants": [
-     "Pentair Sta-Rite 023057"
+     "Pentair 022056",
+     "Pentair Sta-Rite 023055",
+     "Pentair Sta-Rite 023056"
     ],
+    "rank": 9
+   },
+   {
+    "product": {
+     "id": "pentair-maxepro-p6e6y4h-209l",
+     "brand": "Pentair",
+     "model": "Pentair MaxEPro P6E6Y4H-209L",
+     "st": "VS",
+     "mot": "ECM",
+     "thp": 3.96,
+     "nhp": 3,
+     "wef": 5.89289889,
+     "frame": "56",
+     "dq": "ok",
+     "hi": {
+      "rpm": 3450,
+      "g": [
+       71,
+       43,
+       97
+      ],
+      "w": [
+       2340,
+       1990,
+       2720
+      ]
+     },
+     "lo": {
+      "rpm": 800,
+      "g": [
+       17,
+       10,
+       23
+      ],
+      "w": [
+       100,
+       100,
+       100
+      ]
+     }
+    },
+    "score": 78.95674875689521,
+    "reasons": [
+     {
+      "code": "AUTOMATION_SAME_BRAND",
+      "severity": "good",
+      "ruleId": "AUTOMATION_SAME_BRAND",
+      "text": "Same brand as your Pentair automation — simplest to control."
+     },
+     {
+      "code": "VS_PREFERRED",
+      "severity": "good",
+      "ruleId": "VS_REQUIRED_ABOVE_THP",
+      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+     },
+     {
+      "code": "FLOW_MINIMUM",
+      "severity": "good",
+      "ruleId": "TURNOVER_FORMULA",
+      "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
+     },
+     {
+      "code": "FEATURE_FLOW",
+      "severity": "good",
+      "ruleId": "FEATURE_FLOW_DEMANDS",
+      "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+     }
+    ],
+    "fit": {
+     "meetsCapacity": true,
+     "meetsFlow": true,
+     "meetsFlowLow": true,
+     "automationMatch": true,
+     "regulatoryOk": true
+    },
+    "computed": {
+     "requiredGPM": 90,
+     "dailyGPM": 25,
+     "gpmAtCurveLow": 23,
+     "gpmAtCurveHigh": 97,
+     "wattsDaily": 110,
+     "wattsHigh": 2720,
+     "annualKWh": 1274.0057674240927,
+     "annualCostUSD": 217
+    },
+    "variants": [
+     "Pentair MaxEPro P6E6Z4H-209L"
+    ],
+    "rank": 10
+   },
+   {
+    "product": {
+     "id": "pentair-intelliflo-vs-3050",
+     "brand": "Pentair",
+     "model": "Pentair IntelliFlo VS 3050",
+     "st": "VS",
+     "mot": "ECM",
+     "thp": 3.96,
+     "nhp": 3,
+     "wef": 5.789368778,
+     "frame": "56",
+     "dq": "ok",
+     "hi": {
+      "rpm": 3450,
+      "g": [
+       71,
+       43,
+       97
+      ],
+      "w": [
+       2340,
+       1990,
+       2720
+      ]
+     },
+     "lo": {
+      "rpm": 800,
+      "g": [
+       18,
+       11,
+       24
+      ],
+      "w": [
+       110,
+       105,
+       110
+      ]
+     }
+    },
+    "score": 78.63743897726206,
+    "reasons": [
+     {
+      "code": "AUTOMATION_SAME_BRAND",
+      "severity": "good",
+      "ruleId": "AUTOMATION_SAME_BRAND",
+      "text": "Same brand as your Pentair automation — simplest to control."
+     },
+     {
+      "code": "VS_PREFERRED",
+      "severity": "good",
+      "ruleId": "VS_REQUIRED_ABOVE_THP",
+      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+     },
+     {
+      "code": "FLOW_MINIMUM",
+      "severity": "good",
+      "ruleId": "TURNOVER_FORMULA",
+      "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
+     },
+     {
+      "code": "FEATURE_FLOW",
+      "severity": "good",
+      "ruleId": "FEATURE_FLOW_DEMANDS",
+      "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+     }
+    ],
+    "fit": {
+     "meetsCapacity": true,
+     "meetsFlow": true,
+     "meetsFlowLow": true,
+     "automationMatch": true,
+     "regulatoryOk": true
+    },
+    "computed": {
+     "requiredGPM": 90,
+     "dailyGPM": 25,
+     "gpmAtCurveLow": 24,
+     "gpmAtCurveHigh": 97,
+     "wattsDaily": 115,
+     "wattsHigh": 2720,
+     "annualKWh": 1287.2115974985788,
+     "annualCostUSD": 219
+    },
+    "variants": [],
+    "rank": 11
+   },
+   {
+    "product": {
+     "id": "pentair-intelliflo-vs-011018",
+     "brand": "Pentair",
+     "model": "Pentair IntelliFlo VS 011018",
+     "st": "VS",
+     "mot": "ECM",
+     "thp": 3.96,
+     "nhp": 3,
+     "wef": 5.544261484,
+     "frame": "56",
+     "dq": "ok",
+     "hi": {
+      "rpm": 3450,
+      "g": [
+       74,
+       44,
+       100
+      ],
+      "w": [
+       2459,
+       1992,
+       2827
+      ]
+     },
+     "lo": {
+      "rpm": 450,
+      "g": [
+       10,
+       6,
+       14
+      ],
+      "w": [
+       101,
+       101,
+       102
+      ]
+     }
+    },
+    "score": 77.3381729660672,
+    "reasons": [
+     {
+      "code": "AUTOMATION_SAME_BRAND",
+      "severity": "good",
+      "ruleId": "AUTOMATION_SAME_BRAND",
+      "text": "Same brand as your Pentair automation — simplest to control."
+     },
+     {
+      "code": "VS_PREFERRED",
+      "severity": "good",
+      "ruleId": "VS_REQUIRED_ABOVE_THP",
+      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+     },
+     {
+      "code": "FLOW_MINIMUM",
+      "severity": "good",
+      "ruleId": "TURNOVER_FORMULA",
+      "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
+     },
+     {
+      "code": "FEATURE_FLOW",
+      "severity": "good",
+      "ruleId": "FEATURE_FLOW_DEMANDS",
+      "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+     }
+    ],
+    "fit": {
+     "meetsCapacity": true,
+     "meetsFlow": true,
+     "meetsFlowLow": true,
+     "automationMatch": true,
+     "regulatoryOk": true
+    },
+    "computed": {
+     "requiredGPM": 90,
+     "dailyGPM": 25,
+     "gpmAtCurveLow": 14,
+     "gpmAtCurveHigh": 100,
+     "wattsDaily": 137,
+     "wattsHigh": 2827,
+     "annualKWh": 1382.3941178744474,
+     "annualCostUSD": 235
+    },
+    "variants": [],
     "rank": 12
    }
   ],
   "warnings": [
    {
-    "code": "SWG_FLOW_SWITCH_OK",
-    "severity": "info",
+    "code": "SWG_FLOW_SWITCH",
+    "severity": "warning",
     "ruleId": "SWG_FLOW_SWITCH",
-    "text": "Salt cell flow switch needs roughly 25 GPM through a 2″ tee; this pump stays above that even at low speed."
+    "text": "Heads up on the salt cell: its flow switch trips on water velocity, so a 2″ tee needs roughly 25 GPM. The top pick can idle near 12 GPM, which is below that — set your lowest speed high enough to close the switch, or the cell will quietly stop making chlorine."
    }
   ],
   "repairOptions": [],
@@ -1101,7 +1094,7 @@
    "target": 500,
    "ruleId": "FILTER_SIZING"
   },
-  "pumpMaxGPM": 92.52,
+  "pumpMaxGPM": 92.22,
   "comparison": null,
   "recommendations": [
    {
@@ -1132,7 +1125,7 @@
       "code": "FILTER_FLOW_OK",
       "severity": "good",
       "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
-      "text": "Handles ~150 GPM ≥ your pump's ~92.52 GPM."
+      "text": "Handles ~150 GPM ≥ your pump's ~92.22 GPM."
      },
      {
       "code": "FILTER_TURNOVER_NOT_A_FACTOR",
@@ -1158,7 +1151,7 @@
      "minRequired": 375,
      "candidateSize": 420,
      "candidateMaxGPM": 150,
-     "pumpMaxGPM": 92.52,
+     "pumpMaxGPM": 92.22,
      "oversizeRatio": 1.12
     },
     "rank": 1
@@ -1191,7 +1184,7 @@
       "code": "FILTER_FLOW_OK",
       "severity": "good",
       "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
-      "text": "Handles ~150 GPM ≥ your pump's ~92.52 GPM."
+      "text": "Handles ~150 GPM ≥ your pump's ~92.22 GPM."
      },
      {
       "code": "FILTER_TURNOVER_NOT_A_FACTOR",
@@ -1217,7 +1210,7 @@
      "minRequired": 375,
      "candidateSize": 425,
      "candidateMaxGPM": 150,
-     "pumpMaxGPM": 92.52,
+     "pumpMaxGPM": 92.22,
      "oversizeRatio": 1.13
     },
     "rank": 2,
@@ -1251,7 +1244,7 @@
       "code": "FILTER_FLOW_OK",
       "severity": "good",
       "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
-      "text": "Handles ~124 GPM ≥ your pump's ~92.52 GPM."
+      "text": "Handles ~124 GPM ≥ your pump's ~92.22 GPM."
      },
      {
       "code": "FILTER_TURNOVER_NOT_A_FACTOR",
@@ -1277,7 +1270,7 @@
      "minRequired": 375,
      "candidateSize": 450,
      "candidateMaxGPM": 124,
-     "pumpMaxGPM": 92.52,
+     "pumpMaxGPM": 92.22,
      "oversizeRatio": 1.2
     },
     "rank": 3
@@ -1298,7 +1291,7 @@
      "psi": 50,
      "dq": "verified"
     },
-    "score": 115.29914973339098,
+    "score": 115.43393334779152,
     "reasons": [
      {
       "code": "FILTER_SIZE_OK",
@@ -1310,7 +1303,7 @@
       "code": "FILTER_FLOW_OK",
       "severity": "good",
       "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
-      "text": "Handles ~115 GPM ≥ your pump's ~92.52 GPM."
+      "text": "Handles ~115 GPM ≥ your pump's ~92.22 GPM."
      },
      {
       "code": "FILTER_TURNOVER_NOT_A_FACTOR",
@@ -1336,7 +1329,7 @@
      "minRequired": 375,
      "candidateSize": 400,
      "candidateMaxGPM": 115,
-     "pumpMaxGPM": 92.52,
+     "pumpMaxGPM": 92.22,
      "oversizeRatio": 1.07
     },
     "rank": 4
@@ -1369,7 +1362,7 @@
       "code": "FILTER_FLOW_OK",
       "severity": "good",
       "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
-      "text": "Handles ~130 GPM ≥ your pump's ~92.52 GPM."
+      "text": "Handles ~130 GPM ≥ your pump's ~92.22 GPM."
      },
      {
       "code": "FILTER_TURNOVER_NOT_A_FACTOR",
@@ -1395,7 +1388,7 @@
      "minRequired": 375,
      "candidateSize": 500,
      "candidateMaxGPM": 130,
-     "pumpMaxGPM": 92.52,
+     "pumpMaxGPM": 92.22,
      "oversizeRatio": 1.33
     },
     "rank": 5
@@ -1428,7 +1421,7 @@
       "code": "FILTER_FLOW_OK",
       "severity": "good",
       "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
-      "text": "Handles ~150 GPM ≥ your pump's ~92.52 GPM."
+      "text": "Handles ~150 GPM ≥ your pump's ~92.22 GPM."
      },
      {
       "code": "FILTER_TURNOVER_NOT_A_FACTOR",
@@ -1460,7 +1453,7 @@
      "minRequired": 375,
      "candidateSize": 520,
      "candidateMaxGPM": 150,
-     "pumpMaxGPM": 92.52,
+     "pumpMaxGPM": 92.22,
      "oversizeRatio": 1.39
     },
     "rank": 6
@@ -1493,7 +1486,7 @@
       "code": "FILTER_FLOW_OK",
       "severity": "good",
       "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
-      "text": "Handles ~150 GPM ≥ your pump's ~92.52 GPM."
+      "text": "Handles ~150 GPM ≥ your pump's ~92.22 GPM."
      },
      {
       "code": "FILTER_TURNOVER_NOT_A_FACTOR",
@@ -1525,7 +1518,7 @@
      "minRequired": 375,
      "candidateSize": 525,
      "candidateMaxGPM": 150,
-     "pumpMaxGPM": 92.52,
+     "pumpMaxGPM": 92.22,
      "oversizeRatio": 1.4
     },
     "rank": 7
@@ -1558,7 +1551,7 @@
       "code": "FILTER_FLOW_OK",
       "severity": "good",
       "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
-      "text": "Handles ~150 GPM ≥ your pump's ~92.52 GPM."
+      "text": "Handles ~150 GPM ≥ your pump's ~92.22 GPM."
      },
      {
       "code": "FILTER_TURNOVER_NOT_A_FACTOR",
@@ -1578,7 +1571,7 @@
      "minRequired": 375,
      "candidateSize": 460,
      "candidateMaxGPM": 150,
-     "pumpMaxGPM": 92.52,
+     "pumpMaxGPM": 92.22,
      "oversizeRatio": 1.23
     },
     "rank": 8
@@ -2536,7 +2529,7 @@
    "code": "PAD_FLOW_OK",
    "severity": "good",
    "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
-   "text": "Filter handles ~150 GPM, above the ~93 GPM the pump can push at full speed — no bottleneck."
+   "text": "Filter handles ~150 GPM, above the ~92 GPM the pump can push at full speed — no bottleneck."
   },
   {
    "code": "PAD_SWG",
@@ -2551,13 +2544,13 @@
    "text": "Keep pump, lights and salt cell on the same brand as your Pentair automation where you can — filters and heaters are brand-agnostic."
   }
  ],
- "pumpMaxGPM": 92.52,
+ "pumpMaxGPM": 92.22,
  "warnings": [
   {
-   "code": "SWG_FLOW_SWITCH_OK",
-   "severity": "info",
+   "code": "SWG_FLOW_SWITCH",
+   "severity": "warning",
    "ruleId": "SWG_FLOW_SWITCH",
-   "text": "Salt cell flow switch needs roughly 25 GPM through a 2″ tee; this pump stays above that even at low speed."
+   "text": "Heads up on the salt cell: its flow switch trips on water velocity, so a 2″ tee needs roughly 25 GPM. The top pick can idle near 12 GPM, which is below that — set your lowest speed high enough to close the switch, or the cell will quietly stop making chlorine."
   },
   {
    "code": "DATA_QUALITY_FLAG",
@@ -2601,7 +2594,7 @@
    "code": "PAD_FLOW_OK",
    "severity": "good",
    "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
-   "text": "Filter handles ~150 GPM, above the ~93 GPM the pump can push at full speed — no bottleneck."
+   "text": "Filter handles ~150 GPM, above the ~92 GPM the pump can push at full speed — no bottleneck."
   },
   {
    "code": "PAD_SWG",
@@ -2616,10 +2609,10 @@
    "text": "Keep pump, lights and salt cell on the same brand as your Pentair automation where you can — filters and heaters are brand-agnostic."
   },
   {
-   "code": "SWG_FLOW_SWITCH_OK",
-   "severity": "info",
+   "code": "SWG_FLOW_SWITCH",
+   "severity": "warning",
    "ruleId": "SWG_FLOW_SWITCH",
-   "text": "Salt cell flow switch needs roughly 25 GPM through a 2″ tee; this pump stays above that even at low speed."
+   "text": "Heads up on the salt cell: its flow switch trips on water velocity, so a 2″ tee needs roughly 25 GPM. The top pick can idle near 12 GPM, which is below that — set your lowest speed high enough to close the switch, or the cell will quietly stop making chlorine."
   },
   {
    "code": "DATA_QUALITY_FLAG",
