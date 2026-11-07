@@ -1,0 +1,24 @@
+{
+ "_about": "Salt cell specs checked against manufacturer documents (2026-11). Same format as filters-2026-11.json; see README.md. Output is lb of chlorine per 24 h at 100%.",
+ "checked": "2026-11-07",
+ "entries": {
+  "pentair-ic-15": {"verdict": "matches", "lbs": 0.6, "rated": 15000, "src": "https://flowandfiltrationsolutions.pentair.com/content/dam/extranet/nam/pentair-pool/residential/sanitizers/intellichlor/intellichlor-installation-users-guide-ic15-ic20-ic40-ic60.pdf"},
+  "pentair-ic-20": {"verdict": "matches", "lbs": 0.7, "rated": 20000, "src": "https://flowandfiltrationsolutions.pentair.com/content/dam/extranet/nam/pentair-pool/residential/sanitizers/intellichlor/intellichlor-installation-users-guide-ic15-ic20-ic40-ic60.pdf"},
+  "pentair-ic-40": {"verdict": "matches", "lbs": 1.4, "rated": 40000, "src": "https://flowandfiltrationsolutions.pentair.com/content/dam/extranet/nam/pentair-pool/residential/sanitizers/intellichlor/intellichlor-installation-users-guide-ic15-ic20-ic40-ic60.pdf"},
+  "pentair-ic-60": {"verdict": "matches", "lbs": 2.0, "rated": 60000, "src": "https://flowandfiltrationsolutions.pentair.com/content/dam/extranet/nam/pentair-pool/residential/sanitizers/intellichlor/intellichlor-installation-users-guide-ic15-ic20-ic40-ic60.pdf"},
+  "pentair-ic-30": {"verdict": "unverified", "note": "Pentair's IntelliChlor guide lists IC15/IC20/IC40/IC60 only; no IC30 found. Possibly confused with the iChlor 30 (1.0 lb/day, 30k gal), which is a separate record. Check whether this record should be removed."},
+  "jandy-aquapure-700": {"verdict": "matches", "lbs": 0.63, "rated": 12000, "src": "https://manualmachine.com/jandy/apure700/8451906-installation-manual", "note": "Jandy manual: 283 g (0.625 lb) per 24 h, residential pools up to 12,000 gal; resolves the earlier source conflict"},
+  "jandy-aquapure-1400": {"verdict": "matches", "lbs": 1.25, "rated": 40000, "src": "https://manualmachine.com/jandy/apure700/8451906-installation-manual", "note": "567 g (1.25 lb) per 24 h, up to 40,000 gal"},
+  "jandy-truclear-ei": {"verdict": "corrected", "lbs": 0.93, "rated": 35000, "src": "https://jandy.com/en/products/water-sanitizers/salt-chlorinators/truclear", "note": "Jandy: up to 0.93 lb/day, pools up to 35,000 gal (catalog had 0.92); resolves the earlier source conflict"},
+  "jandy-truclear-xl": {"verdict": "matches", "lbs": 1.52, "rated": 45000, "src": "https://www.aquamagazine.com/products/sanitizing/article/15744421/fluidra-fluidra-expands-its-trusted-salt-chlorination-line-with-the-launch-of-jandy-truclear-xl", "note": "Fluidra launch announcement"},
+  "autopilot-chlorsync-cs30": {"verdict": "corrected", "lbs": 1.1, "rated": 30000, "src": "https://cdn.shopify.com/s/files/1/0679/5981/6499/files/ChlorSync-Brochure-English-V3.pdf", "note": "brochure: up to 30,000 gal, 1.1 lb/day at 3,500 ppm salt (rated gallons added)"},
+  "autopilot-chlorsync-cs40": {"verdict": "corrected", "lbs": 1.4, "rated": 40000, "src": "https://cdn.shopify.com/s/files/1/0679/5981/6499/files/ChlorSync-Brochure-English-V3.pdf"},
+  "autopilot-chlorsync-cs50": {"verdict": "corrected", "lbs": 1.7, "rated": 50000, "src": "https://cdn.shopify.com/s/files/1/0679/5981/6499/files/ChlorSync-Brochure-English-V3.pdf"},
+  "autopilot-digital-nanoplus": {"verdict": "corrected", "lbs": 1.06, "rated": 28000, "src": "https://images.inyopools.com/cloud/documents/pool-pilot-digital-nano-brochure.pdf", "note": "Digital Nano+ (DNP2): 1.06 lb/day (20 g/h), pools up to 28,000 gal (rated gallons added)"},
+  "autopilot-ppc5": {"verdict": "matches", "lbs": 2.62, "src": "https://www.activepoolsupply.com/Manuals/56655_2011118163142.pdf", "note": "up to 2.62 lb/day (49.5 g/h); manifold rated 80,000 gal"},
+  "autopilot-digital-ppc1": {"verdict": "conflict", "src": "https://www.activepoolsupply.com/Manuals/56655_2011118163142.pdf", "note": "a Pool Pilot manual table lists PPC1 at ~0.8 lb/day (15.1 g/h); catalog has 1.28 lb/day. The scan is garbled, so the catalog value is kept pending a clean source."},
+  "circupool-rj30p": {"verdict": "conflict", "src": "https://www.troublefreepool.com/goto/post?id=2257105", "note": "CircuPool advertises 1.5 lb/day; TFP member testing measured ~71% of advertised on an RJ-45+. Already flagged advertised-output-disputed; catalog keeps the advertised value per SWG_OUTPUT_HAIRCUT."},
+  "circupool-rj45p": {"verdict": "conflict", "src": "https://www.troublefreepool.com/goto/post?id=2257105", "note": "advertised 2.0 lb/day; member test ~71% of advertised. Kept, flagged."},
+  "circupool-rj60p": {"verdict": "conflict", "src": "https://www.troublefreepool.com/goto/post?id=2492919", "note": "advertised 3.1 lb/day. Kept, flagged."}
+ }
+}

@@ -215,8 +215,8 @@
      "Low-temp cutoff ~60F."
     ],
     "msrp": 1649,
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
+    "src": "https://www.troublefreepool.com/goto/post?id=2492919",
+    "asOf": "2026-11-07"
    },
    "fkey": "circupool-rj60p",
    "score": 78.28,
@@ -300,8 +300,8 @@
     "dq": "verified",
     "notes": [],
     "msrp": null,
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
+    "src": "https://flowandfiltrationsolutions.pentair.com/content/dam/extranet/nam/pentair-pool/residential/sanitizers/intellichlor/intellichlor-installation-users-guide-ic15-ic20-ic40-ic60.pdf",
+    "asOf": "2026-11-07"
    },
    "fkey": "pentair-ic-60",
    "score": 77.68,
@@ -475,6 +475,68 @@
   },
   {
    "product": {
+    "id": "autopilot-chlorsync-cs50",
+    "mfr": "Autopilot",
+    "model": "ChlorSync CS50",
+    "lbs": 1.7,
+    "rated": 50000,
+    "ratedQ": "unknown",
+    "ctrl": null,
+    "cyc": null,
+    "polH": null,
+    "ltCut": null,
+    "ltRed": null,
+    "auto": [],
+    "cell": null,
+    "fam": null,
+    "dq": "verified",
+    "notes": [],
+    "msrp": null,
+    "src": "https://cdn.shopify.com/s/files/1/0679/5981/6499/files/ChlorSync-Brochure-English-V3.pdf",
+    "asOf": "2026-11-07"
+   },
+   "fkey": "autopilot-chlorsync-cs50",
+   "score": 75.88,
+   "reasons": [
+    {
+     "code": "CAPACITY",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Meets the ≥2× rule: 1.7 lbs/day vs 0.84 needed."
+    },
+    {
+     "code": "RATED_GALLONS",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Rated for 50,000 gal ≥ 2× your pool."
+    },
+    {
+     "code": "REQ_OUTPUT",
+     "severity": "info",
+     "ruleId": "SWG_MAX_OUTPUT_PCT",
+     "text": "Needs ~35% output at 8h/day."
+    }
+   ],
+   "derated": false,
+   "effLbs": 1.7,
+   "fit": {
+    "meetsCapacity": true,
+    "automationMatch": false,
+    "regulatoryOk": true,
+    "secondary": true
+   },
+   "computed": {
+    "requiredLbs": 0.84,
+    "deratedLbsPerDay": 1.7,
+    "requiredOutputPct": 35,
+    "lbsNeeded": 0.2,
+    "estRuntimeHours": 8,
+    "ratedPoolGallons": 50000
+   },
+   "rank": 8
+  },
+  {
+   "product": {
     "id": "circupool-edge40",
     "mfr": "CircuPool",
     "model": "Edge-40",
@@ -535,7 +597,73 @@
     "estRuntimeHours": 8,
     "ratedPoolGallons": 40000
    },
-   "rank": 8
+   "rank": 9
+  },
+  {
+   "product": {
+    "id": "jandy-truclear-xl",
+    "mfr": "Jandy",
+    "model": "TruClear XL",
+    "lbs": 1.52,
+    "rated": 45000,
+    "ratedQ": "verified",
+    "ctrl": "duty-cycle",
+    "cyc": null,
+    "polH": null,
+    "ltCut": null,
+    "ltRed": null,
+    "auto": [
+     "Jandy AquaLink"
+    ],
+    "cell": null,
+    "fam": null,
+    "dq": "verified",
+    "notes": [
+     "Output figure taken from the manufacturer launch press release, not a spec sheet."
+    ],
+    "msrp": null,
+    "src": "https://www.aquamagazine.com/products/sanitizing/article/15744421/fluidra-fluidra-expands-its-trusted-salt-chlorination-line-with-the-launch-of-jandy-truclear-xl",
+    "asOf": "2026-11-07"
+   },
+   "fkey": "jandy-truclear-xl",
+   "score": 74.8,
+   "reasons": [
+    {
+     "code": "CAPACITY",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Meets the ≥2× rule: 1.52 lbs/day vs 0.84 needed."
+    },
+    {
+     "code": "RATED_GALLONS",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Rated for 45,000 gal ≥ 2× your pool."
+    },
+    {
+     "code": "REQ_OUTPUT",
+     "severity": "info",
+     "ruleId": "SWG_MAX_OUTPUT_PCT",
+     "text": "Needs ~40% output at 8h/day."
+    }
+   ],
+   "derated": false,
+   "effLbs": 1.52,
+   "fit": {
+    "meetsCapacity": true,
+    "automationMatch": false,
+    "regulatoryOk": true,
+    "secondary": true
+   },
+   "computed": {
+    "requiredLbs": 0.84,
+    "deratedLbsPerDay": 1.52,
+    "requiredOutputPct": 40,
+    "lbsNeeded": 0.2,
+    "estRuntimeHours": 8,
+    "ratedPoolGallons": 45000
+   },
+   "rank": 10
   },
   {
    "product": {
@@ -618,7 +746,7 @@
     "estRuntimeHours": 8,
     "ratedPoolGallons": 40000
    },
-   "rank": 9
+   "rank": 11
   },
   {
    "product": {
@@ -697,147 +825,6 @@
     "lbsNeeded": 0.2,
     "estRuntimeHours": 8,
     "ratedPoolGallons": 40000
-   },
-   "rank": 10
-  },
-  {
-   "product": {
-    "id": "hayward-aquarite-s3-tcells340",
-    "mfr": "Hayward",
-    "model": "AquaRite S3 w/ TCELLS340",
-    "lbs": 1.45,
-    "rated": 40000,
-    "ratedQ": "verified",
-    "ctrl": "proportional",
-    "cyc": null,
-    "polH": 3,
-    "ltCut": 50,
-    "ltRed": 60,
-    "auto": [
-     "Hayward Omni (select platforms)"
-    ],
-    "cell": "TCELLS340",
-    "fam": null,
-    "dq": "verified",
-    "notes": [
-     "Proportional output control — suits short pump cycles.",
-     "Low-temp cutoff ~50F."
-    ],
-    "msrp": null,
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
-   },
-   "fkey": "hayward-aquarite-s3-tcells340",
-   "score": 74.38,
-   "reasons": [
-    {
-     "code": "CAPACITY",
-     "severity": "good",
-     "ruleId": "SWG_2X_RULE",
-     "text": "Meets the ≥2× rule: 1.45 lbs/day vs 0.84 needed."
-    },
-    {
-     "code": "RATED_GALLONS",
-     "severity": "good",
-     "ruleId": "SWG_2X_RULE",
-     "text": "Rated for 40,000 gal ≥ 2× your pool."
-    },
-    {
-     "code": "REQ_OUTPUT",
-     "severity": "info",
-     "ruleId": "SWG_MAX_OUTPUT_PCT",
-     "text": "Needs ~41% output at 8h/day."
-    },
-    {
-     "code": "LOW_TEMP",
-     "severity": "info",
-     "ruleId": "SWG_2X_RULE",
-     "text": "Output tapers below ~60°F, cuts off ~50°F."
-    },
-    {
-     "code": "LOW_TEMP_NOTE",
-     "severity": "info",
-     "ruleId": "SWG_2X_RULE",
-     "text": "Known sticky low-temp behavior — check winter operation."
-    }
-   ],
-   "derated": false,
-   "effLbs": 1.45,
-   "fit": {
-    "meetsCapacity": true,
-    "automationMatch": false,
-    "regulatoryOk": true,
-    "secondary": true
-   },
-   "computed": {
-    "requiredLbs": 0.84,
-    "deratedLbsPerDay": 1.45,
-    "requiredOutputPct": 41,
-    "lbsNeeded": 0.2,
-    "estRuntimeHours": 8,
-    "ratedPoolGallons": 40000
-   },
-   "rank": 11
-  },
-  {
-   "product": {
-    "id": "circupool-core35",
-    "mfr": "CircuPool",
-    "model": "Core-35",
-    "lbs": 1.4,
-    "rated": 35000,
-    "ratedQ": "verified",
-    "ctrl": "duty-cycle",
-    "cyc": null,
-    "polH": null,
-    "ltCut": null,
-    "ltRed": null,
-    "auto": [],
-    "cell": "CORE35-RC",
-    "fam": null,
-    "dq": "verified",
-    "notes": [],
-    "msrp": null,
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
-   },
-   "fkey": "circupool-core35",
-   "score": 74.08,
-   "reasons": [
-    {
-     "code": "CAPACITY",
-     "severity": "good",
-     "ruleId": "SWG_2X_RULE",
-     "text": "Meets the ≥2× rule: 1.4 lbs/day vs 0.84 needed."
-    },
-    {
-     "code": "RATED_GALLONS",
-     "severity": "good",
-     "ruleId": "SWG_2X_RULE",
-     "text": "Rated for 35,000 gal ≥ 2× your pool."
-    },
-    {
-     "code": "REQ_OUTPUT",
-     "severity": "info",
-     "ruleId": "SWG_MAX_OUTPUT_PCT",
-     "text": "Needs ~43% output at 8h/day."
-    }
-   ],
-   "derated": false,
-   "effLbs": 1.4,
-   "fit": {
-    "meetsCapacity": true,
-    "automationMatch": false,
-    "regulatoryOk": true,
-    "secondary": true
-   },
-   "computed": {
-    "requiredLbs": 0.84,
-    "deratedLbsPerDay": 1.4,
-    "requiredOutputPct": 43,
-    "lbsNeeded": 0.2,
-    "estRuntimeHours": 8,
-    "ratedPoolGallons": 35000
    },
    "rank": 12
   }

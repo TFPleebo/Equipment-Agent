@@ -1955,8 +1955,8 @@
       "Low-temp cutoff ~60F."
      ],
      "msrp": 1649,
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "src": "https://www.troublefreepool.com/goto/post?id=2492919",
+     "asOf": "2026-11-07"
     },
     "fkey": "circupool-rj60p",
     "score": 78.7,
@@ -2034,8 +2034,8 @@
      "dq": "verified",
      "notes": [],
      "msrp": null,
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "src": "https://flowandfiltrationsolutions.pentair.com/content/dam/extranet/nam/pentair-pool/residential/sanitizers/intellichlor/intellichlor-installation-users-guide-ic15-ic20-ic40-ic60.pdf",
+     "asOf": "2026-11-07"
     },
     "fkey": "pentair-ic-60",
     "score": 78.1,
@@ -2271,6 +2271,62 @@
    },
    {
     "product": {
+     "id": "autopilot-ppc5",
+     "mfr": "Autopilot",
+     "model": "PPC5",
+     "lbs": 2.62,
+     "rated": null,
+     "ratedQ": "unknown",
+     "ctrl": null,
+     "cyc": null,
+     "polH": null,
+     "ltCut": null,
+     "ltRed": null,
+     "auto": [],
+     "cell": null,
+     "fam": null,
+     "dq": "verified",
+     "notes": [],
+     "msrp": null,
+     "src": "https://www.activepoolsupply.com/Manuals/56655_2011118163142.pdf",
+     "asOf": "2026-11-07"
+    },
+    "fkey": "autopilot-ppc5",
+    "score": 73.82,
+    "reasons": [
+     {
+      "code": "CAPACITY",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Meets the ≥2× rule: 2.62 lbs/day vs 1.05 needed."
+     },
+     {
+      "code": "REQ_OUTPUT",
+      "severity": "info",
+      "ruleId": "SWG_MAX_OUTPUT_PCT",
+      "text": "Needs ~34% output at 10h/day."
+     }
+    ],
+    "derated": false,
+    "effLbs": 2.62,
+    "fit": {
+     "meetsCapacity": true,
+     "automationMatch": false,
+     "regulatoryOk": true,
+     "secondary": null
+    },
+    "computed": {
+     "requiredLbs": 1.05,
+     "deratedLbsPerDay": 2.62,
+     "requiredOutputPct": 34,
+     "lbsNeeded": 0.375,
+     "estRuntimeHours": 10,
+     "ratedPoolGallons": null
+    },
+    "rank": 9
+   },
+   {
+    "product": {
      "id": "pureline-crystal-pure-40",
      "mfr": "Pureline",
      "model": "Crystal Pure 40,000",
@@ -2329,7 +2385,7 @@
      "estRuntimeHours": 10,
      "ratedPoolGallons": 40000
     },
-    "rank": 9
+    "rank": 10
    },
    {
     "product": {
@@ -2391,7 +2447,7 @@
      "estRuntimeHours": 10,
      "ratedPoolGallons": 40000
     },
-    "rank": 10
+    "rank": 11
    },
    {
     "product": {
@@ -2438,82 +2494,6 @@
      }
     ],
     "derated": false,
-    "effLbs": 2,
-    "fit": {
-     "meetsCapacity": true,
-     "automationMatch": false,
-     "regulatoryOk": true,
-     "secondary": true
-    },
-    "computed": {
-     "requiredLbs": 1.05,
-     "deratedLbsPerDay": 2,
-     "requiredOutputPct": 45,
-     "lbsNeeded": 0.375,
-     "estRuntimeHours": 10,
-     "ratedPoolGallons": 45000
-    },
-    "rank": 11
-   },
-   {
-    "product": {
-     "id": "circupool-rj45p",
-     "mfr": "CircuPool",
-     "model": "RJ-45 Plus",
-     "lbs": 2,
-     "rated": 45000,
-     "ratedQ": "verified",
-     "ctrl": "duty-cycle",
-     "cyc": 200,
-     "polH": null,
-     "ltCut": 60,
-     "ltRed": null,
-     "auto": [],
-     "cell": "RJ-45RC",
-     "fam": null,
-     "dq": "advertised-output-disputed",
-     "notes": [
-      "Low-temp cutoff ~60F."
-     ],
-     "msrp": null,
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
-    },
-    "fkey": "circupool-rj45p",
-    "score": 72.1,
-    "reasons": [
-     {
-      "code": "DATA_QUALITY_FLAG",
-      "severity": "info",
-      "ruleId": "SWG_OUTPUT_HAIRCUT",
-      "text": "Published output for this model is disputed between sources. Measurement generally matches published figures, so it is used as-is — but verify against the manufacturer before buying."
-     },
-     {
-      "code": "CAPACITY",
-      "severity": "good",
-      "ruleId": "SWG_2X_RULE",
-      "text": "Meets the ≥2× rule: 2 lbs/day vs 1.05 needed."
-     },
-     {
-      "code": "RATED_GALLONS",
-      "severity": "good",
-      "ruleId": "SWG_2X_RULE",
-      "text": "Rated for 45,000 gal ≥ 2× your pool."
-     },
-     {
-      "code": "REQ_OUTPUT",
-      "severity": "info",
-      "ruleId": "SWG_MAX_OUTPUT_PCT",
-      "text": "Needs ~45% output at 10h/day."
-     },
-     {
-      "code": "LOW_TEMP_NOTE",
-      "severity": "info",
-      "ruleId": "SWG_2X_RULE",
-      "text": "Known sticky low-temp behavior — check winter operation."
-     }
-    ],
-    "derated": true,
     "effLbs": 2,
     "fit": {
      "meetsCapacity": true,

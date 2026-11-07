@@ -23,8 +23,8 @@
       "pureline-crystal-pure-60",
       "circupool-rj60",
       "circupool-rj60p",
-      "circupool-core55",
-      "autopilot-ppc5"
+      "autopilot-ppc5",
+      "circupool-core55"
     ],
     "topRequiredOutputPct": 71,
     "comparison": {

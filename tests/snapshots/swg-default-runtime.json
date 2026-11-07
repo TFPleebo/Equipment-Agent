@@ -153,8 +153,8 @@
      "Low-temp cutoff ~60F."
     ],
     "msrp": 1649,
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
+    "src": "https://www.troublefreepool.com/goto/post?id=2492919",
+    "asOf": "2026-11-07"
    },
    "fkey": "circupool-rj60p",
    "score": 79.4,
@@ -294,8 +294,8 @@
     "dq": "verified",
     "notes": [],
     "msrp": null,
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
+    "src": "https://flowandfiltrationsolutions.pentair.com/content/dam/extranet/nam/pentair-pool/residential/sanitizers/intellichlor/intellichlor-installation-users-guide-ic15-ic20-ic40-ic60.pdf",
+    "asOf": "2026-11-07"
    },
    "fkey": "pentair-ic-60",
    "score": 72.8,
@@ -469,6 +469,68 @@
   },
   {
    "product": {
+    "id": "autopilot-chlorsync-cs50",
+    "mfr": "Autopilot",
+    "model": "ChlorSync CS50",
+    "lbs": 1.7,
+    "rated": 50000,
+    "ratedQ": "unknown",
+    "ctrl": null,
+    "cyc": null,
+    "polH": null,
+    "ltCut": null,
+    "ltRed": null,
+    "auto": [],
+    "cell": null,
+    "fam": null,
+    "dq": "verified",
+    "notes": [],
+    "msrp": null,
+    "src": "https://cdn.shopify.com/s/files/1/0679/5981/6499/files/ChlorSync-Brochure-English-V3.pdf",
+    "asOf": "2026-11-07"
+   },
+   "fkey": "autopilot-chlorsync-cs50",
+   "score": 71,
+   "reasons": [
+    {
+     "code": "CAPACITY",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Meets the ≥2× rule: 1.7 lbs/day vs 1.4 needed."
+    },
+    {
+     "code": "RATED_GALLONS",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Rated for 50,000 gal ≥ 2× your pool."
+    },
+    {
+     "code": "REQ_OUTPUT",
+     "severity": "warning",
+     "ruleId": "SWG_MAX_OUTPUT_PCT",
+     "text": "Needs ~78% output at 12h/day — above about 50%, so longer off periods would help keep scale down."
+    }
+   ],
+   "derated": false,
+   "effLbs": 1.7,
+   "fit": {
+    "meetsCapacity": true,
+    "automationMatch": false,
+    "regulatoryOk": true,
+    "secondary": true
+   },
+   "computed": {
+    "requiredLbs": 1.4,
+    "deratedLbsPerDay": 1.7,
+    "requiredOutputPct": 78,
+    "lbsNeeded": 0.667,
+    "estRuntimeHours": 12,
+    "ratedPoolGallons": 50000
+   },
+   "rank": 8
+  },
+  {
+   "product": {
     "id": "circupool-edge40",
     "mfr": "CircuPool",
     "model": "Edge-40",
@@ -529,7 +591,73 @@
     "estRuntimeHours": 12,
     "ratedPoolGallons": 40000
    },
-   "rank": 8
+   "rank": 9
+  },
+  {
+   "product": {
+    "id": "jandy-truclear-xl",
+    "mfr": "Jandy",
+    "model": "TruClear XL",
+    "lbs": 1.52,
+    "rated": 45000,
+    "ratedQ": "verified",
+    "ctrl": "duty-cycle",
+    "cyc": null,
+    "polH": null,
+    "ltCut": null,
+    "ltRed": null,
+    "auto": [
+     "Jandy AquaLink"
+    ],
+    "cell": null,
+    "fam": null,
+    "dq": "verified",
+    "notes": [
+     "Output figure taken from the manufacturer launch press release, not a spec sheet."
+    ],
+    "msrp": null,
+    "src": "https://www.aquamagazine.com/products/sanitizing/article/15744421/fluidra-fluidra-expands-its-trusted-salt-chlorination-line-with-the-launch-of-jandy-truclear-xl",
+    "asOf": "2026-11-07"
+   },
+   "fkey": "jandy-truclear-xl",
+   "score": 69.92,
+   "reasons": [
+    {
+     "code": "CAPACITY",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Meets the ≥2× rule: 1.52 lbs/day vs 1.4 needed."
+    },
+    {
+     "code": "RATED_GALLONS",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Rated for 45,000 gal ≥ 2× your pool."
+    },
+    {
+     "code": "REQ_OUTPUT",
+     "severity": "warning",
+     "ruleId": "SWG_MAX_OUTPUT_PCT",
+     "text": "Needs ~88% output at 12h/day — above about 50%, so longer off periods would help keep scale down."
+    }
+   ],
+   "derated": false,
+   "effLbs": 1.52,
+   "fit": {
+    "meetsCapacity": true,
+    "automationMatch": false,
+    "regulatoryOk": true,
+    "secondary": true
+   },
+   "computed": {
+    "requiredLbs": 1.4,
+    "deratedLbsPerDay": 1.52,
+    "requiredOutputPct": 88,
+    "lbsNeeded": 0.667,
+    "estRuntimeHours": 12,
+    "ratedPoolGallons": 45000
+   },
+   "rank": 10
   },
   {
    "product": {
@@ -606,7 +734,7 @@
     "estRuntimeHours": 12,
     "ratedPoolGallons": 40000
    },
-   "rank": 9
+   "rank": 11
   },
   {
    "product": {
@@ -676,146 +804,6 @@
     "requiredLbs": 1.4,
     "deratedLbsPerDay": 1.47,
     "requiredOutputPct": 91,
-    "lbsNeeded": 0.667,
-    "estRuntimeHours": 12,
-    "ratedPoolGallons": 40000
-   },
-   "rank": 10
-  },
-  {
-   "product": {
-    "id": "hayward-aquarite-s3-tcells340",
-    "mfr": "Hayward",
-    "model": "AquaRite S3 w/ TCELLS340",
-    "lbs": 1.45,
-    "rated": 40000,
-    "ratedQ": "verified",
-    "ctrl": "proportional",
-    "cyc": null,
-    "polH": 3,
-    "ltCut": 50,
-    "ltRed": 60,
-    "auto": [
-     "Hayward Omni (select platforms)"
-    ],
-    "cell": "TCELLS340",
-    "fam": null,
-    "dq": "verified",
-    "notes": [
-     "Proportional output control — suits short pump cycles.",
-     "Low-temp cutoff ~50F."
-    ],
-    "msrp": null,
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
-   },
-   "fkey": "hayward-aquarite-s3-tcells340",
-   "score": 69.5,
-   "reasons": [
-    {
-     "code": "CAPACITY",
-     "severity": "good",
-     "ruleId": "SWG_2X_RULE",
-     "text": "Meets the ≥2× rule: 1.45 lbs/day vs 1.4 needed."
-    },
-    {
-     "code": "RATED_GALLONS",
-     "severity": "good",
-     "ruleId": "SWG_2X_RULE",
-     "text": "Rated for 40,000 gal ≥ 2× your pool."
-    },
-    {
-     "code": "REQ_OUTPUT",
-     "severity": "warning",
-     "ruleId": "SWG_MAX_OUTPUT_PCT",
-     "text": "Needs ~92% output at 12h/day — above about 50%, so longer off periods would help keep scale down."
-    },
-    {
-     "code": "LOW_TEMP_NOTE",
-     "severity": "info",
-     "ruleId": "SWG_2X_RULE",
-     "text": "Known sticky low-temp behavior — check winter operation."
-    }
-   ],
-   "derated": false,
-   "effLbs": 1.45,
-   "fit": {
-    "meetsCapacity": true,
-    "automationMatch": false,
-    "regulatoryOk": true,
-    "secondary": true
-   },
-   "computed": {
-    "requiredLbs": 1.4,
-    "deratedLbsPerDay": 1.45,
-    "requiredOutputPct": 92,
-    "lbsNeeded": 0.667,
-    "estRuntimeHours": 12,
-    "ratedPoolGallons": 40000
-   },
-   "rank": 11
-  },
-  {
-   "product": {
-    "id": "pentair-ic-40",
-    "mfr": "Pentair",
-    "model": "Intellichlor IC-40",
-    "lbs": 1.4,
-    "rated": 40000,
-    "ratedQ": "verified",
-    "ctrl": "duty-cycle",
-    "cyc": 5,
-    "polH": 3,
-    "ltCut": null,
-    "ltRed": null,
-    "auto": [
-     "Pentair IntelliCenter",
-     "Pentair IntelliTouch",
-     "Pentair EasyTouch",
-     "Pentair SunTouch"
-    ],
-    "cell": "IC40",
-    "fam": null,
-    "dq": "verified",
-    "notes": [],
-    "msrp": null,
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
-   },
-   "fkey": "pentair-ic-40",
-   "score": 69.2,
-   "reasons": [
-    {
-     "code": "CAPACITY",
-     "severity": "good",
-     "ruleId": "SWG_2X_RULE",
-     "text": "Meets the ≥2× rule: 1.4 lbs/day vs 1.4 needed."
-    },
-    {
-     "code": "RATED_GALLONS",
-     "severity": "good",
-     "ruleId": "SWG_2X_RULE",
-     "text": "Rated for 40,000 gal ≥ 2× your pool."
-    },
-    {
-     "code": "REQ_OUTPUT",
-     "severity": "warning",
-     "ruleId": "SWG_MAX_OUTPUT_PCT",
-     "text": "Needs ~95% output at 12h/day — above about 50%, so longer off periods would help keep scale down."
-    }
-   ],
-   "derated": false,
-   "effLbs": 1.4,
-   "fit": {
-    "meetsCapacity": true,
-    "automationMatch": false,
-    "regulatoryOk": true,
-    "secondary": true
-   },
-   "computed": {
-    "requiredLbs": 1.4,
-    "deratedLbsPerDay": 1.4,
-    "requiredOutputPct": 95,
     "lbsNeeded": 0.667,
     "estRuntimeHours": 12,
     "ratedPoolGallons": 40000

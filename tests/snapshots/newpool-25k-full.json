@@ -1908,8 +1908,8 @@
      "dq": "verified",
      "notes": [],
      "msrp": null,
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "src": "https://flowandfiltrationsolutions.pentair.com/content/dam/extranet/nam/pentair-pool/residential/sanitizers/intellichlor/intellichlor-installation-users-guide-ic15-ic20-ic40-ic60.pdf",
+     "asOf": "2026-11-07"
     },
     "fkey": "pentair-ic-60",
     "score": 85.5,
@@ -2237,8 +2237,8 @@
       "Low-temp cutoff ~60F."
      ],
      "msrp": 1649,
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "src": "https://www.troublefreepool.com/goto/post?id=2492919",
+     "asOf": "2026-11-07"
     },
     "fkey": "circupool-rj60p",
     "score": 74.1,
@@ -2434,14 +2434,14 @@
      "auto": [],
      "cell": null,
      "fam": null,
-     "dq": "base-only",
+     "dq": "verified",
      "notes": [],
      "msrp": null,
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "src": "https://www.activepoolsupply.com/Manuals/56655_2011118163142.pdf",
+     "asOf": "2026-11-07"
     },
     "fkey": "autopilot-ppc5",
-    "score": 63.22,
+    "score": 69.22,
     "reasons": [
      {
       "code": "CAPACITY",

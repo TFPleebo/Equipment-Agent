@@ -24,7 +24,7 @@
       "circupool-rj60",
       "circupool-rj60p",
       "circupool-core55",
-      "pentair-ic-60"
+      "autopilot-ppc5"
     ],
     "topRequiredOutputPct": 39,
     "comparison": null,

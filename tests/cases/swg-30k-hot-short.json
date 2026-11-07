@@ -22,8 +22,8 @@
     "top": [
       "pureline-crystal-pure-60",
       "circupool-rj60",
-      "circupool-rj60p",
       "autopilot-ppc5",
+      "circupool-rj60p",
       "astral-viron-v45"
     ],
     "topRequiredOutputPct": 126,

@@ -19,13 +19,13 @@
     "ppm": 4,
     "runtime": 12,
     "top": [
+      "autopilot-ppc5",
       "pureline-crystal-pure-60",
       "circupool-rj60",
       "circupool-rj60p",
-      "circupool-core55",
-      "pentair-ic-60"
+      "circupool-core55"
     ],
-    "topRequiredOutputPct": 168,
+    "topRequiredOutputPct": 204,
     "comparison": null,
     "warnings": [
       "PIPE_OK",

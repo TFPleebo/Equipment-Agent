@@ -145,6 +145,68 @@
   },
   {
    "product": {
+    "id": "autopilot-ppc5",
+    "mfr": "Autopilot",
+    "model": "PPC5",
+    "lbs": 2.62,
+    "rated": null,
+    "ratedQ": "unknown",
+    "ctrl": null,
+    "cyc": null,
+    "polH": null,
+    "ltCut": null,
+    "ltRed": null,
+    "auto": [],
+    "cell": null,
+    "fam": null,
+    "dq": "verified",
+    "notes": [],
+    "msrp": null,
+    "src": "https://www.activepoolsupply.com/Manuals/56655_2011118163142.pdf",
+    "asOf": "2026-11-07"
+   },
+   "fkey": "autopilot-ppc5",
+   "score": 60.92,
+   "reasons": [
+    {
+     "code": "CAPACITY",
+     "severity": "good",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Meets the ≥2× rule: 2.62 lbs/day vs 2.1 needed."
+    },
+    {
+     "code": "REQ_OUTPUT",
+     "severity": "warning",
+     "ruleId": "SWG_MAX_OUTPUT_PCT",
+     "text": "Would need >100% output at 6h/day — run the pump longer or size up."
+    },
+    {
+     "code": "CYCLE_UNKNOWN",
+     "severity": "info",
+     "ruleId": "SWG_2X_RULE",
+     "text": "Cycle behavior not documented for this model."
+    }
+   ],
+   "derated": false,
+   "effLbs": 2.62,
+   "fit": {
+    "meetsCapacity": true,
+    "automationMatch": false,
+    "regulatoryOk": true,
+    "secondary": null
+   },
+   "computed": {
+    "requiredLbs": 2.1,
+    "deratedLbsPerDay": 2.62,
+    "requiredOutputPct": 153,
+    "lbsNeeded": 1.001,
+    "estRuntimeHours": 6,
+    "ratedPoolGallons": null
+   },
+   "rank": 3
+  },
+  {
+   "product": {
     "id": "circupool-rj60p",
     "mfr": "CircuPool",
     "model": "RJ-60 Plus",
@@ -165,8 +227,8 @@
      "Low-temp cutoff ~60F."
     ],
     "msrp": 1649,
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
+    "src": "https://www.troublefreepool.com/goto/post?id=2492919",
+    "asOf": "2026-11-07"
    },
    "fkey": "circupool-rj60p",
    "score": 55.8,
@@ -223,68 +285,6 @@
     "lbsNeeded": 1.001,
     "estRuntimeHours": 6,
     "ratedPoolGallons": 60000
-   },
-   "rank": 3
-  },
-  {
-   "product": {
-    "id": "autopilot-ppc5",
-    "mfr": "Autopilot",
-    "model": "PPC5",
-    "lbs": 2.62,
-    "rated": null,
-    "ratedQ": "unknown",
-    "ctrl": null,
-    "cyc": null,
-    "polH": null,
-    "ltCut": null,
-    "ltRed": null,
-    "auto": [],
-    "cell": null,
-    "fam": null,
-    "dq": "base-only",
-    "notes": [],
-    "msrp": null,
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
-   },
-   "fkey": "autopilot-ppc5",
-   "score": 54.92,
-   "reasons": [
-    {
-     "code": "CAPACITY",
-     "severity": "good",
-     "ruleId": "SWG_2X_RULE",
-     "text": "Meets the ≥2× rule: 2.62 lbs/day vs 2.1 needed."
-    },
-    {
-     "code": "REQ_OUTPUT",
-     "severity": "warning",
-     "ruleId": "SWG_MAX_OUTPUT_PCT",
-     "text": "Would need >100% output at 6h/day — run the pump longer or size up."
-    },
-    {
-     "code": "CYCLE_UNKNOWN",
-     "severity": "info",
-     "ruleId": "SWG_2X_RULE",
-     "text": "Cycle behavior not documented for this model."
-    }
-   ],
-   "derated": false,
-   "effLbs": 2.62,
-   "fit": {
-    "meetsCapacity": true,
-    "automationMatch": false,
-    "regulatoryOk": true,
-    "secondary": null
-   },
-   "computed": {
-    "requiredLbs": 2.1,
-    "deratedLbsPerDay": 2.62,
-    "requiredOutputPct": 153,
-    "lbsNeeded": 1.001,
-    "estRuntimeHours": 6,
-    "ratedPoolGallons": null
    },
    "rank": 4
   },
