@@ -32,7 +32,9 @@
     "port": 2,
     "cart": "Pentair 170148; inner 25021-0224S (209 sq ft) + outer 25022-0225S (291 sq ft)",
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 2,
    "score": 105.22222222222221,
@@ -98,7 +100,9 @@
     "port": 2,
     "cart": "Pentair 179136 / Pleatco ULTRA-A7-PAK4 / Unicel C-7472-4",
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 2,
    "score": 104.11111111111111,
@@ -165,7 +169,9 @@
     "port": 2,
     "cart": "Hayward CX1280XREPAK4",
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 2,
    "score": 103.83333333333333,
@@ -231,7 +237,9 @@
     "port": 2,
     "cart": "Pentair 170147; inner 25021-0202S (191 sq ft) + outer 25022-0203S (259 sq ft)",
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 2,
    "score": 102,
@@ -297,7 +305,9 @@
     "port": 2,
     "cart": null,
     "psi": 50,
-    "dq": "partial"
+    "dq": "partial",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 2,
    "score": 96.64444444444445,
@@ -357,7 +367,9 @@
     "port": 2,
     "cart": null,
     "psi": 50,
-    "dq": "partial"
+    "dq": "partial",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 2,
    "score": 96.64444444444445,
@@ -417,7 +429,9 @@
     "port": 2,
     "cart": null,
     "psi": 50,
-    "dq": "partial"
+    "dq": "partial",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 2,
    "score": 95.97777777777777,
@@ -477,7 +491,9 @@
     "port": 2,
     "cart": null,
     "psi": 50,
-    "dq": "partial"
+    "dq": "partial",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 2,
    "score": 95.97777777777777,
@@ -539,7 +555,9 @@
     "port": 2,
     "cart": "Hayward CX591XREPAK4 (two four-packs / eight elements)",
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "reason": {
     "code": "FILTER_UNDERSIZED",
@@ -562,7 +580,9 @@
     "port": 2,
     "cart": null,
     "psi": 50,
-    "dq": "partial"
+    "dq": "partial",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "reason": {
     "code": "FILTER_UNDERSIZED",
@@ -585,7 +605,9 @@
     "port": 2,
     "cart": null,
     "psi": 50,
-    "dq": "partial"
+    "dq": "partial",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "reason": {
     "code": "FILTER_UNDERSIZED",
@@ -608,7 +630,9 @@
     "port": 2,
     "cart": "Hayward CX1280XREPAK4",
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "reason": {
     "code": "FILTER_UNDERSIZED",
@@ -631,7 +655,9 @@
     "port": 2,
     "cart": "Pentair 179136 / Pleatco ULTRA-A7-PAK4 / Unicel C-7472-4",
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "reason": {
     "code": "FILTER_UNDERSIZED",
@@ -654,7 +680,9 @@
     "port": 2,
     "cart": "Pentair 170148; inner 25021-0224S (209 sq ft) + outer 25022-0225S (291 sq ft)",
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "reason": {
     "code": "FILTER_UNDERSIZED",
@@ -679,7 +707,9 @@
     "port": 2,
     "cart": "Pentair 179136 / Pleatco ULTRA-A7-PAK4 / Unicel C-7472-4",
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "label": "size-up"
   }

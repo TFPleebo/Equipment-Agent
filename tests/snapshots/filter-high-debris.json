@@ -31,7 +31,9 @@
     "port": 2,
     "cart": null,
     "psi": null,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 1,
    "score": 109.89577183688577,
@@ -85,7 +87,9 @@
     "port": 2,
     "cart": null,
     "psi": null,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 1,
    "score": 109.89577183688577,
@@ -139,7 +143,9 @@
     "port": 2,
     "cart": null,
     "psi": null,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 1,
    "score": 109.70652368091045,
@@ -193,7 +199,9 @@
     "port": 2,
     "cart": null,
     "psi": null,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 1,
    "score": 109.57690867473474,
@@ -247,7 +255,9 @@
     "port": null,
     "cart": null,
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 1,
    "score": 109.5,
@@ -301,7 +311,9 @@
     "port": 2,
     "cart": null,
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 1,
    "score": 109.5,
@@ -355,7 +367,9 @@
     "port": 1.5,
     "cart": null,
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 1,
    "score": 104.57690867473474,
@@ -415,7 +429,9 @@
     "port": 1.5,
     "cart": null,
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 1,
    "score": 102.04371525667901,
@@ -478,7 +494,9 @@
     "port": 1.5,
     "cart": null,
     "psi": null,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "reason": {
     "code": "FILTER_UNDERSIZED",
@@ -501,7 +519,9 @@
     "port": 2,
     "cart": null,
     "psi": null,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "reason": {
     "code": "FILTER_UNDERSIZED",
@@ -524,7 +544,9 @@
     "port": 1.5,
     "cart": null,
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "reason": {
     "code": "FILTER_UNDERSIZED",
@@ -547,7 +569,9 @@
     "port": 2,
     "cart": null,
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "reason": {
     "code": "FILTER_UNDERSIZED",
@@ -570,7 +594,9 @@
     "port": 1.5,
     "cart": null,
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "reason": {
     "code": "FILTER_UNDERSIZED",
@@ -593,7 +619,9 @@
     "port": 2,
     "cart": null,
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "reason": {
     "code": "FILTER_UNDERSIZED",
@@ -618,7 +646,9 @@
     "port": 1.5,
     "cart": null,
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "label": "size-up"
   }

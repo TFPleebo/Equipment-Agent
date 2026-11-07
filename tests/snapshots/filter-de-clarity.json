@@ -31,7 +31,9 @@
     "port": 2,
     "cart": null,
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 1,
    "score": 108,
@@ -91,7 +93,9 @@
     "port": 2,
     "cart": null,
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 1,
    "score": 103.66666666666667,
@@ -151,7 +155,9 @@
     "port": 2,
     "cart": null,
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 1,
    "score": 103.66666666666667,
@@ -211,7 +217,9 @@
     "port": 2,
     "cart": null,
     "psi": 50,
-    "dq": "partial"
+    "dq": "partial",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 1,
    "score": 98.86666666666667,
@@ -273,7 +281,9 @@
     "port": 2,
     "cart": null,
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "reason": {
     "code": "FILTER_UNDERSIZED",
@@ -296,7 +306,9 @@
     "port": 2,
     "cart": null,
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "reason": {
     "code": "FILTER_UNDERSIZED",
@@ -319,7 +331,9 @@
     "port": 2,
     "cart": null,
     "psi": 50,
-    "dq": "partial"
+    "dq": "partial",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "reason": {
     "code": "FILTER_UNDERSIZED",
@@ -342,7 +356,9 @@
     "port": 1.5,
     "cart": null,
     "psi": null,
-    "dq": "partial"
+    "dq": "partial",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "reason": {
     "code": "FILTER_UNDERSIZED",
@@ -365,7 +381,9 @@
     "port": 2,
     "cart": null,
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "reason": {
     "code": "FILTER_UNDERSIZED",
@@ -388,7 +406,9 @@
     "port": 2,
     "cart": null,
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "reason": {
     "code": "FILTER_UNDERSIZED",

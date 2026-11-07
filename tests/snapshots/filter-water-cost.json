@@ -32,7 +32,9 @@
     "port": 2,
     "cart": "Pentair 179133 / Pleatco ULTRA-A4-PAK4 / Unicel C-7469-4",
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 1,
    "score": 116.33333333333333,
@@ -92,7 +94,9 @@
     "port": 2,
     "cart": "Jandy R0462500",
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 1,
    "score": 115.22222222222221,
@@ -153,7 +157,9 @@
     "port": 2,
     "cart": "Hayward CX481XREPAK4",
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 1,
    "score": 112,
@@ -213,7 +219,9 @@
     "port": 2,
     "cart": "Pentair 170145; inner 25021-0200S (100 sq ft) + outer 25022-0201S (200 sq ft)",
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 1,
    "score": 109.66666666666667,
@@ -273,7 +281,9 @@
     "port": 2,
     "cart": "Pentair/Sta-Rite 27002-0300S",
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 1,
    "score": 109.66666666666667,
@@ -333,7 +343,9 @@
     "port": 2,
     "cart": "Pentair 179134 / Pleatco ULTRA-A5-PAK4 / Unicel C-7470-4",
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 1,
    "score": 105.44444444444444,
@@ -399,7 +411,9 @@
     "port": 2,
     "cart": "Hayward CX580XREPAK4",
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 1,
    "score": 104.38888888888889,
@@ -465,7 +479,9 @@
     "port": 2,
     "cart": null,
     "psi": 50,
-    "dq": "partial"
+    "dq": "partial",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 1,
    "score": 96.42222222222223,
@@ -533,7 +549,9 @@
     "port": null,
     "cart": "Pentair R173217 / Pleatco ULTRA-C5 / Unicel C-9419",
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "reason": {
     "code": "FILTER_UNDERSIZED",
@@ -556,7 +574,9 @@
     "port": 2,
     "cart": "Pleatco ULTRA-C5 / Unicel C-9419",
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "reason": {
     "code": "FILTER_UNDERSIZED",
@@ -579,7 +599,9 @@
     "port": 2,
     "cart": "Pentair/Sta-Rite 27002-0200S",
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "reason": {
     "code": "FILTER_UNDERSIZED",
@@ -602,7 +624,9 @@
     "port": 2,
     "cart": "Pleatco ULTRA-C5 / Unicel C-9419",
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "reason": {
     "code": "FILTER_UNDERSIZED",
@@ -625,7 +649,9 @@
     "port": 2,
     "cart": "Hayward CX200XRE",
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "reason": {
     "code": "FILTER_UNDERSIZED",
@@ -648,7 +674,9 @@
     "port": 2,
     "cart": "Jandy R0462400",
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "reason": {
     "code": "FILTER_UNDERSIZED",
@@ -673,7 +701,9 @@
     "port": 2,
     "cart": "Jandy R0462500",
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "label": "size-up"
   }

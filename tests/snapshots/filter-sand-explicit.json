@@ -24,7 +24,9 @@
     "port": 2,
     "cart": null,
     "psi": null,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 1,
    "score": 101.52581825142256,
@@ -84,7 +86,9 @@
     "port": 2,
     "cart": null,
     "psi": null,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 1,
    "score": 101.51079480427302,
@@ -144,7 +148,9 @@
     "port": null,
     "cart": null,
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 1,
    "score": 101.50703894248564,
@@ -204,7 +210,9 @@
     "port": 2,
     "cart": null,
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 1,
    "score": 101.50703894248564,
@@ -264,7 +272,9 @@
     "port": 1.5,
     "cart": null,
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 1,
    "score": 96.51079480427302,
@@ -330,7 +340,9 @@
     "port": 2,
     "cart": null,
     "psi": null,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 1,
    "score": 91.27464349513401,
@@ -391,7 +403,9 @@
     "port": 2,
     "cart": null,
     "psi": null,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 1,
    "score": 91.27464349513401,
@@ -451,7 +465,9 @@
     "port": 1.5,
     "cart": null,
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "units": 1,
    "score": 81.81830508856095,
@@ -519,7 +535,9 @@
     "port": 1.5,
     "cart": null,
     "psi": null,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "reason": {
     "code": "FILTER_FLOW_BOTTLENECK",
@@ -542,7 +560,9 @@
     "port": 2,
     "cart": null,
     "psi": null,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "reason": {
     "code": "FILTER_FLOW_BOTTLENECK",
@@ -565,7 +585,9 @@
     "port": 1.5,
     "cart": null,
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "reason": {
     "code": "FILTER_FLOW_BOTTLENECK",
@@ -588,7 +610,9 @@
     "port": 2,
     "cart": null,
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "reason": {
     "code": "FILTER_FLOW_BOTTLENECK",
@@ -611,7 +635,9 @@
     "port": 1.5,
     "cart": null,
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "reason": {
     "code": "FILTER_FLOW_BOTTLENECK",
@@ -634,7 +660,9 @@
     "port": 2,
     "cart": null,
     "psi": 50,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "reason": {
     "code": "FILTER_FLOW_BOTTLENECK",
@@ -659,7 +687,9 @@
     "port": 2,
     "cart": null,
     "psi": null,
-    "dq": "verified"
+    "dq": "verified",
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "label": "size-up"
   }

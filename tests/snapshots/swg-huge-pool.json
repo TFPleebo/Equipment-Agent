@@ -25,7 +25,9 @@
     "fam": null,
     "dq": "base-only",
     "notes": [],
-    "msrp": null
+    "msrp": null,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "pureline-crystal-pure-60",
    "score": -29.56,
@@ -79,7 +81,9 @@
     "fam": null,
     "dq": "base-only",
     "notes": [],
-    "msrp": null
+    "msrp": null,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "circupool-rj60",
    "score": -30.2,
@@ -136,7 +140,9 @@
      "Output conflict: base 3.1 lbs/day vs overlay 2.7 lbs/day. Base value kept.",
      "Low-temp cutoff ~60F."
     ],
-    "msrp": 1649
+    "msrp": 1649,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "circupool-rj60p",
    "score": -30.2,
@@ -202,7 +208,9 @@
     "fam": null,
     "dq": "verified",
     "notes": [],
-    "msrp": null
+    "msrp": null,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "circupool-core55",
    "score": -30.6,
@@ -261,7 +269,9 @@
     "fam": null,
     "dq": "verified",
     "notes": [],
-    "msrp": null
+    "msrp": null,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "pentair-ic-60",
    "score": -33,
@@ -319,7 +329,9 @@
     "fam": null,
     "dq": "verified",
     "notes": [],
-    "msrp": null
+    "msrp": null,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "pentair-plus-60",
    "score": -33,
@@ -375,7 +387,9 @@
     "fam": null,
     "dq": "verified",
     "notes": [],
-    "msrp": null
+    "msrp": null,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "circupool-corecontrol55",
    "score": -33,
@@ -429,7 +443,9 @@
     "fam": null,
     "dq": "base-only",
     "notes": [],
-    "msrp": null
+    "msrp": null,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "autopilot-ppc5",
    "score": -34.04,
@@ -485,7 +501,9 @@
     "notes": [
      "Proportional output control — suits short pump cycles."
     ],
-    "msrp": 1009
+    "msrp": 1009,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "circupool-edge40",
    "score": -35.4,
@@ -539,7 +557,9 @@
     "fam": "fluidra-viron",
     "dq": "base-only",
     "notes": [],
-    "msrp": null
+    "msrp": null,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "fluidra-viron",
    "score": -35.952,
@@ -593,7 +613,9 @@
     "fam": null,
     "dq": "base-only",
     "notes": [],
-    "msrp": null
+    "msrp": null,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "circupool-sj55",
    "score": -36.2,
@@ -647,7 +669,9 @@
     "fam": null,
     "dq": "base-only",
     "notes": [],
-    "msrp": null
+    "msrp": null,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "astral-vx-11s",
    "score": -37.224000000000004,

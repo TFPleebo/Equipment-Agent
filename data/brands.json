@@ -1,0 +1,25 @@
+{
+  "_about": "Canonical brand names. 'aliases' maps every raw spelling seen in a source (CEC exports, old scrapes, spec sheets) to the canonical brand. 'stripModelPrefix' lists leading words to drop from a model name when its brand is normalised (e.g. 'Advanced Quiet Flo Variable QFVS2' -> 'Quiet Flo Variable QFVS2'). Used by tools/import-pumps.mjs and checked by tools/check-catalog.mjs.",
+  "aliases": {
+    "Aquapro": "AquaPro",
+    "AQUAPRO": "AquaPro",
+    "Blue": "Blue Torrent",
+    "Advanced": "Advantage",
+    "Energy": "Advantage",
+    "Advantage Manufacturing": "Advantage",
+    "Ningbo": "Ningbo Jade",
+    "Dab": "DAB",
+    "Sta-rite": "Sta-Rite",
+    "STA-RITE": "Sta-Rite",
+    "PENTAIR": "Pentair",
+    "HAYWARD": "Hayward",
+    "JANDY": "Jandy",
+    "Speck Pumps": "Speck",
+    "Waterway Plastics": "Waterway"
+  },
+  "stripModelPrefix": {
+    "Advanced": "Advantage",
+    "Aquapro": "AquaPro",
+    "Dab": "DAB"
+  }
+}

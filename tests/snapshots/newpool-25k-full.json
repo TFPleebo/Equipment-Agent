@@ -45,7 +45,9 @@
        60.62,
        61.94
       ]
-     }
+     },
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "score": 97.30495997366711,
     "reasons": [
@@ -137,7 +139,9 @@
        61,
        62
       ]
-     }
+     },
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "score": 97.25755320711863,
     "reasons": [
@@ -229,7 +233,9 @@
        61,
        61
       ]
-     }
+     },
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "score": 95.57545831582121,
     "reasons": [
@@ -321,7 +327,9 @@
        61.58,
        63.18
       ]
-     }
+     },
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "score": 95.40042121431573,
     "reasons": [
@@ -416,7 +424,9 @@
        62,
        63
       ]
-     }
+     },
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "score": 95.38234163473915,
     "reasons": [
@@ -511,7 +521,9 @@
        58,
        60
       ]
-     }
+     },
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "score": 94.45168284456588,
     "reasons": [
@@ -607,7 +619,9 @@
        58.42,
        60.04
       ]
-     }
+     },
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "score": 94.39565345249183,
     "reasons": [
@@ -704,7 +718,9 @@
        57,
        58
       ]
-     }
+     },
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "score": 94.33596472121859,
     "reasons": [
@@ -800,7 +816,9 @@
        56.82,
        58.37
       ]
-     }
+     },
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "score": 94.310496784658,
     "reasons": [
@@ -896,7 +914,9 @@
        100,
        100
       ]
-     }
+     },
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "score": 93.95674875689521,
     "reasons": [
@@ -990,7 +1010,9 @@
        105,
        110
       ]
-     }
+     },
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "score": 93.63743897726206,
     "reasons": [
@@ -1082,7 +1104,9 @@
        101,
        102
       ]
-     }
+     },
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "score": 92.3381729660672,
     "reasons": [
@@ -1189,7 +1213,9 @@
      "port": 2,
      "cart": "Pentair 179135 / Pleatco ULTRA-A6-PAK4 / Unicel C-7471-4",
      "psi": 50,
-     "dq": "verified"
+     "dq": "verified",
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "units": 1,
     "score": 116.56,
@@ -1249,7 +1275,9 @@
      "port": 2,
      "cart": "Hayward CX880XREPAK4",
      "psi": 50,
-     "dq": "verified"
+     "dq": "verified",
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "units": 1,
     "score": 116.4,
@@ -1310,7 +1338,9 @@
      "port": 2,
      "cart": "Pentair 170147; inner 25021-0202S (191 sq ft) + outer 25022-0203S (259 sq ft)",
      "psi": 50,
-     "dq": "verified"
+     "dq": "verified",
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "units": 1,
     "score": 115.6,
@@ -1370,7 +1400,9 @@
      "port": 2,
      "cart": "Pentair 170146; inner 25021-0223S (136 sq ft) + outer 25022-0224S (264 sq ft)",
      "psi": 50,
-     "dq": "verified"
+     "dq": "verified",
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "units": 1,
     "score": 115.43393334779152,
@@ -1430,7 +1462,9 @@
      "port": 2,
      "cart": "Pentair 170148; inner 25021-0224S (209 sq ft) + outer 25022-0225S (291 sq ft)",
      "psi": 50,
-     "dq": "verified"
+     "dq": "verified",
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "units": 1,
     "score": 114,
@@ -1490,7 +1524,9 @@
      "port": 2,
      "cart": "Pentair 179136 / Pleatco ULTRA-A7-PAK4 / Unicel C-7472-4",
      "psi": 50,
-     "dq": "verified"
+     "dq": "verified",
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "units": 1,
     "score": 112.16,
@@ -1556,7 +1592,9 @@
      "port": 2,
      "cart": "Hayward CX1280XREPAK4",
      "psi": 50,
-     "dq": "verified"
+     "dq": "verified",
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "units": 1,
     "score": 111.7,
@@ -1622,7 +1660,9 @@
      "port": 2,
      "cart": null,
      "psi": 50,
-     "dq": "partial"
+     "dq": "partial",
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "units": 1,
     "score": 110.48,
@@ -1678,7 +1718,9 @@
      "port": 2,
      "cart": null,
      "psi": 50,
-     "dq": "partial"
+     "dq": "partial",
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "reason": {
      "code": "FILTER_UNDERSIZED",
@@ -1701,7 +1743,9 @@
      "port": 2,
      "cart": null,
      "psi": 50,
-     "dq": "partial"
+     "dq": "partial",
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "reason": {
      "code": "FILTER_UNDERSIZED",
@@ -1724,7 +1768,9 @@
      "port": 2,
      "cart": "Hayward CX580XREPAK4",
      "psi": 50,
-     "dq": "verified"
+     "dq": "verified",
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "reason": {
      "code": "FILTER_UNDERSIZED",
@@ -1747,7 +1793,9 @@
      "port": 2,
      "cart": "Pentair 179134 / Pleatco ULTRA-A5-PAK4 / Unicel C-7470-4",
      "psi": 50,
-     "dq": "verified"
+     "dq": "verified",
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "reason": {
      "code": "FILTER_UNDERSIZED",
@@ -1770,7 +1818,9 @@
      "port": 2,
      "cart": "Pentair 170145; inner 25021-0200S (100 sq ft) + outer 25022-0201S (200 sq ft)",
      "psi": 50,
-     "dq": "verified"
+     "dq": "verified",
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "reason": {
      "code": "FILTER_UNDERSIZED",
@@ -1793,7 +1843,9 @@
      "port": 2,
      "cart": "Pentair/Sta-Rite 27002-0300S",
      "psi": 50,
-     "dq": "verified"
+     "dq": "verified",
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "reason": {
      "code": "FILTER_UNDERSIZED",
@@ -1818,7 +1870,9 @@
      "port": 2,
      "cart": "Hayward CX880XREPAK4",
      "psi": 50,
-     "dq": "verified"
+     "dq": "verified",
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "label": "size-up"
    }
@@ -1865,7 +1919,9 @@
      "fam": null,
      "dq": "verified",
      "notes": [],
-     "msrp": null
+     "msrp": null,
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "fkey": "pentair-ic-60",
     "score": 85.5,
@@ -1935,7 +1991,9 @@
      "fam": null,
      "dq": "verified",
      "notes": [],
-     "msrp": null
+     "msrp": null,
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "fkey": "pentair-plus-60",
     "score": 85.5,
@@ -2001,7 +2059,9 @@
      "fam": null,
      "dq": "verified",
      "notes": [],
-     "msrp": null
+     "msrp": null,
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "fkey": "circupool-core55",
     "score": 75.3,
@@ -2061,7 +2121,9 @@
      "fam": null,
      "dq": "base-only",
      "notes": [],
-     "msrp": null
+     "msrp": null,
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "fkey": "pureline-crystal-pure-60",
     "score": 74.58,
@@ -2121,7 +2183,9 @@
      "fam": null,
      "dq": "base-only",
      "notes": [],
-     "msrp": null
+     "msrp": null,
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "fkey": "circupool-rj60",
     "score": 74.1,
@@ -2184,7 +2248,9 @@
       "Output conflict: base 3.1 lbs/day vs overlay 2.7 lbs/day. Base value kept.",
       "Low-temp cutoff ~60F."
      ],
-     "msrp": 1649
+     "msrp": 1649,
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "fkey": "circupool-rj60p",
     "score": 74.1,
@@ -2258,7 +2324,9 @@
      "fam": null,
      "dq": "verified",
      "notes": [],
-     "msrp": null
+     "msrp": null,
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "fkey": "circupool-corecontrol55",
     "score": 73.5,
@@ -2318,7 +2386,9 @@
      "fam": null,
      "dq": "base-only",
      "notes": [],
-     "msrp": null
+     "msrp": null,
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "fkey": "circupool-sj55",
     "score": 69.6,
@@ -2378,7 +2448,9 @@
      "fam": null,
      "dq": "base-only",
      "notes": [],
-     "msrp": null
+     "msrp": null,
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "fkey": "autopilot-ppc5",
     "score": 63.22,
@@ -2432,7 +2504,9 @@
      "fam": "fluidra-viron",
      "dq": "base-only",
      "notes": [],
-     "msrp": null
+     "msrp": null,
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "fkey": "fluidra-viron",
     "score": 61.786,
@@ -2486,7 +2560,9 @@
      "fam": null,
      "dq": "base-only",
      "notes": [],
-     "msrp": null
+     "msrp": null,
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "fkey": "astral-vx-11s",
     "score": 60.831999999999994,
@@ -2540,7 +2616,9 @@
      "fam": null,
      "dq": "base-only",
      "notes": [],
-     "msrp": null
+     "msrp": null,
+     "src": "legacy-2026-07",
+     "asOf": "2026-07-25"
     },
     "fkey": "astral-vx-11t",
     "score": 60.831999999999994,

@@ -25,7 +25,9 @@
     "fam": null,
     "dq": "base-only",
     "notes": [],
-    "msrp": null
+    "msrp": null,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "pureline-crystal-pure-60",
    "score": 66.28,
@@ -91,7 +93,9 @@
     "fam": null,
     "dq": "base-only",
     "notes": [],
-    "msrp": null
+    "msrp": null,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "circupool-rj60",
    "score": 65.8,
@@ -160,7 +164,9 @@
      "Output conflict: base 3.1 lbs/day vs overlay 2.7 lbs/day. Base value kept.",
      "Low-temp cutoff ~60F."
     ],
-    "msrp": 1649
+    "msrp": 1649,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "circupool-rj60p",
    "score": 55.8,
@@ -238,7 +244,9 @@
     "fam": null,
     "dq": "base-only",
     "notes": [],
-    "msrp": null
+    "msrp": null,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "autopilot-ppc5",
    "score": 54.92,
@@ -298,7 +306,9 @@
     "fam": "fluidra-viron",
     "dq": "base-only",
     "notes": [],
-    "msrp": null
+    "msrp": null,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "fluidra-viron",
    "score": 53.486000000000004,
@@ -358,7 +368,9 @@
     "fam": null,
     "dq": "base-only",
     "notes": [],
-    "msrp": null
+    "msrp": null,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "circupool-sj55",
    "score": 53.3,
@@ -418,7 +430,9 @@
     "fam": null,
     "dq": "base-only",
     "notes": [],
-    "msrp": null
+    "msrp": null,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "astral-vx-11s",
    "score": 52.532,
@@ -478,7 +492,9 @@
     "fam": null,
     "dq": "base-only",
     "notes": [],
-    "msrp": null
+    "msrp": null,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "astral-vx-11t",
    "score": 52.532,
@@ -538,7 +554,9 @@
     "fam": "fluidra-lm3",
     "dq": "base-only",
     "notes": [],
-    "msrp": null
+    "msrp": null,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "fluidra-lm3",
    "score": 51.86,
@@ -598,7 +616,9 @@
     "fam": null,
     "dq": "base-only",
     "notes": [],
-    "msrp": null
+    "msrp": null,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "pureline-crystal-pure-40",
    "score": 51.8,
@@ -658,7 +678,9 @@
     "fam": null,
     "dq": "verified",
     "notes": [],
-    "msrp": null
+    "msrp": null,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "circupool-core55",
    "score": 49,
@@ -720,7 +742,9 @@
     "notes": [
      "Proportional output control — suits short pump cycles."
     ],
-    "msrp": 1009
+    "msrp": 1009,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "circupool-edge40",
    "score": -23.4,

@@ -25,7 +25,9 @@
     "fam": null,
     "dq": "base-only",
     "notes": [],
-    "msrp": null
+    "msrp": null,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "pureline-crystal-pure-60",
    "score": 79.6,
@@ -85,7 +87,9 @@
     "fam": null,
     "dq": "base-only",
     "notes": [],
-    "msrp": null
+    "msrp": null,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "circupool-rj60",
    "score": 79.12,
@@ -148,7 +152,9 @@
      "Output conflict: base 3.1 lbs/day vs overlay 2.7 lbs/day. Base value kept.",
      "Low-temp cutoff ~60F."
     ],
-    "msrp": 1649
+    "msrp": 1649,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "circupool-rj60p",
    "score": 79.12,
@@ -220,7 +226,9 @@
     "fam": null,
     "dq": "verified",
     "notes": [],
-    "msrp": null
+    "msrp": null,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "circupool-core55",
    "score": 74.32,
@@ -285,7 +293,9 @@
     "fam": null,
     "dq": "verified",
     "notes": [],
-    "msrp": null
+    "msrp": null,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "pentair-ic-60",
    "score": 72.52,
@@ -349,7 +359,9 @@
     "fam": null,
     "dq": "verified",
     "notes": [],
-    "msrp": null
+    "msrp": null,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "pentair-plus-60",
    "score": 72.52,
@@ -411,7 +423,9 @@
     "fam": null,
     "dq": "verified",
     "notes": [],
-    "msrp": null
+    "msrp": null,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "circupool-corecontrol55",
    "score": 72.52,
@@ -473,7 +487,9 @@
     "notes": [
      "Proportional output control — suits short pump cycles."
     ],
-    "msrp": 1009
+    "msrp": 1009,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "circupool-edge40",
    "score": 70.72,
@@ -542,7 +558,9 @@
      "Jandy AquaLink control requires AquaRite AL-5 setting.",
      "Low-temp cutoff ~50F."
     ],
-    "msrp": 2199
+    "msrp": 2199,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "hayward-aquarite-t15",
    "score": 69.34,
@@ -614,7 +632,9 @@
     "notes": [
      "Low-temp cutoff ~50F."
     ],
-    "msrp": null
+    "msrp": null,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "hayward-aquarite900",
    "score": 69.34,
@@ -685,7 +705,9 @@
      "Proportional output control — suits short pump cycles.",
      "Low-temp cutoff ~50F."
     ],
-    "msrp": null
+    "msrp": null,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "hayward-aquarite-s3-tcells340",
    "score": 69.22,
@@ -756,7 +778,9 @@
     "fam": null,
     "dq": "verified",
     "notes": [],
-    "msrp": null
+    "msrp": null,
+    "src": "legacy-2026-07",
+    "asOf": "2026-07-25"
    },
    "fkey": "pentair-ic-40",
    "score": 68.91999999999999,
