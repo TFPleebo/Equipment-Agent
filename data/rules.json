@@ -1,4 +1,235 @@
 {
+  "INPUT_SCHEMA": {
+    "title": "Profile fields accepted by recommend() (validation and defaults)",
+    "value": {
+      "fields": {
+        "gallons": {
+          "type": "number",
+          "required": true,
+          "min": 500,
+          "max": 500000
+        },
+        "poolType": {
+          "type": "enum",
+          "values": [
+            "inground-plaster",
+            "inground-vinyl",
+            "inground-fiberglass",
+            "agp"
+          ],
+          "default": "inground-plaster"
+        },
+        "pipe": {
+          "type": "enum",
+          "values": [
+            "1.5",
+            "2",
+            "2.5+",
+            "unknown"
+          ],
+          "default": "unknown"
+        },
+        "climate": {
+          "type": "enum",
+          "values": [
+            "cool_temperate",
+            "warm",
+            "hot_sunny"
+          ],
+          "default": "warm",
+          "modes": [
+            "swg",
+            "newpool"
+          ]
+        },
+        "automation": {
+          "type": "enum",
+          "values": [
+            "none",
+            "pentair",
+            "hayward",
+            "jandy",
+            "other"
+          ],
+          "default": "none"
+        },
+        "voltage": {
+          "type": "enum",
+          "values": [
+            "115",
+            "230",
+            "unknown"
+          ],
+          "default": "unknown",
+          "modes": [
+            "pump",
+            "newpool"
+          ]
+        },
+        "runtime": {
+          "type": "number",
+          "min": 1,
+          "max": 24,
+          "outOfRange": "clamp"
+        },
+        "rate": {
+          "type": "number",
+          "min": 0.01,
+          "max": 2,
+          "outOfRange": "drop"
+        },
+        "spaJets": {
+          "type": "number",
+          "min": 1,
+          "max": 30,
+          "outOfRange": "drop"
+        },
+        "waterfallWidth": {
+          "type": "number",
+          "min": 0,
+          "max": 600,
+          "outOfRange": "drop"
+        },
+        "filterSize": {
+          "type": "number",
+          "min": 1,
+          "max": 3000,
+          "outOfRange": "drop"
+        },
+        "pumpMaxGPM": {
+          "type": "number",
+          "min": 5,
+          "max": 400,
+          "outOfRange": "drop"
+        },
+        "fcLossPpm": {
+          "type": "number",
+          "min": 0.5,
+          "max": 10,
+          "outOfRange": "drop"
+        },
+        "quotedPrice": {
+          "type": "number",
+          "min": 0,
+          "max": 100000,
+          "outOfRange": "drop"
+        },
+        "cycle": {
+          "type": "enum",
+          "values": [
+            "long",
+            "short"
+          ],
+          "default": "long",
+          "modes": [
+            "swg"
+          ]
+        },
+        "desiredType": {
+          "type": "enum",
+          "values": [
+            "recommend",
+            "cartridge",
+            "sand",
+            "de",
+            "hybrid-de"
+          ],
+          "default": "recommend",
+          "modes": [
+            "filter"
+          ]
+        },
+        "debris": {
+          "type": "enum",
+          "values": [
+            "low",
+            "average",
+            "high"
+          ],
+          "default": "average",
+          "modes": [
+            "filter",
+            "newpool"
+          ]
+        },
+        "waterCost": {
+          "type": "enum",
+          "values": [
+            "low",
+            "high"
+          ],
+          "default": "low",
+          "modes": [
+            "filter",
+            "newpool"
+          ]
+        },
+        "filterType": {
+          "type": "enum",
+          "values": [
+            "cartridge",
+            "sand",
+            "de",
+            "none"
+          ]
+        },
+        "spa": {
+          "type": "boolean"
+        },
+        "gasHeater": {
+          "type": "boolean"
+        },
+        "hasSWG": {
+          "type": "boolean"
+        },
+        "cleaner": {
+          "type": "boolean"
+        },
+        "clarity": {
+          "type": "boolean"
+        },
+        "newBuild": {
+          "type": "boolean"
+        },
+        "highCH": {
+          "type": "boolean"
+        },
+        "newPlaster": {
+          "type": "boolean"
+        },
+        "bonding": {
+          "type": "boolean"
+        },
+        "currentPumpId": {
+          "type": "id",
+          "catalog": "pumps"
+        },
+        "currentSwgId": {
+          "type": "id",
+          "catalog": "swg"
+        },
+        "currentFilterId": {
+          "type": "id",
+          "catalog": "filters"
+        }
+      },
+      "behaviour": "Numbers given as strings are converted. A missing/invalid required field or an unknown enum value is an error (recommend() throws with err.errors). Defaults are applied where listed (only for the modes listed, if any); out-of-range optional numbers are clamped or dropped; unknown catalog ids are dropped. Every adjustment is reported in result.inputNotes. Fields not listed pass through unchanged.",
+      "reviewedBy": "2026-11 (new, for PoolMath integration)"
+    },
+    "src": "Engine contract"
+  },
+  "PUMP_MAX_GPM_BY_PIPE": {
+    "title": "Assumed pump max flow when the user doesn't know it (filter sizing)",
+    "value": {
+      "byPipe": {
+        "2": 80,
+        "1.5": 50,
+        "2.5+": 100
+      },
+      "note": "Typical full-speed flow on that plumbing. Used by the filter step's pre-fill and, via recommend(), when pumpMaxGPM is missing but the pipe size is known; reported in inputNotes."
+    },
+    "src": "Page pre-fill values (previously hard-coded in the page), moved into rules 2026-11"
+  },
   "FILTER_PARALLEL_UNITS": {
     "title": "Multiple filters in parallel when no single unit is big enough",
     "value": {

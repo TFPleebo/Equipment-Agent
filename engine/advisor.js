@@ -646,27 +646,85 @@ function createAdvisor(data) {
       text:'Before you buy: check the warranty. Internet purchases and owner installation can void coverage on some brands, a few require a certified installer, and most require product registration. Bundled purchases with professional install sometimes carry a longer warranty.'};
   }
 
+  /* ---------------- input validation (rule INPUT_SCHEMA) ---------------- */
+  // Returns { profile, errors[], notes[] }. Never mutates the caller's object.
+  function normalizeProfile(mode, input) {
+    const MODES = ["pump", "swg", "filter", "newpool"];
+    const errors = [], notes = [];
+    if (!MODES.includes(mode)) errors.push(`mode must be one of ${MODES.join(", ")} (got ${JSON.stringify(mode)})`);
+    if (input == null || typeof input !== "object") return { profile: {}, errors: errors.concat(["profile must be an object"]), notes };
+    const p = { ...input };
+    const F = RULES.INPUT_SCHEMA.value.fields;
+    const toNum = (v) => (typeof v === "number" ? v : (typeof v === "string" && v.trim() !== "" ? Number(v) : NaN));
+    for (const [k, s] of Object.entries(F)) {
+      const applies = !s.modes || s.modes.includes(mode);
+      let v = p[k];
+      if (v === undefined || v === null || v === "") {
+        if (s.required) errors.push(`${k} is required`);
+        else if (s.default !== undefined && applies) { p[k] = s.default; notes.push(`${k} not given: using ${JSON.stringify(s.default)}`); }
+        else delete p[k];
+        continue;
+      }
+      if (s.type === "number") {
+        const n = toNum(v);
+        if (!Number.isFinite(n)) { if (s.required) errors.push(`${k} must be a number (got ${JSON.stringify(v)})`); else { delete p[k]; notes.push(`${k} ignored: not a number`); } continue; }
+        if (typeof v !== "number") notes.push(`${k} converted from text to ${n}`);
+        if (n < s.min || n > s.max) {
+          if (s.required) { errors.push(`${k} must be between ${s.min} and ${s.max} (got ${n})`); continue; }
+          if (s.outOfRange === "clamp") { const c = clamp(n, s.min, s.max); p[k] = c; notes.push(`${k} ${n} is outside ${s.min}-${s.max}: using ${c}`); }
+          else { delete p[k]; notes.push(`${k} ${n} is outside ${s.min}-${s.max}: ignored`); }
+          continue;
+        }
+        p[k] = n;
+      } else if (s.type === "enum") {
+        const sv = String(v);
+        if (!s.values.includes(sv)) errors.push(`${k} must be one of ${s.values.join(", ")} (got ${JSON.stringify(v)})`);
+        else p[k] = sv;
+      } else if (s.type === "boolean") {
+        if (v === "true" || v === 1) p[k] = true; else if (v === "false" || v === 0) p[k] = false;
+        else if (typeof v !== "boolean") errors.push(`${k} must be true or false (got ${JSON.stringify(v)})`);
+      } else if (s.type === "id") {
+        if (!DATA[s.catalog].some((x) => x.id === v)) { delete p[k]; notes.push(`${k} ${JSON.stringify(v)} is not in the ${s.catalog} catalog: ignored`); }
+      }
+    }
+    // Filter sizing needs the pump's max flow; if unknown, assume the typical value for the pipe.
+    if (mode === "filter" && p.pumpMaxGPM == null && p.pipe && p.pipe !== "unknown") {
+      const g = RULES.PUMP_MAX_GPM_BY_PIPE.value.byPipe[p.pipe];
+      if (g) { p.pumpMaxGPM = g; notes.push(`pumpMaxGPM not given: assuming ~${g} GPM, typical for ${p.pipe}" plumbing`); }
+    }
+    if (mode === "filter" && p.pipeIn == null && p.pipe && p.pipe !== "unknown") p.pipeIn = ({ "1.5": 1.5, "2": 2, "2.5+": 2.5 })[p.pipe];
+    if (mode === "newpool") p.newBuild = true;
+    return { profile: p, errors, notes };
+  }
+
   /* ---------------- public API ---------------- */
   // Same output the web page shows: engine result plus the shared guidance
   // (plumbing, heater bypass, warranty) the page adds to every result.
+  // Inputs are validated first (normalizeProfile): bad input throws an Error whose
+  // .errors lists every problem; adjustments are returned in result.inputNotes.
   function recommend(mode, profile) {
-    const p = profile || {};
+    const { profile: p, errors, notes } = normalizeProfile(mode, profile);
+    if (errors.length) {
+      const err = new Error("recommend: invalid input - " + errors.join("; "));
+      err.errors = errors;
+      throw err;
+    }
+    const withNotes = (res) => (notes.length ? { ...res, inputNotes: notes } : res);
     if (mode === "newpool") {
       const plan = padPlanner(p);
       const pa = plumbingAdvice({ ...p, newBuild: true });
       const hb = heaterBypassAdvice(p);
-      return { ...plan, advice: [].concat(pa ? [pa] : [], plan.checks, plan.warnings, hb ? [hb] : [], [warrantyAdvice()]) };
+      return withNotes({ ...plan, advice: [].concat(pa ? [pa] : [], plan.checks, plan.warnings, hb ? [hb] : [], [warrantyAdvice()]) });
     }
-    const engine = mode === "pump" ? pumpEngine : mode === "swg" ? swgEngine : mode === "filter" ? filterEngine : null;
-    if (!engine) throw new Error("recommend: unknown mode " + mode);
+    const engine = mode === "pump" ? pumpEngine : mode === "swg" ? swgEngine : filterEngine;
     const res = engine(p);
     const pa = plumbingAdvice(p), hb = heaterBypassAdvice(p);
     res.warnings = [].concat(pa ? [pa] : [], res.warnings || [], hb ? [hb] : [], [warrantyAdvice()]);
-    return res;
+    return withNotes(res);
   }
 
   return {
-    recommend,
+    recommend, normalizeProfile,
     pumpEngine, swgEngine, filterEngine, padPlanner,
     recommendFilterType, filterMinRequired, bedAreaOf, filterAllowGPM,
     plumbingAdvice, heaterBypassAdvice, warrantyAdvice, pipeCapGPM,

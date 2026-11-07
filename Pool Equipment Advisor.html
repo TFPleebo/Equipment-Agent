@@ -497,7 +497,7 @@ function stepFilterOps(){
   const p=S.profile;
   const c=card([el('div','q','Sizing details'),el('div','hint','These drive the size minimum and the all-important flow check.')]);
   c.append(el('label','fld','Main pipe size'),
-    optGrid(true,[{v:'1.5',t:'1.5″'},{v:'2',t:'2″'},{v:'2.5+',t:'2.5″+'},{v:'unknown',t:'Not sure'}],p.pipe,v=>{p.pipe=v;p.pipeIn=({'1.5':1.5,'2':2,'2.5+':2.5})[v]||null;if(!p.pumpMaxGPM){p.pumpMaxGPM=({'1.5':50,'2':80,'2.5+':100})[v]||null;}render();}));
+    optGrid(true,[{v:'1.5',t:'1.5″'},{v:'2',t:'2″'},{v:'2.5+',t:'2.5″+'},{v:'unknown',t:'Not sure'}],p.pipe,v=>{p.pipe=v;p.pipeIn=({'1.5':1.5,'2':2,'2.5+':2.5})[v]||null;if(!p.pumpMaxGPM){p.pumpMaxGPM=RULES.PUMP_MAX_GPM_BY_PIPE.value.byPipe[v]||null;}render();}));
   const g=el('input');g.type='number';g.value=p.pumpMaxGPM||'';g.placeholder='e.g. 80';
   g.oninput=()=>p.pumpMaxGPM=num(g.value);
   c.append(fldHelp('Your pump’s max flow (GPM)','Pump max flow','The most water your pump pushes at full speed. The filter must handle at least this much or it becomes a restriction. Not sure? We prefilled a typical value from your pipe size — adjust if you know it.'),g);
