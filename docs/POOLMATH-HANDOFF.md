@@ -21,7 +21,7 @@ Live page: https://tfpleebo.github.io/Equipment-Agent/Pool%20Equipment%20Advisor
 | `engine/advisor.js` | the sizing engine, no screen code. Plain JavaScript: works in a browser `<script>`, Node, or a JS bridge |
 | `data/*.json` | pumps, SWGs, filters, rules (see `docs/DATA.md`) |
 | `docs/RULES.md` | every rule and formula in plain English, plus **open questions for review** |
-| `tests/cases/*.json` | 21 golden cases: input profile → expected numbers, top models and warnings |
+| `tests/cases/*.json` | 25 golden cases: input profile → expected numbers, top models and warnings |
 | `tests/run.mjs` | runs the engine on every case (`node tests/run.mjs`) |
 | `Pool Equipment Advisor.html` | the standalone web page, which uses the engine above |
 
@@ -50,15 +50,16 @@ in a web view, pre-filled through the shared-link format `#r=<base64 JSON {m: mo
 | `gallons` | pool volume |
 | `poolType` | surface type / above-ground flag |
 | `hasSWG`, `currentSwgId` | SWG setting / model |
-| `climate` | location, or the user's measured daily FC loss (better than the climate default: it could replace the 2/3/4 ppm/day assumption) |
+| `climate` | location (fallback only) |
+| `fcLossPpm` | the user's **measured daily FC loss** from their logs. The engine already accepts it and it overrides the climate default |
 | `runtime` | pump schedule |
 | `currentPumpId`, `filterType`, `filterSize` | equipment profile, if PoolMath stores it |
 
 Using the user's **real FC loss** from their PoolMath logs is the most valuable link-up. It turns
-the SWG sizing from a regional estimate into one based on that user's actual pool.
+the SWG sizing from a regional estimate into one based on that user's actual pool. The engine already supports it (`fcLossPpm`).
 
 ## Before shipping
-- Review the **open questions** in `docs/RULES.md` §7. These are places where the code and the rule
-  text disagree.
+- Review the **changes awaiting review** in `docs/RULES.md` §7. Each one is a `rules.json` value that
+  can be reverted without touching code.
 - Pump `hhp` (hydraulic HP) isn't in the data yet, so the DOE check uses the rough THP proxy.
 - Catalog freshness: decide who maintains `data/*.json` and how often (CEC publishes updates).
