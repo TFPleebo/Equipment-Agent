@@ -224,10 +224,10 @@ This agent prioritizes:
 | `docs/RULES.md` | every rule in plain English, plus open questions |
 | `docs/DATA.md` | what each data field means and how to update it |
 | `docs/POOLMATH-HANDOFF.md` | how PoolMath can embed or rebuild the advisor |
-| `tests/` | golden test cases (`node tests/run.mjs`) |
+| `tests/` | golden cases (`node tests/run.mjs`), input checks (`node tests/validation.mjs`), robustness sweep (`node tests/sweep.mjs`) |
 | `pool-advisor-chatbot.html` | separate experimental chat version (OpenAI via a Cloudflare Worker) |
 
-**After editing data:** run `node tools/build-data.mjs` and then `node tests/run.mjs`.
+**After editing data:** run `node tools/build-data.mjs`, then `node tests/run.mjs`, `node tests/validation.mjs` and `node tests/sweep.mjs`.
 The page must be published together with the `data/` and `engine/` folders.
 
 ## 🛠️ Status

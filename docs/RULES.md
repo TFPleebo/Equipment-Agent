@@ -16,6 +16,15 @@ Severity levels used on every reason/warning: `good`, `info`, `warning`, `blocke
 
 ## 1. Inputs (the "profile")
 
+`recommend()` validates every profile against `INPUT_SCHEMA` in `rules.json` (types, allowed values,
+ranges, defaults) before running:
+- **Rejected:** a missing/invalid `gallons` (500–500,000), an unknown value for a listed choice (e.g.
+  `climate: "tropical"`) or an unknown mode throws an `Error` whose `.errors` lists every problem.
+- **Fixed and noted:** numbers sent as text are converted, `runtime` outside 1–24 is clamped, out-of-range
+  optional numbers and unknown catalog ids are ignored, and mode-specific defaults are filled in. Every
+  adjustment is listed in `result.inputNotes`.
+- In filter mode, a missing `pumpMaxGPM` is assumed from the pipe size (`PUMP_MAX_GPM_BY_PIPE`).
+
 | Field | Values | Used by |
 |---|---|---|
 | `gallons` | number | all |
@@ -102,6 +111,15 @@ other model names are listed as variants (`pumpFingerprint`). The top 12 are ret
   rating). For a cartridge between 0.375 and 0.75 GPM/sq ft, there's an info note about the APSP-15
   efficiency guideline instead.
 - **Voltage** (`PUMP_VOLTAGE_CHECK`): 115V pads get a "confirm the pump's voltage" warning.
+- **No pump reaches the peak** (`FEATURE_FLOW_SHORTFALL`): if a feature (usually a big spa) needs more flow
+  than any single pump delivers, a second pass ranks the pumps that cover the daily minimum by full-speed
+  flow (+2 points per GPM, so the closest come first). Each card says the per-jet flow it would give, and the
+  warning lists the options: jets in banks, a dedicated spa/booster pump, or softer jets. Previously the
+  result was empty.
+- **Plumbing vs features** (`PLUMBING_SIZE_GUIDANCE`): feature peak above the pipe's return-side figure is
+  an info note up to 1.25× over, and a warning beyond.
+- **Cap the top speed** (`CAP_MAX_SPEED`): if the top pick at full speed would exceed the user's filter
+  rating (but the required flow doesn't), suggest capping the pump's maximum RPM.
 - **Salt cell flow switch** (`SWG_FLOW_SWITCH`): when `hasSWG`, compares the top pick's low-speed flow
   with **25 GPM** (2″ tee) / **14 GPM** (1.5″ tee) and warns if the low speed could fail to close the switch.
 - **SuperFlo build date** (`SUPERFLO_AUTOMATION`): SuperFlo / SuperMax / WhisperFlo VST VS pumps
@@ -177,8 +195,17 @@ Checked in this order:
   (bed area from the data, or π·(tank/2/12)²). Other types use the manufacturer's design max GPM.
 - Ports smaller than the plumbing → warning (−5 points), not excluded.
 
-The page pre-fills pump max flow from pipe size if the user doesn't know it: 1.5″ → 50, 2″ → 80,
-2.5″+ → 100 GPM.
+If the user doesn't know the pump's max flow, it's assumed from the pipe size (`PUMP_MAX_GPM_BY_PIPE`):
+1.5″ → 50, 2″ → 80, 2.5″+ → 100 GPM. The page pre-fills it, and `recommend()` applies it.
+
+**Parallel filters** (`FILTER_PARALLEL_UNITS`): if no single filter of the chosen type passes both gates,
+the engine tries 2, then up to 3, identical units in parallel. Area or sand bed and allowable flow
+multiply; sand is compared on total bed area, since two tanks don't make a bigger diameter. Each extra
+unit costs −10 points. Results carry `units`, and the page shows "2 × model". In the catalog, single
+cartridges top out at 700 sq ft, so cartridge pools over ~46k gallons need two or more.
+
+**Large pools** (`LARGE_POOL_MINIMUM`): TFP's sand and DE minimums stop growing above 25k gallons, so
+above 50k gallons the result notes that the minimum is a floor, not a fit.
 
 ### 4.4 Score: the smallest model that comfortably passes wins
 Start at 100, then:
@@ -227,6 +254,10 @@ value kept next to it, so each one can be reverted by editing data alone.
 | 8 | Current-cell comparison uses the ranking derate | It still applied the retired 0.75 factor to disputed cells | `SWG_OUTPUT_HAIRCUT.comparisonNote` | New case `swg-upgrade-from-disputed` |
 | 9 | 115V voltage check | The answer was collected but never used | `PUMP_VOLTAGE_CHECK` | `pump-agp-small` gets a voltage warning |
 | 10 | Default runtime 8 → 12 h/day | At 8 h a 2×-sized salt cell usually exceeds the 50% scale-control limit (e.g. 87% for 20k gal hot & sunny). At 12 h typical pools land at about 30–45%, for ~$18/yr more pump energy on a 20k pool. Users can still edit it | `DEFAULT_RUNTIME.hours` | New case `swg-default-runtime`: 42% output, no "run longer" warning. Existing cases set runtime explicitly and are unchanged |
+| 11 | Closest pumps when none reaches a feature's peak | A stress sweep found 224 pump/new-pool results that were **empty with no explanation** (spas with 7+ jets on 2″, 5+ on 1.5″) | `FEATURE_FLOW_SHORTFALL` | New case `pump-big-spa-shortfall`: 12 ranked pumps, ~13 GPM per jet, options explained |
+| 12 | Plumbing-vs-feature and cap-top-speed checks | A spa could need more flow than the pipe carries, or the top pump could overrun the user's filter, with no mention | `PLUMBING_SIZE_GUIDANCE.featureOverRetWarnRatio`, `CAP_MAX_SPEED` | Info notes on `pump-spa-heater`, `pump-cartridge-guideline`, `pump-agp-small`, `newpool-25k-full` |
+| 13 | Filters in parallel for large pools | Cartridge pools over ~46k gallons got **no filter at all** (largest single unit is 700 sq ft) | `FILTER_PARALLEL_UNITS` | New case `filter-large-pool-parallel`: 2 × Sta-Rite S8M500. 100k gallons → 3 × SwimClear C5030 |
+| 14 | Input validation | Missing input produced `NaN` in the advice text, and bad values were silently accepted, which matters once PoolMath calls the engine | `INPUT_SCHEMA`, `PUMP_MAX_GPM_BY_PIPE` | `tests/validation.mjs` (9 checks). The page is unaffected |
 
 Top salt cell's required output % by runtime (current engine):
 
@@ -247,12 +278,20 @@ hard-coded constants moved into `rules.json`.
 ### Still open
 - **Catalog gaps:** no pump `hhp` (so the DOE check uses the THP proxy) and no pump `volts` (so voltage
   can only warn, not filter).
-- **Pump max-flow pre-fill** in the filter step (1.5″ → 50, 2″ → 80, 2.5″+ → 100 GPM) is page-only
-  and not a rule yet.
+- **Spa jet flow:** 15 GPM per jet is the TFP "typical" figure (range 10–25). If real spas run well on
+  less, a lower figure would end most shortfall warnings. Worth checking against real installs.
+- **Pressure-side cleaner:** the page asks about it, but the engine doesn't use it yet (booster pumps need
+  the main pump to supply their minimum flow; no rule values for that yet).
+- **Heater sizing:** `HEATER_BTU_MATH` is in the rules, but there's no heater mode or heater catalog yet.
+  This is the natural next equipment type.
 - **Full-size threshold (2.5 THP) and bonus (+15)** are judgment values.
 
 ## 8. Changelog
 - **2026-11 (logic review):** see §7. 26 golden cases (5 new). Default runtime raised to 12 h/day.
+- **2026-11 (round 2):** §7 rows 11–14, from a stress sweep of ~2,000 profiles that found 258 empty
+  results. Tests: 28 golden cases (`node tests/run.mjs`), 9 input-validation checks
+  (`node tests/validation.mjs`), and a 2,016-profile robustness sweep (`node tests/sweep.mjs`) that
+  fails on any crash, empty result or NaN.
 - **2026-11:** engine moved out of the page into `engine/advisor.js`. **Bug fixed:** in pump mode,
   choosing a current variable-speed or two-speed pump crashed the results page, because of an undefined
   variable `turnoverGPM`. The comparison now uses the daily minimum flow, the same flow the

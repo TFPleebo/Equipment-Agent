@@ -20,9 +20,11 @@ Live page: https://tfpleebo.github.io/Equipment-Agent/Pool%20Equipment%20Advisor
 |---|---|
 | `engine/advisor.js` | the sizing engine, no screen code. Plain JavaScript: works in a browser `<script>`, Node, or a JS bridge |
 | `data/*.json` | pumps, SWGs, filters, rules (see `docs/DATA.md`) |
-| `docs/RULES.md` | every rule and formula in plain English, plus **open questions for review** |
-| `tests/cases/*.json` | 26 golden cases: input profile → expected numbers, top models and warnings |
+| `docs/RULES.md` | every rule and formula in plain English, plus **changes awaiting review** |
+| `tests/cases/*.json` | 28 golden cases: input profile → expected numbers, top models and warnings |
 | `tests/run.mjs` | runs the engine on every case (`node tests/run.mjs`) |
+| `tests/validation.mjs` | input-validation contract: errors, conversions, defaults (`node tests/validation.mjs`) |
+| `tests/sweep.mjs` | ~2,000-profile robustness sweep: no crash, empty result or NaN (`node tests/sweep.mjs`) |
 | `Pool Equipment Advisor.html` | the standalone web page, which uses the engine above |
 
 ## Two ways to integrate
@@ -32,9 +34,14 @@ For PoolMath's web app, or a mobile web view:
 ```js
 const advisor = PoolAdvisor.createAdvisor(window.ADVISOR_DATA); // or build the data object from data/*.json
 const result  = advisor.recommend("pump", profile);             // "pump" | "swg" | "filter" | "newpool"
-// result.recommendations[i] -> { product, score, rank, reasons[], fit{}, computed{} }
+// result.recommendations[i] -> { product, score, rank, reasons[], fit{}, computed{} }  (filters also: units)
 // result.warnings[]         -> { code, severity, ruleId, text }
+// result.inputNotes[]       -> plain-text notes on any input that was converted, defaulted or ignored
 ```
+**Bad input throws.** A missing `gallons`, an unknown choice value (e.g. `climate: "tropical"`) or an
+unknown mode throws an `Error` whose `.errors` array lists every problem. Wrap calls in `try/catch` and
+show those messages, or log them, since they usually mean a field-mapping bug. The full field list,
+allowed values, ranges and defaults are in `rules.json` → `INPUT_SCHEMA`.
 The output is plain JSON, so PoolMath can render it in its own style. Or show the existing page
 in a web view, pre-filled through the shared-link format `#r=<base64 JSON {m: mode, p: profile}>`.
 
@@ -43,6 +50,8 @@ in a web view, pre-filled through the shared-link format `#r=<base64 JSON {m: mo
 2. Ship `data/*.json` as app data, or serve it so the catalog can update without an app release.
 3. Run your implementation over `tests/cases/*.json` and match each case's `expect` block: headline
    numbers, top model ids in order, and warning codes in order.
+4. Mirror `tests/validation.mjs` (input contract) and `tests/sweep.mjs` (never empty, never NaN) in
+   your own test suite.
 
 ## Inputs PoolMath could pre-fill from a user's pool
 | Advisor field | Likely PoolMath source |
