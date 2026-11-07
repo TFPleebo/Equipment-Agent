@@ -1,0 +1,3 @@
+{
+  "_about": "Hand corrections applied by tools/import-pumps.mjs after every import, so a re-import never wipes them. Key = pump id; value = fields to set. Say why in a _why field."
+}
