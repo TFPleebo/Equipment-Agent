@@ -1,0 +1,43 @@
+{
+  "id": "pump-big-spa-shortfall",
+  "title": "Pump: 8-jet spa on 2in plumbing - no pump reaches ~120 GPM, closest pumps ranked with options",
+  "mode": "pump",
+  "profile": {
+    "poolType": "inground-plaster",
+    "pipe": "2",
+    "automation": "none",
+    "voltage": "230",
+    "climate": "warm",
+    "gallons": 20000,
+    "spa": true,
+    "spaJets": 8,
+    "hasSWG": true,
+    "failure": "efficiency",
+    "rate": 0.17,
+    "runtime": 12
+  },
+  "expect": {
+    "requiredGPM": 120,
+    "dailyGPM": 25,
+    "featureGPM": 120,
+    "minDriver": "salt cell flow switch 25 GPM",
+    "curve": "C",
+    "top": [
+      "pentair-intelliflo-xf-vsf-22056",
+      "pentair-022055",
+      "hayward-tristar-sp32950vsp",
+      "pentair-intelliflo-2-vst-011055",
+      "pentair-011018"
+    ],
+    "topAnnualCostUSD": 240,
+    "comparison": null,
+    "warnings": [
+      "PIPE_OK",
+      "FEATURE_FLOW_SHORTFALL",
+      "PIPE_LIMITS_FEATURES",
+      "SWG_FLOW_SWITCH",
+      "WARRANTY_CHECK"
+    ],
+    "repairOptions": []
+  }
+}

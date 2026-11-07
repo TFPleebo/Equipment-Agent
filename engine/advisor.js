@@ -83,7 +83,14 @@ function createAdvisor(data) {
     const featureHours=featBits.length?FD.featureHoursPerDay:0;
     const dailyHours=Math.max(0,(p.runtime||RULES.DEFAULT_RUNTIME.value.hours)-featureHours);
     const cands=[];
-    for(const pump of DATA.pumps){
+    // Pass 1: pumps that reach the full required (peak) flow. If none do and the shortfall is
+    // caused by a feature (spa jets, waterfall), pass 2 ranks the pumps that at least cover the
+    // daily minimum by how close they get to the peak (rule FEATURE_FLOW_SHORTFALL), instead of
+    // returning an empty list.
+    let shortfall=false;
+    for(const pass of [1,2]){
+     if(pass===2){ if(cands.length||featureGPM<=dailyGPM) break; shortfall=true; }
+     for(const pump of DATA.pumps){
       const reasons=[];
       // DOE: the specification is hydraulic horsepower, not THP. Use HHP where published;
       // fall back to the rough THP proxy only when HHP is missing.
@@ -94,7 +101,8 @@ function createAdvisor(data) {
       // New pool: TFP discourages single- and two-speed outright (unlike an existing-pool swap)
       if(p.newBuild && pump.st!=='VS'){continue;}
       const gLo=pump.lo.g[ci], wLo=pump.lo.w[ci], gHi=pump.hi.g[ci], wHi=pump.hi.w[ci];
-      if(gHi==null||gHi<requiredGPM) continue; // can't reach peak/feature flow at all
+      const gate = shortfall ? dailyGPM : requiredGPM;
+      if(gHi==null||gHi<gate) continue; // can't reach the flow this pass requires
       // Daily filtering runs at the minimum useful flow. VS pumps slow down to it; two- and
       // multi-speed pumps use their low speed if it delivers enough; single-speed runs flat out.
       const efficientLow = canRunAtDailyFlow(pump.st,gLo,dailyGPM);
@@ -116,10 +124,18 @@ function createAdvisor(data) {
       else if(pump.st!=='SS') reasons.push({code:'MULTISPEED',severity:'info',ruleId:'VS_REQUIRED_ABOVE_THP',text:`${pump.st==='DS'?'Two-speed':'Multi-speed'} — acceptable for an existing-pool swap, though VS saves more.`});
       reasons.push({code:'FLOW_MINIMUM', severity: efficientLow?'good':'info', ruleId:'TURNOVER_FORMULA',
         text: efficientLow?(pump.st==='VS'?`Can idle down to the ~${Math.round(dailyGPM)} GPM your ${minBits[0]} needs — cheapest way to run every day.`:`Low speed (~${Math.round(gLo)} GPM) covers the ~${Math.round(dailyGPM)} GPM your ${minBits[0]} needs, so it can run on low most of the day.`):(pump.st==='SS'?`Single speed: runs at full flow (~${Math.round(gHi)} GPM) all day even though ~${Math.round(dailyGPM)} GPM (${minBits[0]}) would do.`:`Reaches the ~${Math.round(dailyGPM)} GPM minimum (${minBits[0]}) only at a higher speed.`)});
-      if(featBits.length) reasons.push({code:'FEATURE_FLOW',severity: gHi>=featureGPM?'good':'info',ruleId:'FEATURE_FLOW_DEMANDS',text:`Reaches ${featBits.join(' + ')} peak (~${Math.round(featureGPM)} GPM) at full speed.`});
+      if(featBits.length){
+        if(gHi>=featureGPM) reasons.push({code:'FEATURE_FLOW',severity:'good',ruleId:'FEATURE_FLOW_DEMANDS',text:`Reaches ${featBits.join(' + ')} peak (~${Math.round(featureGPM)} GPM) at full speed.`});
+        else {
+          const jets=p.spa?(p.spaJets>0?p.spaJets:FD.defaultSpaJets):0;
+          const perJet=jets?` (about ${Math.round(gHi/jets)} GPM per jet vs ~${FD.spaJetGpmEach.typical} typical)`:'';
+          reasons.push({code:'FEATURE_FLOW_SHORT',severity:'warning',ruleId:'FEATURE_FLOW_SHORTFALL',text:`Reaches ~${Math.round(gHi)} GPM at full speed, short of the ~${Math.round(featureGPM)} GPM ${featBits.join(' + ')} peak${perJet}.`});
+        }
+      }
 
       let score=0;
-      score += 25;                              // reaches required flow (guaranteed)
+      score += 25;                              // reaches the flow this pass requires
+      if(shortfall) score += gHi*RULES.FEATURE_FLOW_SHORTFALL.value.pointsPerGpm; // closest to the peak first
       score += efficientLow?25:0;               // idles at turnover = big efficiency win
       score += pump.st==='VS'?14:(pump.st==='SS'?0:6);
       score += pump.wef?clamp(pump.wef,0,12)*2:0;
@@ -136,8 +152,9 @@ function createAdvisor(data) {
       }
 
       cands.push({product:pump, score, reasons,
-        fit:{meetsCapacity:true,meetsFlow:true,meetsFlowLow:efficientLow,automationMatch:autoMatch,regulatoryOk:true},
+        fit:{meetsCapacity:true,meetsFlow:gHi>=requiredGPM,meetsFlowLow:efficientLow,automationMatch:autoMatch,regulatoryOk:true},
         computed:{requiredGPM:round1(requiredGPM),dailyGPM:round1(dailyGPM),gpmAtCurveLow:gLo,gpmAtCurveHigh:gHi,wattsDaily:wattsDaily!=null?Math.round(wattsDaily):null,wattsHigh:wHi,annualKWh:kWh,annualCostUSD:annualCost?Math.round(annualCost):null}});
+     }
     }
     cands.sort((a,b)=>b.score-a.score);
     // Collapse identical-performance models AFTER ranking (scoring untouched).
@@ -155,6 +172,31 @@ function createAdvisor(data) {
     cands.length=0; cands.push(...collapsed);
     cands.forEach((c,i)=>c.rank=i+1);
 
+    // ---- no single pump reaches the feature peak ----
+    if(shortfall && cands.length){
+      const best=Math.round(cands.reduce((m,c)=>Math.max(m,c.computed.gpmAtCurveHigh||0),0));
+      warnings.push({code:'FEATURE_FLOW_SHORTFALL',severity:'warning',ruleId:'FEATURE_FLOW_SHORTFALL',
+        text:`No single pump in the catalog reaches the ~${Math.round(featureGPM)} GPM your ${featBits.join(' + ')} would need on this plumbing (the strongest manage about ${best} GPM). The pumps below are ranked by how close they get. Options: run the spa jets in banks with a valve, add a dedicated spa or booster pump for the jets, or accept softer jets. Your daily filtering is covered either way.`});
+    }
+    // ---- plumbing can't carry the feature flow efficiently ----
+    if(featBits.length && p.pipe && p.pipe!=='unknown'){
+      const cap=pipeCapGPM(p.pipe);
+      if(cap && featureGPM>cap.ret){
+        // The velocity limits are efficiency/noise guidelines, not hard limits: a little over is a
+        // note, well over (featureOverRetWarnRatio) is a warning.
+        const well = featureGPM > cap.ret*RULES.PLUMBING_SIZE_GUIDANCE.value.featureOverRetWarnRatio;
+        warnings.push({code:'PIPE_LIMITS_FEATURES',severity:well?'warning':'info',ruleId:'PLUMBING_SIZE_GUIDANCE',
+          text: well
+            ? `Your ${featBits.join(' + ')} would need ~${Math.round(featureGPM)} GPM, but ${p.pipe}″ plumbing carries about ${cap.ret} GPM on the return side before water moves too fast (noisy, wasteful, hard on equipment). For full-strength features, the feature lines need larger pipe or a separate pump.`
+            : `Your ${featBits.join(' + ')} peak (~${Math.round(featureGPM)} GPM) is a little over the ~${cap.ret} GPM that ${p.pipe}″ return plumbing carries at the recommended velocity. That's fine for short feature runs, but expect some extra noise and energy at full speed.`});
+      }
+    }
+    // ---- the top pick at full speed would overrun the user's filter ----
+    if(filterCap!=null && cands[0] && requiredGPM<=filterCap){
+      const topMax=cands[0].computed.gpmAtCurveHigh;
+      if(topMax!=null && topMax>filterCap) warnings.push({code:'CAP_MAX_SPEED',severity:'info',ruleId:'FILTER_MUST_NOT_BOTTLENECK_PUMP',
+        text:`At full speed the top pick can push ~${Math.round(topMax)} GPM, more than your filter is rated for (~${Math.round(filterCap)} GPM). Set the pump's maximum speed so it stays below that. Variable-speed pumps let you cap the top RPM, and you only need ~${Math.round(requiredGPM)} GPM.`});
+    }
     // Power: the catalog has no voltage field yet, so a 115V pad gets a check-before-you-buy note.
     if(p.voltage==='115') warnings.push({code:'VOLTAGE_115',severity:'warning',ruleId:'PUMP_VOLTAGE_CHECK',
       text:'Your pad is 115V. Many full-size variable-speed pumps are 230V only, so confirm the voltage on any pump below before buying. Some run on either voltage, and some deliver less power on 115V. Moving to 230V needs an electrician.'});

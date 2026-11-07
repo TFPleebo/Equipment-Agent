@@ -35,6 +35,7 @@
     "warnings": [
       "PIPE_OK",
       "FILTER_FLOW_GUIDELINE",
+      "PIPE_LIMITS_FEATURES",
       "WARRANTY_CHECK"
     ],
     "repairOptions": []

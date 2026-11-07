@@ -924,6 +924,12 @@
    "text": "1.5″ plumbing holds about 38 GPM on the suction side and 51 GPM on returns before water moves too fast (6 and 8 ft/s). Beyond that you pay in friction, energy and noise — these are efficiency and noise guidelines rather than hard limits, and PVC will carry more if a specific application calls for it; running a variable-speed pump slower is the practical fix."
   },
   {
+   "code": "CAP_MAX_SPEED",
+   "severity": "info",
+   "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+   "text": "At full speed the top pick can push ~52 GPM, more than your filter is rated for (~38 GPM). Set the pump's maximum speed so it stays below that. Variable-speed pumps let you cap the top RPM, and you only need ~15 GPM."
+  },
+  {
    "code": "VOLTAGE_115",
    "severity": "warning",
    "ruleId": "PUMP_VOLTAGE_CHECK",

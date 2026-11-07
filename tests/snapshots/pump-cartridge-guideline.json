@@ -1006,6 +1006,12 @@
    "text": "Peak flow of ~90 GPM is within your filter's rating but above the ~56 GPM efficiency guideline (0.375 GPM per sq ft). That's fine for short spa or feature runs; keep everyday filtering at low speed."
   },
   {
+   "code": "PIPE_LIMITS_FEATURES",
+   "severity": "info",
+   "ruleId": "PLUMBING_SIZE_GUIDANCE",
+   "text": "Your 6 spa jets peak (~90 GPM) is a little over the ~84 GPM that 2″ return plumbing carries at the recommended velocity. That's fine for short feature runs, but expect some extra noise and energy at full speed."
+  },
+  {
    "code": "WARRANTY_CHECK",
    "severity": "info",
    "ruleId": "WARRANTY_CHECK",

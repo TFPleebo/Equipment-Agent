@@ -1,4 +1,18 @@
 {
+  "FEATURE_FLOW_SHORTFALL": {
+    "title": "When no single pump reaches a feature's peak flow",
+    "value": {
+      "behaviour": "If no pump reaches the required peak (usually a large spa), rank the pumps that cover the daily minimum by full-speed flow (closest to the peak first) and explain the options, instead of returning no results.",
+      "pointsPerGpm": 2,
+      "options": [
+        "run spa jets in banks",
+        "dedicated spa/booster pump for the jets",
+        "accept softer jets"
+      ],
+      "reviewedBy": "pending review (proposed 2026-11)"
+    },
+    "src": "TFP: Pool Plumbing and Hydraulics (spa jets 10-25 GPM each); catalog max ~111 GPM on curve C"
+  },
   "DEFAULT_RUNTIME": {
     "title": "Default pump runtime when the user hasn't entered one",
     "value": {
@@ -259,6 +273,8 @@
   "PLUMBING_SIZE_GUIDANCE": {
     "title": "Pipe size sets the real flow ceiling",
     "value": {
+      "featureOverRetWarnRatio": 1.25,
+      "featureCheckNote": "2026-11 (pending review): feature peak flow above the return-side figure is an info note up to 1.25x, a warning beyond (velocity limits are guidelines, not hard limits).",
       "table": {
         "2": {
           "suction": 63,

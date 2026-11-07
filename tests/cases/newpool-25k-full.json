@@ -44,6 +44,7 @@
       "PAD_FLOW_OK",
       "PAD_SWG",
       "PAD_AUTOMATION",
+      "PIPE_LIMITS_FEATURES",
       "SWG_FLOW_SWITCH",
       "DATA_QUALITY_FLAG",
       "SWG_FLOW_SWITCH",

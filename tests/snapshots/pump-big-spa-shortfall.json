@@ -1,0 +1,1028 @@
+{
+ "mode": "pump",
+ "requiredGPM": 120,
+ "dailyGPM": 25,
+ "minDriver": "salt cell flow switch 25 GPM",
+ "featureGPM": 120,
+ "comparison": null,
+ "recommendations": [
+  {
+   "product": {
+    "id": "pentair-intelliflo-xf-vsf-22056",
+    "brand": "Pentair",
+    "model": "Pentair IntelliFlo XF VSF 22056",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 3.96,
+    "nhp": 3,
+    "wef": 6.092818989,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      74,
+      44,
+      101
+     ],
+     "w": [
+      2545,
+      2138,
+      2837
+     ]
+    },
+    "lo": {
+     "rpm": 450,
+     "g": [
+      9,
+      6,
+      13
+     ],
+     "w": [
+      58,
+      57,
+      58
+     ]
+    }
+   },
+   "score": 268.1657471459149,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW_SHORT",
+     "severity": "warning",
+     "ruleId": "FEATURE_FLOW_SHORTFALL",
+     "text": "Reaches ~101 GPM at full speed, short of the ~120 GPM 8 spa jets peak (about 13 GPM per jet vs ~15 typical)."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": false,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 120,
+    "dailyGPM": 25,
+    "gpmAtCurveLow": 13,
+    "gpmAtCurveHigh": 101,
+    "wattsDaily": 94,
+    "wattsHigh": 2837,
+    "annualKWh": 1414.1048037747155,
+    "annualCostUSD": 240
+   },
+   "variants": [
+    "Pentair IntelliPro XF VSF 23056",
+    "Pentair IntelliProXF VS 22055",
+    "Pentair IntelliProXF VS 23055"
+   ],
+   "rank": 1
+  },
+  {
+   "product": {
+    "id": "pentair-022055",
+    "brand": "Pentair",
+    "model": "Pentair 022055",
+    "st": "VS",
+    "mot": "PSC",
+    "thp": 3.96,
+    "nhp": 3,
+    "wef": 6.091413023,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      74.17,
+      44.01,
+      100.94
+     ],
+     "w": [
+      2544.81,
+      2138.2,
+      2837.4
+     ]
+    },
+    "lo": {
+     "rpm": 450,
+     "g": [
+      9.22,
+      5.55,
+      12.58
+     ],
+     "w": [
+      57.64,
+      56.82,
+      58.37
+     ]
+    }
+   },
+   "score": 268.00804206389114,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW_SHORT",
+     "severity": "warning",
+     "ruleId": "FEATURE_FLOW_SHORTFALL",
+     "text": "Reaches ~101 GPM at full speed, short of the ~120 GPM 8 spa jets peak (about 13 GPM per jet vs ~15 typical)."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": false,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 120,
+    "dailyGPM": 25,
+    "gpmAtCurveLow": 12.58,
+    "gpmAtCurveHigh": 100.94,
+    "wattsDaily": 95,
+    "wattsHigh": 2837.4,
+    "annualKWh": 1418.2098802481005,
+    "annualCostUSD": 241
+   },
+   "variants": [
+    "Pentair 022056",
+    "Pentair Sta-Rite 023055",
+    "Pentair Sta-Rite 023056"
+   ],
+   "rank": 2
+  },
+  {
+   "product": {
+    "id": "hayward-tristar-sp32950vsp",
+    "brand": "Hayward",
+    "model": "Hayward TriStar SP32950VSP",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 2.7,
+    "nhp": 2,
+    "wef": 7.7918995,
+    "frame": "48",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      70,
+      41,
+      97
+     ],
+     "w": [
+      1923,
+      1533,
+      2237
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      13,
+      8,
+      17
+     ],
+     "w": [
+      35,
+      34,
+      36
+     ]
+    }
+   },
+   "score": 266.52852814869567,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW_SHORT",
+     "severity": "warning",
+     "ruleId": "FEATURE_FLOW_SHORTFALL",
+     "text": "Reaches ~97 GPM at full speed, short of the ~120 GPM 8 spa jets peak (about 12 GPM per jet vs ~15 typical)."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": false,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 120,
+    "dailyGPM": 25,
+    "gpmAtCurveLow": 17,
+    "gpmAtCurveHigh": 97,
+    "wattsDaily": 62,
+    "wattsHigh": 2237,
+    "annualKWh": 1065.3259825063894,
+    "annualCostUSD": 181
+   },
+   "variants": [
+    "Hayward TriStar VS 950 HL32950VSP"
+   ],
+   "rank": 3
+  },
+  {
+   "product": {
+    "id": "pentair-intelliflo-2-vst-011055",
+    "brand": "Pentair",
+    "model": "Pentair IntelliFlo 2 VST 011055",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 3.96,
+    "nhp": 3,
+    "wef": 6.09270848,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      73,
+      43,
+      99
+     ],
+     "w": [
+      2410,
+      1945,
+      2776
+     ]
+    },
+    "lo": {
+     "rpm": 450,
+     "g": [
+      10,
+      6,
+      13
+     ],
+     "w": [
+      59,
+      58,
+      60
+     ]
+    }
+   },
+   "score": 264.23957192146065,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW_SHORT",
+     "severity": "warning",
+     "ruleId": "FEATURE_FLOW_SHORTFALL",
+     "text": "Reaches ~99 GPM at full speed, short of the ~120 GPM 8 spa jets peak (about 12 GPM per jet vs ~15 typical)."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": false,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 120,
+    "dailyGPM": 25,
+    "gpmAtCurveLow": 13,
+    "gpmAtCurveHigh": 99,
+    "wattsDaily": 98,
+    "wattsHigh": 2776,
+    "annualKWh": 1405.3935339458033,
+    "annualCostUSD": 239
+   },
+   "variants": [
+    "Pentair IntelliFlo VS 011028",
+    "Pentair S-013003",
+    "Pentair Shasta IntelliFlo 2 VST S-011058"
+   ],
+   "rank": 4
+  },
+  {
+   "product": {
+    "id": "pentair-011018",
+    "brand": "Pentair",
+    "model": "Pentair 011018",
+    "st": "VS",
+    "mot": "PSC",
+    "thp": 3.96,
+    "nhp": 3,
+    "wef": 5.547675833,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      73.75,
+      43.97,
+      100.21
+     ],
+     "w": [
+      2459.11,
+      1991.94,
+      2826.86
+     ]
+    },
+    "lo": {
+     "rpm": 450,
+     "g": [
+      9.9,
+      6.03,
+      13.56
+     ],
+     "w": [
+      101.39,
+      101.22,
+      102.39
+     ]
+    }
+   },
+   "score": 264.03437554890286,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW_SHORT",
+     "severity": "warning",
+     "ruleId": "FEATURE_FLOW_SHORTFALL",
+     "text": "Reaches ~100 GPM at full speed, short of the ~120 GPM 8 spa jets peak (about 13 GPM per jet vs ~15 typical)."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": false,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 120,
+    "dailyGPM": 25,
+    "gpmAtCurveLow": 13.56,
+    "gpmAtCurveHigh": 100.21,
+    "wattsDaily": 138,
+    "wattsHigh": 2826.86,
+    "annualKWh": 1585.997190246718,
+    "annualCostUSD": 270
+   },
+   "variants": [],
+   "rank": 5
+  },
+  {
+   "product": {
+    "id": "pentair-intelliflo-vs-011018",
+    "brand": "Pentair",
+    "model": "Pentair IntelliFlo VS 011018",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 3.96,
+    "nhp": 3,
+    "wef": 5.544261484,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      74,
+      44,
+      100
+     ],
+     "w": [
+      2459,
+      1992,
+      2827
+     ]
+    },
+    "lo": {
+     "rpm": 450,
+     "g": [
+      10,
+      6,
+      14
+     ],
+     "w": [
+      101,
+      101,
+      102
+     ]
+    }
+   },
+   "score": 263.63555439353416,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW_SHORT",
+     "severity": "warning",
+     "ruleId": "FEATURE_FLOW_SHORTFALL",
+     "text": "Reaches ~100 GPM at full speed, short of the ~120 GPM 8 spa jets peak (about 13 GPM per jet vs ~15 typical)."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": false,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 120,
+    "dailyGPM": 25,
+    "gpmAtCurveLow": 14,
+    "gpmAtCurveHigh": 100,
+    "wattsDaily": 137,
+    "wattsHigh": 2827,
+    "annualKWh": 1582.7021852312744,
+    "annualCostUSD": 269
+   },
+   "variants": [],
+   "rank": 6
+  },
+  {
+   "product": {
+    "id": "pentair-011028",
+    "brand": "Pentair",
+    "model": "Pentair 011028",
+    "st": "VS",
+    "mot": "PSC",
+    "thp": 3.96,
+    "nhp": 3,
+    "wef": 6.066459049,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      72.56,
+      43.47,
+      98.67
+     ],
+     "w": [
+      2409.51,
+      1945,
+      2776.01
+     ]
+    },
+    "lo": {
+     "rpm": 450,
+     "g": [
+      9.82,
+      5.86,
+      13.18
+     ],
+     "w": [
+      59.37,
+      58.42,
+      60.04
+     ]
+    }
+   },
+   "score": 263.52154281220146,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW_SHORT",
+     "severity": "warning",
+     "ruleId": "FEATURE_FLOW_SHORTFALL",
+     "text": "Reaches ~99 GPM at full speed, short of the ~120 GPM 8 spa jets peak (about 12 GPM per jet vs ~15 typical)."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": false,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 120,
+    "dailyGPM": 25,
+    "gpmAtCurveLow": 13.18,
+    "gpmAtCurveHigh": 98.67,
+    "wattsDaily": 98,
+    "wattsHigh": 2776.01,
+    "annualKWh": 1406.0441512704188,
+    "annualCostUSD": 239
+   },
+   "variants": [
+    "Pentair 011055",
+    "Pentair 011056",
+    "Pentair S-011056",
+    "Pentair S-011058"
+   ],
+   "rank": 7
+  },
+  {
+   "product": {
+    "id": "pentair-intellipro-vs-p6e6vs4h-209l",
+    "brand": "Pentair",
+    "model": "Pentair IntelliPro VS P6E6VS4H-209L",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 3.96,
+    "nhp": 3,
+    "wef": 6.352328987,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      71,
+      42,
+      97
+     ],
+     "w": [
+      2242,
+      1836,
+      2578
+     ]
+    },
+    "lo": {
+     "rpm": 450,
+     "g": [
+      10,
+      6,
+      13
+     ],
+     "w": [
+      61,
+      61,
+      61
+     ]
+    }
+   },
+   "score": 261.357769939719,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW_SHORT",
+     "severity": "warning",
+     "ruleId": "FEATURE_FLOW_SHORTFALL",
+     "text": "Reaches ~97 GPM at full speed, short of the ~120 GPM 8 spa jets peak (about 12 GPM per jet vs ~15 typical)."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": false,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 120,
+    "dailyGPM": 25,
+    "gpmAtCurveLow": 13,
+    "gpmAtCurveHigh": 97,
+    "wattsDaily": 98,
+    "wattsHigh": 2578,
+    "annualKWh": 1334.9280040330552,
+    "annualCostUSD": 227
+   },
+   "variants": [],
+   "rank": 8
+  },
+  {
+   "product": {
+    "id": "jandy-epump-vs-jep-2-0",
+    "brand": "Jandy",
+    "model": "Jandy ePump VS JEP 2.0",
+    "st": "VS",
+    "mot": "PSC",
+    "thp": 2.7,
+    "nhp": 2,
+    "wef": 7.754788034,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      69,
+      41,
+      94
+     ],
+     "w": [
+      1911,
+      1542,
+      2149
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      11,
+      6,
+      15
+     ],
+     "w": [
+      38,
+      36,
+      39
+     ]
+    }
+   },
+   "score": 260.4449614368064,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW_SHORT",
+     "severity": "warning",
+     "ruleId": "FEATURE_FLOW_SHORTFALL",
+     "text": "Reaches ~94 GPM at full speed, short of the ~120 GPM 8 spa jets peak (about 12 GPM per jet vs ~15 typical)."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": false,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 120,
+    "dailyGPM": 25,
+    "gpmAtCurveLow": 15,
+    "gpmAtCurveHigh": 94,
+    "wattsDaily": 70,
+    "wattsHigh": 2149,
+    "annualKWh": 1066.425250728655,
+    "annualCostUSD": 181
+   },
+   "variants": [],
+   "rank": 9
+  },
+  {
+   "product": {
+    "id": "pentair-maxepro-p6e6y4h-209l",
+    "brand": "Pentair",
+    "model": "Pentair MaxEPro P6E6Y4H-209L",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 3.96,
+    "nhp": 3,
+    "wef": 5.89289889,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      71,
+      43,
+      97
+     ],
+     "w": [
+      2340,
+      1990,
+      2720
+     ]
+    },
+    "lo": {
+     "rpm": 800,
+     "g": [
+      17,
+      10,
+      23
+     ],
+     "w": [
+      100,
+      100,
+      100
+     ]
+    }
+   },
+   "score": 259.5908921722639,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW_SHORT",
+     "severity": "warning",
+     "ruleId": "FEATURE_FLOW_SHORTFALL",
+     "text": "Reaches ~97 GPM at full speed, short of the ~120 GPM 8 spa jets peak (about 12 GPM per jet vs ~15 typical)."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": false,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 120,
+    "dailyGPM": 25,
+    "gpmAtCurveLow": 23,
+    "gpmAtCurveHigh": 97,
+    "wattsDaily": 110,
+    "wattsHigh": 2720,
+    "annualKWh": 1434.6947773807171,
+    "annualCostUSD": 244
+   },
+   "variants": [
+    "Pentair MaxEPro P6E6Z4H-209L"
+   ],
+   "rank": 10
+  },
+  {
+   "product": {
+    "id": "pentair-intelliflo-vs-3050",
+    "brand": "Pentair",
+    "model": "Pentair IntelliFlo VS 3050",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 3.96,
+    "nhp": 3,
+    "wef": 5.789368778,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      71,
+      43,
+      97
+     ],
+     "w": [
+      2340,
+      1990,
+      2720
+     ]
+    },
+    "lo": {
+     "rpm": 800,
+     "g": [
+      18,
+      11,
+      24
+     ],
+     "w": [
+      110,
+      105,
+      110
+     ]
+    }
+   },
+   "score": 259.20743978941186,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW_SHORT",
+     "severity": "warning",
+     "ruleId": "FEATURE_FLOW_SHORTFALL",
+     "text": "Reaches ~97 GPM at full speed, short of the ~120 GPM 8 spa jets peak (about 12 GPM per jet vs ~15 typical)."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": false,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 120,
+    "dailyGPM": 25,
+    "gpmAtCurveLow": 24,
+    "gpmAtCurveHigh": 97,
+    "wattsDaily": 115,
+    "wattsHigh": 2720,
+    "annualKWh": 1455.4467960691954,
+    "annualCostUSD": 247
+   },
+   "variants": [],
+   "rank": 11
+  },
+  {
+   "product": {
+    "id": "pentair-sta-rite-013001",
+    "brand": "Pentair",
+    "model": "Pentair Sta-Rite 013001",
+    "st": "VS",
+    "mot": "PSC",
+    "thp": 3.96,
+    "nhp": 3,
+    "wef": 6.274547872,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      70.45,
+      42.29,
+      95.14
+     ],
+     "w": [
+      2222.35,
+      1818.88,
+      2552.88
+     ]
+    },
+    "lo": {
+     "rpm": 450,
+     "g": [
+      9.35,
+      5.63,
+      12.64
+     ],
+     "w": [
+      62.5,
+      61.58,
+      63.18
+     ]
+    }
+   },
+   "score": 257.4070701687819,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~25 GPM your salt cell flow switch 25 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW_SHORT",
+     "severity": "warning",
+     "ruleId": "FEATURE_FLOW_SHORTFALL",
+     "text": "Reaches ~95 GPM at full speed, short of the ~120 GPM 8 spa jets peak (about 12 GPM per jet vs ~15 typical)."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": false,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 120,
+    "dailyGPM": 25,
+    "gpmAtCurveLow": 12.64,
+    "gpmAtCurveHigh": 95.14,
+    "wattsDaily": 103,
+    "wattsHigh": 2552.88,
+    "annualKWh": 1343.767714731545,
+    "annualCostUSD": 228
+   },
+   "variants": [
+    "Pentair Sta-Rite 013004",
+    "Pentair Sta-Rite 013028"
+   ],
+   "rank": 12
+  }
+ ],
+ "warnings": [
+  {
+   "code": "PIPE_OK",
+   "severity": "info",
+   "ruleId": "PLUMBING_SIZE_GUIDANCE",
+   "text": "2″ plumbing carries about 63 GPM suction / 84 GPM return within the velocity limits."
+  },
+  {
+   "code": "FEATURE_FLOW_SHORTFALL",
+   "severity": "warning",
+   "ruleId": "FEATURE_FLOW_SHORTFALL",
+   "text": "No single pump in the catalog reaches the ~120 GPM your 8 spa jets would need on this plumbing (the strongest manage about 102 GPM). The pumps below are ranked by how close they get. Options: run the spa jets in banks with a valve, add a dedicated spa or booster pump for the jets, or accept softer jets. Your daily filtering is covered either way."
+  },
+  {
+   "code": "PIPE_LIMITS_FEATURES",
+   "severity": "warning",
+   "ruleId": "PLUMBING_SIZE_GUIDANCE",
+   "text": "Your 8 spa jets would need ~120 GPM, but 2″ plumbing carries about 84 GPM on the return side before water moves too fast (noisy, wasteful, hard on equipment). For full-strength features, the feature lines need larger pipe or a separate pump."
+  },
+  {
+   "code": "SWG_FLOW_SWITCH",
+   "severity": "warning",
+   "ruleId": "SWG_FLOW_SWITCH",
+   "text": "Heads up on the salt cell: its flow switch trips on water velocity, so a 2″ tee needs roughly 25 GPM. The top pick can idle near 13 GPM, which is below that — set your lowest speed high enough to close the switch, or the cell will quietly stop making chlorine."
+  },
+  {
+   "code": "WARRANTY_CHECK",
+   "severity": "info",
+   "ruleId": "WARRANTY_CHECK",
+   "text": "Before you buy: check the warranty. Internet purchases and owner installation can void coverage on some brands, a few require a certified installer, and most require product registration. Bundled purchases with professional install sometimes carry a longer warranty."
+  }
+ ],
+ "repairOptions": [],
+ "curve": "C"
+}

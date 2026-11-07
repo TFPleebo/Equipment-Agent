@@ -36,6 +36,7 @@
     "comparison": null,
     "warnings": [
       "PIPE_OK",
+      "PIPE_LIMITS_FEATURES",
       "SWG_FLOW_SWITCH",
       "HEATER_BYPASS",
       "WARRANTY_CHECK"
