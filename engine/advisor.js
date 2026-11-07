@@ -53,7 +53,7 @@ function createAdvisor(data) {
     if(p.gasHeater&&TF.heaterSetsDailyMinimum&&TF.gasHeaterMinGpm>dailyGPM){dailyGPM=TF.gasHeaterMinGpm; minBits.length=0; minBits.push('gas heater '+TF.gasHeaterMinGpm+' GPM');}
     let featureGPM=0; const featBits=[];
     if(p.spa){
-      const jets=p.spaJets>0?p.spaJets:4;                    // typical small spa if unspecified
+      const jets=p.spaJets>0?p.spaJets:FD.defaultSpaJets;    // typical small spa if unspecified
       const spaGPM=jets*FD.spaJetGpmEach.typical;            // 10-25 GPM per jet; use typical
       featureGPM=Math.max(featureGPM,spaGPM);
       featBits.push(jets+' spa jet'+(jets===1?'':'s'));
@@ -80,7 +80,7 @@ function createAdvisor(data) {
         text:`Peak flow of ~${Math.round(requiredGPM)} GPM is within your filter's rating but above the ~${Math.round(filterGuide)} GPM efficiency guideline (0.375 GPM per sq ft). That's fine for short spa or feature runs; keep everyday filtering at low speed.`});
     }
 
-    const featureHours=featBits.length?1:0;
+    const featureHours=featBits.length?FD.featureHoursPerDay:0;
     const dailyHours=Math.max(0,(p.runtime||8)-featureHours);
     const cands=[];
     for(const pump of DATA.pumps){
@@ -216,7 +216,7 @@ function createAdvisor(data) {
     const measured = (typeof p.fcLossPpm==='number' && p.fcLossPpm>=FD.measuredRange[0] && p.fcLossPpm<=FD.measuredRange[1]) ? p.fcLossPpm : null;
     const ppm = measured ?? FC_BY_CLIMATE[p.climate] ?? FC_BY_CLIMATE.warm ?? 3;
     const ppmSource = measured!=null ? 'measured' : 'climate';
-    const lbsNeeded = p.gallons * ppm * 8.34e-6; // daily FC demand in lbs Cl2
+    const lbsNeeded = p.gallons * ppm * FD.lbsPerPpmPerGallon; // daily FC demand in lbs Cl2
     const runtime = p.runtime||8;
     const warnings=[];
     if(p.newPlaster) warnings.push({code:'NEW_PLASTER_NO_SALT',severity:'blocker',ruleId:'NEW_PLASTER_NO_SALT',text:'New plaster: do NOT add salt or run an SWG until the plaster has cured ~30 days. Use liquid chlorine until then.'});
@@ -327,9 +327,10 @@ function createAdvisor(data) {
     // Longer runtime is usually cheaper than a bigger cell, and is easier on the cell.
     if(out[0]&&out[0].computed.requiredOutputPct>RULES.SWG_MAX_OUTPUT_PCT.value.warnAbovePct){
       const need=out[0].computed.requiredOutputPct, cur=runtime;
-      const hrs=Math.min(24,Math.ceil((need/45)*cur));   // hours that would bring it to ~45%
+      const tgt=RULES.SWG_RUNTIME_TRADEOFF.value.targetPct;
+      const hrs=Math.min(24,Math.ceil((need/tgt)*cur));  // hours that would bring it to ~target %
       if(hrs>cur) warnings.push({code:'SWG_RUNTIME_TRADEOFF',severity:'info',ruleId:'SWG_RUNTIME_TRADEOFF',
-        text:`Top pick needs about ${need}% output at ${cur}h/day. Running the pump roughly ${hrs}h/day at low RPM would drop it to about 45% — usually cheaper than buying a larger cell, keeps scale down, and the cell lasts longer when it works less hard.`});
+        text:`Top pick needs about ${need}% output at ${cur}h/day. Running the pump roughly ${hrs}h/day at low RPM would drop it to about ${tgt}% — usually cheaper than buying a larger cell, keeps scale down, and the cell lasts longer when it works less hard.`});
     }
 
     const repairOptions=[];

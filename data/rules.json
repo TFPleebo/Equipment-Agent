@@ -87,7 +87,8 @@
         0.5,
         10
       ],
-      "note": "2026-11 (pending review): measured loss affects demand and output %, not the 2x capacity rule (requiredLbs), which stays volume-based."
+      "note": "2026-11 (pending review): measured loss affects demand and output %, not the 2x capacity rule (requiredLbs), which stays volume-based.",
+      "lbsPerPpmPerGallon": 0.00000834
     },
     "src": "TFP methodology: typical FC loss 2-4 ppm/day depending on sun/temperature"
   },
@@ -167,8 +168,9 @@
     "value": [
       {
         "subject": "Pentair SuperFlo VS",
-        "fact": "Variable speeds cannot be controlled by any automation system, even Pentair's (can still be switched on/off).",
-        "severity": "blocker-for-speed-control"
+        "fact": "Superseded by SUPERFLO_AUTOMATION: units built after 2020-11-20 have RS-485 and work with Pentair automation; earlier units need low-voltage relay control per speed.",
+        "severity": "info",
+        "supersededBy": "SUPERFLO_AUTOMATION"
       },
       {
         "subject": "Hayward AquaLogic (pre-VS firmware)",
@@ -297,7 +299,9 @@
         "note": "A ~400,000 BTU gas heater is often the single largest flow demand on a residential pool."
       },
       "baselineCirculationGpm": 20,
-      "waterfallGpmPerInch": 1.5
+      "waterfallGpmPerInch": 1.5,
+      "defaultSpaJets": 4,
+      "featureHoursPerDay": 1
     },
     "src": "TFP: Pool Plumbing and Hydraulics"
   },
@@ -384,8 +388,10 @@
   "SWG_RUNTIME_TRADEOFF": {
     "title": "Longer runtime beats a bigger cell",
     "value": {
-      "whenOutputAbovePct": 80,
-      "advice": "Running the pump longer at low RPM is usually cheaper than upsizing the cell, and running a cell at a lower percentage extends its life."
+      "advice": "Running the pump longer at low RPM is usually cheaper than upsizing the cell, and running a cell at a lower percentage extends its life.",
+      "previousWhenOutputAbovePct": 80,
+      "triggerSource": "SWG_MAX_OUTPUT_PCT.warnAbovePct (50)",
+      "targetPct": 45
     },
     "src": "TFP: SWG sizing and cell life"
   },
@@ -410,7 +416,7 @@
     "value": {
       "rule": "candidate allowable flow >= pumpMaxGPM",
       "cartridgeDeHybridSource": "designMaxGPM",
-      "sandSource": "15 * bedAreaSqFt (TFP cap, not manufacturer NSF rating)",
+      "sandSource": "FILTER_FLOW_CAP.sandGpmPerSqFt (20, reviewed 2026-07) * bedAreaSqFt (TFP cap, not manufacturer NSF rating)",
       "sandBedAreaFallback": "PI * (tankDiameterInches/2/12)^2"
     },
     "src": "TFP: filter flow caps (APSP-15/ANSI-NSF 50)"
@@ -425,14 +431,21 @@
           "code": "FILTER_TYPE_CARTRIDGE_WATER"
         },
         {
-          "if": "debrisLoad=high AND waterCostConcern!=high",
-          "then": "sand|cartridge",
-          "code": "FILTER_TYPE_DEBRIS"
+          "if": "finest-clarity requested",
+          "then": "de",
+          "code": "FILTER_TYPE_DE_CLARITY",
+          "note": "An explicit clarity request outranks debris load."
         },
         {
-          "if": "finest-clarity OR small-pool OR lowest-micron",
-          "then": "de",
-          "code": "FILTER_TYPE_DE_CLARITY"
+          "if": "newBuild AND debrisLoad=high",
+          "then": "cartridge (sized up)",
+          "code": "FILTER_TYPE_DEFAULT_CARTRIDGE + FILTER_TYPE_DEBRIS",
+          "ruleRef": "NEW_POOL_DEFAULTS"
+        },
+        {
+          "if": "debrisLoad=high",
+          "then": "sand",
+          "code": "FILTER_TYPE_DEBRIS"
         },
         {
           "if": "default",
@@ -447,7 +460,8 @@
         ],
         "cartridge": 10,
         "sand": 30
-      }
+      },
+      "orderNote": "2026-11: order rewritten to match the engine (clarity before debris; new-build branch was missing)."
     },
     "src": "filter-selection-engine-spec.md §4"
   },
