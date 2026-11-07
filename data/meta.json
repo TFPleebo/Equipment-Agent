@@ -1,0 +1,12 @@
+{
+  "version": "2026.11.0",
+  "updated": "2026-11-07",
+  "sources": [
+    "Trouble Free Pool (TFP) sizing guidance and wiki - cited per rule in rules.json (src)",
+    "California Energy Commission (CEC) appliance database - pump flow/watt curve points",
+    "Manufacturer spec sheets and manuals - SWG output, filter area/flow, ports"
+  ],
+  "pumpCount": 665,
+  "swgCount": 107,
+  "filterCount": 124
+}

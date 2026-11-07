@@ -1,0 +1,2659 @@
+{
+ "mode": "newpool",
+ "pump": {
+  "mode": "pump",
+  "requiredGPM": 90,
+  "dailyGPM": 40,
+  "minDriver": "gas heater 40 GPM",
+  "featureGPM": 90,
+  "comparison": null,
+  "recommendations": [
+   {
+    "product": {
+     "id": "pentair-whisperflo-vst-011532",
+     "brand": "Pentair",
+     "model": "Pentair WhisperFlo VST 011532",
+     "st": "VS",
+     "mot": "ECM",
+     "thp": 2.6,
+     "nhp": 2.6,
+     "wef": 8.387540226,
+     "frame": null,
+     "dq": "ok",
+     "hi": {
+      "rpm": 3450,
+      "g": [
+       68.87,
+       41.3,
+       92.52
+      ],
+      "w": [
+       1816.11,
+       1479.11,
+       2047.72
+      ]
+     },
+     "lo": {
+      "rpm": 1163,
+      "g": [
+       23.216,
+       13.922,
+       31.19
+      ],
+      "w": [
+       81.208,
+       68.298,
+       90.08
+      ]
+     }
+    },
+    "score": 84.29562219117446,
+    "reasons": [
+     {
+      "code": "AUTOMATION_SAME_BRAND",
+      "severity": "good",
+      "ruleId": "AUTOMATION_SAME_BRAND",
+      "text": "Same brand as your Pentair automation — simplest to control."
+     },
+     {
+      "code": "AUTOMATION_SUPERFLO_NUANCE",
+      "severity": "warning",
+      "ruleId": "SUPERFLO_AUTOMATION",
+      "text": "Check the build date on this one. Units made after 11/20/2020 have RS-485 and talk to IntelliCenter, IntelliSync, EasyTouch and IntelliTouch; earlier ones need an external low-voltage relay for each speed. Either way its scheduler is limited — one start time with up to three speeds, where an IntelliFlo allows four independent schedules."
+     },
+     {
+      "code": "VS_PREFERRED",
+      "severity": "good",
+      "ruleId": "VS_REQUIRED_ABOVE_THP",
+      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+     },
+     {
+      "code": "FLOW_MINIMUM",
+      "severity": "good",
+      "ruleId": "TURNOVER_FORMULA",
+      "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
+     },
+     {
+      "code": "FEATURE_FLOW",
+      "severity": "good",
+      "ruleId": "FEATURE_FLOW_DEMANDS",
+      "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+     }
+    ],
+    "fit": {
+     "meetsCapacity": true,
+     "meetsFlow": true,
+     "meetsFlowLow": true,
+     "automationMatch": true,
+     "regulatoryOk": true
+    },
+    "computed": {
+     "requiredGPM": 90,
+     "dailyGPM": 40,
+     "gpmAtCurveLow": 31.19,
+     "gpmAtCurveHigh": 92.52,
+     "wattsDaily": 190,
+     "wattsHigh": 2047.72,
+     "annualKWh": 1232.8774424500634,
+     "annualCostUSD": 210
+    },
+    "variants": [
+     "Pentair WhisperFlo VST 011533",
+     "Pentair WhisperFlo VST EC-011533"
+    ],
+    "rank": 1
+   },
+   {
+    "product": {
+     "id": "pentair-intelliflo-3-vsf-011075",
+     "brand": "Pentair",
+     "model": "Pentair INTELLIFLO 3 VSF 011075",
+     "st": "VS",
+     "mot": "ECM",
+     "thp": 3,
+     "nhp": 3,
+     "wef": 7.256038231,
+     "frame": null,
+     "dq": "ok",
+     "hi": {
+      "rpm": 3450,
+      "g": [
+       69.84,
+       41.35,
+       94.22
+      ],
+      "w": [
+       1987.25,
+       1635.28,
+       2253.48
+      ]
+     },
+     "lo": {
+      "rpm": 1142,
+      "g": [
+       23.118,
+       13.687,
+       31.19
+      ],
+      "w": [
+       109.694,
+       96.928,
+       119.35
+      ]
+     }
+    },
+    "score": 80.05344038839289,
+    "reasons": [
+     {
+      "code": "AUTOMATION_SAME_BRAND",
+      "severity": "good",
+      "ruleId": "AUTOMATION_SAME_BRAND",
+      "text": "Same brand as your Pentair automation — simplest to control."
+     },
+     {
+      "code": "VS_PREFERRED",
+      "severity": "good",
+      "ruleId": "VS_REQUIRED_ABOVE_THP",
+      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+     },
+     {
+      "code": "FLOW_MINIMUM",
+      "severity": "good",
+      "ruleId": "TURNOVER_FORMULA",
+      "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
+     },
+     {
+      "code": "FEATURE_FLOW",
+      "severity": "good",
+      "ruleId": "FEATURE_FLOW_DEMANDS",
+      "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+     }
+    ],
+    "fit": {
+     "meetsCapacity": true,
+     "meetsFlow": true,
+     "meetsFlowLow": true,
+     "automationMatch": true,
+     "regulatoryOk": true
+    },
+    "computed": {
+     "requiredGPM": 90,
+     "dailyGPM": 40,
+     "gpmAtCurveLow": 31.19,
+     "gpmAtCurveHigh": 94.22,
+     "wattsDaily": 252,
+     "wattsHigh": 2253.48,
+     "annualKWh": 1465.721891012601,
+     "annualCostUSD": 249
+    },
+    "variants": [
+     "Pentair INTELLIFLO 3 VSF, IO BOARD 011076",
+     "Pentair INTELLIPRO 3 VSF 13075",
+     "Pentair INTELLIPRO 3 VSF, IO BOARD 13076"
+    ],
+    "rank": 2
+   },
+   {
+    "product": {
+     "id": "pentair-intelliflo-vs-ec-011028",
+     "brand": "Pentair",
+     "model": "Pentair IntelliFlo VS EC-011028",
+     "st": "VS",
+     "mot": "ECM",
+     "thp": 3.95,
+     "nhp": 3.95,
+     "wef": 6.891234561,
+     "frame": null,
+     "dq": "ok",
+     "hi": {
+      "rpm": 3450,
+      "g": [
+       71.08,
+       41.8,
+       96.89
+      ],
+      "w": [
+       2157.8,
+       1710.55,
+       2502.49
+      ]
+     },
+     "lo": {
+      "rpm": 1112,
+      "g": [
+       22.91,
+       13.473,
+       31.24
+      ],
+      "w": [
+       103.248,
+       88.271,
+       114.79
+      ]
+     }
+    },
+    "score": 78.78537280249019,
+    "reasons": [
+     {
+      "code": "AUTOMATION_SAME_BRAND",
+      "severity": "good",
+      "ruleId": "AUTOMATION_SAME_BRAND",
+      "text": "Same brand as your Pentair automation — simplest to control."
+     },
+     {
+      "code": "VS_PREFERRED",
+      "severity": "good",
+      "ruleId": "VS_REQUIRED_ABOVE_THP",
+      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+     },
+     {
+      "code": "FLOW_MINIMUM",
+      "severity": "good",
+      "ruleId": "TURNOVER_FORMULA",
+      "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
+     },
+     {
+      "code": "FEATURE_FLOW",
+      "severity": "good",
+      "ruleId": "FEATURE_FLOW_DEMANDS",
+      "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+     }
+    ],
+    "fit": {
+     "meetsCapacity": true,
+     "meetsFlow": true,
+     "meetsFlowLow": true,
+     "automationMatch": true,
+     "regulatoryOk": true
+    },
+    "computed": {
+     "requiredGPM": 90,
+     "dailyGPM": 40,
+     "gpmAtCurveLow": 31.24,
+     "gpmAtCurveHigh": 96.89,
+     "wattsDaily": 241,
+     "wattsHigh": 2502.49,
+     "annualKWh": 1529.070155236448,
+     "annualCostUSD": 260
+    },
+    "variants": [
+     "Pentair IntelliFlo VS+SVRS 011057",
+     "Pentair IntelliFlo VS+SVRS EC-011057",
+     "Pentair IntelliFlo VSF 011056",
+     "Pentair IntelliPro VS+SVRS 13002",
+     "Pentair Shasta IntelliFlo VSF S-011056"
+    ],
+    "rank": 3
+   },
+   {
+    "product": {
+     "id": "pentair-intelliflo-xf-vs-svrs-22057",
+     "brand": "Pentair",
+     "model": "Pentair IntelliFlo XF VS+SVRS 22057",
+     "st": "VS",
+     "mot": "ECM",
+     "thp": 3.96,
+     "nhp": 3,
+     "wef": 6.153993447,
+     "frame": "56",
+     "dq": "ok",
+     "hi": {
+      "rpm": 3450,
+      "g": [
+       74,
+       44,
+       101
+      ],
+      "w": [
+       2545,
+       2138,
+       2837
+      ]
+     },
+     "lo": {
+      "rpm": 1100,
+      "g": [
+       24,
+       14,
+       33
+      ],
+      "w": [
+       129,
+       116,
+       137
+      ]
+     }
+    },
+    "score": 76.20750390787148,
+    "reasons": [
+     {
+      "code": "AUTOMATION_SAME_BRAND",
+      "severity": "good",
+      "ruleId": "AUTOMATION_SAME_BRAND",
+      "text": "Same brand as your Pentair automation — simplest to control."
+     },
+     {
+      "code": "VS_PREFERRED",
+      "severity": "good",
+      "ruleId": "VS_REQUIRED_ABOVE_THP",
+      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+     },
+     {
+      "code": "FLOW_MINIMUM",
+      "severity": "good",
+      "ruleId": "TURNOVER_FORMULA",
+      "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
+     },
+     {
+      "code": "FEATURE_FLOW",
+      "severity": "good",
+      "ruleId": "FEATURE_FLOW_DEMANDS",
+      "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+     }
+    ],
+    "fit": {
+     "meetsCapacity": true,
+     "meetsFlow": true,
+     "meetsFlowLow": true,
+     "automationMatch": true,
+     "regulatoryOk": true
+    },
+    "computed": {
+     "requiredGPM": 90,
+     "dailyGPM": 40,
+     "gpmAtCurveLow": 33,
+     "gpmAtCurveHigh": 101,
+     "wattsDaily": 244,
+     "wattsHigh": 2837,
+     "annualKWh": 1658.880351309236,
+     "annualCostUSD": 282
+    },
+    "variants": [
+     "Pentair IntelliPro XF VS+SVRS 23057"
+    ],
+    "rank": 4
+   },
+   {
+    "product": {
+     "id": "pentair-022057",
+     "brand": "Pentair",
+     "model": "Pentair 022057",
+     "st": "VS",
+     "mot": "PSC",
+     "thp": 3.96,
+     "nhp": 3,
+     "wef": 6.152020646,
+     "frame": "56",
+     "dq": "ok",
+     "hi": {
+      "rpm": 3450,
+      "g": [
+       74.17,
+       44.01,
+       100.94
+      ],
+      "w": [
+       2544.81,
+       2138.2,
+       2837.4
+      ]
+     },
+     "lo": {
+      "rpm": 1100,
+      "g": [
+       24.02,
+       14.44,
+       32.68
+      ],
+      "w": [
+       128.5,
+       116.48,
+       136.99
+      ]
+     }
+    },
+    "score": 76.04553334066594,
+    "reasons": [
+     {
+      "code": "AUTOMATION_SAME_BRAND",
+      "severity": "good",
+      "ruleId": "AUTOMATION_SAME_BRAND",
+      "text": "Same brand as your Pentair automation — simplest to control."
+     },
+     {
+      "code": "VS_PREFERRED",
+      "severity": "good",
+      "ruleId": "VS_REQUIRED_ABOVE_THP",
+      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+     },
+     {
+      "code": "FLOW_MINIMUM",
+      "severity": "good",
+      "ruleId": "TURNOVER_FORMULA",
+      "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
+     },
+     {
+      "code": "FEATURE_FLOW",
+      "severity": "good",
+      "ruleId": "FEATURE_FLOW_DEMANDS",
+      "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+     }
+    ],
+    "fit": {
+     "meetsCapacity": true,
+     "meetsFlow": true,
+     "meetsFlowLow": true,
+     "automationMatch": true,
+     "regulatoryOk": true
+    },
+    "computed": {
+     "requiredGPM": 90,
+     "dailyGPM": 40,
+     "gpmAtCurveLow": 32.68,
+     "gpmAtCurveHigh": 100.94,
+     "wattsDaily": 251,
+     "wattsHigh": 2837.4,
+     "annualKWh": 1677.4715236863588,
+     "annualCostUSD": 285
+    },
+    "variants": [
+     "Pentair Sta-Rite 023057"
+    ],
+    "rank": 5
+   },
+   {
+    "product": {
+     "id": "pentair-intellipro-shasta-vs-svrs-s-013003",
+     "brand": "Pentair",
+     "model": "Pentair IntelliPro Shasta VS+SVRS S-013003",
+     "st": "VS",
+     "mot": "ECM",
+     "thp": 3.96,
+     "nhp": 3,
+     "wef": 6.182842494,
+     "frame": "56",
+     "dq": "ok",
+     "hi": {
+      "rpm": 3450,
+      "g": [
+       73,
+       43,
+       99
+      ],
+      "w": [
+       2410,
+       1945,
+       2776
+      ]
+     },
+     "lo": {
+      "rpm": 1100,
+      "g": [
+       24,
+       14,
+       32
+      ],
+      "w": [
+       124,
+       109,
+       135
+      ]
+     }
+    },
+    "score": 76.0268510426875,
+    "reasons": [
+     {
+      "code": "AUTOMATION_SAME_BRAND",
+      "severity": "good",
+      "ruleId": "AUTOMATION_SAME_BRAND",
+      "text": "Same brand as your Pentair automation — simplest to control."
+     },
+     {
+      "code": "VS_PREFERRED",
+      "severity": "good",
+      "ruleId": "VS_REQUIRED_ABOVE_THP",
+      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+     },
+     {
+      "code": "FLOW_MINIMUM",
+      "severity": "good",
+      "ruleId": "TURNOVER_FORMULA",
+      "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
+     },
+     {
+      "code": "FEATURE_FLOW",
+      "severity": "good",
+      "ruleId": "FEATURE_FLOW_DEMANDS",
+      "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+     }
+    ],
+    "fit": {
+     "meetsCapacity": true,
+     "meetsFlow": true,
+     "meetsFlowLow": true,
+     "automationMatch": true,
+     "regulatoryOk": true
+    },
+    "computed": {
+     "requiredGPM": 90,
+     "dailyGPM": 40,
+     "gpmAtCurveLow": 32,
+     "gpmAtCurveHigh": 99,
+     "wattsDaily": 264,
+     "wattsHigh": 2776,
+     "annualKWh": 1686.921640625,
+     "annualCostUSD": 287
+    },
+    "variants": [],
+    "rank": 6
+   },
+   {
+    "product": {
+     "id": "pentair-011057",
+     "brand": "Pentair",
+     "model": "Pentair 011057",
+     "st": "VS",
+     "mot": "PSC",
+     "thp": 3.96,
+     "nhp": 3,
+     "wef": 6.159167225,
+     "frame": "56",
+     "dq": "ok",
+     "hi": {
+      "rpm": 3450,
+      "g": [
+       72.56,
+       43.47,
+       98.67
+      ],
+      "w": [
+       2409.51,
+       1945,
+       2776.01
+      ]
+     },
+     "lo": {
+      "rpm": 1100,
+      "g": [
+       23.73,
+       14.15,
+       31.94
+      ],
+      "w": [
+       123.98,
+       108.93,
+       135.18
+      ]
+     }
+    },
+    "score": 75.93945974134706,
+    "reasons": [
+     {
+      "code": "AUTOMATION_SAME_BRAND",
+      "severity": "good",
+      "ruleId": "AUTOMATION_SAME_BRAND",
+      "text": "Same brand as your Pentair automation — simplest to control."
+     },
+     {
+      "code": "VS_PREFERRED",
+      "severity": "good",
+      "ruleId": "VS_REQUIRED_ABOVE_THP",
+      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+     },
+     {
+      "code": "FLOW_MINIMUM",
+      "severity": "good",
+      "ruleId": "TURNOVER_FORMULA",
+      "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
+     },
+     {
+      "code": "FEATURE_FLOW",
+      "severity": "good",
+      "ruleId": "FEATURE_FLOW_DEMANDS",
+      "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+     }
+    ],
+    "fit": {
+     "meetsCapacity": true,
+     "meetsFlow": true,
+     "meetsFlowLow": true,
+     "automationMatch": true,
+     "regulatoryOk": true
+    },
+    "computed": {
+     "requiredGPM": 90,
+     "dailyGPM": 40,
+     "gpmAtCurveLow": 31.94,
+     "gpmAtCurveHigh": 98.67,
+     "wattsDaily": 266,
+     "wattsHigh": 2776.01,
+     "annualKWh": 1691.6323186650516,
+     "annualCostUSD": 288
+    },
+    "variants": [
+     "Pentair Sta-Rite 013002",
+     "Pentair Sta-Rite S-013003"
+    ],
+    "rank": 7
+   },
+   {
+    "product": {
+     "id": "pentair-intellipro-vs-p6e6xs4h-209l",
+     "brand": "Pentair",
+     "model": "Pentair IntelliPro VS P6E6XS4H-209L",
+     "st": "VS",
+     "mot": "ECM",
+     "thp": 3.96,
+     "nhp": 3,
+     "wef": 5.9333358,
+     "frame": "56",
+     "dq": "ok",
+     "hi": {
+      "rpm": 3450,
+      "g": [
+       71,
+       43,
+       97
+      ],
+      "w": [
+       2340,
+       1990,
+       2720
+      ]
+     },
+     "lo": {
+      "rpm": 1100,
+      "g": [
+       24,
+       15,
+       33
+      ],
+      "w": [
+       145,
+       132,
+       150
+      ]
+     }
+    },
+    "score": 75.62638566628266,
+    "reasons": [
+     {
+      "code": "AUTOMATION_SAME_BRAND",
+      "severity": "good",
+      "ruleId": "AUTOMATION_SAME_BRAND",
+      "text": "Same brand as your Pentair automation — simplest to control."
+     },
+     {
+      "code": "VS_PREFERRED",
+      "severity": "good",
+      "ruleId": "VS_REQUIRED_ABOVE_THP",
+      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+     },
+     {
+      "code": "FLOW_MINIMUM",
+      "severity": "good",
+      "ruleId": "TURNOVER_FORMULA",
+      "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
+     },
+     {
+      "code": "FEATURE_FLOW",
+      "severity": "good",
+      "ruleId": "FEATURE_FLOW_DEMANDS",
+      "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+     }
+    ],
+    "fit": {
+     "meetsCapacity": true,
+     "meetsFlow": true,
+     "meetsFlowLow": true,
+     "automationMatch": true,
+     "regulatoryOk": true
+    },
+    "computed": {
+     "requiredGPM": 90,
+     "dailyGPM": 40,
+     "gpmAtCurveLow": 33,
+     "gpmAtCurveHigh": 97,
+     "wattsDaily": 267,
+     "wattsHigh": 2720,
+     "annualKWh": 1675.3277569079223,
+     "annualCostUSD": 285
+    },
+    "variants": [],
+    "rank": 8
+   },
+   {
+    "product": {
+     "id": "pentair-intelliflo-vs-svrs-011017",
+     "brand": "Pentair",
+     "model": "Pentair IntelliFlo VS+SVRS 011017",
+     "st": "VS",
+     "mot": "ECM",
+     "thp": 3.96,
+     "nhp": 3,
+     "wef": 5.807281571,
+     "frame": "56",
+     "dq": "ok",
+     "hi": {
+      "rpm": 3450,
+      "g": [
+       73,
+       44,
+       101
+      ],
+      "w": [
+       2448,
+       1996,
+       2830
+      ]
+     },
+     "lo": {
+      "rpm": 1100,
+      "g": [
+       24,
+       14,
+       32
+      ],
+      "w": [
+       158,
+       132,
+       168
+      ]
+     }
+    },
+    "score": 73.7084334545,
+    "reasons": [
+     {
+      "code": "AUTOMATION_SAME_BRAND",
+      "severity": "good",
+      "ruleId": "AUTOMATION_SAME_BRAND",
+      "text": "Same brand as your Pentair automation — simplest to control."
+     },
+     {
+      "code": "VS_PREFERRED",
+      "severity": "good",
+      "ruleId": "VS_REQUIRED_ABOVE_THP",
+      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+     },
+     {
+      "code": "FLOW_MINIMUM",
+      "severity": "good",
+      "ruleId": "TURNOVER_FORMULA",
+      "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
+     },
+     {
+      "code": "FEATURE_FLOW",
+      "severity": "good",
+      "ruleId": "FEATURE_FLOW_DEMANDS",
+      "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+     }
+    ],
+    "fit": {
+     "meetsCapacity": true,
+     "meetsFlow": true,
+     "meetsFlowLow": true,
+     "automationMatch": true,
+     "regulatoryOk": true
+    },
+    "computed": {
+     "requiredGPM": 90,
+     "dailyGPM": 40,
+     "gpmAtCurveLow": 32,
+     "gpmAtCurveHigh": 101,
+     "wattsDaily": 328,
+     "wattsHigh": 2830,
+     "annualKWh": 1871.309375,
+     "annualCostUSD": 318
+    },
+    "variants": [
+     "Pentair IntelliPro VS+SVRS P6E6XS4H-209L"
+    ],
+    "rank": 9
+   },
+   {
+    "product": {
+     "id": "pentair-intelliflo-vs-3050",
+     "brand": "Pentair",
+     "model": "Pentair IntelliFlo VS 3050",
+     "st": "VS",
+     "mot": "ECM",
+     "thp": 3.96,
+     "nhp": 3,
+     "wef": 5.789368778,
+     "frame": "56",
+     "dq": "ok",
+     "hi": {
+      "rpm": 3450,
+      "g": [
+       71,
+       43,
+       97
+      ],
+      "w": [
+       2340,
+       1990,
+       2720
+      ]
+     },
+     "lo": {
+      "rpm": 800,
+      "g": [
+       18,
+       11,
+       24
+      ],
+      "w": [
+       110,
+       105,
+       110
+      ]
+     }
+    },
+    "score": 70.08009959303703,
+    "reasons": [
+     {
+      "code": "AUTOMATION_SAME_BRAND",
+      "severity": "good",
+      "ruleId": "AUTOMATION_SAME_BRAND",
+      "text": "Same brand as your Pentair automation — simplest to control."
+     },
+     {
+      "code": "VS_PREFERRED",
+      "severity": "good",
+      "ruleId": "VS_REQUIRED_ABOVE_THP",
+      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+     },
+     {
+      "code": "FLOW_MINIMUM",
+      "severity": "good",
+      "ruleId": "TURNOVER_FORMULA",
+      "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
+     },
+     {
+      "code": "FEATURE_FLOW",
+      "severity": "good",
+      "ruleId": "FEATURE_FLOW_DEMANDS",
+      "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+     }
+    ],
+    "fit": {
+     "meetsCapacity": true,
+     "meetsFlow": true,
+     "meetsFlowLow": true,
+     "automationMatch": true,
+     "regulatoryOk": true
+    },
+    "computed": {
+     "requiredGPM": 90,
+     "dailyGPM": 40,
+     "gpmAtCurveLow": 24,
+     "gpmAtCurveHigh": 97,
+     "wattsDaily": 509,
+     "wattsHigh": 2720,
+     "annualKWh": 2293.9574074074076,
+     "annualCostUSD": 390
+    },
+    "variants": [],
+    "rank": 10
+   },
+   {
+    "product": {
+     "id": "pentair-maxepro-p6e6y4h-209l",
+     "brand": "Pentair",
+     "model": "Pentair MaxEPro P6E6Y4H-209L",
+     "st": "VS",
+     "mot": "ECM",
+     "thp": 3.96,
+     "nhp": 3,
+     "wef": 5.89289889,
+     "frame": "56",
+     "dq": "ok",
+     "hi": {
+      "rpm": 3450,
+      "g": [
+       71,
+       43,
+       97
+      ],
+      "w": [
+       2340,
+       1990,
+       2720
+      ]
+     },
+     "lo": {
+      "rpm": 800,
+      "g": [
+       17,
+       10,
+       23
+      ],
+      "w": [
+       100,
+       100,
+       100
+      ]
+     }
+    },
+    "score": 69.92331075772664,
+    "reasons": [
+     {
+      "code": "AUTOMATION_SAME_BRAND",
+      "severity": "good",
+      "ruleId": "AUTOMATION_SAME_BRAND",
+      "text": "Same brand as your Pentair automation — simplest to control."
+     },
+     {
+      "code": "VS_PREFERRED",
+      "severity": "good",
+      "ruleId": "VS_REQUIRED_ABOVE_THP",
+      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+     },
+     {
+      "code": "FLOW_MINIMUM",
+      "severity": "good",
+      "ruleId": "TURNOVER_FORMULA",
+      "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
+     },
+     {
+      "code": "FEATURE_FLOW",
+      "severity": "good",
+      "ruleId": "FEATURE_FLOW_DEMANDS",
+      "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+     }
+    ],
+    "fit": {
+     "meetsCapacity": true,
+     "meetsFlow": true,
+     "meetsFlowLow": true,
+     "automationMatch": true,
+     "regulatoryOk": true
+    },
+    "computed": {
+     "requiredGPM": 90,
+     "dailyGPM": 40,
+     "gpmAtCurveLow": 23,
+     "gpmAtCurveHigh": 97,
+     "wattsDaily": 526,
+     "wattsHigh": 2720,
+     "annualKWh": 2336.763179090983,
+     "annualCostUSD": 397
+    },
+    "variants": [
+     "Pentair MaxEPro P6E6Z4H-209L"
+    ],
+    "rank": 11
+   },
+   {
+    "product": {
+     "id": "jandy-stealth-vsshp220aut",
+     "brand": "Jandy",
+     "model": "Jandy Stealth VSSHP220AUT",
+     "st": "VS",
+     "mot": "CSCR",
+     "thp": 2.21,
+     "nhp": 2.21,
+     "wef": 7.630720271,
+     "frame": null,
+     "dq": "ok",
+     "hi": {
+      "rpm": 3450,
+      "g": [
+       66.9,
+       39.7,
+       91
+      ],
+      "w": [
+       1783,
+       1452,
+       2002
+      ]
+     },
+     "lo": {
+      "rpm": 1187,
+      "g": [
+       23.017,
+       13.659,
+       31.3
+      ],
+      "w": [
+       116.181,
+       102.7,
+       125.1
+      ]
+     }
+    },
+    "score": 69.3798302494867,
+    "reasons": [
+     {
+      "code": "VS_PREFERRED",
+      "severity": "good",
+      "ruleId": "VS_REQUIRED_ABOVE_THP",
+      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+     },
+     {
+      "code": "FLOW_MINIMUM",
+      "severity": "good",
+      "ruleId": "TURNOVER_FORMULA",
+      "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
+     },
+     {
+      "code": "FEATURE_FLOW",
+      "severity": "good",
+      "ruleId": "FEATURE_FLOW_DEMANDS",
+      "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+     }
+    ],
+    "fit": {
+     "meetsCapacity": true,
+     "meetsFlow": true,
+     "meetsFlowLow": true,
+     "automationMatch": false,
+     "regulatoryOk": true
+    },
+    "computed": {
+     "requiredGPM": 90,
+     "dailyGPM": 40,
+     "gpmAtCurveLow": 31.3,
+     "gpmAtCurveHigh": 91,
+     "wattsDaily": 261,
+     "wattsHigh": 2002,
+     "annualKWh": 1397.8365050015655,
+     "annualCostUSD": 238
+    },
+    "variants": [],
+    "rank": 12
+   }
+  ],
+  "warnings": [
+   {
+    "code": "SWG_FLOW_SWITCH_OK",
+    "severity": "info",
+    "ruleId": "SWG_FLOW_SWITCH",
+    "text": "Salt cell flow switch needs roughly 25 GPM through a 2″ tee; this pump stays above that even at low speed."
+   }
+  ],
+  "repairOptions": [],
+  "curve": "C"
+ },
+ "filt": {
+  "mode": "filter",
+  "chosenType": "cartridge",
+  "typeReasons": [
+   {
+    "code": "FILTER_TYPE_DEFAULT_CARTRIDGE",
+    "severity": "good",
+    "ruleId": "FILTER_TYPE_RECOMMENDATION",
+    "text": "Cartridge is TFP’s general-purpose pick: good clarity, no backwash, pairs well with VS pumps."
+   }
+  ],
+  "min": {
+   "kind": "sqft",
+   "value": 375,
+   "target": 500,
+   "ruleId": "FILTER_SIZING"
+  },
+  "pumpMaxGPM": 92.52,
+  "comparison": null,
+  "recommendations": [
+   {
+    "product": {
+     "id": "pentair-clean-clear-plus-ccp420",
+     "brand": "Pentair",
+     "model": "Clean & Clear Plus CCP420",
+     "ft": "cartridge",
+     "area": 420,
+     "tank": null,
+     "bed": null,
+     "gpm": 150,
+     "mic": null,
+     "port": 2,
+     "cart": "Pentair 179135 / Pleatco ULTRA-A6-PAK4 / Unicel C-7471-4",
+     "psi": 50,
+     "dq": "verified"
+    },
+    "score": 116.56,
+    "reasons": [
+     {
+      "code": "FILTER_SIZE_OK",
+      "severity": "good",
+      "ruleId": "FILTER_SIZING",
+      "text": "420 sq ft — meets the 375 sq ft minimum."
+     },
+     {
+      "code": "FILTER_FLOW_OK",
+      "severity": "good",
+      "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+      "text": "Handles ~150 GPM ≥ your pump's ~92.52 GPM."
+     },
+     {
+      "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "severity": "info",
+      "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+     },
+     {
+      "code": "CART_ELEMENT",
+      "severity": "info",
+      "ruleId": "FILTER_REPAIR_FACTS",
+      "text": "Replacement element: Pentair 179135 / Pleatco ULTRA-A6-PAK4 / Unicel C-7471-4."
+     }
+    ],
+    "fit": {
+     "meetsMinSize": true,
+     "flowOk": true,
+     "portOk": true,
+     "withinBudget": true
+    },
+    "derated": false,
+    "computed": {
+     "minRequired": 375,
+     "candidateSize": 420,
+     "candidateMaxGPM": 150,
+     "pumpMaxGPM": 92.52,
+     "oversizeRatio": 1.12
+    },
+    "rank": 1
+   },
+   {
+    "product": {
+     "id": "hayward-swimclear-c4030",
+     "brand": "Hayward",
+     "model": "SwimClear C4030",
+     "ft": "cartridge",
+     "area": 425,
+     "tank": null,
+     "bed": null,
+     "gpm": 150,
+     "mic": null,
+     "port": 2,
+     "cart": "Hayward CX880XREPAK4",
+     "psi": 50,
+     "dq": "verified"
+    },
+    "score": 116.4,
+    "reasons": [
+     {
+      "code": "FILTER_SIZE_OK",
+      "severity": "good",
+      "ruleId": "FILTER_SIZING",
+      "text": "425 sq ft — meets the 375 sq ft minimum."
+     },
+     {
+      "code": "FILTER_FLOW_OK",
+      "severity": "good",
+      "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+      "text": "Handles ~150 GPM ≥ your pump's ~92.52 GPM."
+     },
+     {
+      "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "severity": "info",
+      "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+     },
+     {
+      "code": "CART_ELEMENT",
+      "severity": "info",
+      "ruleId": "FILTER_REPAIR_FACTS",
+      "text": "Replacement element: Hayward CX880XREPAK4."
+     }
+    ],
+    "fit": {
+     "meetsMinSize": true,
+     "flowOk": true,
+     "portOk": true,
+     "withinBudget": true
+    },
+    "derated": false,
+    "computed": {
+     "minRequired": 375,
+     "candidateSize": 425,
+     "candidateMaxGPM": 150,
+     "pumpMaxGPM": 92.52,
+     "oversizeRatio": 1.13
+    },
+    "rank": 2,
+    "sizeUp": true
+   },
+   {
+    "product": {
+     "id": "sta-rite-system-3-s8m150",
+     "brand": "Sta-Rite",
+     "model": "System 3 S8M150",
+     "ft": "cartridge",
+     "area": 450,
+     "tank": null,
+     "bed": null,
+     "gpm": 124,
+     "mic": null,
+     "port": 2,
+     "cart": "Pentair 170147; inner 25021-0202S (191 sq ft) + outer 25022-0203S (259 sq ft)",
+     "psi": 50,
+     "dq": "verified"
+    },
+    "score": 115.6,
+    "reasons": [
+     {
+      "code": "FILTER_SIZE_OK",
+      "severity": "good",
+      "ruleId": "FILTER_SIZING",
+      "text": "450 sq ft — meets the 375 sq ft minimum."
+     },
+     {
+      "code": "FILTER_FLOW_OK",
+      "severity": "good",
+      "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+      "text": "Handles ~124 GPM ≥ your pump's ~92.52 GPM."
+     },
+     {
+      "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "severity": "info",
+      "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+     },
+     {
+      "code": "CART_ELEMENT",
+      "severity": "info",
+      "ruleId": "FILTER_REPAIR_FACTS",
+      "text": "Replacement element: Pentair 170147; inner 25021-0202S (191 sq ft) + outer 25022-0203S (259 sq ft)."
+     }
+    ],
+    "fit": {
+     "meetsMinSize": true,
+     "flowOk": true,
+     "portOk": true,
+     "withinBudget": true
+    },
+    "derated": false,
+    "computed": {
+     "minRequired": 375,
+     "candidateSize": 450,
+     "candidateMaxGPM": 124,
+     "pumpMaxGPM": 92.52,
+     "oversizeRatio": 1.2
+    },
+    "rank": 3
+   },
+   {
+    "product": {
+     "id": "sta-rite-system-3-s7m400",
+     "brand": "Sta-Rite",
+     "model": "System 3 S7M400",
+     "ft": "cartridge",
+     "area": 400,
+     "tank": null,
+     "bed": null,
+     "gpm": 115,
+     "mic": null,
+     "port": 2,
+     "cart": "Pentair 170146; inner 25021-0223S (136 sq ft) + outer 25022-0224S (264 sq ft)",
+     "psi": 50,
+     "dq": "verified"
+    },
+    "score": 115.29914973339098,
+    "reasons": [
+     {
+      "code": "FILTER_SIZE_OK",
+      "severity": "good",
+      "ruleId": "FILTER_SIZING",
+      "text": "400 sq ft — meets the 375 sq ft minimum."
+     },
+     {
+      "code": "FILTER_FLOW_OK",
+      "severity": "good",
+      "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+      "text": "Handles ~115 GPM ≥ your pump's ~92.52 GPM."
+     },
+     {
+      "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "severity": "info",
+      "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+     },
+     {
+      "code": "CART_ELEMENT",
+      "severity": "info",
+      "ruleId": "FILTER_REPAIR_FACTS",
+      "text": "Replacement element: Pentair 170146; inner 25021-0223S (136 sq ft) + outer 25022-0224S (264 sq ft)."
+     }
+    ],
+    "fit": {
+     "meetsMinSize": true,
+     "flowOk": true,
+     "portOk": true,
+     "withinBudget": true
+    },
+    "derated": false,
+    "computed": {
+     "minRequired": 375,
+     "candidateSize": 400,
+     "candidateMaxGPM": 115,
+     "pumpMaxGPM": 92.52,
+     "oversizeRatio": 1.07
+    },
+    "rank": 4
+   },
+   {
+    "product": {
+     "id": "sta-rite-system-3-s8m500",
+     "brand": "Sta-Rite",
+     "model": "System 3 S8M500",
+     "ft": "cartridge",
+     "area": 500,
+     "tank": null,
+     "bed": null,
+     "gpm": 130,
+     "mic": null,
+     "port": 2,
+     "cart": "Pentair 170148; inner 25021-0224S (209 sq ft) + outer 25022-0225S (291 sq ft)",
+     "psi": 50,
+     "dq": "verified"
+    },
+    "score": 114,
+    "reasons": [
+     {
+      "code": "FILTER_SIZE_OK",
+      "severity": "good",
+      "ruleId": "FILTER_SIZING",
+      "text": "500 sq ft — meets the 375 sq ft minimum."
+     },
+     {
+      "code": "FILTER_FLOW_OK",
+      "severity": "good",
+      "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+      "text": "Handles ~130 GPM ≥ your pump's ~92.52 GPM."
+     },
+     {
+      "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "severity": "info",
+      "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+     },
+     {
+      "code": "CART_ELEMENT",
+      "severity": "info",
+      "ruleId": "FILTER_REPAIR_FACTS",
+      "text": "Replacement element: Pentair 170148; inner 25021-0224S (209 sq ft) + outer 25022-0225S (291 sq ft)."
+     }
+    ],
+    "fit": {
+     "meetsMinSize": true,
+     "flowOk": true,
+     "portOk": true,
+     "withinBudget": true
+    },
+    "derated": false,
+    "computed": {
+     "minRequired": 375,
+     "candidateSize": 500,
+     "candidateMaxGPM": 130,
+     "pumpMaxGPM": 92.52,
+     "oversizeRatio": 1.33
+    },
+    "rank": 5
+   },
+   {
+    "product": {
+     "id": "pentair-clean-clear-plus-ccp520",
+     "brand": "Pentair",
+     "model": "Clean & Clear Plus CCP520",
+     "ft": "cartridge",
+     "area": 520,
+     "tank": null,
+     "bed": null,
+     "gpm": 150,
+     "mic": null,
+     "port": 2,
+     "cart": "Pentair 179136 / Pleatco ULTRA-A7-PAK4 / Unicel C-7472-4",
+     "psi": 50,
+     "dq": "verified"
+    },
+    "score": 112.16,
+    "reasons": [
+     {
+      "code": "FILTER_SIZE_OK",
+      "severity": "good",
+      "ruleId": "FILTER_SIZING",
+      "text": "520 sq ft — meets the 375 sq ft minimum."
+     },
+     {
+      "code": "FILTER_FLOW_OK",
+      "severity": "good",
+      "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+      "text": "Handles ~150 GPM ≥ your pump's ~92.52 GPM."
+     },
+     {
+      "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "severity": "info",
+      "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+     },
+     {
+      "code": "CART_ELEMENT",
+      "severity": "info",
+      "ruleId": "FILTER_REPAIR_FACTS",
+      "text": "Replacement element: Pentair 179136 / Pleatco ULTRA-A7-PAK4 / Unicel C-7472-4."
+     },
+     {
+      "code": "FILTER_OVER_TARGET",
+      "severity": "info",
+      "ruleId": "FILTER_SIZING",
+      "text": "Above the ~500 sq ft that suits 25,000 gallons. Extra cartridge area past this point buys very little — a smaller unit would still go a full season between cleanings."
+     }
+    ],
+    "fit": {
+     "meetsMinSize": true,
+     "flowOk": true,
+     "portOk": true,
+     "withinBudget": true
+    },
+    "derated": false,
+    "computed": {
+     "minRequired": 375,
+     "candidateSize": 520,
+     "candidateMaxGPM": 150,
+     "pumpMaxGPM": 92.52,
+     "oversizeRatio": 1.39
+    },
+    "rank": 6
+   },
+   {
+    "product": {
+     "id": "hayward-swimclear-c5030",
+     "brand": "Hayward",
+     "model": "SwimClear C5030",
+     "ft": "cartridge",
+     "area": 525,
+     "tank": null,
+     "bed": null,
+     "gpm": 150,
+     "mic": null,
+     "port": 2,
+     "cart": "Hayward CX1280XREPAK4",
+     "psi": 50,
+     "dq": "verified"
+    },
+    "score": 111.7,
+    "reasons": [
+     {
+      "code": "FILTER_SIZE_OK",
+      "severity": "good",
+      "ruleId": "FILTER_SIZING",
+      "text": "525 sq ft — meets the 375 sq ft minimum."
+     },
+     {
+      "code": "FILTER_FLOW_OK",
+      "severity": "good",
+      "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+      "text": "Handles ~150 GPM ≥ your pump's ~92.52 GPM."
+     },
+     {
+      "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "severity": "info",
+      "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+     },
+     {
+      "code": "CART_ELEMENT",
+      "severity": "info",
+      "ruleId": "FILTER_REPAIR_FACTS",
+      "text": "Replacement element: Hayward CX1280XREPAK4."
+     },
+     {
+      "code": "FILTER_OVER_TARGET",
+      "severity": "info",
+      "ruleId": "FILTER_SIZING",
+      "text": "Above the ~500 sq ft that suits 25,000 gallons. Extra cartridge area past this point buys very little — a smaller unit would still go a full season between cleanings."
+     }
+    ],
+    "fit": {
+     "meetsMinSize": true,
+     "flowOk": true,
+     "portOk": true,
+     "withinBudget": true
+    },
+    "derated": false,
+    "computed": {
+     "minRequired": 375,
+     "candidateSize": 525,
+     "candidateMaxGPM": 150,
+     "pumpMaxGPM": 92.52,
+     "oversizeRatio": 1.4
+    },
+    "rank": 7
+   },
+   {
+    "product": {
+     "id": "jandy-cv460",
+     "brand": "Jandy",
+     "model": "CV460",
+     "ft": "cartridge",
+     "area": 460,
+     "tank": null,
+     "bed": null,
+     "gpm": 150,
+     "mic": null,
+     "port": 2,
+     "cart": null,
+     "psi": 50,
+     "dq": "partial"
+    },
+    "score": 110.48,
+    "reasons": [
+     {
+      "code": "FILTER_SIZE_OK",
+      "severity": "good",
+      "ruleId": "FILTER_SIZING",
+      "text": "460 sq ft — meets the 375 sq ft minimum."
+     },
+     {
+      "code": "FILTER_FLOW_OK",
+      "severity": "good",
+      "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+      "text": "Handles ~150 GPM ≥ your pump's ~92.52 GPM."
+     },
+     {
+      "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "severity": "info",
+      "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+     }
+    ],
+    "fit": {
+     "meetsMinSize": true,
+     "flowOk": true,
+     "portOk": true,
+     "withinBudget": true
+    },
+    "derated": false,
+    "computed": {
+     "minRequired": 375,
+     "candidateSize": 460,
+     "candidateMaxGPM": 150,
+     "pumpMaxGPM": 92.52,
+     "oversizeRatio": 1.23
+    },
+    "rank": 8
+   }
+  ],
+  "disqualified": [
+   {
+    "product": {
+     "id": "jandy-cv340",
+     "brand": "Jandy",
+     "model": "CV340",
+     "ft": "cartridge",
+     "area": 340,
+     "tank": null,
+     "bed": null,
+     "gpm": 127,
+     "mic": null,
+     "port": 2,
+     "cart": null,
+     "psi": 50,
+     "dq": "partial"
+    },
+    "reason": {
+     "code": "FILTER_UNDERSIZED",
+     "severity": "blocker",
+     "ruleId": "FILTER_SIZING",
+     "text": "Below the 375 sq ft minimum (this is 340 sq ft)."
+    }
+   },
+   {
+    "product": {
+     "id": "jandy-cl340",
+     "brand": "Jandy",
+     "model": "CL340",
+     "ft": "cartridge",
+     "area": 340,
+     "tank": null,
+     "bed": null,
+     "gpm": 127,
+     "mic": null,
+     "port": 2,
+     "cart": null,
+     "psi": 50,
+     "dq": "partial"
+    },
+    "reason": {
+     "code": "FILTER_UNDERSIZED",
+     "severity": "blocker",
+     "ruleId": "FILTER_SIZING",
+     "text": "Below the 375 sq ft minimum (this is 340 sq ft)."
+    }
+   },
+   {
+    "product": {
+     "id": "hayward-swimclear-c3030",
+     "brand": "Hayward",
+     "model": "SwimClear C3030",
+     "ft": "cartridge",
+     "area": 325,
+     "tank": null,
+     "bed": null,
+     "gpm": 122,
+     "mic": null,
+     "port": 2,
+     "cart": "Hayward CX580XREPAK4",
+     "psi": 50,
+     "dq": "verified"
+    },
+    "reason": {
+     "code": "FILTER_UNDERSIZED",
+     "severity": "blocker",
+     "ruleId": "FILTER_SIZING",
+     "text": "Below the 375 sq ft minimum (this is 325 sq ft)."
+    }
+   },
+   {
+    "product": {
+     "id": "pentair-clean-clear-plus-ccp320",
+     "brand": "Pentair",
+     "model": "Clean & Clear Plus CCP320",
+     "ft": "cartridge",
+     "area": 320,
+     "tank": null,
+     "bed": null,
+     "gpm": 120,
+     "mic": null,
+     "port": 2,
+     "cart": "Pentair 179134 / Pleatco ULTRA-A5-PAK4 / Unicel C-7470-4",
+     "psi": 50,
+     "dq": "verified"
+    },
+    "reason": {
+     "code": "FILTER_UNDERSIZED",
+     "severity": "blocker",
+     "ruleId": "FILTER_SIZING",
+     "text": "Below the 375 sq ft minimum (this is 320 sq ft)."
+    }
+   },
+   {
+    "product": {
+     "id": "sta-rite-system-3-s7m120",
+     "brand": "Sta-Rite",
+     "model": "System 3 S7M120",
+     "ft": "cartridge",
+     "area": 300,
+     "tank": null,
+     "bed": null,
+     "gpm": 100,
+     "mic": null,
+     "port": 2,
+     "cart": "Pentair 170145; inner 25021-0200S (100 sq ft) + outer 25022-0201S (200 sq ft)",
+     "psi": 50,
+     "dq": "verified"
+    },
+    "reason": {
+     "code": "FILTER_UNDERSIZED",
+     "severity": "blocker",
+     "ruleId": "FILTER_SIZING",
+     "text": "Below the 375 sq ft minimum (this is 300 sq ft)."
+    }
+   },
+   {
+    "product": {
+     "id": "sta-rite-system-2-plm300",
+     "brand": "Sta-Rite",
+     "model": "System 2 PLM300",
+     "ft": "cartridge",
+     "area": 300,
+     "tank": null,
+     "bed": null,
+     "gpm": 150,
+     "mic": null,
+     "port": 2,
+     "cart": "Pentair/Sta-Rite 27002-0300S",
+     "psi": 50,
+     "dq": "verified"
+    },
+    "reason": {
+     "code": "FILTER_UNDERSIZED",
+     "severity": "blocker",
+     "ruleId": "FILTER_SIZING",
+     "text": "Below the 375 sq ft minimum (this is 300 sq ft)."
+    }
+   }
+  ],
+  "alternatives": [
+   {
+    "product": {
+     "id": "hayward-swimclear-c4030",
+     "brand": "Hayward",
+     "model": "SwimClear C4030",
+     "ft": "cartridge",
+     "area": 425,
+     "tank": null,
+     "bed": null,
+     "gpm": 150,
+     "mic": null,
+     "port": 2,
+     "cart": "Hayward CX880XREPAK4",
+     "psi": 50,
+     "dq": "verified"
+    },
+    "label": "size-up"
+   }
+  ],
+  "repairOptions": [],
+  "warnings": [
+   {
+    "code": "FILTER_AUTOMATION_AGNOSTIC",
+    "severity": "info",
+    "ruleId": "AUTOMATION_SAME_BRAND",
+    "text": "Filters aren’t controlled by automation, so brand match doesn’t matter here."
+   }
+  ]
+ },
+ "swg": {
+  "mode": "swg",
+  "requiredLbs": 1.75,
+  "lbsNeeded": 0.626,
+  "ppm": 3,
+  "runtime": 8,
+  "comparison": null,
+  "recommendations": [
+   {
+    "product": {
+     "id": "pentair-ic-60",
+     "mfr": "Pentair",
+     "model": "Intellichlor IC-60",
+     "lbs": 2,
+     "rated": 60000,
+     "ratedQ": "verified",
+     "ctrl": "duty-cycle",
+     "cyc": 5,
+     "polH": 3,
+     "ltCut": null,
+     "ltRed": null,
+     "auto": [
+      "Pentair IntelliCenter",
+      "Pentair IntelliTouch",
+      "Pentair EasyTouch",
+      "Pentair SunTouch"
+     ],
+     "cell": "IC60",
+     "fam": null,
+     "dq": "verified",
+     "notes": [],
+     "msrp": null
+    },
+    "fkey": "pentair-ic-60",
+    "score": 85.5,
+    "reasons": [
+     {
+      "code": "CAPACITY",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Meets the ≥2× rule: 2 lbs/day vs 1.75 needed."
+     },
+     {
+      "code": "RATED_GALLONS",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Rated for 60,000 gal ≥ 2× your pool."
+     },
+     {
+      "code": "REQ_OUTPUT",
+      "severity": "warning",
+      "ruleId": "SWG_MAX_OUTPUT_PCT",
+      "text": "Needs ~94% output at 8h/day — above about 50%, so longer off periods would help keep scale down."
+     },
+     {
+      "code": "AUTOMATION_SAME_BRAND",
+      "severity": "good",
+      "ruleId": "AUTOMATION_SAME_BRAND",
+      "text": "Controllable by your Pentair automation."
+     }
+    ],
+    "derated": false,
+    "effLbs": 2,
+    "fit": {
+     "meetsCapacity": true,
+     "automationMatch": true,
+     "regulatoryOk": true,
+     "secondary": true
+    },
+    "computed": {
+     "requiredLbs": 1.75,
+     "deratedLbsPerDay": 2,
+     "requiredOutputPct": 94,
+     "lbsNeeded": 0.626,
+     "estRuntimeHours": 8,
+     "ratedPoolGallons": 60000
+    },
+    "rank": 1
+   },
+   {
+    "product": {
+     "id": "pentair-plus-60",
+     "mfr": "Pentair",
+     "model": "PLUS60",
+     "lbs": 2,
+     "rated": 60000,
+     "ratedQ": "verified",
+     "ctrl": "duty-cycle",
+     "cyc": null,
+     "polH": null,
+     "ltCut": null,
+     "ltRed": null,
+     "auto": [
+      "Pentair IntelliCenter",
+      "Pentair IntelliTouch",
+      "Pentair EasyTouch"
+     ],
+     "cell": "PLUS60",
+     "fam": null,
+     "dq": "verified",
+     "notes": [],
+     "msrp": null
+    },
+    "fkey": "pentair-plus-60",
+    "score": 85.5,
+    "reasons": [
+     {
+      "code": "CAPACITY",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Meets the ≥2× rule: 2 lbs/day vs 1.75 needed."
+     },
+     {
+      "code": "RATED_GALLONS",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Rated for 60,000 gal ≥ 2× your pool."
+     },
+     {
+      "code": "REQ_OUTPUT",
+      "severity": "warning",
+      "ruleId": "SWG_MAX_OUTPUT_PCT",
+      "text": "Needs ~94% output at 8h/day — above about 50%, so longer off periods would help keep scale down."
+     },
+     {
+      "code": "AUTOMATION_SAME_BRAND",
+      "severity": "good",
+      "ruleId": "AUTOMATION_SAME_BRAND",
+      "text": "Controllable by your Pentair automation."
+     }
+    ],
+    "derated": false,
+    "effLbs": 2,
+    "fit": {
+     "meetsCapacity": true,
+     "automationMatch": true,
+     "regulatoryOk": true,
+     "secondary": true
+    },
+    "computed": {
+     "requiredLbs": 1.75,
+     "deratedLbsPerDay": 2,
+     "requiredOutputPct": 94,
+     "lbsNeeded": 0.626,
+     "estRuntimeHours": 8,
+     "ratedPoolGallons": 60000
+    },
+    "rank": 2
+   },
+   {
+    "product": {
+     "id": "circupool-core55",
+     "mfr": "CircuPool",
+     "model": "Core-55",
+     "lbs": 2.3,
+     "rated": 55000,
+     "ratedQ": "verified",
+     "ctrl": "duty-cycle",
+     "cyc": null,
+     "polH": null,
+     "ltCut": null,
+     "ltRed": null,
+     "auto": [],
+     "cell": "CORE55-RC",
+     "fam": null,
+     "dq": "verified",
+     "notes": [],
+     "msrp": null
+    },
+    "fkey": "circupool-core55",
+    "score": 75.3,
+    "reasons": [
+     {
+      "code": "CAPACITY",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Meets the ≥2× rule: 2.3 lbs/day vs 1.75 needed."
+     },
+     {
+      "code": "RATED_GALLONS",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Rated for 55,000 gal ≥ 2× your pool."
+     },
+     {
+      "code": "REQ_OUTPUT",
+      "severity": "warning",
+      "ruleId": "SWG_MAX_OUTPUT_PCT",
+      "text": "Needs ~82% output at 8h/day — above about 50%, so longer off periods would help keep scale down."
+     }
+    ],
+    "derated": false,
+    "effLbs": 2.3,
+    "fit": {
+     "meetsCapacity": true,
+     "automationMatch": false,
+     "regulatoryOk": true,
+     "secondary": true
+    },
+    "computed": {
+     "requiredLbs": 1.75,
+     "deratedLbsPerDay": 2.3,
+     "requiredOutputPct": 82,
+     "lbsNeeded": 0.626,
+     "estRuntimeHours": 8,
+     "ratedPoolGallons": 55000
+    },
+    "rank": 3
+   },
+   {
+    "product": {
+     "id": "pureline-crystal-pure-60",
+     "mfr": "Pureline",
+     "model": "Crystal Pure 60,000",
+     "lbs": 3.18,
+     "rated": 60000,
+     "ratedQ": "inferred-from-model-name",
+     "ctrl": null,
+     "cyc": null,
+     "polH": null,
+     "ltCut": null,
+     "ltRed": null,
+     "auto": [],
+     "cell": null,
+     "fam": null,
+     "dq": "base-only",
+     "notes": [],
+     "msrp": null
+    },
+    "fkey": "pureline-crystal-pure-60",
+    "score": 74.58,
+    "reasons": [
+     {
+      "code": "CAPACITY",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Meets the ≥2× rule: 3.18 lbs/day vs 1.75 needed."
+     },
+     {
+      "code": "RATED_GALLONS",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Rated for 60,000 gal ≥ 2× your pool."
+     },
+     {
+      "code": "REQ_OUTPUT",
+      "severity": "warning",
+      "ruleId": "SWG_MAX_OUTPUT_PCT",
+      "text": "Needs ~59% output at 8h/day — above about 50%, so longer off periods would help keep scale down."
+     }
+    ],
+    "derated": false,
+    "effLbs": 3.18,
+    "fit": {
+     "meetsCapacity": true,
+     "automationMatch": false,
+     "regulatoryOk": true,
+     "secondary": true
+    },
+    "computed": {
+     "requiredLbs": 1.75,
+     "deratedLbsPerDay": 3.18,
+     "requiredOutputPct": 59,
+     "lbsNeeded": 0.626,
+     "estRuntimeHours": 8,
+     "ratedPoolGallons": 60000
+    },
+    "rank": 4
+   },
+   {
+    "product": {
+     "id": "circupool-rj60",
+     "mfr": "CircuPool",
+     "model": "RJ-60",
+     "lbs": 3.1,
+     "rated": 60000,
+     "ratedQ": "inferred-from-model-name",
+     "ctrl": null,
+     "cyc": null,
+     "polH": null,
+     "ltCut": null,
+     "ltRed": null,
+     "auto": [],
+     "cell": null,
+     "fam": null,
+     "dq": "base-only",
+     "notes": [],
+     "msrp": null
+    },
+    "fkey": "circupool-rj60",
+    "score": 74.1,
+    "reasons": [
+     {
+      "code": "CAPACITY",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Meets the ≥2× rule: 3.1 lbs/day vs 1.75 needed."
+     },
+     {
+      "code": "RATED_GALLONS",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Rated for 60,000 gal ≥ 2× your pool."
+     },
+     {
+      "code": "REQ_OUTPUT",
+      "severity": "warning",
+      "ruleId": "SWG_MAX_OUTPUT_PCT",
+      "text": "Needs ~61% output at 8h/day — above about 50%, so longer off periods would help keep scale down."
+     }
+    ],
+    "derated": false,
+    "effLbs": 3.1,
+    "fit": {
+     "meetsCapacity": true,
+     "automationMatch": false,
+     "regulatoryOk": true,
+     "secondary": true
+    },
+    "computed": {
+     "requiredLbs": 1.75,
+     "deratedLbsPerDay": 3.1,
+     "requiredOutputPct": 61,
+     "lbsNeeded": 0.626,
+     "estRuntimeHours": 8,
+     "ratedPoolGallons": 60000
+    },
+    "rank": 5
+   },
+   {
+    "product": {
+     "id": "circupool-rj60p",
+     "mfr": "CircuPool",
+     "model": "RJ-60 Plus",
+     "lbs": 3.1,
+     "rated": 60000,
+     "ratedQ": "verified",
+     "ctrl": "duty-cycle",
+     "cyc": 200,
+     "polH": null,
+     "ltCut": 60,
+     "ltRed": null,
+     "auto": [],
+     "cell": "RJ-60RC",
+     "fam": null,
+     "dq": "conflicting-sources",
+     "notes": [
+      "Output conflict: base 3.1 lbs/day vs overlay 2.7 lbs/day. Base value kept.",
+      "Low-temp cutoff ~60F."
+     ],
+     "msrp": 1649
+    },
+    "fkey": "circupool-rj60p",
+    "score": 74.1,
+    "reasons": [
+     {
+      "code": "DATA_QUALITY_FLAG",
+      "severity": "info",
+      "ruleId": "SWG_OUTPUT_HAIRCUT",
+      "text": "Published output for this model is disputed between sources. Measurement generally matches published figures, so it is used as-is — but verify against the manufacturer before buying."
+     },
+     {
+      "code": "CAPACITY",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Meets the ≥2× rule: 3.1 lbs/day vs 1.75 needed."
+     },
+     {
+      "code": "RATED_GALLONS",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Rated for 60,000 gal ≥ 2× your pool."
+     },
+     {
+      "code": "REQ_OUTPUT",
+      "severity": "warning",
+      "ruleId": "SWG_MAX_OUTPUT_PCT",
+      "text": "Needs ~61% output at 8h/day — above about 50%, so longer off periods would help keep scale down."
+     },
+     {
+      "code": "LOW_TEMP_NOTE",
+      "severity": "info",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Known sticky low-temp behavior — check winter operation."
+     }
+    ],
+    "derated": true,
+    "effLbs": 3.1,
+    "fit": {
+     "meetsCapacity": true,
+     "automationMatch": false,
+     "regulatoryOk": true,
+     "secondary": true
+    },
+    "computed": {
+     "requiredLbs": 1.75,
+     "deratedLbsPerDay": 3.1,
+     "requiredOutputPct": 61,
+     "lbsNeeded": 0.626,
+     "estRuntimeHours": 8,
+     "ratedPoolGallons": 60000
+    },
+    "rank": 6
+   },
+   {
+    "product": {
+     "id": "circupool-corecontrol55",
+     "mfr": "CircuPool",
+     "model": "CORE CONTROL 55",
+     "lbs": 2,
+     "rated": 55000,
+     "ratedQ": "verified",
+     "ctrl": "duty-cycle",
+     "cyc": null,
+     "polH": null,
+     "ltCut": null,
+     "ltRed": null,
+     "auto": [
+      "built-in app/WiFi automation platform (self)"
+     ],
+     "cell": null,
+     "fam": null,
+     "dq": "verified",
+     "notes": [],
+     "msrp": null
+    },
+    "fkey": "circupool-corecontrol55",
+    "score": 73.5,
+    "reasons": [
+     {
+      "code": "CAPACITY",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Meets the ≥2× rule: 2 lbs/day vs 1.75 needed."
+     },
+     {
+      "code": "RATED_GALLONS",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Rated for 55,000 gal ≥ 2× your pool."
+     },
+     {
+      "code": "REQ_OUTPUT",
+      "severity": "warning",
+      "ruleId": "SWG_MAX_OUTPUT_PCT",
+      "text": "Needs ~94% output at 8h/day — above about 50%, so longer off periods would help keep scale down."
+     }
+    ],
+    "derated": false,
+    "effLbs": 2,
+    "fit": {
+     "meetsCapacity": true,
+     "automationMatch": false,
+     "regulatoryOk": true,
+     "secondary": true
+    },
+    "computed": {
+     "requiredLbs": 1.75,
+     "deratedLbsPerDay": 2,
+     "requiredOutputPct": 94,
+     "lbsNeeded": 0.626,
+     "estRuntimeHours": 8,
+     "ratedPoolGallons": 55000
+    },
+    "rank": 7
+   },
+   {
+    "product": {
+     "id": "circupool-sj55",
+     "mfr": "CircuPool",
+     "model": "SJ-55",
+     "lbs": 2.35,
+     "rated": 55000,
+     "ratedQ": "inferred-from-model-name",
+     "ctrl": null,
+     "cyc": null,
+     "polH": null,
+     "ltCut": null,
+     "ltRed": null,
+     "auto": [],
+     "cell": null,
+     "fam": null,
+     "dq": "base-only",
+     "notes": [],
+     "msrp": null
+    },
+    "fkey": "circupool-sj55",
+    "score": 69.6,
+    "reasons": [
+     {
+      "code": "CAPACITY",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Meets the ≥2× rule: 2.35 lbs/day vs 1.75 needed."
+     },
+     {
+      "code": "RATED_GALLONS",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Rated for 55,000 gal ≥ 2× your pool."
+     },
+     {
+      "code": "REQ_OUTPUT",
+      "severity": "warning",
+      "ruleId": "SWG_MAX_OUTPUT_PCT",
+      "text": "Needs ~80% output at 8h/day — above about 50%, so longer off periods would help keep scale down."
+     }
+    ],
+    "derated": false,
+    "effLbs": 2.35,
+    "fit": {
+     "meetsCapacity": true,
+     "automationMatch": false,
+     "regulatoryOk": true,
+     "secondary": true
+    },
+    "computed": {
+     "requiredLbs": 1.75,
+     "deratedLbsPerDay": 2.35,
+     "requiredOutputPct": 80,
+     "lbsNeeded": 0.626,
+     "estRuntimeHours": 8,
+     "ratedPoolGallons": 55000
+    },
+    "rank": 8
+   },
+   {
+    "product": {
+     "id": "autopilot-ppc5",
+     "mfr": "Autopilot",
+     "model": "PPC5",
+     "lbs": 2.62,
+     "rated": null,
+     "ratedQ": "unknown",
+     "ctrl": null,
+     "cyc": null,
+     "polH": null,
+     "ltCut": null,
+     "ltRed": null,
+     "auto": [],
+     "cell": null,
+     "fam": null,
+     "dq": "base-only",
+     "notes": [],
+     "msrp": null
+    },
+    "fkey": "autopilot-ppc5",
+    "score": 63.22,
+    "reasons": [
+     {
+      "code": "CAPACITY",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Meets the ≥2× rule: 2.62 lbs/day vs 1.75 needed."
+     },
+     {
+      "code": "REQ_OUTPUT",
+      "severity": "warning",
+      "ruleId": "SWG_MAX_OUTPUT_PCT",
+      "text": "Needs ~72% output at 8h/day — above about 50%, so longer off periods would help keep scale down."
+     }
+    ],
+    "derated": false,
+    "effLbs": 2.62,
+    "fit": {
+     "meetsCapacity": true,
+     "automationMatch": false,
+     "regulatoryOk": true,
+     "secondary": null
+    },
+    "computed": {
+     "requiredLbs": 1.75,
+     "deratedLbsPerDay": 2.62,
+     "requiredOutputPct": 72,
+     "lbsNeeded": 0.626,
+     "estRuntimeHours": 8,
+     "ratedPoolGallons": null
+    },
+    "rank": 9
+   },
+   {
+    "product": {
+     "id": "astral-viron-v45",
+     "mfr": "Astral",
+     "model": "Viron V45",
+     "lbs": 2.381,
+     "rated": null,
+     "ratedQ": "unknown",
+     "ctrl": null,
+     "cyc": null,
+     "polH": null,
+     "ltCut": null,
+     "ltRed": null,
+     "auto": [],
+     "cell": null,
+     "fam": "fluidra-viron",
+     "dq": "base-only",
+     "notes": [],
+     "msrp": null
+    },
+    "fkey": "fluidra-viron",
+    "score": 61.786,
+    "reasons": [
+     {
+      "code": "CAPACITY",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Meets the ≥2× rule: 2.38 lbs/day vs 1.75 needed."
+     },
+     {
+      "code": "REQ_OUTPUT",
+      "severity": "warning",
+      "ruleId": "SWG_MAX_OUTPUT_PCT",
+      "text": "Needs ~79% output at 8h/day — above about 50%, so longer off periods would help keep scale down."
+     }
+    ],
+    "derated": false,
+    "effLbs": 2.38,
+    "fit": {
+     "meetsCapacity": true,
+     "automationMatch": false,
+     "regulatoryOk": true,
+     "secondary": null
+    },
+    "computed": {
+     "requiredLbs": 1.75,
+     "deratedLbsPerDay": 2.38,
+     "requiredOutputPct": 79,
+     "lbsNeeded": 0.626,
+     "estRuntimeHours": 8,
+     "ratedPoolGallons": null
+    },
+    "rank": 10
+   },
+   {
+    "product": {
+     "id": "astral-vx-11s",
+     "mfr": "Astral",
+     "model": "VX 11S",
+     "lbs": 2.222,
+     "rated": null,
+     "ratedQ": "unknown",
+     "ctrl": null,
+     "cyc": null,
+     "polH": null,
+     "ltCut": null,
+     "ltRed": null,
+     "auto": [],
+     "cell": null,
+     "fam": null,
+     "dq": "base-only",
+     "notes": [],
+     "msrp": null
+    },
+    "fkey": "astral-vx-11s",
+    "score": 60.831999999999994,
+    "reasons": [
+     {
+      "code": "CAPACITY",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Meets the ≥2× rule: 2.22 lbs/day vs 1.75 needed."
+     },
+     {
+      "code": "REQ_OUTPUT",
+      "severity": "warning",
+      "ruleId": "SWG_MAX_OUTPUT_PCT",
+      "text": "Needs ~84% output at 8h/day — above about 50%, so longer off periods would help keep scale down."
+     }
+    ],
+    "derated": false,
+    "effLbs": 2.22,
+    "fit": {
+     "meetsCapacity": true,
+     "automationMatch": false,
+     "regulatoryOk": true,
+     "secondary": null
+    },
+    "computed": {
+     "requiredLbs": 1.75,
+     "deratedLbsPerDay": 2.22,
+     "requiredOutputPct": 84,
+     "lbsNeeded": 0.626,
+     "estRuntimeHours": 8,
+     "ratedPoolGallons": null
+    },
+    "rank": 11
+   },
+   {
+    "product": {
+     "id": "astral-vx-11t",
+     "mfr": "Astral",
+     "model": "VX 11T",
+     "lbs": 2.222,
+     "rated": null,
+     "ratedQ": "unknown",
+     "ctrl": null,
+     "cyc": null,
+     "polH": null,
+     "ltCut": null,
+     "ltRed": null,
+     "auto": [],
+     "cell": null,
+     "fam": null,
+     "dq": "base-only",
+     "notes": [],
+     "msrp": null
+    },
+    "fkey": "astral-vx-11t",
+    "score": 60.831999999999994,
+    "reasons": [
+     {
+      "code": "CAPACITY",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Meets the ≥2× rule: 2.22 lbs/day vs 1.75 needed."
+     },
+     {
+      "code": "REQ_OUTPUT",
+      "severity": "warning",
+      "ruleId": "SWG_MAX_OUTPUT_PCT",
+      "text": "Needs ~84% output at 8h/day — above about 50%, so longer off periods would help keep scale down."
+     }
+    ],
+    "derated": false,
+    "effLbs": 2.22,
+    "fit": {
+     "meetsCapacity": true,
+     "automationMatch": false,
+     "regulatoryOk": true,
+     "secondary": null
+    },
+    "computed": {
+     "requiredLbs": 1.75,
+     "deratedLbsPerDay": 2.22,
+     "requiredOutputPct": 84,
+     "lbsNeeded": 0.626,
+     "estRuntimeHours": 8,
+     "ratedPoolGallons": null
+    },
+    "rank": 12
+   }
+  ],
+  "warnings": [
+   {
+    "code": "DATA_QUALITY_FLAG",
+    "severity": "info",
+    "ruleId": "SWG_OUTPUT_HAIRCUT",
+    "text": "Some models have disputed published output (badged below). Measured output generally matches published figures, so no derating is applied — but confirm with the manufacturer."
+   },
+   {
+    "code": "SWG_FLOW_SWITCH",
+    "severity": "info",
+    "ruleId": "SWG_FLOW_SWITCH",
+    "text": "If you run a variable-speed pump, keep the lowest speed above roughly 25 GPM (2″ tee). The flow switch reacts to water velocity, so too slow a speed stops chlorine production without any obvious fault."
+   },
+   {
+    "code": "SWG_CYA_CELL_LIFE",
+    "severity": "info",
+    "ruleId": "SWG_CYA_CELL_LIFE",
+    "text": "Hold CYA at 70–80 once you are running on salt. Higher CYA shields chlorine from sunlight, so the cell makes less to hold the same FC and lasts longer. Note the output percentage is a share of pump run time — change your schedule and you will need to re-tune it."
+   },
+   {
+    "code": "CELL_LIFE",
+    "severity": "info",
+    "ruleId": "CELL_LIFE",
+    "text": "Cell life is measured in generating hours — roughly 10,000 for OEM cells, nearer 7,000 for generics (some offshore cells as low as 3,000). At about 94% output the top pick spends most of the day idle, which is exactly why TFP says to oversize."
+   },
+   {
+    "code": "SWG_RUNTIME_TRADEOFF",
+    "severity": "info",
+    "ruleId": "SWG_RUNTIME_TRADEOFF",
+    "text": "Top pick needs about 94% output at 8h/day. Running the pump roughly 17h/day at low RPM would drop it to about 45% — usually cheaper than buying a larger cell, keeps scale down, and the cell lasts longer when it works less hard."
+   }
+  ],
+  "repairOptions": []
+ },
+ "checks": [
+  {
+   "code": "PAD_FLOW_OK",
+   "severity": "good",
+   "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+   "text": "Filter handles ~150 GPM, above the ~93 GPM the pump can push at full speed — no bottleneck."
+  },
+  {
+   "code": "PAD_SWG",
+   "severity": "good",
+   "ruleId": "SWG_2X_RULE",
+   "text": "Salt cell sized to the TFP 2× rule for 25,000 gallons."
+  },
+  {
+   "code": "PAD_AUTOMATION",
+   "severity": "info",
+   "ruleId": "AUTOMATION_SAME_BRAND",
+   "text": "Keep pump, lights and salt cell on the same brand as your Pentair automation where you can — filters and heaters are brand-agnostic."
+  }
+ ],
+ "pumpMaxGPM": 92.52,
+ "warnings": [
+  {
+   "code": "SWG_FLOW_SWITCH_OK",
+   "severity": "info",
+   "ruleId": "SWG_FLOW_SWITCH",
+   "text": "Salt cell flow switch needs roughly 25 GPM through a 2″ tee; this pump stays above that even at low speed."
+  },
+  {
+   "code": "DATA_QUALITY_FLAG",
+   "severity": "info",
+   "ruleId": "SWG_OUTPUT_HAIRCUT",
+   "text": "Some models have disputed published output (badged below). Measured output generally matches published figures, so no derating is applied — but confirm with the manufacturer."
+  },
+  {
+   "code": "SWG_FLOW_SWITCH",
+   "severity": "info",
+   "ruleId": "SWG_FLOW_SWITCH",
+   "text": "If you run a variable-speed pump, keep the lowest speed above roughly 25 GPM (2″ tee). The flow switch reacts to water velocity, so too slow a speed stops chlorine production without any obvious fault."
+  },
+  {
+   "code": "SWG_CYA_CELL_LIFE",
+   "severity": "info",
+   "ruleId": "SWG_CYA_CELL_LIFE",
+   "text": "Hold CYA at 70–80 once you are running on salt. Higher CYA shields chlorine from sunlight, so the cell makes less to hold the same FC and lasts longer. Note the output percentage is a share of pump run time — change your schedule and you will need to re-tune it."
+  },
+  {
+   "code": "CELL_LIFE",
+   "severity": "info",
+   "ruleId": "CELL_LIFE",
+   "text": "Cell life is measured in generating hours — roughly 10,000 for OEM cells, nearer 7,000 for generics (some offshore cells as low as 3,000). At about 94% output the top pick spends most of the day idle, which is exactly why TFP says to oversize."
+  },
+  {
+   "code": "SWG_RUNTIME_TRADEOFF",
+   "severity": "info",
+   "ruleId": "SWG_RUNTIME_TRADEOFF",
+   "text": "Top pick needs about 94% output at 8h/day. Running the pump roughly 17h/day at low RPM would drop it to about 45% — usually cheaper than buying a larger cell, keeps scale down, and the cell lasts longer when it works less hard."
+  }
+ ],
+ "advice": [
+  {
+   "code": "PIPE_OK",
+   "severity": "good",
+   "ruleId": "PLUMBING_SIZE_GUIDANCE",
+   "text": "2″ plumbing carries about 63 GPM suction / 84 GPM return within the velocity limits — room to run the pump slowly and quietly, which is the right call on a new build."
+  },
+  {
+   "code": "PAD_FLOW_OK",
+   "severity": "good",
+   "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+   "text": "Filter handles ~150 GPM, above the ~93 GPM the pump can push at full speed — no bottleneck."
+  },
+  {
+   "code": "PAD_SWG",
+   "severity": "good",
+   "ruleId": "SWG_2X_RULE",
+   "text": "Salt cell sized to the TFP 2× rule for 25,000 gallons."
+  },
+  {
+   "code": "PAD_AUTOMATION",
+   "severity": "info",
+   "ruleId": "AUTOMATION_SAME_BRAND",
+   "text": "Keep pump, lights and salt cell on the same brand as your Pentair automation where you can — filters and heaters are brand-agnostic."
+  },
+  {
+   "code": "SWG_FLOW_SWITCH_OK",
+   "severity": "info",
+   "ruleId": "SWG_FLOW_SWITCH",
+   "text": "Salt cell flow switch needs roughly 25 GPM through a 2″ tee; this pump stays above that even at low speed."
+  },
+  {
+   "code": "DATA_QUALITY_FLAG",
+   "severity": "info",
+   "ruleId": "SWG_OUTPUT_HAIRCUT",
+   "text": "Some models have disputed published output (badged below). Measured output generally matches published figures, so no derating is applied — but confirm with the manufacturer."
+  },
+  {
+   "code": "SWG_FLOW_SWITCH",
+   "severity": "info",
+   "ruleId": "SWG_FLOW_SWITCH",
+   "text": "If you run a variable-speed pump, keep the lowest speed above roughly 25 GPM (2″ tee). The flow switch reacts to water velocity, so too slow a speed stops chlorine production without any obvious fault."
+  },
+  {
+   "code": "SWG_CYA_CELL_LIFE",
+   "severity": "info",
+   "ruleId": "SWG_CYA_CELL_LIFE",
+   "text": "Hold CYA at 70–80 once you are running on salt. Higher CYA shields chlorine from sunlight, so the cell makes less to hold the same FC and lasts longer. Note the output percentage is a share of pump run time — change your schedule and you will need to re-tune it."
+  },
+  {
+   "code": "CELL_LIFE",
+   "severity": "info",
+   "ruleId": "CELL_LIFE",
+   "text": "Cell life is measured in generating hours — roughly 10,000 for OEM cells, nearer 7,000 for generics (some offshore cells as low as 3,000). At about 94% output the top pick spends most of the day idle, which is exactly why TFP says to oversize."
+  },
+  {
+   "code": "SWG_RUNTIME_TRADEOFF",
+   "severity": "info",
+   "ruleId": "SWG_RUNTIME_TRADEOFF",
+   "text": "Top pick needs about 94% output at 8h/day. Running the pump roughly 17h/day at low RPM would drop it to about 45% — usually cheaper than buying a larger cell, keeps scale down, and the cell lasts longer when it works less hard."
+  },
+  {
+   "code": "HEATER_BYPASS",
+   "severity": "info",
+   "ruleId": "HEATER_BYPASS",
+   "text": "Plumb in a heater bypass while you are at it. Isolate a leaking or failed heater without shutting the pump down, so the pool keeps circulating and chlorinating. It also protect the copper heat exchanger when pH drops below about 7.0 — acidic water erodes the core and can stain the pool. And it cut back pressure for the ~95% of the time the heater is not in use; heat pumps restrict more than gas heaters because of smaller internal piping."
+  },
+  {
+   "code": "WARRANTY_CHECK",
+   "severity": "info",
+   "ruleId": "WARRANTY_CHECK",
+   "text": "Before you buy: check the warranty. Internet purchases and owner installation can void coverage on some brands, a few require a certified installer, and most require product registration. Bundled purchases with professional install sometimes carry a longer warranty."
+  }
+ ]
+}

@@ -1,0 +1,1055 @@
+{
+ "mode": "pump",
+ "requiredGPM": 36,
+ "dailyGPM": 15,
+ "minDriver": "skimmer 15 GPM",
+ "featureGPM": 36,
+ "comparison": null,
+ "recommendations": [
+  {
+   "product": {
+    "id": "pentair-supermax-vs-343000",
+    "brand": "Pentair",
+    "model": "Pentair SuperMax VS 343000",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1.65,
+    "nhp": 1.65,
+    "wef": 8.417853749,
+    "frame": "48",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      58,
+      36,
+      74
+     ],
+     "w": [
+      1428,
+      1231,
+      1542
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      10,
+      6,
+      13
+     ],
+     "w": [
+      21,
+      20,
+      21
+     ]
+    }
+   },
+   "score": 89.99630216686664,
+   "reasons": [
+    {
+     "code": "AUTOMATION_SAME_BRAND",
+     "severity": "good",
+     "ruleId": "AUTOMATION_SAME_BRAND",
+     "text": "Same brand as your Pentair automation — simplest to control."
+    },
+    {
+     "code": "AUTOMATION_SUPERFLO_NUANCE",
+     "severity": "warning",
+     "ruleId": "SUPERFLO_AUTOMATION",
+     "text": "Check the build date on this one. Units made after 11/20/2020 have RS-485 and talk to IntelliCenter, IntelliSync, EasyTouch and IntelliTouch; earlier ones need an external low-voltage relay for each speed. Either way its scheduler is limited — one start time with up to three speeds, where an IntelliFlo allows four independent schedules."
+    },
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW",
+     "severity": "good",
+     "ruleId": "FEATURE_FLOW_DEMANDS",
+     "text": "Reaches waterfall peak (~36 GPM) at full speed."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": true,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 36,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 13,
+    "gpmAtCurveHigh": 74,
+    "wattsDaily": 32,
+    "wattsHigh": 1542,
+    "annualKWh": 645.2540441511152,
+    "annualCostUSD": 97
+   },
+   "variants": [],
+   "rank": 1
+  },
+  {
+   "product": {
+    "id": "pentair-sta-rite-343000",
+    "brand": "Pentair",
+    "model": "Pentair Sta-Rite 343000",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1.65,
+    "nhp": 1.65,
+    "wef": 8.415554121,
+    "frame": "48",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      57.84,
+      36.38,
+      74.05
+     ],
+     "w": [
+      1428.12,
+      1231.23,
+      1542.4
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      10.1,
+      6.32,
+      12.89
+     ],
+     "w": [
+      20.87,
+      20,
+      21.49
+     ]
+    }
+   },
+   "score": 89.95984964059507,
+   "reasons": [
+    {
+     "code": "AUTOMATION_SAME_BRAND",
+     "severity": "good",
+     "ruleId": "AUTOMATION_SAME_BRAND",
+     "text": "Same brand as your Pentair automation — simplest to control."
+    },
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW",
+     "severity": "good",
+     "ruleId": "FEATURE_FLOW_DEMANDS",
+     "text": "Reaches waterfall peak (~36 GPM) at full speed."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": true,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 36,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 12.89,
+    "gpmAtCurveHigh": 74.05,
+    "wattsDaily": 34,
+    "wattsHigh": 1542.4,
+    "annualKWh": 649.5011468539905,
+    "annualCostUSD": 97
+   },
+   "variants": [],
+   "rank": 2
+  },
+  {
+   "product": {
+    "id": "pentair-superflo-vs-vs-pump-342000",
+    "brand": "Pentair",
+    "model": "Pentair SuperFlo VS VS Pump 342000",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1.65,
+    "nhp": 1.5,
+    "wef": 8.408817415,
+    "frame": "48",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      58,
+      36,
+      74
+     ],
+     "w": [
+      1428,
+      1231,
+      1542
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      10,
+      6,
+      13
+     ],
+     "w": [
+      21,
+      20,
+      22
+     ]
+    }
+   },
+   "score": 89.94879234024124,
+   "reasons": [
+    {
+     "code": "AUTOMATION_SAME_BRAND",
+     "severity": "good",
+     "ruleId": "AUTOMATION_SAME_BRAND",
+     "text": "Same brand as your Pentair automation — simplest to control."
+    },
+    {
+     "code": "AUTOMATION_SUPERFLO_NUANCE",
+     "severity": "warning",
+     "ruleId": "SUPERFLO_AUTOMATION",
+     "text": "Check the build date on this one. Units made after 11/20/2020 have RS-485 and talk to IntelliCenter, IntelliSync, EasyTouch and IntelliTouch; earlier ones need an external low-voltage relay for each speed. Either way its scheduler is limited — one start time with up to three speeds, where an IntelliFlo allows four independent schedules."
+    },
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW",
+     "severity": "good",
+     "ruleId": "FEATURE_FLOW_DEMANDS",
+     "text": "Reaches waterfall peak (~36 GPM) at full speed."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": true,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 36,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 13,
+    "gpmAtCurveHigh": 74,
+    "wattsDaily": 34,
+    "wattsHigh": 1542,
+    "annualKWh": 649.1789986345016,
+    "annualCostUSD": 97
+   },
+   "variants": [],
+   "rank": 3
+  },
+  {
+   "product": {
+    "id": "pentair-intelliflo-i1-vs-011059",
+    "brand": "Pentair",
+    "model": "Pentair IntelliFlo i1 VS 011059",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 3.95,
+    "nhp": 1,
+    "wef": 7.559755459,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      64,
+      40,
+      82
+     ],
+     "w": [
+      1611,
+      1380,
+      1710
+     ]
+    },
+    "lo": {
+     "rpm": 450,
+     "g": [
+      9,
+      5,
+      11
+     ],
+     "w": [
+      61,
+      61,
+      62
+     ]
+    }
+   },
+   "score": 85.42579904722615,
+   "reasons": [
+    {
+     "code": "AUTOMATION_SAME_BRAND",
+     "severity": "good",
+     "ruleId": "AUTOMATION_SAME_BRAND",
+     "text": "Same brand as your Pentair automation — simplest to control."
+    },
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW",
+     "severity": "good",
+     "ruleId": "FEATURE_FLOW_DEMANDS",
+     "text": "Reaches waterfall peak (~36 GPM) at full speed."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": true,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 36,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 11,
+    "gpmAtCurveHigh": 82,
+    "wattsDaily": 157,
+    "wattsHigh": 1710,
+    "annualKWh": 1025.8282494365137,
+    "annualCostUSD": 154
+   },
+   "variants": [],
+   "rank": 4
+  },
+  {
+   "product": {
+    "id": "pentair-011059",
+    "brand": "Pentair",
+    "model": "Pentair 011059",
+    "st": "VS",
+    "mot": "PSC",
+    "thp": 3.95,
+    "nhp": 1,
+    "wef": 7.538460136,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      64.08,
+      40.18,
+      81.76
+     ],
+     "w": [
+      1611.02,
+      1379.66,
+      1709.83
+     ]
+    },
+    "lo": {
+     "rpm": 450,
+     "g": [
+      8.57,
+      5.32,
+      10.68
+     ],
+     "w": [
+      61.41,
+      60.87,
+      61.59
+     ]
+    }
+   },
+   "score": 85.12645160054281,
+   "reasons": [
+    {
+     "code": "AUTOMATION_SAME_BRAND",
+     "severity": "good",
+     "ruleId": "AUTOMATION_SAME_BRAND",
+     "text": "Same brand as your Pentair automation — simplest to control."
+    },
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW",
+     "severity": "good",
+     "ruleId": "FEATURE_FLOW_DEMANDS",
+     "text": "Reaches waterfall peak (~36 GPM) at full speed."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": true,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 36,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 10.68,
+    "gpmAtCurveHigh": 81.76,
+    "wattsDaily": 171,
+    "wattsHigh": 1709.83,
+    "annualKWh": 1060.0624895276246,
+    "annualCostUSD": 159
+   },
+   "variants": [],
+   "rank": 5
+  },
+  {
+   "product": {
+    "id": "hayward-hl2350020vsp",
+    "brand": "Hayward",
+    "model": "Hayward HL2350020VSP",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1.65,
+    "nhp": 1.65,
+    "wef": 11.15358737,
+    "frame": "48",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      52,
+      33,
+      66
+     ],
+     "w": [
+      938,
+      837,
+      976
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      9,
+      6,
+      12
+     ],
+     "w": [
+      29,
+      29,
+      30
+     ]
+    }
+   },
+   "score": 84.51257200562499,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW",
+     "severity": "good",
+     "ruleId": "FEATURE_FLOW_DEMANDS",
+     "text": "Reaches waterfall peak (~36 GPM) at full speed."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 36,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 12,
+    "gpmAtCurveHigh": 66,
+    "wattsDaily": 59,
+    "wattsHigh": 976,
+    "annualKWh": 505.94703125,
+    "annualCostUSD": 76
+   },
+   "variants": [
+    "Hayward MaxFlo VS 500 HL2350020VSP",
+    "Hayward MaxFlo XL SP2303VSP",
+    "Hayward MaxFlo XL SP23520VSP"
+   ],
+   "rank": 6
+  },
+  {
+   "product": {
+    "id": "pentair-011060",
+    "brand": "Pentair",
+    "model": "Pentair 011060",
+    "st": "VS",
+    "mot": "PSC",
+    "thp": 3.96,
+    "nhp": 2,
+    "wef": 6.762613156,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      68.34,
+      41.45,
+      92.22
+     ],
+     "w": [
+      2002.73,
+      1682.56,
+      2267.03
+     ]
+    },
+    "lo": {
+     "rpm": 450,
+     "g": [
+      9.23,
+      5.54,
+      12.33
+     ],
+     "w": [
+      61.41,
+      60.62,
+      61.94
+     ]
+    }
+   },
+   "score": 83.18221498584867,
+   "reasons": [
+    {
+     "code": "AUTOMATION_SAME_BRAND",
+     "severity": "good",
+     "ruleId": "AUTOMATION_SAME_BRAND",
+     "text": "Same brand as your Pentair automation — simplest to control."
+    },
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW",
+     "severity": "good",
+     "ruleId": "FEATURE_FLOW_DEMANDS",
+     "text": "Reaches waterfall peak (~36 GPM) at full speed."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": true,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 36,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 12.33,
+    "gpmAtCurveHigh": 92.22,
+    "wattsDaily": 112,
+    "wattsHigh": 2267.03,
+    "annualKWh": 1112.4015101535097,
+    "annualCostUSD": 167
+   },
+   "variants": [],
+   "rank": 7
+  },
+  {
+   "product": {
+    "id": "speck-e71-ii-vhv",
+    "brand": "Speck",
+    "model": "Speck E71-II VHV",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1.1,
+    "nhp": 1,
+    "wef": 10.1347564,
+    "frame": "48",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3400,
+     "g": [
+      46,
+      28,
+      62
+     ],
+     "w": [
+      875,
+      747,
+      956
+     ]
+    },
+    "lo": {
+     "rpm": 1000,
+     "g": [
+      13,
+      8,
+      17
+     ],
+     "w": [
+      47,
+      46,
+      52
+     ]
+    }
+   },
+   "score": 82.9679485012009,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW",
+     "severity": "good",
+     "ruleId": "FEATURE_FLOW_DEMANDS",
+     "text": "Reaches waterfall peak (~36 GPM) at full speed."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 36,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 17,
+    "gpmAtCurveHigh": 62,
+    "wattsDaily": 36,
+    "wattsHigh": 956,
+    "annualKWh": 440.2085731732139,
+    "annualCostUSD": 66
+   },
+   "variants": [
+    "Speck PE71-II VHV"
+   ],
+   "rank": 8
+  },
+  {
+   "product": {
+    "id": "pentair-intelliflo-i2-vs-011060",
+    "brand": "Pentair",
+    "model": "Pentair IntelliFlo i2 VS 011060",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 3.96,
+    "nhp": 2,
+    "wef": 6.74696612,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      68,
+      41,
+      92
+     ],
+     "w": [
+      2003,
+      1683,
+      2267
+     ]
+    },
+    "lo": {
+     "rpm": 450,
+     "g": [
+      9,
+      6,
+      12
+     ],
+     "w": [
+      61,
+      61,
+      62
+     ]
+    }
+   },
+   "score": 82.96756075562499,
+   "reasons": [
+    {
+     "code": "AUTOMATION_SAME_BRAND",
+     "severity": "good",
+     "ruleId": "AUTOMATION_SAME_BRAND",
+     "text": "Same brand as your Pentair automation — simplest to control."
+    },
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW",
+     "severity": "good",
+     "ruleId": "FEATURE_FLOW_DEMANDS",
+     "text": "Reaches waterfall peak (~36 GPM) at full speed."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": true,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 36,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 12,
+    "gpmAtCurveHigh": 92,
+    "wattsDaily": 121,
+    "wattsHigh": 2267,
+    "annualKWh": 1136.84953125,
+    "annualCostUSD": 171
+   },
+   "variants": [],
+   "rank": 9
+  },
+  {
+   "product": {
+    "id": "pentair-intellipro-vs-p6e6vs4h-209l",
+    "brand": "Pentair",
+    "model": "Pentair IntelliPro VS P6E6VS4H-209L",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 3.96,
+    "nhp": 3,
+    "wef": 6.352328987,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      71,
+      42,
+      97
+     ],
+     "w": [
+      2242,
+      1836,
+      2578
+     ]
+    },
+    "lo": {
+     "rpm": 450,
+     "g": [
+      10,
+      6,
+      13
+     ],
+     "w": [
+      61,
+      61,
+      61
+     ]
+    }
+   },
+   "score": 81.85171629785071,
+   "reasons": [
+    {
+     "code": "AUTOMATION_SAME_BRAND",
+     "severity": "good",
+     "ruleId": "AUTOMATION_SAME_BRAND",
+     "text": "Same brand as your Pentair automation — simplest to control."
+    },
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW",
+     "severity": "good",
+     "ruleId": "FEATURE_FLOW_DEMANDS",
+     "text": "Reaches waterfall peak (~36 GPM) at full speed."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": true,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 36,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 13,
+    "gpmAtCurveHigh": 97,
+    "wattsDaily": 94,
+    "wattsHigh": 2578,
+    "annualKWh": 1180.3922234865724,
+    "annualCostUSD": 177
+   },
+   "variants": [],
+   "rank": 10
+  },
+  {
+   "product": {
+    "id": "hayward-hl2670020vsp",
+    "brand": "Hayward",
+    "model": "Hayward HL2670020VSP",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1.65,
+    "nhp": 1.65,
+    "wef": 10.10746055,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      55,
+      35,
+      70
+     ],
+     "w": [
+      1135,
+      961,
+      1231
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      9,
+      8,
+      11
+     ],
+     "w": [
+      22,
+      20,
+      22
+     ]
+    }
+   },
+   "score": 81.77607616198347,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW",
+     "severity": "good",
+     "ruleId": "FEATURE_FLOW_DEMANDS",
+     "text": "Reaches waterfall peak (~36 GPM) at full speed."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 36,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 11,
+    "gpmAtCurveHigh": 70,
+    "wattsDaily": 56,
+    "wattsHigh": 1231,
+    "annualKWh": 591.8459917355373,
+    "annualCostUSD": 89
+   },
+   "variants": [],
+   "rank": 11
+  },
+  {
+   "product": {
+    "id": "hayward-super-pump-vs-700-hl2670020vsp",
+    "brand": "Hayward",
+    "model": "Hayward Super Pump VS 700 HL2670020VSP",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1.65,
+    "nhp": 1.65,
+    "wef": 10.10746055,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      55,
+      35,
+      70
+     ],
+     "w": [
+      1135,
+      961,
+      1231
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      9,
+      6,
+      11
+     ],
+     "w": [
+      22,
+      20,
+      22
+     ]
+    }
+   },
+   "score": 81.77607616198347,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW",
+     "severity": "good",
+     "ruleId": "FEATURE_FLOW_DEMANDS",
+     "text": "Reaches waterfall peak (~36 GPM) at full speed."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 36,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 11,
+    "gpmAtCurveHigh": 70,
+    "wattsDaily": 56,
+    "wattsHigh": 1231,
+    "annualKWh": 591.8459917355373,
+    "annualCostUSD": 89
+   },
+   "variants": [
+    "Hayward SuperPump SP2603VSP",
+    "Hayward SuperPump SP2670020VSP"
+   ],
+   "rank": 12
+  }
+ ],
+ "warnings": [
+  {
+   "code": "PIPE_OK",
+   "severity": "info",
+   "ruleId": "PLUMBING_SIZE_GUIDANCE",
+   "text": "2″ plumbing carries about 63 GPM suction / 84 GPM return within the velocity limits."
+  },
+  {
+   "code": "WARRANTY_CHECK",
+   "severity": "info",
+   "ruleId": "WARRANTY_CHECK",
+   "text": "Before you buy: check the warranty. Internet purchases and owner installation can void coverage on some brands, a few require a certified installer, and most require product registration. Bundled purchases with professional install sometimes carry a longer warranty."
+  }
+ ],
+ "repairOptions": [],
+ "curve": "C"
+}

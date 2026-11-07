@@ -1,0 +1,483 @@
+{
+  "TURNOVER_FORMULA": {
+    "title": "Minimum flow is set by equipment, not pool volume",
+    "value": {
+      "basis": "equipment-driven",
+      "skimmerMinGpm": 15,
+      "skimmerNote": "A single skimmer works properly down to about 15 GPM on most designs.",
+      "swgFlowSwitchGpm": {
+        "2": 22,
+        "1.5": 14
+      },
+      "gasHeaterMinGpm": 40,
+      "formula": "minimumGPM = max(skimmer 15, SWG flow switch if fitted, heater minimum if fitted)",
+      "supersedes": "poolGallons / 8 turnover. Turnover does not determine minimum flow for a residential pool.",
+      "commercialCaveat": "Commercial pools DO have firm turnover requirements. This tool is residential-only.",
+      "reviewedBy": "Mark S (TFP), 2026-07"
+    },
+    "src": "TFP: 'turnover is not a factor' — Turnover_of_Pool_Water"
+  },
+  "VS_REQUIRED_ABOVE_THP": {
+    "title": "US DOE variable-speed requirement",
+    "value": {
+      "hhpThreshold": 0.711,
+      "thpApproxOnly": 1.1,
+      "thpNote": "THP over ~1.1 is a rough proxy only. The DOE specification is hydraulic horsepower and there is no accurate conversion, because pump efficiency intervenes. Check the manufacturer for a definitive compliance answer.",
+      "reviewedBy": "Mark S (TFP), 2026-07",
+      "requiredSpeedTypeAbove": "VS",
+      "effectiveDate": "2021-07-19",
+      "sellableInventoryCutoff": "2021-07-18",
+      "boostersExempt": true,
+      "existingPoolReplacementNote": "For replacing a single-speed pump in an EXISTING pool, TFP notes a 2-speed pump saves nearly as much as VS at lower cost; however DOE still requires VS for pumps > 1.1 THP manufactured/imported on/after 2021-07-19."
+    },
+    "src": "US DOE pool pump energy conservation standard (eff. 2021-07-19)"
+  },
+  "SWG_2X_RULE": {
+    "title": "SWG rated capacity >= 2x pool volume",
+    "value": {
+      "ratedGallonsMultiplier": 2,
+      "requiredLbsPerDayFormula": "0.7 * (poolGallons / 10000)",
+      "referencePoint": {
+        "poolGallons": 20000,
+        "sufficientLbsPerDay": 1.4
+      },
+      "primaryMetric": "lbsPerDay",
+      "secondaryMetric": "ratedPoolGallons",
+      "largePoolMultiCell": "Large pools may require multiple SWG cells for sufficient capacity."
+    },
+    "src": "TFP: How to select pool equipment > Saltwater Chlorine Generators"
+  },
+  "SWG_OUTPUT_HAIRCUT": {
+    "title": "Published SWG output is used as-is",
+    "value": {
+      "defaultDeratingFactor": 1,
+      "previousFactor": 0.75,
+      "changeReason": "Measurement across a range of conditions found published output close to actual (Hayward 1.45 lbs/day verified). Derating removed; flag the data-quality concern instead of penalising capacity. Derate only on evidence of a specific failing or scaled cell.",
+      "reviewedBy": "Mark S (TFP), 2026-07",
+      "appliesToFlags": [
+        "advertised-output-disputed",
+        "conflicting-sources"
+      ],
+      "appliedBefore": "capacity math",
+      "configurable": true
+    },
+    "src": "TFP member OCLT testing: CircuPool RJ+ measured ~71% of advertised output"
+  },
+  "FC_DEMAND_DEFAULTS": {
+    "title": "Daily free-chlorine demand by climate",
+    "value": {
+      "unit": "ppm FC per day",
+      "byClimate": {
+        "cool_temperate": 2,
+        "warm": 3,
+        "hot_sunny": 4
+      },
+      "default": 3,
+      "range": [
+        2,
+        4
+      ]
+    },
+    "src": "TFP methodology: typical FC loss 2-4 ppm/day depending on sun/temperature"
+  },
+  "SWG_MAX_OUTPUT_PCT": {
+    "title": "Keep required output low - scale control",
+    "value": {
+      "warnAbovePct": 50,
+      "previousWarnAbovePct": 80,
+      "reason": "Running a cell above about 50% is not advised: longer off periods keep scale accumulation in check, and a cell that works less hard lasts longer.",
+      "reviewedBy": "Mark S (TFP), 2026-07",
+      "rejectImpliesLongRuntime": true
+    },
+    "src": "TFP: 2x rule rationale — avoid running SWG at 100%"
+  },
+  "FILTER_SIZING": {
+    "title": "Minimum filter size by type",
+    "value": {
+      "sandInches": {
+        "min": 24,
+        "min_if_over_25k_or_high_debris": 30
+      },
+      "deSquareFeet": {
+        "min": 48,
+        "min_if_over_25k": 60
+      },
+      "hybridDeSquareFeet": {
+        "min": 80,
+        "larger": 100
+      },
+      "cartridgeSquareFeetPer10k": 200,
+      "cartridgeTargetIsUpperLimit": true,
+      "cartridgeMinSquareFeetPer10k": 150,
+      "cartridgeNote": "200 sq ft per 10,000 gal is the UPPER end of the useful range, not a minimum - a cartridge filter can be oversized. Evidence: a 20,000 gal pool with 425 sq ft is at the edge of too big (under 1 PSI rise in 12 months); 325 sq ft would have been sufficient. Floor set at 150 sq ft per 10,000 gal. Reviewed by Mark S (TFP), 2026-07."
+    },
+    "src": "TFP: How to select pool equipment > Pool Filter Types"
+  },
+  "FILTER_FLOW_CAP": {
+    "title": "Maximum flow per filter surface area (APSP-15 / ANSI-NSF 50)",
+    "value": {
+      "sandGpmPerSqFt": 20,
+      "sandPreviousGpmPerSqFt": 15,
+      "sandCapNote": "NSF filtration specification; the older 15 GPM/sq ft figure was more conservative than necessary. Reviewed by Mark S (TFP), 2026-07.",
+      "deGpmPerSqFt": {
+        "min": 1,
+        "max": 2
+      },
+      "cartridgeGpmPerSqFt": 0.375,
+      "sandAreaReference": {
+        "diameter24inSqFt": 3.14,
+        "pentairTR140SqFt": 7.06
+      },
+      "note": "Pump max flow can dictate minimum filter size rather than pool size — check BOTH."
+    },
+    "src": "TFP: How to select pool equipment > Pool Filter Sizing"
+  },
+  "AUTOMATION_SAME_BRAND": {
+    "title": "Same-brand automation preference",
+    "value": {
+      "sameBrandItems": [
+        "automation",
+        "pump",
+        "lights",
+        "SWG"
+      ],
+      "brandAgnostic": [
+        "filter",
+        "heater"
+      ],
+      "preference": "strong"
+    },
+    "src": "TFP: How to select pool equipment > Automation"
+  },
+  "AUTOMATION_EXCEPTIONS": {
+    "title": "Per-model automation controllability exceptions",
+    "value": [
+      {
+        "subject": "Pentair SuperFlo VS",
+        "fact": "Variable speeds cannot be controlled by any automation system, even Pentair's (can still be switched on/off).",
+        "severity": "blocker-for-speed-control"
+      },
+      {
+        "subject": "Hayward AquaLogic (pre-VS firmware)",
+        "fact": "Requires firmware >= 2.65 for VS pump control; not field-upgradeable — board replacement required.",
+        "severity": "blocker",
+        "sourceRef": "Equipment_Scraped_Data / TFP AquaLogic article"
+      },
+      {
+        "subject": "Hayward AquaRite on Jandy AquaLink",
+        "fact": "AquaRite AL-5 setting required for Jandy AquaLink to control it.",
+        "severity": "config-required"
+      }
+    ],
+    "src": "TFP: How to select pool equipment > Automation (SuperFlo VS)"
+  },
+  "HEATER_BTU_MATH": {
+    "title": "Heater sizing math (future scope)",
+    "value": {
+      "btuPerLbPerF": 1,
+      "lbsPerGallon": 8.4,
+      "gasEfficiency": 0.82,
+      "gasEfficiencyConservative": 0.8,
+      "heatPumpEfficiency": 1,
+      "heatPumpMinAmbientF": 50,
+      "heatPumpRatingAmbientF": 80
+    },
+    "src": "TFP: How to select pool equipment > Selecting pool heaters / About BTUs / Efficiency / Air Temperature"
+  },
+  "SWG_POLARITY_HIGH_CH": {
+    "title": "Polarity reversal interval guidance for high calcium hardness",
+    "value": {
+      "highCHImplication": "Shorter polarity-reversal interval reduces scaling on the cell plates for high-CH water; surface each candidate's polarityReversalHours where known."
+    },
+    "src": "swg-catalog.json polarityReversalHours field; TFP SWG maintenance"
+  },
+  "NEW_PLASTER_NO_SALT": {
+    "title": "No salt on new plaster",
+    "value": {
+      "waitDays": 30,
+      "severity": "warning"
+    },
+    "src": "TFP construction / startup best practices (wiki-construction-best-practices.md)"
+  },
+  "AGP_BONDING_CHECK": {
+    "title": "Above-ground bonding + water bond confirmation",
+    "value": {
+      "severity": "info",
+      "blocking": false
+    },
+    "src": "wiki-equipment-pad-best-practices.md; NEC bonding requirements"
+  },
+  "NEW_POOL_DEFAULTS": {
+    "title": "TFP new-pool equipment defaults",
+    "value": {
+      "filter": "oversized cartridge",
+      "pump": "full-size variable-speed",
+      "swg": "rated 2x pool volume",
+      "automation": "same brand as pump/lights/SWG",
+      "note": "For a NEW pool TFP discourages single-speed and two-speed pumps outright (a 2-speed is only a reasonable compromise when replacing in an existing pool)."
+    },
+    "src": "TFP: How to select pool equipment > Selection of Equipment"
+  },
+  "WARRANTY_CHECK": {
+    "title": "Check warranty terms before buying",
+    "value": {
+      "internetSales": "may void coverage",
+      "proInstall": "some brands require a certified installer for full coverage",
+      "registration": "product registration is often required",
+      "bundles": "bundled purchases with pro install sometimes extend coverage"
+    },
+    "src": "TFP: How to select pool equipment > Important Warranty Information"
+  },
+  "PLUMBING_SIZE_GUIDANCE": {
+    "title": "Pipe size sets the real flow ceiling",
+    "value": {
+      "table": {
+        "2": {
+          "suction": 63,
+          "ret": 84
+        },
+        "3": {
+          "suction": 138,
+          "ret": 184
+        },
+        "1.5": {
+          "suction": 38,
+          "ret": 51
+        },
+        "2.5+": {
+          "suction": 90,
+          "ret": 119
+        }
+      },
+      "basis": "suction ≤6 ft/s, return ≤8 ft/s",
+      "minimum": "Use at least 2″ plumbing; 2.5″ is a good efficiency upgrade. High-flow spa jets want 2.5″ minimum, 3″ better.",
+      "diminishing": "Under ~100 ft runs, upsizing beyond the velocity rule gains little."
+    },
+    "src": "TFP: Pool Plumbing and Hydraulics (velocity table)"
+  },
+  "SWG_FLOW_SWITCH": {
+    "title": "Salt cell flow switch trips on velocity, not flow",
+    "value": {
+      "byTee": {
+        "2": 25,
+        "1.5": 14
+      },
+      "note": "The flow switch is activated by water velocity, so the tee size sets the threshold. A 2″ tee needs about 25 GPM; swapping to a 1.5″ tee drops it to about 14 GPM. Use the tee supplied with the cell.",
+      "risk": "A variable-speed pump run too slowly will not close the switch, and the cell silently stops making chlorine."
+    },
+    "src": "TFP wiki: Hayward AquaRite SWG — Flow Switch T"
+  },
+  "FEATURE_FLOW_DEMANDS": {
+    "title": "What actually drives peak flow",
+    "value": {
+      "spaJetGpmEach": {
+        "min": 10,
+        "max": 25,
+        "typical": 15
+      },
+      "gasHeaterGpm": {
+        "min": 40,
+        "max": 50,
+        "note": "A ~400,000 BTU gas heater is often the single largest flow demand on a residential pool."
+      },
+      "baselineCirculationGpm": 20,
+      "waterfallGpmPerInch": 1.5
+    },
+    "src": "TFP: Pool Plumbing and Hydraulics"
+  },
+  "CELL_LIFE": {
+    "title": "Salt cell life and why oversizing pays",
+    "value": {
+      "oemHours": 10000,
+      "typicalGenericHours": 7000,
+      "poorOffshoreHours": 3000,
+      "note": "Manufacturer ratings assume the pump runs 24/7 with the cell generating continuously. Oversizing lets you run shorter pump times at a lower output percentage, which extends cell life.",
+      "warrantyCaution": "Be wary of long prorated warranties on generic cells — the proration basis is often undisclosed."
+    },
+    "src": "TFP wiki: Hayward AquaRite SWG — cell life / generic cells"
+  },
+  "AQUARITE_CELL_TYPE": {
+    "title": "AquaRite infers salinity from the cell — the T-Cell type setting must match",
+    "value": {
+      "fact": "Hayward AquaRite (and clones such as CircuPool RJ) have no separate salt sensor; they infer salinity from cell performance. If the T-Cell type setting does not match the installed cell, salt reads wrong — a larger cell than the setting reads high, a smaller one reads low.",
+      "risk": "A wrong reading can trip a low-salt / check-cell warning, which shuts off chlorine production.",
+      "alsoTrips": "Low salt, a dirty or scaled cell, trapped air, or cold water can trip the same warning.",
+      "verify": "TFP recommends confirming actual salt with a Taylor K-1766 (or TF Salt) drop test rather than trusting the panel."
+    },
+    "src": "TFP: SWG chemistry — how salt systems determine salinity"
+  },
+  "SWG_CYA_CELL_LIFE": {
+    "title": "CYA 70-80 makes the cell work less hard",
+    "value": {
+      "cyaTarget": [
+        70,
+        80
+      ],
+      "startingUsers": 60,
+      "fcRange": [
+        5,
+        10
+      ],
+      "why": "Higher CYA shields chlorine from UV, so the cell produces less to hold the same FC — which extends cell life.",
+      "percentIsRuntime": "The output percentage is a fraction of pump run time, so changing your pump schedule changes chlorine output and the percentage needs re-tuning."
+    },
+    "src": "TFP: SWG chemistry — water balance targets"
+  },
+  "SWG_ONOFF_ONLY": {
+    "title": "Some cells have no percentage adjustment",
+    "value": {
+      "models": [
+        "intex"
+      ],
+      "fact": "Intex salt systems run at 100% or off — there is no output percentage, so chlorine output is controlled purely by pump run time."
+    },
+    "src": "TFP wiki: Intex SWG"
+  },
+  "HEATER_BYPASS": {
+    "title": "Fit a heater bypass",
+    "value": {
+      "reasons": [
+        "Isolate a leaking or failed heater without shutting the pump down, so the pool keeps circulating and chlorinating.",
+        "Protect the copper heat exchanger when pH drops below about 7.0 — acidic water erodes the core and can stain the pool.",
+        "Cut back pressure for the ~95% of the time the heater is not in use; heat pumps restrict more than gas heaters because of smaller internal piping."
+      ],
+      "note": "An internal bypass or a flow-limiting external bypass is not the same thing — neither can stop water flowing through the core."
+    },
+    "src": "TFP wiki: Heater Bypass"
+  },
+  "SUPERFLO_AUTOMATION": {
+    "title": "Pentair SuperFlo VS automation compatibility depends on build date",
+    "value": {
+      "cutoff": "2020-11-20",
+      "after": "Has RS-485; communicates with IntelliCenter, IntelliSync, EasyTouch and IntelliTouch.",
+      "before": "No RS-485; connects via external low-voltage control with a relay per speed.",
+      "intelliSync": "IntelliSync gives app control for all SuperFlo VS, by RS-485 or low-voltage input.",
+      "intelliConnect": "SuperFlo VST needs IntelliConnect host firmware 1.6.1.5+ (1.6.2.5+ reported working) plus control cable 356324Z.",
+      "schedulerLimit": "SuperFlo has one scheduled start time with up to three speeds in sequence; IntelliFlo supports four independent schedules.",
+      "supersedes": "Replaces the older blanket guidance that a SuperFlo VS cannot be controlled by automation."
+    },
+    "src": "TFP wiki: Pentair SuperFlo VS Pumps — Pentair Automation Compatibility"
+  },
+  "ECOSTAR_KNOWN_ISSUE": {
+    "title": "Hayward EcoStar drive failures",
+    "value": {
+      "fact": "EcoStar drives have had many failures; TFP describes the pump as \"sort of a lemon\". The drive is separately replaceable, but a replacement drive’s warranty expires on the same date as the original pump. TFP suggests the Hayward TriStar VS as a replacement."
+    },
+    "src": "TFP wiki: Hayward EcoStar Pumps"
+  },
+  "SWG_RUNTIME_TRADEOFF": {
+    "title": "Longer runtime beats a bigger cell",
+    "value": {
+      "whenOutputAbovePct": 80,
+      "advice": "Running the pump longer at low RPM is usually cheaper than upsizing the cell, and running a cell at a lower percentage extends its life."
+    },
+    "src": "TFP: SWG sizing and cell life"
+  },
+  "FILTER_TURNOVER_NOT_A_FACTOR": {
+    "title": "Filters are NOT sized on turnover",
+    "value": {
+      "rejectOnTurnover": false
+    },
+    "src": "TFP: turnover is not a factor (Turnover_of_Pool_Water)"
+  },
+  "FILTER_BIGGER_IS_BETTER": {
+    "title": "Oversizing a filter is a positive signal",
+    "value": {
+      "direction": "larger-better",
+      "diminishingReturnsAboveMultiple": 3,
+      "rationale": "Larger area = longer runs between cleanings at marginal extra cost."
+    },
+    "src": "TFP: How to select pool equipment > Filters"
+  },
+  "FILTER_MUST_NOT_BOTTLENECK_PUMP": {
+    "title": "Filter must not restrict pump flow (primary disqualifier)",
+    "value": {
+      "rule": "candidate allowable flow >= pumpMaxGPM",
+      "cartridgeDeHybridSource": "designMaxGPM",
+      "sandSource": "15 * bedAreaSqFt (TFP cap, not manufacturer NSF rating)",
+      "sandBedAreaFallback": "PI * (tankDiameterInches/2/12)^2"
+    },
+    "src": "TFP: filter flow caps (APSP-15/ANSI-NSF 50)"
+  },
+  "FILTER_TYPE_RECOMMENDATION": {
+    "title": "Filter-type decision tree (when desiredType=recommend)",
+    "value": {
+      "order": [
+        {
+          "if": "waterCostConcern=high",
+          "then": "cartridge",
+          "code": "FILTER_TYPE_CARTRIDGE_WATER"
+        },
+        {
+          "if": "debrisLoad=high AND waterCostConcern!=high",
+          "then": "sand|cartridge",
+          "code": "FILTER_TYPE_DEBRIS"
+        },
+        {
+          "if": "finest-clarity OR small-pool OR lowest-micron",
+          "then": "de",
+          "code": "FILTER_TYPE_DE_CLARITY"
+        },
+        {
+          "if": "default",
+          "then": "cartridge",
+          "code": "FILTER_TYPE_DEFAULT_CARTRIDGE"
+        }
+      ],
+      "microns": {
+        "de": [
+          3,
+          5
+        ],
+        "cartridge": 10,
+        "sand": 30
+      }
+    },
+    "src": "filter-selection-engine-spec.md §4"
+  },
+  "FILTER_RANKING_WEIGHTS": {
+    "title": "Filter ranking weights (tunable)",
+    "value": {
+      "oversizeHeadroom": 40,
+      "flowHeadroom": 20,
+      "replacementMediaCost": 15,
+      "dataQuality": 8,
+      "budgetFit": 5,
+      "sameBrandPad": 1,
+      "tieBreak": [
+        "oversizeHeadroom",
+        "replacementMediaCostLower",
+        "verifiedData",
+        "lowerMSRP"
+      ],
+      "note": "Prefer the smallest model that comfortably clears both size minimum and flow, then offer next size up as an explicit alternative. Cost signals degrade gracefully when pricing is absent."
+    },
+    "src": "filter-selection-engine-spec.md §6"
+  },
+  "FILTER_REPAIR_FACTS": {
+    "title": "Filter repair-vs-replace facts",
+    "value": [
+      {
+        "match": "worn-out-media+sand",
+        "code": "FILTER_REPAIR_SAND_MEDIA",
+        "fact": "Sand lasts ~5-7 yrs; a media swap is routine maintenance, far cheaper than a new filter. Replace filter only if the tank is also failing."
+      },
+      {
+        "match": "worn-out-media+cartridge",
+        "code": "FILTER_REPAIR_CARTRIDGE",
+        "fact": "Replace the cartridge element set (cite cartridgeSet.model), not the whole filter."
+      },
+      {
+        "match": "leaking-valve+sand",
+        "code": "FILTER_REPAIR_VALVE",
+        "fact": "Multiport valve or spider gasket repair, not a new filter."
+      },
+      {
+        "match": "cracked-tank",
+        "code": null,
+        "fact": "Genuine replacement — proceed to full recommendation."
+      }
+    ],
+    "src": "filter-selection-engine-spec.md §7"
+  }
+}

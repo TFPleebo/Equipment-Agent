@@ -1,0 +1,680 @@
+{
+ "mode": "filter",
+ "chosenType": "cartridge",
+ "typeReasons": [
+  {
+   "code": "FILTER_TYPE_DEFAULT_CARTRIDGE",
+   "severity": "good",
+   "ruleId": "FILTER_TYPE_RECOMMENDATION",
+   "text": "Cartridge is TFP’s general-purpose pick: good clarity, no backwash, pairs well with VS pumps."
+  }
+ ],
+ "min": {
+  "kind": "sqft",
+  "value": 300,
+  "target": 400,
+  "ruleId": "FILTER_SIZING"
+ },
+ "pumpMaxGPM": 80,
+ "comparison": {
+  "current": {
+   "model": "Hayward Star-Clear / Star-Clear Plus C900",
+   "size": "90 sq ft"
+  },
+  "recommended": {
+   "model": "Pentair Clean & Clear Plus CCP320",
+   "size": "320 sq ft"
+  },
+  "factor": 3.5555555555555554
+ },
+ "recommendations": [
+  {
+   "product": {
+    "id": "pentair-clean-clear-plus-ccp320",
+    "brand": "Pentair",
+    "model": "Clean & Clear Plus CCP320",
+    "ft": "cartridge",
+    "area": 320,
+    "tank": null,
+    "bed": null,
+    "gpm": 120,
+    "mic": null,
+    "port": 2,
+    "cart": "Pentair 179134 / Pleatco ULTRA-A5-PAK4 / Unicel C-7470-4",
+    "psi": 50,
+    "dq": "verified"
+   },
+   "score": 116.33333333333333,
+   "reasons": [
+    {
+     "code": "FILTER_SIZE_OK",
+     "severity": "good",
+     "ruleId": "FILTER_SIZING",
+     "text": "320 sq ft — meets the 300 sq ft minimum."
+    },
+    {
+     "code": "FILTER_FLOW_OK",
+     "severity": "good",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Handles ~120 GPM ≥ your pump's ~80 GPM."
+    },
+    {
+     "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "severity": "info",
+     "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+    },
+    {
+     "code": "CART_ELEMENT",
+     "severity": "info",
+     "ruleId": "FILTER_REPAIR_FACTS",
+     "text": "Replacement element: Pentair 179134 / Pleatco ULTRA-A5-PAK4 / Unicel C-7470-4."
+    }
+   ],
+   "fit": {
+    "meetsMinSize": true,
+    "flowOk": true,
+    "portOk": true,
+    "withinBudget": true
+   },
+   "derated": false,
+   "computed": {
+    "minRequired": 300,
+    "candidateSize": 320,
+    "candidateMaxGPM": 120,
+    "pumpMaxGPM": 80,
+    "oversizeRatio": 1.07
+   },
+   "rank": 1
+  },
+  {
+   "product": {
+    "id": "hayward-swimclear-c3030",
+    "brand": "Hayward",
+    "model": "SwimClear C3030",
+    "ft": "cartridge",
+    "area": 325,
+    "tank": null,
+    "bed": null,
+    "gpm": 122,
+    "mic": null,
+    "port": 2,
+    "cart": "Hayward CX580XREPAK4",
+    "psi": 50,
+    "dq": "verified"
+   },
+   "score": 115.91666666666667,
+   "reasons": [
+    {
+     "code": "FILTER_SIZE_OK",
+     "severity": "good",
+     "ruleId": "FILTER_SIZING",
+     "text": "325 sq ft — meets the 300 sq ft minimum."
+    },
+    {
+     "code": "FILTER_FLOW_OK",
+     "severity": "good",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Handles ~122 GPM ≥ your pump's ~80 GPM."
+    },
+    {
+     "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "severity": "info",
+     "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+    },
+    {
+     "code": "CART_ELEMENT",
+     "severity": "info",
+     "ruleId": "FILTER_REPAIR_FACTS",
+     "text": "Replacement element: Hayward CX580XREPAK4."
+    }
+   ],
+   "fit": {
+    "meetsMinSize": true,
+    "flowOk": true,
+    "portOk": true,
+    "withinBudget": true
+   },
+   "derated": false,
+   "computed": {
+    "minRequired": 300,
+    "candidateSize": 325,
+    "candidateMaxGPM": 122,
+    "pumpMaxGPM": 80,
+    "oversizeRatio": 1.08
+   },
+   "rank": 2,
+   "sizeUp": true
+  },
+  {
+   "product": {
+    "id": "sta-rite-system-2-plm300",
+    "brand": "Sta-Rite",
+    "model": "System 2 PLM300",
+    "ft": "cartridge",
+    "area": 300,
+    "tank": null,
+    "bed": null,
+    "gpm": 150,
+    "mic": null,
+    "port": 2,
+    "cart": "Pentair/Sta-Rite 27002-0300S",
+    "psi": 50,
+    "dq": "verified"
+   },
+   "score": 112,
+   "reasons": [
+    {
+     "code": "FILTER_SIZE_OK",
+     "severity": "good",
+     "ruleId": "FILTER_SIZING",
+     "text": "300 sq ft — meets the 300 sq ft minimum."
+    },
+    {
+     "code": "FILTER_FLOW_OK",
+     "severity": "good",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Handles ~150 GPM ≥ your pump's ~80 GPM."
+    },
+    {
+     "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "severity": "info",
+     "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+    },
+    {
+     "code": "CART_ELEMENT",
+     "severity": "info",
+     "ruleId": "FILTER_REPAIR_FACTS",
+     "text": "Replacement element: Pentair/Sta-Rite 27002-0300S."
+    }
+   ],
+   "fit": {
+    "meetsMinSize": true,
+    "flowOk": true,
+    "portOk": true,
+    "withinBudget": true
+   },
+   "derated": false,
+   "computed": {
+    "minRequired": 300,
+    "candidateSize": 300,
+    "candidateMaxGPM": 150,
+    "pumpMaxGPM": 80,
+    "oversizeRatio": 1
+   },
+   "rank": 3
+  },
+  {
+   "product": {
+    "id": "sta-rite-system-3-s7m120",
+    "brand": "Sta-Rite",
+    "model": "System 3 S7M120",
+    "ft": "cartridge",
+    "area": 300,
+    "tank": null,
+    "bed": null,
+    "gpm": 100,
+    "mic": null,
+    "port": 2,
+    "cart": "Pentair 170145; inner 25021-0200S (100 sq ft) + outer 25022-0201S (200 sq ft)",
+    "psi": 50,
+    "dq": "verified"
+   },
+   "score": 110.33333333333333,
+   "reasons": [
+    {
+     "code": "FILTER_SIZE_OK",
+     "severity": "good",
+     "ruleId": "FILTER_SIZING",
+     "text": "300 sq ft — meets the 300 sq ft minimum."
+    },
+    {
+     "code": "FILTER_FLOW_OK",
+     "severity": "good",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Handles ~100 GPM ≥ your pump's ~80 GPM."
+    },
+    {
+     "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "severity": "info",
+     "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+    },
+    {
+     "code": "CART_ELEMENT",
+     "severity": "info",
+     "ruleId": "FILTER_REPAIR_FACTS",
+     "text": "Replacement element: Pentair 170145; inner 25021-0200S (100 sq ft) + outer 25022-0201S (200 sq ft)."
+    }
+   ],
+   "fit": {
+    "meetsMinSize": true,
+    "flowOk": true,
+    "portOk": true,
+    "withinBudget": true
+   },
+   "derated": false,
+   "computed": {
+    "minRequired": 300,
+    "candidateSize": 300,
+    "candidateMaxGPM": 100,
+    "pumpMaxGPM": 80,
+    "oversizeRatio": 1
+   },
+   "rank": 4
+  },
+  {
+   "product": {
+    "id": "jandy-cv340",
+    "brand": "Jandy",
+    "model": "CV340",
+    "ft": "cartridge",
+    "area": 340,
+    "tank": null,
+    "bed": null,
+    "gpm": 127,
+    "mic": null,
+    "port": 2,
+    "cart": null,
+    "psi": 50,
+    "dq": "partial"
+   },
+   "score": 109.86666666666667,
+   "reasons": [
+    {
+     "code": "FILTER_SIZE_OK",
+     "severity": "good",
+     "ruleId": "FILTER_SIZING",
+     "text": "340 sq ft — meets the 300 sq ft minimum."
+    },
+    {
+     "code": "FILTER_FLOW_OK",
+     "severity": "good",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Handles ~127 GPM ≥ your pump's ~80 GPM."
+    },
+    {
+     "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "severity": "info",
+     "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+    }
+   ],
+   "fit": {
+    "meetsMinSize": true,
+    "flowOk": true,
+    "portOk": true,
+    "withinBudget": true
+   },
+   "derated": false,
+   "computed": {
+    "minRequired": 300,
+    "candidateSize": 340,
+    "candidateMaxGPM": 127,
+    "pumpMaxGPM": 80,
+    "oversizeRatio": 1.13
+   },
+   "rank": 5
+  },
+  {
+   "product": {
+    "id": "jandy-cl340",
+    "brand": "Jandy",
+    "model": "CL340",
+    "ft": "cartridge",
+    "area": 340,
+    "tank": null,
+    "bed": null,
+    "gpm": 127,
+    "mic": null,
+    "port": 2,
+    "cart": null,
+    "psi": 50,
+    "dq": "partial"
+   },
+   "score": 109.86666666666667,
+   "reasons": [
+    {
+     "code": "FILTER_SIZE_OK",
+     "severity": "good",
+     "ruleId": "FILTER_SIZING",
+     "text": "340 sq ft — meets the 300 sq ft minimum."
+    },
+    {
+     "code": "FILTER_FLOW_OK",
+     "severity": "good",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Handles ~127 GPM ≥ your pump's ~80 GPM."
+    },
+    {
+     "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "severity": "info",
+     "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+    }
+   ],
+   "fit": {
+    "meetsMinSize": true,
+    "flowOk": true,
+    "portOk": true,
+    "withinBudget": true
+   },
+   "derated": false,
+   "computed": {
+    "minRequired": 300,
+    "candidateSize": 340,
+    "candidateMaxGPM": 127,
+    "pumpMaxGPM": 80,
+    "oversizeRatio": 1.13
+   },
+   "rank": 6
+  },
+  {
+   "product": {
+    "id": "sta-rite-system-3-s7m400",
+    "brand": "Sta-Rite",
+    "model": "System 3 S7M400",
+    "ft": "cartridge",
+    "area": 400,
+    "tank": null,
+    "bed": null,
+    "gpm": 115,
+    "mic": null,
+    "port": 2,
+    "cart": "Pentair 170146; inner 25021-0223S (136 sq ft) + outer 25022-0224S (264 sq ft)",
+    "psi": 50,
+    "dq": "verified"
+   },
+   "score": 109.66666666666667,
+   "reasons": [
+    {
+     "code": "FILTER_SIZE_OK",
+     "severity": "good",
+     "ruleId": "FILTER_SIZING",
+     "text": "400 sq ft — meets the 300 sq ft minimum."
+    },
+    {
+     "code": "FILTER_FLOW_OK",
+     "severity": "good",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Handles ~115 GPM ≥ your pump's ~80 GPM."
+    },
+    {
+     "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "severity": "info",
+     "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+    },
+    {
+     "code": "CART_ELEMENT",
+     "severity": "info",
+     "ruleId": "FILTER_REPAIR_FACTS",
+     "text": "Replacement element: Pentair 170146; inner 25021-0223S (136 sq ft) + outer 25022-0224S (264 sq ft)."
+    }
+   ],
+   "fit": {
+    "meetsMinSize": true,
+    "flowOk": true,
+    "portOk": true,
+    "withinBudget": true
+   },
+   "derated": false,
+   "computed": {
+    "minRequired": 300,
+    "candidateSize": 400,
+    "candidateMaxGPM": 115,
+    "pumpMaxGPM": 80,
+    "oversizeRatio": 1.33
+   },
+   "rank": 7
+  },
+  {
+   "product": {
+    "id": "pentair-clean-clear-plus-ccp420",
+    "brand": "Pentair",
+    "model": "Clean & Clear Plus CCP420",
+    "ft": "cartridge",
+    "area": 420,
+    "tank": null,
+    "bed": null,
+    "gpm": 150,
+    "mic": null,
+    "port": 2,
+    "cart": "Pentair 179135 / Pleatco ULTRA-A6-PAK4 / Unicel C-7471-4",
+    "psi": 50,
+    "dq": "verified"
+   },
+   "score": 106.5,
+   "reasons": [
+    {
+     "code": "FILTER_SIZE_OK",
+     "severity": "good",
+     "ruleId": "FILTER_SIZING",
+     "text": "420 sq ft — meets the 300 sq ft minimum."
+    },
+    {
+     "code": "FILTER_FLOW_OK",
+     "severity": "good",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Handles ~150 GPM ≥ your pump's ~80 GPM."
+    },
+    {
+     "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "severity": "info",
+     "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+    },
+    {
+     "code": "CART_ELEMENT",
+     "severity": "info",
+     "ruleId": "FILTER_REPAIR_FACTS",
+     "text": "Replacement element: Pentair 179135 / Pleatco ULTRA-A6-PAK4 / Unicel C-7471-4."
+    },
+    {
+     "code": "FILTER_OVER_TARGET",
+     "severity": "info",
+     "ruleId": "FILTER_SIZING",
+     "text": "Above the ~400 sq ft that suits 20,000 gallons. Extra cartridge area past this point buys very little — a smaller unit would still go a full season between cleanings."
+    }
+   ],
+   "fit": {
+    "meetsMinSize": true,
+    "flowOk": true,
+    "portOk": true,
+    "withinBudget": true
+   },
+   "derated": false,
+   "computed": {
+    "minRequired": 300,
+    "candidateSize": 420,
+    "candidateMaxGPM": 150,
+    "pumpMaxGPM": 80,
+    "oversizeRatio": 1.4
+   },
+   "rank": 8
+  }
+ ],
+ "disqualified": [
+  {
+   "product": {
+    "id": "jandy-cs250",
+    "brand": "Jandy",
+    "model": "CS250",
+    "ft": "cartridge",
+    "area": 250,
+    "tank": null,
+    "bed": null,
+    "gpm": 125,
+    "mic": null,
+    "port": 2,
+    "cart": "Jandy R0462500",
+    "psi": 50,
+    "dq": "verified"
+   },
+   "reason": {
+    "code": "FILTER_UNDERSIZED",
+    "severity": "blocker",
+    "ruleId": "FILTER_SIZING",
+    "text": "Below the 300 sq ft minimum (this is 250 sq ft)."
+   }
+  },
+  {
+   "product": {
+    "id": "pentair-clean-clear-plus-ccp240",
+    "brand": "Pentair",
+    "model": "Clean & Clear Plus CCP240",
+    "ft": "cartridge",
+    "area": 240,
+    "tank": null,
+    "bed": null,
+    "gpm": 90,
+    "mic": null,
+    "port": 2,
+    "cart": "Pentair 179133 / Pleatco ULTRA-A4-PAK4 / Unicel C-7469-4",
+    "psi": 50,
+    "dq": "verified"
+   },
+   "reason": {
+    "code": "FILTER_UNDERSIZED",
+    "severity": "blocker",
+    "ruleId": "FILTER_SIZING",
+    "text": "Below the 300 sq ft minimum (this is 240 sq ft)."
+   }
+  },
+  {
+   "product": {
+    "id": "hayward-swimclear-c2030",
+    "brand": "Hayward",
+    "model": "SwimClear C2030",
+    "ft": "cartridge",
+    "area": 225,
+    "tank": null,
+    "bed": null,
+    "gpm": 84,
+    "mic": null,
+    "port": 2,
+    "cart": "Hayward CX481XREPAK4",
+    "psi": 50,
+    "dq": "verified"
+   },
+   "reason": {
+    "code": "FILTER_UNDERSIZED",
+    "severity": "blocker",
+    "ruleId": "FILTER_SIZING",
+    "text": "Below the 300 sq ft minimum (this is 225 sq ft)."
+   }
+  },
+  {
+   "product": {
+    "id": "pentair-clean-clear-cc200",
+    "brand": "Pentair",
+    "model": "Clean & Clear CC200",
+    "ft": "cartridge",
+    "area": 200,
+    "tank": null,
+    "bed": null,
+    "gpm": 150,
+    "mic": 20,
+    "port": null,
+    "cart": "Pentair R173217 / Pleatco ULTRA-C5 / Unicel C-9419",
+    "psi": 50,
+    "dq": "verified"
+   },
+   "reason": {
+    "code": "FILTER_UNDERSIZED",
+    "severity": "blocker",
+    "ruleId": "FILTER_SIZING",
+    "text": "Below the 300 sq ft minimum (this is 200 sq ft)."
+   }
+  },
+  {
+   "product": {
+    "id": "pentair-clean-clear-rp-ccrp200",
+    "brand": "Pentair",
+    "model": "Clean & Clear RP CCRP200",
+    "ft": "cartridge",
+    "area": 200,
+    "tank": null,
+    "bed": null,
+    "gpm": 150,
+    "mic": 20,
+    "port": 2,
+    "cart": "Pleatco ULTRA-C5 / Unicel C-9419",
+    "psi": 50,
+    "dq": "verified"
+   },
+   "reason": {
+    "code": "FILTER_UNDERSIZED",
+    "severity": "blocker",
+    "ruleId": "FILTER_SIZING",
+    "text": "Below the 300 sq ft minimum (this is 200 sq ft)."
+   }
+  },
+  {
+   "product": {
+    "id": "sta-rite-system-2-plm200",
+    "brand": "Sta-Rite",
+    "model": "System 2 PLM200",
+    "ft": "cartridge",
+    "area": 200,
+    "tank": null,
+    "bed": null,
+    "gpm": 150,
+    "mic": null,
+    "port": 2,
+    "cart": "Pentair/Sta-Rite 27002-0200S",
+    "psi": 50,
+    "dq": "verified"
+   },
+   "reason": {
+    "code": "FILTER_UNDERSIZED",
+    "severity": "blocker",
+    "ruleId": "FILTER_SIZING",
+    "text": "Below the 300 sq ft minimum (this is 200 sq ft)."
+   }
+  }
+ ],
+ "alternatives": [
+  {
+   "product": {
+    "id": "hayward-swimclear-c3030",
+    "brand": "Hayward",
+    "model": "SwimClear C3030",
+    "ft": "cartridge",
+    "area": 325,
+    "tank": null,
+    "bed": null,
+    "gpm": 122,
+    "mic": null,
+    "port": 2,
+    "cart": "Hayward CX580XREPAK4",
+    "psi": 50,
+    "dq": "verified"
+   },
+   "label": "size-up"
+  }
+ ],
+ "repairOptions": [],
+ "warnings": [
+  {
+   "code": "PIPE_OK",
+   "severity": "info",
+   "ruleId": "PLUMBING_SIZE_GUIDANCE",
+   "text": "2″ plumbing carries about 63 GPM suction / 84 GPM return within the velocity limits."
+  },
+  {
+   "code": "FILTER_AUTOMATION_AGNOSTIC",
+   "severity": "info",
+   "ruleId": "AUTOMATION_SAME_BRAND",
+   "text": "Filters aren’t controlled by automation, so brand match doesn’t matter here."
+  },
+  {
+   "code": "WARRANTY_CHECK",
+   "severity": "info",
+   "ruleId": "WARRANTY_CHECK",
+   "text": "Before you buy: check the warranty. Internet purchases and owner installation can void coverage on some brands, a few require a certified installer, and most require product registration. Bundled purchases with professional install sometimes carry a longer warranty."
+  }
+ ]
+}

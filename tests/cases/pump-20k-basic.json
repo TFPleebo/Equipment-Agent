@@ -1,0 +1,39 @@
+{
+  "id": "pump-20k-basic",
+  "title": "Pump: 20k gal plaster pool, 2in pipe, no features, efficiency upgrade",
+  "mode": "pump",
+  "profile": {
+    "poolType": "inground-plaster",
+    "pipe": "2",
+    "automation": "none",
+    "voltage": "230",
+    "climate": "warm",
+    "gallons": 20000,
+    "failure": "efficiency",
+    "rate": 0.17,
+    "runtime": 8,
+    "filterType": "cartridge",
+    "filterSize": 400
+  },
+  "expect": {
+    "requiredGPM": 15,
+    "dailyGPM": 15,
+    "featureGPM": 0,
+    "minDriver": "skimmer 15 GPM",
+    "curve": "C",
+    "top": [
+      "hayward-hl2350020vsp",
+      "speck-e71-ii-vhv",
+      "hayward-energyflo-rs-ef200vs",
+      "hayward-tristar-sp3200vsp",
+      "hayward-hl32900vsp"
+    ],
+    "topAnnualCostUSD": 29,
+    "comparison": null,
+    "warnings": [
+      "PIPE_OK",
+      "WARRANTY_CHECK"
+    ],
+    "repairOptions": []
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "filter-de-clarity",
+  "title": "Filter: clarity priority picks DE, 30k gal",
+  "mode": "filter",
+  "profile": {
+    "poolType": "inground-plaster",
+    "pipe": "2.5+",
+    "automation": "none",
+    "voltage": "230",
+    "climate": "warm",
+    "gallons": 30000,
+    "replacingType": "de",
+    "desiredType": "recommend",
+    "failureMode": "upgrading",
+    "pipeIn": 2.5,
+    "pumpMaxGPM": 100,
+    "debris": "average",
+    "waterCost": "low",
+    "clarity": true
+  },
+  "expect": {
+    "chosenType": "de",
+    "min": {
+      "kind": "sqft",
+      "value": 60,
+      "ruleId": "FILTER_SIZING"
+    },
+    "pumpMaxGPM": 100,
+    "top": [
+      "hayward-progrid-de7220",
+      "pentair-fns-plus-fnsp60",
+      "hayward-progrid-de6020",
+      "jandy-dev60"
+    ],
+    "sizeUp": [],
+    "disqualified": 6,
+    "comparison": null,
+    "warnings": [
+      "PIPE_OK",
+      "FILTER_AUTOMATION_AGNOSTIC",
+      "WARRANTY_CHECK"
+    ],
+    "typeReasons": [
+      "FILTER_TYPE_DE_CLARITY"
+    ],
+    "repairOptions": []
+  }
+}

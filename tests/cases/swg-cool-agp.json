@@ -1,0 +1,42 @@
+{
+  "id": "swg-cool-agp",
+  "title": "SWG: 12k gal above-ground, cool climate, bonding not confirmed",
+  "mode": "swg",
+  "profile": {
+    "poolType": "agp",
+    "pipe": "1.5",
+    "automation": "none",
+    "voltage": "230",
+    "climate": "cool_temperate",
+    "gallons": 12000,
+    "failure": "first",
+    "runtime": 8,
+    "cycle": "long"
+  },
+  "expect": {
+    "requiredLbs": 0.84,
+    "lbsNeeded": 0.2,
+    "ppm": 2,
+    "runtime": 8,
+    "top": [
+      "circupool-core55",
+      "pureline-crystal-pure-60",
+      "circupool-rj60",
+      "circupool-rj60p",
+      "pentair-ic-60"
+    ],
+    "topRequiredOutputPct": 26,
+    "comparison": null,
+    "warnings": [
+      "PIPE_SMALL",
+      "BONDING_CHECK",
+      "DATA_QUALITY_FLAG",
+      "SWG_FLOW_SWITCH",
+      "AQUARITE_CELL_TYPE",
+      "SWG_CYA_CELL_LIFE",
+      "CELL_LIFE",
+      "WARRANTY_CHECK"
+    ],
+    "repairOptions": []
+  }
+}

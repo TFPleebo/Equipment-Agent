@@ -1,0 +1,44 @@
+{
+  "id": "pump-replace-single-speed",
+  "title": "Pump: replacing a 2.2 THP single-speed, energy comparison",
+  "mode": "pump",
+  "profile": {
+    "poolType": "inground-plaster",
+    "pipe": "2",
+    "automation": "none",
+    "voltage": "230",
+    "climate": "warm",
+    "gallons": 20000,
+    "failure": "efficiency",
+    "currentPumpId": "hayward-maxflo-sp2815x20",
+    "currentPump": "Hayward MaxFlo SP2815X20",
+    "rate": 0.25,
+    "runtime": 10,
+    "quotedPrice": 1200
+  },
+  "expect": {
+    "requiredGPM": 15,
+    "dailyGPM": 15,
+    "featureGPM": 0,
+    "minDriver": "skimmer 15 GPM",
+    "curve": "C",
+    "top": [
+      "hayward-hl2350020vsp",
+      "speck-e71-ii-vhv",
+      "hayward-energyflo-rs-ef200vs",
+      "hayward-tristar-sp3200vsp",
+      "hayward-hl32900vsp"
+    ],
+    "topAnnualCostUSD": 53,
+    "comparison": {
+      "kWhSaved": 6099,
+      "costSaved": 1525,
+      "pctSaved": 97
+    },
+    "warnings": [
+      "PIPE_OK",
+      "WARRANTY_CHECK"
+    ],
+    "repairOptions": []
+  }
+}

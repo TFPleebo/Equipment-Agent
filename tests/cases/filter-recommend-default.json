@@ -1,0 +1,54 @@
+{
+  "id": "filter-recommend-default",
+  "title": "Filter: recommend type, 20k gal, average debris",
+  "mode": "filter",
+  "profile": {
+    "poolType": "inground-plaster",
+    "pipe": "2",
+    "automation": "none",
+    "voltage": "230",
+    "climate": "warm",
+    "gallons": 20000,
+    "replacingType": "cartridge",
+    "currentFilterId": "hayward-star-clear-c900",
+    "desiredType": "recommend",
+    "failureMode": "cracked-tank",
+    "pipeIn": 2,
+    "pumpMaxGPM": 80,
+    "debris": "average",
+    "waterCost": "low"
+  },
+  "expect": {
+    "chosenType": "cartridge",
+    "min": {
+      "kind": "sqft",
+      "value": 300,
+      "target": 400,
+      "ruleId": "FILTER_SIZING"
+    },
+    "pumpMaxGPM": 80,
+    "top": [
+      "pentair-clean-clear-plus-ccp320",
+      "hayward-swimclear-c3030",
+      "sta-rite-system-2-plm300",
+      "sta-rite-system-3-s7m120",
+      "jandy-cv340"
+    ],
+    "sizeUp": [
+      "hayward-swimclear-c3030"
+    ],
+    "disqualified": 6,
+    "comparison": {
+      "factor": 3.56
+    },
+    "warnings": [
+      "PIPE_OK",
+      "FILTER_AUTOMATION_AGNOSTIC",
+      "WARRANTY_CHECK"
+    ],
+    "typeReasons": [
+      "FILTER_TYPE_DEFAULT_CARTRIDGE"
+    ],
+    "repairOptions": []
+  }
+}

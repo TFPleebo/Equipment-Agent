@@ -1,0 +1,48 @@
+{
+  "id": "filter-sand-explicit",
+  "title": "Filter: user asks for sand, 2in pipe",
+  "mode": "filter",
+  "profile": {
+    "poolType": "inground-plaster",
+    "pipe": "2",
+    "automation": "none",
+    "voltage": "230",
+    "climate": "warm",
+    "gallons": 20000,
+    "replacingType": "sand",
+    "desiredType": "sand",
+    "failureMode": "too-small",
+    "pipeIn": 2,
+    "pumpMaxGPM": 80,
+    "debris": "average",
+    "waterCost": "low"
+  },
+  "expect": {
+    "chosenType": "sand",
+    "min": {
+      "kind": "diam",
+      "value": 24,
+      "ruleId": "FILTER_SIZING"
+    },
+    "pumpMaxGPM": 80,
+    "top": [
+      "hayward-proseries-plus-s311sxv",
+      "hayward-proseries-s310t2",
+      "jandy-js100-sm",
+      "pentair-tagelus-ta100d",
+      "pentair-triton-ii-tr100"
+    ],
+    "sizeUp": [
+      "hayward-proseries-plus-s360sx"
+    ],
+    "disqualified": 6,
+    "comparison": null,
+    "warnings": [
+      "PIPE_OK",
+      "FILTER_AUTOMATION_AGNOSTIC",
+      "WARRANTY_CHECK"
+    ],
+    "typeReasons": [],
+    "repairOptions": []
+  }
+}

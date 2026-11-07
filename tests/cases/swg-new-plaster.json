@@ -1,0 +1,42 @@
+{
+  "id": "swg-new-plaster",
+  "title": "SWG: new plaster within 30 days (blocker warning)",
+  "mode": "swg",
+  "profile": {
+    "poolType": "inground-plaster",
+    "pipe": "2",
+    "automation": "none",
+    "voltage": "230",
+    "climate": "warm",
+    "gallons": 18000,
+    "failure": "first",
+    "runtime": 8,
+    "cycle": "long",
+    "newPlaster": true
+  },
+  "expect": {
+    "requiredLbs": 1.26,
+    "lbsNeeded": 0.45,
+    "ppm": 3,
+    "runtime": 8,
+    "top": [
+      "pureline-crystal-pure-60",
+      "circupool-rj60",
+      "circupool-rj60p",
+      "circupool-core55",
+      "pentair-ic-60"
+    ],
+    "topRequiredOutputPct": 42,
+    "comparison": null,
+    "warnings": [
+      "PIPE_OK",
+      "NEW_PLASTER_NO_SALT",
+      "DATA_QUALITY_FLAG",
+      "SWG_FLOW_SWITCH",
+      "SWG_CYA_CELL_LIFE",
+      "CELL_LIFE",
+      "WARRANTY_CHECK"
+    ],
+    "repairOptions": []
+  }
+}

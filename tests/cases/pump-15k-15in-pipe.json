@@ -1,0 +1,39 @@
+{
+  "id": "pump-15k-15in-pipe",
+  "title": "Pump: 15k gal on 1.5in plumbing with a salt cell",
+  "mode": "pump",
+  "profile": {
+    "poolType": "inground-plaster",
+    "pipe": "1.5",
+    "automation": "none",
+    "voltage": "230",
+    "climate": "warm",
+    "gallons": 15000,
+    "hasSWG": true,
+    "failure": "dead-motor",
+    "rate": 0.2,
+    "runtime": 10
+  },
+  "expect": {
+    "requiredGPM": 15,
+    "dailyGPM": 15,
+    "featureGPM": 0,
+    "minDriver": "skimmer 15 GPM",
+    "curve": "A",
+    "top": [
+      "hayward-tristar-sp3200vsp",
+      "hayward-hl32900vsp",
+      "hayward-tristar-sp3202vsp",
+      "speck-e71-ii-vhv",
+      "speck-a91-ii-vsp"
+    ],
+    "topAnnualCostUSD": 41,
+    "comparison": null,
+    "warnings": [
+      "PIPE_SMALL",
+      "SWG_FLOW_SWITCH",
+      "WARRANTY_CHECK"
+    ],
+    "repairOptions": []
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "pump-waterfall-pentair",
+  "title": "Pump: Pentair automation, 24in waterfall, sand filter",
+  "mode": "pump",
+  "profile": {
+    "poolType": "inground-plaster",
+    "pipe": "2",
+    "automation": "pentair",
+    "voltage": "230",
+    "climate": "warm",
+    "gallons": 22000,
+    "waterfallWidth": 24,
+    "failure": "loud",
+    "rate": 0.15,
+    "runtime": 8,
+    "filterType": "sand",
+    "filterSize": 30
+  },
+  "expect": {
+    "requiredGPM": 36,
+    "dailyGPM": 15,
+    "featureGPM": 36,
+    "minDriver": "skimmer 15 GPM",
+    "curve": "C",
+    "top": [
+      "pentair-supermax-vs-343000",
+      "pentair-sta-rite-343000",
+      "pentair-superflo-vs-vs-pump-342000",
+      "pentair-intelliflo-i1-vs-011059",
+      "pentair-011059"
+    ],
+    "topAnnualCostUSD": 97,
+    "comparison": null,
+    "warnings": [
+      "PIPE_OK",
+      "WARRANTY_CHECK"
+    ],
+    "repairOptions": []
+  }
+}

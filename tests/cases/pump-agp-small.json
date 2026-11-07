@@ -1,0 +1,39 @@
+{
+  "id": "pump-agp-small",
+  "title": "Pump: 8k gal above-ground, 115V, filter too small for features",
+  "mode": "pump",
+  "profile": {
+    "poolType": "agp",
+    "pipe": "1.5",
+    "automation": "none",
+    "voltage": "115",
+    "climate": "warm",
+    "gallons": 8000,
+    "failure": "dead-motor",
+    "rate": 0.17,
+    "runtime": 8,
+    "filterType": "cartridge",
+    "filterSize": 50
+  },
+  "expect": {
+    "requiredGPM": 15,
+    "dailyGPM": 15,
+    "featureGPM": 0,
+    "minDriver": "skimmer 15 GPM",
+    "curve": "A",
+    "top": [
+      "hayward-hl2350020vsp",
+      "speck-e71-ii-vhv",
+      "hayward-tristar-sp3200vsp",
+      "hayward-hl32900vsp",
+      "hayward-tristar-sp3202vsp"
+    ],
+    "topAnnualCostUSD": 67,
+    "comparison": null,
+    "warnings": [
+      "PIPE_SMALL",
+      "WARRANTY_CHECK"
+    ],
+    "repairOptions": []
+  }
+}

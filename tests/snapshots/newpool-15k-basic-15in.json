@@ -1,0 +1,2550 @@
+{
+ "mode": "newpool",
+ "pump": {
+  "mode": "pump",
+  "requiredGPM": 15,
+  "dailyGPM": 15,
+  "minDriver": "skimmer 15 GPM",
+  "featureGPM": 0,
+  "comparison": null,
+  "recommendations": [
+   {
+    "product": {
+     "id": "hayward-tristar-sp3200vsp",
+     "brand": "Hayward",
+     "model": "Hayward TriStar SP3200VSP",
+     "st": "VS",
+     "mot": "ECM",
+     "thp": 1.85,
+     "nhp": 1.85,
+     "wef": 9.878303306,
+     "frame": "48",
+     "dq": "ok",
+     "hi": {
+      "rpm": 3450,
+      "g": [
+       64,
+       38,
+       85
+      ],
+      "w": [
+       1408,
+       1128,
+       1544
+      ]
+     },
+     "lo": {
+      "rpm": 600,
+      "g": [
+       11,
+       7,
+       14
+      ],
+      "w": [
+       22,
+       21,
+       22
+      ]
+     }
+    },
+    "score": 83.72044958720662,
+    "reasons": [
+     {
+      "code": "VS_PREFERRED",
+      "severity": "good",
+      "ruleId": "VS_REQUIRED_ABOVE_THP",
+      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+     },
+     {
+      "code": "FLOW_MINIMUM",
+      "severity": "good",
+      "ruleId": "TURNOVER_FORMULA",
+      "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+     }
+    ],
+    "fit": {
+     "meetsCapacity": true,
+     "meetsFlow": true,
+     "meetsFlowLow": true,
+     "automationMatch": false,
+     "regulatoryOk": true
+    },
+    "computed": {
+     "requiredGPM": 15,
+     "dailyGPM": 15,
+     "gpmAtCurveLow": 11,
+     "gpmAtCurveHigh": 64,
+     "wattsDaily": 56,
+     "wattsHigh": 1408,
+     "annualKWh": 203.6157024793388,
+     "annualCostUSD": 41
+    },
+    "variants": [],
+    "rank": 1
+   },
+   {
+    "product": {
+     "id": "hayward-hl32900vsp",
+     "brand": "Hayward",
+     "model": "Hayward HL32900VSP",
+     "st": "VS",
+     "mot": "ECM",
+     "thp": 1.85,
+     "nhp": 1.85,
+     "wef": 9.870840606,
+     "frame": "48",
+     "dq": "ok",
+     "hi": {
+      "rpm": 3450,
+      "g": [
+       64,
+       38,
+       85
+      ],
+      "w": [
+       1408,
+       1128,
+       1543
+      ]
+     },
+     "lo": {
+      "rpm": 600,
+      "g": [
+       11,
+       7,
+       14
+      ],
+      "w": [
+       22,
+       21,
+       23
+      ]
+     }
+    },
+    "score": 83.70552418720662,
+    "reasons": [
+     {
+      "code": "VS_PREFERRED",
+      "severity": "good",
+      "ruleId": "VS_REQUIRED_ABOVE_THP",
+      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+     },
+     {
+      "code": "FLOW_MINIMUM",
+      "severity": "good",
+      "ruleId": "TURNOVER_FORMULA",
+      "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+     }
+    ],
+    "fit": {
+     "meetsCapacity": true,
+     "meetsFlow": true,
+     "meetsFlowLow": true,
+     "automationMatch": false,
+     "regulatoryOk": true
+    },
+    "computed": {
+     "requiredGPM": 15,
+     "dailyGPM": 15,
+     "gpmAtCurveLow": 11,
+     "gpmAtCurveHigh": 64,
+     "wattsDaily": 56,
+     "wattsHigh": 1408,
+     "annualKWh": 203.6157024793388,
+     "annualCostUSD": 41
+    },
+    "variants": [
+     "Hayward TriStar SP3200VSPND"
+    ],
+    "rank": 2
+   },
+   {
+    "product": {
+     "id": "hayward-tristar-sp3202vsp",
+     "brand": "Hayward",
+     "model": "Hayward TriStar SP3202VSP",
+     "st": "VS",
+     "mot": "ECM",
+     "thp": 1.85,
+     "nhp": 1.85,
+     "wef": 9.866146174,
+     "frame": "48",
+     "dq": "ok",
+     "hi": {
+      "rpm": 3450,
+      "g": [
+       64,
+       38,
+       85
+      ],
+      "w": [
+       1408,
+       1128,
+       1544
+      ]
+     },
+     "lo": {
+      "rpm": 600,
+      "g": [
+       11,
+       7,
+       14
+      ],
+      "w": [
+       22,
+       21,
+       23
+      ]
+     }
+    },
+    "score": 83.69613532320662,
+    "reasons": [
+     {
+      "code": "VS_PREFERRED",
+      "severity": "good",
+      "ruleId": "VS_REQUIRED_ABOVE_THP",
+      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+     },
+     {
+      "code": "FLOW_MINIMUM",
+      "severity": "good",
+      "ruleId": "TURNOVER_FORMULA",
+      "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+     }
+    ],
+    "fit": {
+     "meetsCapacity": true,
+     "meetsFlow": true,
+     "meetsFlowLow": true,
+     "automationMatch": false,
+     "regulatoryOk": true
+    },
+    "computed": {
+     "requiredGPM": 15,
+     "dailyGPM": 15,
+     "gpmAtCurveLow": 11,
+     "gpmAtCurveHigh": 64,
+     "wattsDaily": 56,
+     "wattsHigh": 1408,
+     "annualKWh": 203.6157024793388,
+     "annualCostUSD": 41
+    },
+    "variants": [
+     "Hayward TriStar SP3202VSPBH",
+     "Hayward TriStar SP3202VSPND",
+     "Hayward TriStar SP32900VSP",
+     "Hayward TriStar VS 900 HL32900VSP"
+    ],
+    "rank": 3
+   },
+   {
+    "product": {
+     "id": "speck-e71-ii-vhv",
+     "brand": "Speck",
+     "model": "Speck E71-II VHV",
+     "st": "VS",
+     "mot": "ECM",
+     "thp": 1.1,
+     "nhp": 1,
+     "wef": 10.1347564,
+     "frame": "48",
+     "dq": "ok",
+     "hi": {
+      "rpm": 3400,
+      "g": [
+       46,
+       28,
+       62
+      ],
+      "w": [
+       875,
+       747,
+       956
+      ]
+     },
+     "lo": {
+      "rpm": 1000,
+      "g": [
+       13,
+       8,
+       17
+      ],
+      "w": [
+       47,
+       46,
+       52
+      ]
+     }
+    },
+    "score": 83.63418621829769,
+    "reasons": [
+     {
+      "code": "VS_PREFERRED",
+      "severity": "good",
+      "ruleId": "VS_REQUIRED_ABOVE_THP",
+      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+     },
+     {
+      "code": "FLOW_MINIMUM",
+      "severity": "good",
+      "ruleId": "TURNOVER_FORMULA",
+      "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+     }
+    ],
+    "fit": {
+     "meetsCapacity": true,
+     "meetsFlow": true,
+     "meetsFlowLow": true,
+     "automationMatch": false,
+     "regulatoryOk": true
+    },
+    "computed": {
+     "requiredGPM": 15,
+     "dailyGPM": 15,
+     "gpmAtCurveLow": 13,
+     "gpmAtCurveHigh": 46,
+     "wattsDaily": 72,
+     "wattsHigh": 875,
+     "annualKWh": 263.5326581702321,
+     "annualCostUSD": 53
+    },
+    "variants": [
+     "Speck PE71-II VHV"
+    ],
+    "rank": 4
+   },
+   {
+    "product": {
+     "id": "speck-a91-ii-vsp",
+     "brand": "Speck",
+     "model": "Speck A91-II VSP",
+     "st": "VS",
+     "mot": "ECM",
+     "thp": 1.1,
+     "nhp": 1,
+     "wef": 9.87235898,
+     "frame": "48",
+     "dq": "ok",
+     "hi": {
+      "rpm": 3400,
+      "g": [
+       50,
+       32,
+       64
+      ],
+      "w": [
+       968,
+       882,
+       1031
+      ]
+     },
+     "lo": {
+      "rpm": 1000,
+      "g": [
+       14,
+       9,
+       18
+      ],
+      "w": [
+       51,
+       49,
+       53
+      ]
+     }
+    },
+    "score": 83.45515436670554,
+    "reasons": [
+     {
+      "code": "VS_PREFERRED",
+      "severity": "good",
+      "ruleId": "VS_REQUIRED_ABOVE_THP",
+      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+     },
+     {
+      "code": "FLOW_MINIMUM",
+      "severity": "good",
+      "ruleId": "TURNOVER_FORMULA",
+      "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+     }
+    ],
+    "fit": {
+     "meetsCapacity": true,
+     "meetsFlow": true,
+     "meetsFlowLow": true,
+     "automationMatch": false,
+     "regulatoryOk": true
+    },
+    "computed": {
+     "requiredGPM": 15,
+     "dailyGPM": 15,
+     "gpmAtCurveLow": 14,
+     "gpmAtCurveHigh": 50,
+     "wattsDaily": 63,
+     "wattsHigh": 968,
+     "annualKWh": 228.95635932944606,
+     "annualCostUSD": 46
+    },
+    "variants": [
+     "Speck PA91-II VSP"
+    ],
+    "rank": 5
+   },
+   {
+    "product": {
+     "id": "hayward-hl2350020vsp",
+     "brand": "Hayward",
+     "model": "Hayward HL2350020VSP",
+     "st": "VS",
+     "mot": "ECM",
+     "thp": 1.65,
+     "nhp": 1.65,
+     "wef": 11.15358737,
+     "frame": "48",
+     "dq": "ok",
+     "hi": {
+      "rpm": 3450,
+      "g": [
+       52,
+       33,
+       66
+      ],
+      "w": [
+       938,
+       837,
+       976
+      ]
+     },
+     "lo": {
+      "rpm": 600,
+      "g": [
+       9,
+       6,
+       12
+      ],
+      "w": [
+       29,
+       29,
+       30
+      ]
+     }
+    },
+    "score": 83.40671177703703,
+    "reasons": [
+     {
+      "code": "VS_PREFERRED",
+      "severity": "good",
+      "ruleId": "VS_REQUIRED_ABOVE_THP",
+      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+     },
+     {
+      "code": "FLOW_MINIMUM",
+      "severity": "good",
+      "ruleId": "TURNOVER_FORMULA",
+      "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+     }
+    ],
+    "fit": {
+     "meetsCapacity": true,
+     "meetsFlow": true,
+     "meetsFlowLow": true,
+     "automationMatch": false,
+     "regulatoryOk": true
+    },
+    "computed": {
+     "requiredGPM": 15,
+     "dailyGPM": 15,
+     "gpmAtCurveLow": 9,
+     "gpmAtCurveHigh": 52,
+     "wattsDaily": 134,
+     "wattsHigh": 938,
+     "annualKWh": 490.04629629629636,
+     "annualCostUSD": 98
+    },
+    "variants": [
+     "Hayward MaxFlo VS 500 HL2350020VSP",
+     "Hayward MaxFlo XL SP2303VSP",
+     "Hayward MaxFlo XL SP23520VSP"
+    ],
+    "rank": 6
+   },
+   {
+    "product": {
+     "id": "hayward-energyflo-rs-ef200vs",
+     "brand": "Hayward",
+     "model": "Hayward EnergyFlo RS EF200VS",
+     "st": "VS",
+     "mot": "ECM",
+     "thp": 1.85,
+     "nhp": 1.85,
+     "wef": 9.889093357,
+     "frame": "48",
+     "dq": "ok",
+     "hi": {
+      "rpm": 3450,
+      "g": [
+       63,
+       37,
+       85
+      ],
+      "w": [
+       1407,
+       1128,
+       1543
+      ]
+     },
+     "lo": {
+      "rpm": 600,
+      "g": [
+       10,
+       6,
+       14
+      ],
+      "w": [
+       22,
+       20,
+       22
+      ]
+     }
+    },
+    "score": 83.068061714,
+    "reasons": [
+     {
+      "code": "VS_PREFERRED",
+      "severity": "good",
+      "ruleId": "VS_REQUIRED_ABOVE_THP",
+      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+     },
+     {
+      "code": "FLOW_MINIMUM",
+      "severity": "good",
+      "ruleId": "TURNOVER_FORMULA",
+      "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+     }
+    ],
+    "fit": {
+     "meetsCapacity": true,
+     "meetsFlow": true,
+     "meetsFlowLow": true,
+     "automationMatch": false,
+     "regulatoryOk": true
+    },
+    "computed": {
+     "requiredGPM": 15,
+     "dailyGPM": 15,
+     "gpmAtCurveLow": 10,
+     "gpmAtCurveHigh": 63,
+     "wattsDaily": 74,
+     "wattsHigh": 1407,
+     "annualKWh": 271.0125,
+     "annualCostUSD": 54
+    },
+    "variants": [],
+    "rank": 7
+   },
+   {
+    "product": {
+     "id": "aquaguard-agvs165-59927-xxxx",
+     "brand": "Aquaguard",
+     "model": "Aquaguard AGVS165 59927-XXXX",
+     "st": "VS",
+     "mot": "ECM",
+     "thp": 1.65,
+     "nhp": 1.65,
+     "wef": 9.464139954,
+     "frame": "56",
+     "dq": "ok",
+     "hi": {
+      "rpm": 3450,
+      "g": [
+       64,
+       39,
+       84
+      ],
+      "w": [
+       1552,
+       1255,
+       1572
+      ]
+     },
+     "lo": {
+      "rpm": 600,
+      "g": [
+       11,
+       7,
+       15
+      ],
+      "w": [
+       22,
+       20,
+       22
+      ]
+     }
+    },
+    "score": 82.89212288320662,
+    "reasons": [
+     {
+      "code": "VS_PREFERRED",
+      "severity": "good",
+      "ruleId": "VS_REQUIRED_ABOVE_THP",
+      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+     },
+     {
+      "code": "FLOW_MINIMUM",
+      "severity": "good",
+      "ruleId": "TURNOVER_FORMULA",
+      "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+     }
+    ],
+    "fit": {
+     "meetsCapacity": true,
+     "meetsFlow": true,
+     "meetsFlowLow": true,
+     "automationMatch": false,
+     "regulatoryOk": true
+    },
+    "computed": {
+     "requiredGPM": 15,
+     "dailyGPM": 15,
+     "gpmAtCurveLow": 11,
+     "gpmAtCurveHigh": 64,
+     "wattsDaily": 56,
+     "wattsHigh": 1552,
+     "annualKWh": 203.6157024793388,
+     "annualCostUSD": 41
+    },
+    "variants": [
+     "Aquapro APEXVS165 59927-XXXX",
+     "Aquapro SUNVS165 59927-XXXX"
+    ],
+    "rank": 8
+   },
+   {
+    "product": {
+     "id": "hayward-hl2670020vsp",
+     "brand": "Hayward",
+     "model": "Hayward HL2670020VSP",
+     "st": "VS",
+     "mot": "ECM",
+     "thp": 1.65,
+     "nhp": 1.65,
+     "wef": 10.10746055,
+     "frame": "56",
+     "dq": "ok",
+     "hi": {
+      "rpm": 3450,
+      "g": [
+       55,
+       35,
+       70
+      ],
+      "w": [
+       1135,
+       961,
+       1231
+      ]
+     },
+     "lo": {
+      "rpm": 600,
+      "g": [
+       9,
+       8,
+       11
+      ],
+      "w": [
+       22,
+       20,
+       22
+      ]
+     }
+    },
+    "score": 82.4973285074074,
+    "reasons": [
+     {
+      "code": "VS_PREFERRED",
+      "severity": "good",
+      "ruleId": "VS_REQUIRED_ABOVE_THP",
+      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+     },
+     {
+      "code": "FLOW_MINIMUM",
+      "severity": "good",
+      "ruleId": "TURNOVER_FORMULA",
+      "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+     }
+    ],
+    "fit": {
+     "meetsCapacity": true,
+     "meetsFlow": true,
+     "meetsFlowLow": true,
+     "automationMatch": false,
+     "regulatoryOk": true
+    },
+    "computed": {
+     "requiredGPM": 15,
+     "dailyGPM": 15,
+     "gpmAtCurveLow": 9,
+     "gpmAtCurveHigh": 55,
+     "wattsDaily": 102,
+     "wattsHigh": 1135,
+     "annualKWh": 371.7592592592592,
+     "annualCostUSD": 74
+    },
+    "variants": [],
+    "rank": 9
+   },
+   {
+    "product": {
+     "id": "hayward-super-pump-vs-700-hl2670020vsp",
+     "brand": "Hayward",
+     "model": "Hayward Super Pump VS 700 HL2670020VSP",
+     "st": "VS",
+     "mot": "ECM",
+     "thp": 1.65,
+     "nhp": 1.65,
+     "wef": 10.10746055,
+     "frame": "56",
+     "dq": "ok",
+     "hi": {
+      "rpm": 3450,
+      "g": [
+       55,
+       35,
+       70
+      ],
+      "w": [
+       1135,
+       961,
+       1231
+      ]
+     },
+     "lo": {
+      "rpm": 600,
+      "g": [
+       9,
+       6,
+       11
+      ],
+      "w": [
+       22,
+       20,
+       22
+      ]
+     }
+    },
+    "score": 82.4973285074074,
+    "reasons": [
+     {
+      "code": "VS_PREFERRED",
+      "severity": "good",
+      "ruleId": "VS_REQUIRED_ABOVE_THP",
+      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+     },
+     {
+      "code": "FLOW_MINIMUM",
+      "severity": "good",
+      "ruleId": "TURNOVER_FORMULA",
+      "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+     }
+    ],
+    "fit": {
+     "meetsCapacity": true,
+     "meetsFlow": true,
+     "meetsFlowLow": true,
+     "automationMatch": false,
+     "regulatoryOk": true
+    },
+    "computed": {
+     "requiredGPM": 15,
+     "dailyGPM": 15,
+     "gpmAtCurveLow": 9,
+     "gpmAtCurveHigh": 55,
+     "wattsDaily": 102,
+     "wattsHigh": 1135,
+     "annualKWh": 371.7592592592592,
+     "annualCostUSD": 74
+    },
+    "variants": [
+     "Hayward SuperPump SP2603VSP",
+     "Hayward SuperPump SP2670020VSP"
+    ],
+    "rank": 10
+   },
+   {
+    "product": {
+     "id": "spectralight-leaf-v2-t2",
+     "brand": "Spectralight",
+     "model": "Spectralight Leaf V2 T2",
+     "st": "VS",
+     "mot": "CSCR",
+     "thp": 1.65,
+     "nhp": 1.65,
+     "wef": 9.447924524,
+     "frame": "48",
+     "dq": "ok",
+     "hi": {
+      "rpm": 3450,
+      "g": [
+       60,
+       38,
+       78
+      ],
+      "w": [
+       1422,
+       1269,
+       1457
+      ]
+     },
+     "lo": {
+      "rpm": 600,
+      "g": [
+       10,
+       6,
+       13
+      ],
+      "w": [
+       21,
+       20,
+       21
+      ]
+     }
+    },
+    "score": 82.308911548,
+    "reasons": [
+     {
+      "code": "VS_PREFERRED",
+      "severity": "good",
+      "ruleId": "VS_REQUIRED_ABOVE_THP",
+      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+     },
+     {
+      "code": "FLOW_MINIMUM",
+      "severity": "good",
+      "ruleId": "TURNOVER_FORMULA",
+      "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+     }
+    ],
+    "fit": {
+     "meetsCapacity": true,
+     "meetsFlow": true,
+     "meetsFlowLow": true,
+     "automationMatch": false,
+     "regulatoryOk": true
+    },
+    "computed": {
+     "requiredGPM": 15,
+     "dailyGPM": 15,
+     "gpmAtCurveLow": 10,
+     "gpmAtCurveHigh": 60,
+     "wattsDaily": 71,
+     "wattsHigh": 1422,
+     "annualKWh": 258.69375,
+     "annualCostUSD": 52
+    },
+    "variants": [],
+    "rank": 11
+   },
+   {
+    "product": {
+     "id": "speck-badu-ecom3-v-1-65",
+     "brand": "Speck",
+     "model": "Speck Badu EcoM3 V 1.65",
+     "st": "VS",
+     "mot": "ECM",
+     "thp": 1.65,
+     "nhp": 1.65,
+     "wef": 9.83115861,
+     "frame": "56",
+     "dq": "ok",
+     "hi": {
+      "rpm": 3450,
+      "g": [
+       54,
+       33,
+       72
+      ],
+      "w": [
+       1165,
+       1034,
+       1247
+      ]
+     },
+     "lo": {
+      "rpm": 600,
+      "g": [
+       9,
+       6,
+       12
+      ],
+      "w": [
+       22,
+       21,
+       22
+      ]
+     }
+    },
+    "score": 81.94472462740741,
+    "reasons": [
+     {
+      "code": "VS_PREFERRED",
+      "severity": "good",
+      "ruleId": "VS_REQUIRED_ABOVE_THP",
+      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+     },
+     {
+      "code": "FLOW_MINIMUM",
+      "severity": "good",
+      "ruleId": "TURNOVER_FORMULA",
+      "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+     }
+    ],
+    "fit": {
+     "meetsCapacity": true,
+     "meetsFlow": true,
+     "meetsFlowLow": true,
+     "automationMatch": false,
+     "regulatoryOk": true
+    },
+    "computed": {
+     "requiredGPM": 15,
+     "dailyGPM": 15,
+     "gpmAtCurveLow": 9,
+     "gpmAtCurveHigh": 54,
+     "wattsDaily": 102,
+     "wattsHigh": 1165,
+     "annualKWh": 371.7592592592592,
+     "annualCostUSD": 74
+    },
+    "variants": [],
+    "rank": 12
+   }
+  ],
+  "warnings": [
+   {
+    "code": "SWG_FLOW_SWITCH",
+    "severity": "warning",
+    "ruleId": "SWG_FLOW_SWITCH",
+    "text": "Heads up on the salt cell: its flow switch trips on water velocity, so a 1.5″ tee needs roughly 14 GPM. The top pick can idle near 11 GPM, which is below that — set your lowest speed high enough to close the switch, or the cell will quietly stop making chlorine."
+   }
+  ],
+  "repairOptions": [],
+  "curve": "A"
+ },
+ "filt": {
+  "mode": "filter",
+  "chosenType": "cartridge",
+  "typeReasons": [
+   {
+    "code": "FILTER_TYPE_DEFAULT_CARTRIDGE",
+    "severity": "good",
+    "ruleId": "NEW_POOL_DEFAULTS",
+    "text": "Cartridge chosen — TFP’s general recommendation for a new pool."
+   },
+   {
+    "code": "FILTER_TYPE_DEBRIS",
+    "severity": "info",
+    "ruleId": "FILTER_TYPE_RECOMMENDATION",
+    "text": "Heavy debris: we size the cartridge up rather than switching to sand, so you avoid backwash water. A large sand filter is a reasonable alternative if you prefer simpler cleaning."
+   }
+  ],
+  "min": {
+   "kind": "sqft",
+   "value": 225,
+   "target": 300,
+   "ruleId": "FILTER_SIZING"
+  },
+  "pumpMaxGPM": 64,
+  "comparison": null,
+  "recommendations": [
+   {
+    "product": {
+     "id": "pentair-clean-clear-plus-ccp240",
+     "brand": "Pentair",
+     "model": "Clean & Clear Plus CCP240",
+     "ft": "cartridge",
+     "area": 240,
+     "tank": null,
+     "bed": null,
+     "gpm": 90,
+     "mic": null,
+     "port": 2,
+     "cart": "Pentair 179133 / Pleatco ULTRA-A4-PAK4 / Unicel C-7469-4",
+     "psi": 50,
+     "dq": "verified"
+    },
+    "score": 117.2,
+    "reasons": [
+     {
+      "code": "FILTER_SIZE_OK",
+      "severity": "good",
+      "ruleId": "FILTER_SIZING",
+      "text": "240 sq ft — meets the 225 sq ft minimum."
+     },
+     {
+      "code": "FILTER_FLOW_OK",
+      "severity": "good",
+      "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+      "text": "Handles ~90 GPM ≥ your pump's ~64 GPM."
+     },
+     {
+      "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "severity": "info",
+      "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+     },
+     {
+      "code": "CART_ELEMENT",
+      "severity": "info",
+      "ruleId": "FILTER_REPAIR_FACTS",
+      "text": "Replacement element: Pentair 179133 / Pleatco ULTRA-A4-PAK4 / Unicel C-7469-4."
+     }
+    ],
+    "fit": {
+     "meetsMinSize": true,
+     "flowOk": true,
+     "portOk": true,
+     "withinBudget": true
+    },
+    "derated": false,
+    "computed": {
+     "minRequired": 225,
+     "candidateSize": 240,
+     "candidateMaxGPM": 90,
+     "pumpMaxGPM": 64,
+     "oversizeRatio": 1.07
+    },
+    "rank": 1
+   },
+   {
+    "product": {
+     "id": "jandy-cs250",
+     "brand": "Jandy",
+     "model": "CS250",
+     "ft": "cartridge",
+     "area": 250,
+     "tank": null,
+     "bed": null,
+     "gpm": 125,
+     "mic": null,
+     "port": 2,
+     "cart": "Jandy R0462500",
+     "psi": 50,
+     "dq": "verified"
+    },
+    "score": 116.66666666666667,
+    "reasons": [
+     {
+      "code": "FILTER_SIZE_OK",
+      "severity": "good",
+      "ruleId": "FILTER_SIZING",
+      "text": "250 sq ft — meets the 225 sq ft minimum."
+     },
+     {
+      "code": "FILTER_FLOW_OK",
+      "severity": "good",
+      "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+      "text": "Handles ~125 GPM ≥ your pump's ~64 GPM."
+     },
+     {
+      "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "severity": "info",
+      "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+     },
+     {
+      "code": "CART_ELEMENT",
+      "severity": "info",
+      "ruleId": "FILTER_REPAIR_FACTS",
+      "text": "Replacement element: Jandy R0462500."
+     }
+    ],
+    "fit": {
+     "meetsMinSize": true,
+     "flowOk": true,
+     "portOk": true,
+     "withinBudget": true
+    },
+    "derated": false,
+    "computed": {
+     "minRequired": 225,
+     "candidateSize": 250,
+     "candidateMaxGPM": 125,
+     "pumpMaxGPM": 64,
+     "oversizeRatio": 1.11
+    },
+    "rank": 2,
+    "sizeUp": true
+   },
+   {
+    "product": {
+     "id": "sta-rite-system-3-s7m120",
+     "brand": "Sta-Rite",
+     "model": "System 3 S7M120",
+     "ft": "cartridge",
+     "area": 300,
+     "tank": null,
+     "bed": null,
+     "gpm": 100,
+     "mic": null,
+     "port": 2,
+     "cart": "Pentair 170145; inner 25021-0200S (100 sq ft) + outer 25022-0201S (200 sq ft)",
+     "psi": 50,
+     "dq": "verified"
+    },
+    "score": 114,
+    "reasons": [
+     {
+      "code": "FILTER_SIZE_OK",
+      "severity": "good",
+      "ruleId": "FILTER_SIZING",
+      "text": "300 sq ft — meets the 225 sq ft minimum."
+     },
+     {
+      "code": "FILTER_FLOW_OK",
+      "severity": "good",
+      "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+      "text": "Handles ~100 GPM ≥ your pump's ~64 GPM."
+     },
+     {
+      "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "severity": "info",
+      "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+     },
+     {
+      "code": "CART_ELEMENT",
+      "severity": "info",
+      "ruleId": "FILTER_REPAIR_FACTS",
+      "text": "Replacement element: Pentair 170145; inner 25021-0200S (100 sq ft) + outer 25022-0201S (200 sq ft)."
+     }
+    ],
+    "fit": {
+     "meetsMinSize": true,
+     "flowOk": true,
+     "portOk": true,
+     "withinBudget": true
+    },
+    "derated": false,
+    "computed": {
+     "minRequired": 225,
+     "candidateSize": 300,
+     "candidateMaxGPM": 100,
+     "pumpMaxGPM": 64,
+     "oversizeRatio": 1.33
+    },
+    "rank": 3
+   },
+   {
+    "product": {
+     "id": "sta-rite-system-2-plm300",
+     "brand": "Sta-Rite",
+     "model": "System 2 PLM300",
+     "ft": "cartridge",
+     "area": 300,
+     "tank": null,
+     "bed": null,
+     "gpm": 150,
+     "mic": null,
+     "port": 2,
+     "cart": "Pentair/Sta-Rite 27002-0300S",
+     "psi": 50,
+     "dq": "verified"
+    },
+    "score": 114,
+    "reasons": [
+     {
+      "code": "FILTER_SIZE_OK",
+      "severity": "good",
+      "ruleId": "FILTER_SIZING",
+      "text": "300 sq ft — meets the 225 sq ft minimum."
+     },
+     {
+      "code": "FILTER_FLOW_OK",
+      "severity": "good",
+      "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+      "text": "Handles ~150 GPM ≥ your pump's ~64 GPM."
+     },
+     {
+      "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "severity": "info",
+      "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+     },
+     {
+      "code": "CART_ELEMENT",
+      "severity": "info",
+      "ruleId": "FILTER_REPAIR_FACTS",
+      "text": "Replacement element: Pentair/Sta-Rite 27002-0300S."
+     }
+    ],
+    "fit": {
+     "meetsMinSize": true,
+     "flowOk": true,
+     "portOk": true,
+     "withinBudget": true
+    },
+    "derated": false,
+    "computed": {
+     "minRequired": 225,
+     "candidateSize": 300,
+     "candidateMaxGPM": 150,
+     "pumpMaxGPM": 64,
+     "oversizeRatio": 1.33
+    },
+    "rank": 4
+   },
+   {
+    "product": {
+     "id": "hayward-swimclear-c2030",
+     "brand": "Hayward",
+     "model": "SwimClear C2030",
+     "ft": "cartridge",
+     "area": 225,
+     "tank": null,
+     "bed": null,
+     "gpm": 84,
+     "mic": null,
+     "port": 2,
+     "cart": "Hayward CX481XREPAK4",
+     "psi": 50,
+     "dq": "verified"
+    },
+    "score": 112,
+    "reasons": [
+     {
+      "code": "FILTER_SIZE_OK",
+      "severity": "good",
+      "ruleId": "FILTER_SIZING",
+      "text": "225 sq ft — meets the 225 sq ft minimum."
+     },
+     {
+      "code": "FILTER_FLOW_OK",
+      "severity": "good",
+      "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+      "text": "Handles ~84 GPM ≥ your pump's ~64 GPM."
+     },
+     {
+      "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "severity": "info",
+      "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+     },
+     {
+      "code": "CART_ELEMENT",
+      "severity": "info",
+      "ruleId": "FILTER_REPAIR_FACTS",
+      "text": "Replacement element: Hayward CX481XREPAK4."
+     }
+    ],
+    "fit": {
+     "meetsMinSize": true,
+     "flowOk": true,
+     "portOk": true,
+     "withinBudget": true
+    },
+    "derated": false,
+    "computed": {
+     "minRequired": 225,
+     "candidateSize": 225,
+     "candidateMaxGPM": 84,
+     "pumpMaxGPM": 64,
+     "oversizeRatio": 1
+    },
+    "rank": 5
+   },
+   {
+    "product": {
+     "id": "pentair-clean-clear-plus-ccp320",
+     "brand": "Pentair",
+     "model": "Clean & Clear Plus CCP320",
+     "ft": "cartridge",
+     "area": 320,
+     "tank": null,
+     "bed": null,
+     "gpm": 120,
+     "mic": null,
+     "port": 2,
+     "cart": "Pentair 179134 / Pleatco ULTRA-A5-PAK4 / Unicel C-7470-4",
+     "psi": 50,
+     "dq": "verified"
+    },
+    "score": 110.93333333333334,
+    "reasons": [
+     {
+      "code": "FILTER_SIZE_OK",
+      "severity": "good",
+      "ruleId": "FILTER_SIZING",
+      "text": "320 sq ft — meets the 225 sq ft minimum."
+     },
+     {
+      "code": "FILTER_FLOW_OK",
+      "severity": "good",
+      "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+      "text": "Handles ~120 GPM ≥ your pump's ~64 GPM."
+     },
+     {
+      "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "severity": "info",
+      "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+     },
+     {
+      "code": "CART_ELEMENT",
+      "severity": "info",
+      "ruleId": "FILTER_REPAIR_FACTS",
+      "text": "Replacement element: Pentair 179134 / Pleatco ULTRA-A5-PAK4 / Unicel C-7470-4."
+     },
+     {
+      "code": "FILTER_OVER_TARGET",
+      "severity": "info",
+      "ruleId": "FILTER_SIZING",
+      "text": "Above the ~300 sq ft that suits 15,000 gallons. Extra cartridge area past this point buys very little — a smaller unit would still go a full season between cleanings."
+     }
+    ],
+    "fit": {
+     "meetsMinSize": true,
+     "flowOk": true,
+     "portOk": true,
+     "withinBudget": true
+    },
+    "derated": false,
+    "computed": {
+     "minRequired": 225,
+     "candidateSize": 320,
+     "candidateMaxGPM": 120,
+     "pumpMaxGPM": 64,
+     "oversizeRatio": 1.42
+    },
+    "rank": 6
+   },
+   {
+    "product": {
+     "id": "hayward-swimclear-c3030",
+     "brand": "Hayward",
+     "model": "SwimClear C3030",
+     "ft": "cartridge",
+     "area": 325,
+     "tank": null,
+     "bed": null,
+     "gpm": 122,
+     "mic": null,
+     "port": 2,
+     "cart": "Hayward CX580XREPAK4",
+     "psi": 50,
+     "dq": "verified"
+    },
+    "score": 110.16666666666667,
+    "reasons": [
+     {
+      "code": "FILTER_SIZE_OK",
+      "severity": "good",
+      "ruleId": "FILTER_SIZING",
+      "text": "325 sq ft — meets the 225 sq ft minimum."
+     },
+     {
+      "code": "FILTER_FLOW_OK",
+      "severity": "good",
+      "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+      "text": "Handles ~122 GPM ≥ your pump's ~64 GPM."
+     },
+     {
+      "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "severity": "info",
+      "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+     },
+     {
+      "code": "CART_ELEMENT",
+      "severity": "info",
+      "ruleId": "FILTER_REPAIR_FACTS",
+      "text": "Replacement element: Hayward CX580XREPAK4."
+     },
+     {
+      "code": "FILTER_OVER_TARGET",
+      "severity": "info",
+      "ruleId": "FILTER_SIZING",
+      "text": "Above the ~300 sq ft that suits 15,000 gallons. Extra cartridge area past this point buys very little — a smaller unit would still go a full season between cleanings."
+     }
+    ],
+    "fit": {
+     "meetsMinSize": true,
+     "flowOk": true,
+     "portOk": true,
+     "withinBudget": true
+    },
+    "derated": false,
+    "computed": {
+     "minRequired": 225,
+     "candidateSize": 325,
+     "candidateMaxGPM": 122,
+     "pumpMaxGPM": 64,
+     "oversizeRatio": 1.44
+    },
+    "rank": 7
+   },
+   {
+    "product": {
+     "id": "jandy-cv340",
+     "brand": "Jandy",
+     "model": "CV340",
+     "ft": "cartridge",
+     "area": 340,
+     "tank": null,
+     "bed": null,
+     "gpm": 127,
+     "mic": null,
+     "port": 2,
+     "cart": null,
+     "psi": 50,
+     "dq": "partial"
+    },
+    "score": 103.06666666666668,
+    "reasons": [
+     {
+      "code": "FILTER_SIZE_OK",
+      "severity": "good",
+      "ruleId": "FILTER_SIZING",
+      "text": "340 sq ft — comfortably above the 225 sq ft minimum."
+     },
+     {
+      "code": "FILTER_BIGGER_IS_BETTER",
+      "severity": "good",
+      "ruleId": "FILTER_BIGGER_IS_BETTER",
+      "text": "~1.5× minimum → longer runs between cleanings."
+     },
+     {
+      "code": "FILTER_FLOW_OK",
+      "severity": "good",
+      "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+      "text": "Handles ~127 GPM ≥ your pump's ~64 GPM."
+     },
+     {
+      "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "severity": "info",
+      "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+     },
+     {
+      "code": "FILTER_OVER_TARGET",
+      "severity": "info",
+      "ruleId": "FILTER_SIZING",
+      "text": "Above the ~300 sq ft that suits 15,000 gallons. Extra cartridge area past this point buys very little — a smaller unit would still go a full season between cleanings."
+     }
+    ],
+    "fit": {
+     "meetsMinSize": true,
+     "flowOk": true,
+     "portOk": true,
+     "withinBudget": true
+    },
+    "derated": false,
+    "computed": {
+     "minRequired": 225,
+     "candidateSize": 340,
+     "candidateMaxGPM": 127,
+     "pumpMaxGPM": 64,
+     "oversizeRatio": 1.51
+    },
+    "rank": 8
+   }
+  ],
+  "disqualified": [
+   {
+    "product": {
+     "id": "pentair-clean-clear-cc200",
+     "brand": "Pentair",
+     "model": "Clean & Clear CC200",
+     "ft": "cartridge",
+     "area": 200,
+     "tank": null,
+     "bed": null,
+     "gpm": 150,
+     "mic": 20,
+     "port": null,
+     "cart": "Pentair R173217 / Pleatco ULTRA-C5 / Unicel C-9419",
+     "psi": 50,
+     "dq": "verified"
+    },
+    "reason": {
+     "code": "FILTER_UNDERSIZED",
+     "severity": "blocker",
+     "ruleId": "FILTER_SIZING",
+     "text": "Below the 225 sq ft minimum (this is 200 sq ft)."
+    }
+   },
+   {
+    "product": {
+     "id": "pentair-clean-clear-rp-ccrp200",
+     "brand": "Pentair",
+     "model": "Clean & Clear RP CCRP200",
+     "ft": "cartridge",
+     "area": 200,
+     "tank": null,
+     "bed": null,
+     "gpm": 150,
+     "mic": 20,
+     "port": 2,
+     "cart": "Pleatco ULTRA-C5 / Unicel C-9419",
+     "psi": 50,
+     "dq": "verified"
+    },
+    "reason": {
+     "code": "FILTER_UNDERSIZED",
+     "severity": "blocker",
+     "ruleId": "FILTER_SIZING",
+     "text": "Below the 225 sq ft minimum (this is 200 sq ft)."
+    }
+   },
+   {
+    "product": {
+     "id": "sta-rite-system-2-plm200",
+     "brand": "Sta-Rite",
+     "model": "System 2 PLM200",
+     "ft": "cartridge",
+     "area": 200,
+     "tank": null,
+     "bed": null,
+     "gpm": 150,
+     "mic": null,
+     "port": 2,
+     "cart": "Pentair/Sta-Rite 27002-0200S",
+     "psi": 50,
+     "dq": "verified"
+    },
+    "reason": {
+     "code": "FILTER_UNDERSIZED",
+     "severity": "blocker",
+     "ruleId": "FILTER_SIZING",
+     "text": "Below the 225 sq ft minimum (this is 200 sq ft)."
+    }
+   },
+   {
+    "product": {
+     "id": "sta-rite-posi-clear-rp-pxcrp200",
+     "brand": "Sta-Rite",
+     "model": "Posi-Clear RP PXCRP200",
+     "ft": "cartridge",
+     "area": 200,
+     "tank": null,
+     "bed": null,
+     "gpm": 150,
+     "mic": 20,
+     "port": 2,
+     "cart": "Pleatco ULTRA-C5 / Unicel C-9419",
+     "psi": 50,
+     "dq": "verified"
+    },
+    "reason": {
+     "code": "FILTER_UNDERSIZED",
+     "severity": "blocker",
+     "ruleId": "FILTER_SIZING",
+     "text": "Below the 225 sq ft minimum (this is 200 sq ft)."
+    }
+   },
+   {
+    "product": {
+     "id": "hayward-swimclear-single-c200s",
+     "brand": "Hayward",
+     "model": "SwimClear Single Element C200S",
+     "ft": "cartridge",
+     "area": 200,
+     "tank": null,
+     "bed": null,
+     "gpm": 120,
+     "mic": null,
+     "port": 2,
+     "cart": "Hayward CX200XRE",
+     "psi": 50,
+     "dq": "verified"
+    },
+    "reason": {
+     "code": "FILTER_UNDERSIZED",
+     "severity": "blocker",
+     "ruleId": "FILTER_SIZING",
+     "text": "Below the 225 sq ft minimum (this is 200 sq ft)."
+    }
+   },
+   {
+    "product": {
+     "id": "jandy-cs200",
+     "brand": "Jandy",
+     "model": "CS200",
+     "ft": "cartridge",
+     "area": 200,
+     "tank": null,
+     "bed": null,
+     "gpm": 125,
+     "mic": null,
+     "port": 2,
+     "cart": "Jandy R0462400",
+     "psi": 50,
+     "dq": "verified"
+    },
+    "reason": {
+     "code": "FILTER_UNDERSIZED",
+     "severity": "blocker",
+     "ruleId": "FILTER_SIZING",
+     "text": "Below the 225 sq ft minimum (this is 200 sq ft)."
+    }
+   }
+  ],
+  "alternatives": [
+   {
+    "product": {
+     "id": "jandy-cs250",
+     "brand": "Jandy",
+     "model": "CS250",
+     "ft": "cartridge",
+     "area": 250,
+     "tank": null,
+     "bed": null,
+     "gpm": 125,
+     "mic": null,
+     "port": 2,
+     "cart": "Jandy R0462500",
+     "psi": 50,
+     "dq": "verified"
+    },
+    "label": "size-up"
+   }
+  ],
+  "repairOptions": [],
+  "warnings": [
+   {
+    "code": "FILTER_AUTOMATION_AGNOSTIC",
+    "severity": "info",
+    "ruleId": "AUTOMATION_SAME_BRAND",
+    "text": "Filters aren’t controlled by automation, so brand match doesn’t matter here."
+   }
+  ]
+ },
+ "swg": {
+  "mode": "swg",
+  "requiredLbs": 1.05,
+  "lbsNeeded": 0.375,
+  "ppm": 3,
+  "runtime": 10,
+  "comparison": null,
+  "recommendations": [
+   {
+    "product": {
+     "id": "circupool-core55",
+     "mfr": "CircuPool",
+     "model": "Core-55",
+     "lbs": 2.3,
+     "rated": 55000,
+     "ratedQ": "verified",
+     "ctrl": "duty-cycle",
+     "cyc": null,
+     "polH": null,
+     "ltCut": null,
+     "ltRed": null,
+     "auto": [],
+     "cell": "CORE55-RC",
+     "fam": null,
+     "dq": "verified",
+     "notes": [],
+     "msrp": null
+    },
+    "fkey": "circupool-core55",
+    "score": 79.9,
+    "reasons": [
+     {
+      "code": "CAPACITY",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Meets the ≥2× rule: 2.3 lbs/day vs 1.05 needed."
+     },
+     {
+      "code": "RATED_GALLONS",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Rated for 55,000 gal ≥ 2× your pool."
+     },
+     {
+      "code": "REQ_OUTPUT",
+      "severity": "info",
+      "ruleId": "SWG_MAX_OUTPUT_PCT",
+      "text": "Needs ~39% output at 10h/day."
+     }
+    ],
+    "derated": false,
+    "effLbs": 2.3,
+    "fit": {
+     "meetsCapacity": true,
+     "automationMatch": false,
+     "regulatoryOk": true,
+     "secondary": true
+    },
+    "computed": {
+     "requiredLbs": 1.05,
+     "deratedLbsPerDay": 2.3,
+     "requiredOutputPct": 39,
+     "lbsNeeded": 0.375,
+     "estRuntimeHours": 10,
+     "ratedPoolGallons": 55000
+    },
+    "rank": 1
+   },
+   {
+    "product": {
+     "id": "pureline-crystal-pure-60",
+     "mfr": "Pureline",
+     "model": "Crystal Pure 60,000",
+     "lbs": 3.18,
+     "rated": 60000,
+     "ratedQ": "inferred-from-model-name",
+     "ctrl": null,
+     "cyc": null,
+     "polH": null,
+     "ltCut": null,
+     "ltRed": null,
+     "auto": [],
+     "cell": null,
+     "fam": null,
+     "dq": "base-only",
+     "notes": [],
+     "msrp": null
+    },
+    "fkey": "pureline-crystal-pure-60",
+    "score": 79.18,
+    "reasons": [
+     {
+      "code": "CAPACITY",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Meets the ≥2× rule: 3.18 lbs/day vs 1.05 needed."
+     },
+     {
+      "code": "RATED_GALLONS",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Rated for 60,000 gal ≥ 2× your pool."
+     },
+     {
+      "code": "REQ_OUTPUT",
+      "severity": "info",
+      "ruleId": "SWG_MAX_OUTPUT_PCT",
+      "text": "Needs ~28% output at 10h/day."
+     }
+    ],
+    "derated": false,
+    "effLbs": 3.18,
+    "fit": {
+     "meetsCapacity": true,
+     "automationMatch": false,
+     "regulatoryOk": true,
+     "secondary": true
+    },
+    "computed": {
+     "requiredLbs": 1.05,
+     "deratedLbsPerDay": 3.18,
+     "requiredOutputPct": 28,
+     "lbsNeeded": 0.375,
+     "estRuntimeHours": 10,
+     "ratedPoolGallons": 60000
+    },
+    "rank": 2
+   },
+   {
+    "product": {
+     "id": "circupool-rj60",
+     "mfr": "CircuPool",
+     "model": "RJ-60",
+     "lbs": 3.1,
+     "rated": 60000,
+     "ratedQ": "inferred-from-model-name",
+     "ctrl": null,
+     "cyc": null,
+     "polH": null,
+     "ltCut": null,
+     "ltRed": null,
+     "auto": [],
+     "cell": null,
+     "fam": null,
+     "dq": "base-only",
+     "notes": [],
+     "msrp": null
+    },
+    "fkey": "circupool-rj60",
+    "score": 78.7,
+    "reasons": [
+     {
+      "code": "CAPACITY",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Meets the ≥2× rule: 3.1 lbs/day vs 1.05 needed."
+     },
+     {
+      "code": "RATED_GALLONS",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Rated for 60,000 gal ≥ 2× your pool."
+     },
+     {
+      "code": "REQ_OUTPUT",
+      "severity": "info",
+      "ruleId": "SWG_MAX_OUTPUT_PCT",
+      "text": "Needs ~29% output at 10h/day."
+     }
+    ],
+    "derated": false,
+    "effLbs": 3.1,
+    "fit": {
+     "meetsCapacity": true,
+     "automationMatch": false,
+     "regulatoryOk": true,
+     "secondary": true
+    },
+    "computed": {
+     "requiredLbs": 1.05,
+     "deratedLbsPerDay": 3.1,
+     "requiredOutputPct": 29,
+     "lbsNeeded": 0.375,
+     "estRuntimeHours": 10,
+     "ratedPoolGallons": 60000
+    },
+    "rank": 3
+   },
+   {
+    "product": {
+     "id": "circupool-rj60p",
+     "mfr": "CircuPool",
+     "model": "RJ-60 Plus",
+     "lbs": 3.1,
+     "rated": 60000,
+     "ratedQ": "verified",
+     "ctrl": "duty-cycle",
+     "cyc": 200,
+     "polH": null,
+     "ltCut": 60,
+     "ltRed": null,
+     "auto": [],
+     "cell": "RJ-60RC",
+     "fam": null,
+     "dq": "conflicting-sources",
+     "notes": [
+      "Output conflict: base 3.1 lbs/day vs overlay 2.7 lbs/day. Base value kept.",
+      "Low-temp cutoff ~60F."
+     ],
+     "msrp": 1649
+    },
+    "fkey": "circupool-rj60p",
+    "score": 78.7,
+    "reasons": [
+     {
+      "code": "DATA_QUALITY_FLAG",
+      "severity": "info",
+      "ruleId": "SWG_OUTPUT_HAIRCUT",
+      "text": "Published output for this model is disputed between sources. Measurement generally matches published figures, so it is used as-is — but verify against the manufacturer before buying."
+     },
+     {
+      "code": "CAPACITY",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Meets the ≥2× rule: 3.1 lbs/day vs 1.05 needed."
+     },
+     {
+      "code": "RATED_GALLONS",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Rated for 60,000 gal ≥ 2× your pool."
+     },
+     {
+      "code": "REQ_OUTPUT",
+      "severity": "info",
+      "ruleId": "SWG_MAX_OUTPUT_PCT",
+      "text": "Needs ~29% output at 10h/day."
+     },
+     {
+      "code": "LOW_TEMP_NOTE",
+      "severity": "info",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Known sticky low-temp behavior — check winter operation."
+     }
+    ],
+    "derated": true,
+    "effLbs": 3.1,
+    "fit": {
+     "meetsCapacity": true,
+     "automationMatch": false,
+     "regulatoryOk": true,
+     "secondary": true
+    },
+    "computed": {
+     "requiredLbs": 1.05,
+     "deratedLbsPerDay": 3.1,
+     "requiredOutputPct": 29,
+     "lbsNeeded": 0.375,
+     "estRuntimeHours": 10,
+     "ratedPoolGallons": 60000
+    },
+    "rank": 4
+   },
+   {
+    "product": {
+     "id": "pentair-ic-60",
+     "mfr": "Pentair",
+     "model": "Intellichlor IC-60",
+     "lbs": 2,
+     "rated": 60000,
+     "ratedQ": "verified",
+     "ctrl": "duty-cycle",
+     "cyc": 5,
+     "polH": 3,
+     "ltCut": null,
+     "ltRed": null,
+     "auto": [
+      "Pentair IntelliCenter",
+      "Pentair IntelliTouch",
+      "Pentair EasyTouch",
+      "Pentair SunTouch"
+     ],
+     "cell": "IC60",
+     "fam": null,
+     "dq": "verified",
+     "notes": [],
+     "msrp": null
+    },
+    "fkey": "pentair-ic-60",
+    "score": 78.1,
+    "reasons": [
+     {
+      "code": "CAPACITY",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Meets the ≥2× rule: 2 lbs/day vs 1.05 needed."
+     },
+     {
+      "code": "RATED_GALLONS",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Rated for 60,000 gal ≥ 2× your pool."
+     },
+     {
+      "code": "REQ_OUTPUT",
+      "severity": "info",
+      "ruleId": "SWG_MAX_OUTPUT_PCT",
+      "text": "Needs ~45% output at 10h/day."
+     }
+    ],
+    "derated": false,
+    "effLbs": 2,
+    "fit": {
+     "meetsCapacity": true,
+     "automationMatch": false,
+     "regulatoryOk": true,
+     "secondary": true
+    },
+    "computed": {
+     "requiredLbs": 1.05,
+     "deratedLbsPerDay": 2,
+     "requiredOutputPct": 45,
+     "lbsNeeded": 0.375,
+     "estRuntimeHours": 10,
+     "ratedPoolGallons": 60000
+    },
+    "rank": 5
+   },
+   {
+    "product": {
+     "id": "pentair-plus-60",
+     "mfr": "Pentair",
+     "model": "PLUS60",
+     "lbs": 2,
+     "rated": 60000,
+     "ratedQ": "verified",
+     "ctrl": "duty-cycle",
+     "cyc": null,
+     "polH": null,
+     "ltCut": null,
+     "ltRed": null,
+     "auto": [
+      "Pentair IntelliCenter",
+      "Pentair IntelliTouch",
+      "Pentair EasyTouch"
+     ],
+     "cell": "PLUS60",
+     "fam": null,
+     "dq": "verified",
+     "notes": [],
+     "msrp": null
+    },
+    "fkey": "pentair-plus-60",
+    "score": 78.1,
+    "reasons": [
+     {
+      "code": "CAPACITY",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Meets the ≥2× rule: 2 lbs/day vs 1.05 needed."
+     },
+     {
+      "code": "RATED_GALLONS",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Rated for 60,000 gal ≥ 2× your pool."
+     },
+     {
+      "code": "REQ_OUTPUT",
+      "severity": "info",
+      "ruleId": "SWG_MAX_OUTPUT_PCT",
+      "text": "Needs ~45% output at 10h/day."
+     }
+    ],
+    "derated": false,
+    "effLbs": 2,
+    "fit": {
+     "meetsCapacity": true,
+     "automationMatch": false,
+     "regulatoryOk": true,
+     "secondary": true
+    },
+    "computed": {
+     "requiredLbs": 1.05,
+     "deratedLbsPerDay": 2,
+     "requiredOutputPct": 45,
+     "lbsNeeded": 0.375,
+     "estRuntimeHours": 10,
+     "ratedPoolGallons": 60000
+    },
+    "rank": 6
+   },
+   {
+    "product": {
+     "id": "circupool-corecontrol55",
+     "mfr": "CircuPool",
+     "model": "CORE CONTROL 55",
+     "lbs": 2,
+     "rated": 55000,
+     "ratedQ": "verified",
+     "ctrl": "duty-cycle",
+     "cyc": null,
+     "polH": null,
+     "ltCut": null,
+     "ltRed": null,
+     "auto": [
+      "built-in app/WiFi automation platform (self)"
+     ],
+     "cell": null,
+     "fam": null,
+     "dq": "verified",
+     "notes": [],
+     "msrp": null
+    },
+    "fkey": "circupool-corecontrol55",
+    "score": 78.1,
+    "reasons": [
+     {
+      "code": "CAPACITY",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Meets the ≥2× rule: 2 lbs/day vs 1.05 needed."
+     },
+     {
+      "code": "RATED_GALLONS",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Rated for 55,000 gal ≥ 2× your pool."
+     },
+     {
+      "code": "REQ_OUTPUT",
+      "severity": "info",
+      "ruleId": "SWG_MAX_OUTPUT_PCT",
+      "text": "Needs ~45% output at 10h/day."
+     }
+    ],
+    "derated": false,
+    "effLbs": 2,
+    "fit": {
+     "meetsCapacity": true,
+     "automationMatch": false,
+     "regulatoryOk": true,
+     "secondary": true
+    },
+    "computed": {
+     "requiredLbs": 1.05,
+     "deratedLbsPerDay": 2,
+     "requiredOutputPct": 45,
+     "lbsNeeded": 0.375,
+     "estRuntimeHours": 10,
+     "ratedPoolGallons": 55000
+    },
+    "rank": 7
+   },
+   {
+    "product": {
+     "id": "circupool-sj55",
+     "mfr": "CircuPool",
+     "model": "SJ-55",
+     "lbs": 2.35,
+     "rated": 55000,
+     "ratedQ": "inferred-from-model-name",
+     "ctrl": null,
+     "cyc": null,
+     "polH": null,
+     "ltCut": null,
+     "ltRed": null,
+     "auto": [],
+     "cell": null,
+     "fam": null,
+     "dq": "base-only",
+     "notes": [],
+     "msrp": null
+    },
+    "fkey": "circupool-sj55",
+    "score": 74.2,
+    "reasons": [
+     {
+      "code": "CAPACITY",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Meets the ≥2× rule: 2.35 lbs/day vs 1.05 needed."
+     },
+     {
+      "code": "RATED_GALLONS",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Rated for 55,000 gal ≥ 2× your pool."
+     },
+     {
+      "code": "REQ_OUTPUT",
+      "severity": "info",
+      "ruleId": "SWG_MAX_OUTPUT_PCT",
+      "text": "Needs ~38% output at 10h/day."
+     }
+    ],
+    "derated": false,
+    "effLbs": 2.35,
+    "fit": {
+     "meetsCapacity": true,
+     "automationMatch": false,
+     "regulatoryOk": true,
+     "secondary": true
+    },
+    "computed": {
+     "requiredLbs": 1.05,
+     "deratedLbsPerDay": 2.35,
+     "requiredOutputPct": 38,
+     "lbsNeeded": 0.375,
+     "estRuntimeHours": 10,
+     "ratedPoolGallons": 55000
+    },
+    "rank": 8
+   },
+   {
+    "product": {
+     "id": "pureline-crystal-pure-40",
+     "mfr": "Pureline",
+     "model": "Crystal Pure 40,000",
+     "lbs": 2.1,
+     "rated": 40000,
+     "ratedQ": "inferred-from-model-name",
+     "ctrl": null,
+     "cyc": null,
+     "polH": null,
+     "ltCut": null,
+     "ltRed": null,
+     "auto": [],
+     "cell": null,
+     "fam": null,
+     "dq": "base-only",
+     "notes": [],
+     "msrp": null
+    },
+    "fkey": "pureline-crystal-pure-40",
+    "score": 72.7,
+    "reasons": [
+     {
+      "code": "CAPACITY",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Meets the ≥2× rule: 2.1 lbs/day vs 1.05 needed."
+     },
+     {
+      "code": "RATED_GALLONS",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Rated for 40,000 gal ≥ 2× your pool."
+     },
+     {
+      "code": "REQ_OUTPUT",
+      "severity": "info",
+      "ruleId": "SWG_MAX_OUTPUT_PCT",
+      "text": "Needs ~43% output at 10h/day."
+     }
+    ],
+    "derated": false,
+    "effLbs": 2.1,
+    "fit": {
+     "meetsCapacity": true,
+     "automationMatch": false,
+     "regulatoryOk": true,
+     "secondary": true
+    },
+    "computed": {
+     "requiredLbs": 1.05,
+     "deratedLbsPerDay": 2.1,
+     "requiredOutputPct": 43,
+     "lbsNeeded": 0.375,
+     "estRuntimeHours": 10,
+     "ratedPoolGallons": 40000
+    },
+    "rank": 9
+   },
+   {
+    "product": {
+     "id": "circupool-u40",
+     "mfr": "CircuPool",
+     "model": "Universal40",
+     "lbs": 2,
+     "rated": 40000,
+     "ratedQ": "inferred-from-model-name",
+     "ctrl": null,
+     "cyc": null,
+     "polH": null,
+     "ltCut": null,
+     "ltRed": null,
+     "auto": [],
+     "cell": null,
+     "fam": null,
+     "dq": "base-only",
+     "notes": [],
+     "msrp": null
+    },
+    "fkey": "circupool-u40",
+    "score": 72.1,
+    "reasons": [
+     {
+      "code": "CAPACITY",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Meets the ≥2× rule: 2 lbs/day vs 1.05 needed."
+     },
+     {
+      "code": "RATED_GALLONS",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Rated for 40,000 gal ≥ 2× your pool."
+     },
+     {
+      "code": "REQ_OUTPUT",
+      "severity": "info",
+      "ruleId": "SWG_MAX_OUTPUT_PCT",
+      "text": "Needs ~45% output at 10h/day."
+     }
+    ],
+    "derated": false,
+    "effLbs": 2,
+    "fit": {
+     "meetsCapacity": true,
+     "automationMatch": false,
+     "regulatoryOk": true,
+     "secondary": true
+    },
+    "computed": {
+     "requiredLbs": 1.05,
+     "deratedLbsPerDay": 2,
+     "requiredOutputPct": 45,
+     "lbsNeeded": 0.375,
+     "estRuntimeHours": 10,
+     "ratedPoolGallons": 40000
+    },
+    "rank": 10
+   },
+   {
+    "product": {
+     "id": "circupool-rj45",
+     "mfr": "CircuPool",
+     "model": "RJ-45",
+     "lbs": 2,
+     "rated": 45000,
+     "ratedQ": "inferred-from-model-name",
+     "ctrl": null,
+     "cyc": null,
+     "polH": null,
+     "ltCut": null,
+     "ltRed": null,
+     "auto": [],
+     "cell": null,
+     "fam": null,
+     "dq": "base-only",
+     "notes": [],
+     "msrp": null
+    },
+    "fkey": "circupool-rj45",
+    "score": 72.1,
+    "reasons": [
+     {
+      "code": "CAPACITY",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Meets the ≥2× rule: 2 lbs/day vs 1.05 needed."
+     },
+     {
+      "code": "RATED_GALLONS",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Rated for 45,000 gal ≥ 2× your pool."
+     },
+     {
+      "code": "REQ_OUTPUT",
+      "severity": "info",
+      "ruleId": "SWG_MAX_OUTPUT_PCT",
+      "text": "Needs ~45% output at 10h/day."
+     }
+    ],
+    "derated": false,
+    "effLbs": 2,
+    "fit": {
+     "meetsCapacity": true,
+     "automationMatch": false,
+     "regulatoryOk": true,
+     "secondary": true
+    },
+    "computed": {
+     "requiredLbs": 1.05,
+     "deratedLbsPerDay": 2,
+     "requiredOutputPct": 45,
+     "lbsNeeded": 0.375,
+     "estRuntimeHours": 10,
+     "ratedPoolGallons": 45000
+    },
+    "rank": 11
+   },
+   {
+    "product": {
+     "id": "circupool-rj45p",
+     "mfr": "CircuPool",
+     "model": "RJ-45 Plus",
+     "lbs": 2,
+     "rated": 45000,
+     "ratedQ": "verified",
+     "ctrl": "duty-cycle",
+     "cyc": 200,
+     "polH": null,
+     "ltCut": 60,
+     "ltRed": null,
+     "auto": [],
+     "cell": "RJ-45RC",
+     "fam": null,
+     "dq": "advertised-output-disputed",
+     "notes": [
+      "Low-temp cutoff ~60F."
+     ],
+     "msrp": null
+    },
+    "fkey": "circupool-rj45p",
+    "score": 72.1,
+    "reasons": [
+     {
+      "code": "DATA_QUALITY_FLAG",
+      "severity": "info",
+      "ruleId": "SWG_OUTPUT_HAIRCUT",
+      "text": "Published output for this model is disputed between sources. Measurement generally matches published figures, so it is used as-is — but verify against the manufacturer before buying."
+     },
+     {
+      "code": "CAPACITY",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Meets the ≥2× rule: 2 lbs/day vs 1.05 needed."
+     },
+     {
+      "code": "RATED_GALLONS",
+      "severity": "good",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Rated for 45,000 gal ≥ 2× your pool."
+     },
+     {
+      "code": "REQ_OUTPUT",
+      "severity": "info",
+      "ruleId": "SWG_MAX_OUTPUT_PCT",
+      "text": "Needs ~45% output at 10h/day."
+     },
+     {
+      "code": "LOW_TEMP_NOTE",
+      "severity": "info",
+      "ruleId": "SWG_2X_RULE",
+      "text": "Known sticky low-temp behavior — check winter operation."
+     }
+    ],
+    "derated": true,
+    "effLbs": 2,
+    "fit": {
+     "meetsCapacity": true,
+     "automationMatch": false,
+     "regulatoryOk": true,
+     "secondary": true
+    },
+    "computed": {
+     "requiredLbs": 1.05,
+     "deratedLbsPerDay": 2,
+     "requiredOutputPct": 45,
+     "lbsNeeded": 0.375,
+     "estRuntimeHours": 10,
+     "ratedPoolGallons": 45000
+    },
+    "rank": 12
+   }
+  ],
+  "warnings": [
+   {
+    "code": "DATA_QUALITY_FLAG",
+    "severity": "info",
+    "ruleId": "SWG_OUTPUT_HAIRCUT",
+    "text": "Some models have disputed published output (badged below). Measured output generally matches published figures, so no derating is applied — but confirm with the manufacturer."
+   },
+   {
+    "code": "SWG_FLOW_SWITCH",
+    "severity": "info",
+    "ruleId": "SWG_FLOW_SWITCH",
+    "text": "If you run a variable-speed pump, keep the lowest speed above roughly 14 GPM (1.5″ tee). The flow switch reacts to water velocity, so too slow a speed stops chlorine production without any obvious fault."
+   },
+   {
+    "code": "AQUARITE_CELL_TYPE",
+    "severity": "info",
+    "ruleId": "AQUARITE_CELL_TYPE",
+    "text": "On install, set the cell-type setting to match the cell you actually fit — this panel works out salt from cell performance rather than a salt sensor, so a mismatch makes salt read wrong and can stop chlorine production. Confirm real salt with a K-1766 drop test rather than trusting the display."
+   },
+   {
+    "code": "SWG_CYA_CELL_LIFE",
+    "severity": "info",
+    "ruleId": "SWG_CYA_CELL_LIFE",
+    "text": "Hold CYA at 70–80 once you are running on salt. Higher CYA shields chlorine from sunlight, so the cell makes less to hold the same FC and lasts longer. Note the output percentage is a share of pump run time — change your schedule and you will need to re-tune it."
+   },
+   {
+    "code": "CELL_LIFE",
+    "severity": "info",
+    "ruleId": "CELL_LIFE",
+    "text": "Cell life is measured in generating hours — roughly 10,000 for OEM cells, nearer 7,000 for generics (some offshore cells as low as 3,000). At about 39% output the top pick spends most of the day idle, which is exactly why TFP says to oversize."
+   }
+  ],
+  "repairOptions": []
+ },
+ "checks": [
+  {
+   "code": "PAD_FLOW_OK",
+   "severity": "good",
+   "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+   "text": "Filter handles ~90 GPM, above the ~64 GPM the pump can push at full speed — no bottleneck."
+  },
+  {
+   "code": "PAD_SWG",
+   "severity": "good",
+   "ruleId": "SWG_2X_RULE",
+   "text": "Salt cell sized to the TFP 2× rule for 15,000 gallons."
+  },
+  {
+   "code": "PAD_AUTOMATION_NONE",
+   "severity": "info",
+   "ruleId": "AUTOMATION_SAME_BRAND",
+   "text": "If you add automation later, keeping pump, lights and salt cell on one brand makes it far simpler."
+  }
+ ],
+ "pumpMaxGPM": 64,
+ "warnings": [
+  {
+   "code": "SWG_FLOW_SWITCH",
+   "severity": "warning",
+   "ruleId": "SWG_FLOW_SWITCH",
+   "text": "Heads up on the salt cell: its flow switch trips on water velocity, so a 1.5″ tee needs roughly 14 GPM. The top pick can idle near 11 GPM, which is below that — set your lowest speed high enough to close the switch, or the cell will quietly stop making chlorine."
+  },
+  {
+   "code": "DATA_QUALITY_FLAG",
+   "severity": "info",
+   "ruleId": "SWG_OUTPUT_HAIRCUT",
+   "text": "Some models have disputed published output (badged below). Measured output generally matches published figures, so no derating is applied — but confirm with the manufacturer."
+  },
+  {
+   "code": "SWG_FLOW_SWITCH",
+   "severity": "info",
+   "ruleId": "SWG_FLOW_SWITCH",
+   "text": "If you run a variable-speed pump, keep the lowest speed above roughly 14 GPM (1.5″ tee). The flow switch reacts to water velocity, so too slow a speed stops chlorine production without any obvious fault."
+  },
+  {
+   "code": "AQUARITE_CELL_TYPE",
+   "severity": "info",
+   "ruleId": "AQUARITE_CELL_TYPE",
+   "text": "On install, set the cell-type setting to match the cell you actually fit — this panel works out salt from cell performance rather than a salt sensor, so a mismatch makes salt read wrong and can stop chlorine production. Confirm real salt with a K-1766 drop test rather than trusting the display."
+  },
+  {
+   "code": "SWG_CYA_CELL_LIFE",
+   "severity": "info",
+   "ruleId": "SWG_CYA_CELL_LIFE",
+   "text": "Hold CYA at 70–80 once you are running on salt. Higher CYA shields chlorine from sunlight, so the cell makes less to hold the same FC and lasts longer. Note the output percentage is a share of pump run time — change your schedule and you will need to re-tune it."
+  },
+  {
+   "code": "CELL_LIFE",
+   "severity": "info",
+   "ruleId": "CELL_LIFE",
+   "text": "Cell life is measured in generating hours — roughly 10,000 for OEM cells, nearer 7,000 for generics (some offshore cells as low as 3,000). At about 39% output the top pick spends most of the day idle, which is exactly why TFP says to oversize."
+  }
+ ],
+ "advice": [
+  {
+   "code": "PIPE_SMALL",
+   "severity": "warning",
+   "ruleId": "PLUMBING_SIZE_GUIDANCE",
+   "text": "1.5″ plumbing holds about 38 GPM on the suction side and 51 GPM on returns before water moves too fast (6 and 8 ft/s). Beyond that you pay in friction, energy and noise — these are efficiency and noise guidelines rather than hard limits, and PVC will carry more if a specific application calls for it — on a new build, going to 2″ now is the cheapest performance decision you will ever make."
+  },
+  {
+   "code": "PAD_FLOW_OK",
+   "severity": "good",
+   "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+   "text": "Filter handles ~90 GPM, above the ~64 GPM the pump can push at full speed — no bottleneck."
+  },
+  {
+   "code": "PAD_SWG",
+   "severity": "good",
+   "ruleId": "SWG_2X_RULE",
+   "text": "Salt cell sized to the TFP 2× rule for 15,000 gallons."
+  },
+  {
+   "code": "PAD_AUTOMATION_NONE",
+   "severity": "info",
+   "ruleId": "AUTOMATION_SAME_BRAND",
+   "text": "If you add automation later, keeping pump, lights and salt cell on one brand makes it far simpler."
+  },
+  {
+   "code": "SWG_FLOW_SWITCH",
+   "severity": "warning",
+   "ruleId": "SWG_FLOW_SWITCH",
+   "text": "Heads up on the salt cell: its flow switch trips on water velocity, so a 1.5″ tee needs roughly 14 GPM. The top pick can idle near 11 GPM, which is below that — set your lowest speed high enough to close the switch, or the cell will quietly stop making chlorine."
+  },
+  {
+   "code": "DATA_QUALITY_FLAG",
+   "severity": "info",
+   "ruleId": "SWG_OUTPUT_HAIRCUT",
+   "text": "Some models have disputed published output (badged below). Measured output generally matches published figures, so no derating is applied — but confirm with the manufacturer."
+  },
+  {
+   "code": "SWG_FLOW_SWITCH",
+   "severity": "info",
+   "ruleId": "SWG_FLOW_SWITCH",
+   "text": "If you run a variable-speed pump, keep the lowest speed above roughly 14 GPM (1.5″ tee). The flow switch reacts to water velocity, so too slow a speed stops chlorine production without any obvious fault."
+  },
+  {
+   "code": "AQUARITE_CELL_TYPE",
+   "severity": "info",
+   "ruleId": "AQUARITE_CELL_TYPE",
+   "text": "On install, set the cell-type setting to match the cell you actually fit — this panel works out salt from cell performance rather than a salt sensor, so a mismatch makes salt read wrong and can stop chlorine production. Confirm real salt with a K-1766 drop test rather than trusting the display."
+  },
+  {
+   "code": "SWG_CYA_CELL_LIFE",
+   "severity": "info",
+   "ruleId": "SWG_CYA_CELL_LIFE",
+   "text": "Hold CYA at 70–80 once you are running on salt. Higher CYA shields chlorine from sunlight, so the cell makes less to hold the same FC and lasts longer. Note the output percentage is a share of pump run time — change your schedule and you will need to re-tune it."
+  },
+  {
+   "code": "CELL_LIFE",
+   "severity": "info",
+   "ruleId": "CELL_LIFE",
+   "text": "Cell life is measured in generating hours — roughly 10,000 for OEM cells, nearer 7,000 for generics (some offshore cells as low as 3,000). At about 39% output the top pick spends most of the day idle, which is exactly why TFP says to oversize."
+  },
+  {
+   "code": "WARRANTY_CHECK",
+   "severity": "info",
+   "ruleId": "WARRANTY_CHECK",
+   "text": "Before you buy: check the warranty. Internet purchases and owner installation can void coverage on some brands, a few require a certified installer, and most require product registration. Bundled purchases with professional install sometimes carry a longer warranty."
+  }
+ ]
+}

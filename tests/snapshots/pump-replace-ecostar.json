@@ -1,0 +1,957 @@
+{
+ "mode": "pump",
+ "requiredGPM": 15,
+ "dailyGPM": 15,
+ "minDriver": "skimmer 15 GPM",
+ "featureGPM": 0,
+ "comparison": {
+  "current": {
+   "model": "Hayward EcoStar SP3400VSP",
+   "st": "VS",
+   "kWh": 43,
+   "cost": 7,
+   "watts": 15
+  },
+  "recommended": {
+   "model": "Hayward HL2350020VSP",
+   "st": "VS",
+   "kWh": 171,
+   "cost": 29,
+   "watts": 59
+  },
+  "kWhSaved": -128,
+  "costSaved": -22,
+  "pctSaved": -297,
+  "paybackYears": null
+ },
+ "recommendations": [
+  {
+   "product": {
+    "id": "hayward-hl2350020vsp",
+    "brand": "Hayward",
+    "model": "Hayward HL2350020VSP",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1.65,
+    "nhp": 1.65,
+    "wef": 11.15358737,
+    "frame": "48",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      52,
+      33,
+      66
+     ],
+     "w": [
+      938,
+      837,
+      976
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      9,
+      6,
+      12
+     ],
+     "w": [
+      29,
+      29,
+      30
+     ]
+    }
+   },
+   "score": 86.852877865,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 15,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 12,
+    "gpmAtCurveHigh": 66,
+    "wattsDaily": 59,
+    "wattsHigh": 976,
+    "annualKWh": 171.09375,
+    "annualCostUSD": 29
+   },
+   "variants": [
+    "Hayward MaxFlo VS 500 HL2350020VSP",
+    "Hayward MaxFlo XL SP2303VSP",
+    "Hayward MaxFlo XL SP23520VSP"
+   ],
+   "rank": 1
+  },
+  {
+   "product": {
+    "id": "speck-e71-ii-vhv",
+    "brand": "Speck",
+    "model": "Speck E71-II VHV",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1.1,
+    "nhp": 1,
+    "wef": 10.1347564,
+    "frame": "48",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3400,
+     "g": [
+      46,
+      28,
+      62
+     ],
+     "w": [
+      875,
+      747,
+      956
+     ]
+    },
+    "lo": {
+     "rpm": 1000,
+     "g": [
+      13,
+      8,
+      17
+     ],
+     "w": [
+      47,
+      46,
+      52
+     ]
+    }
+   },
+   "score": 85.38290380346021,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 15,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 17,
+    "gpmAtCurveHigh": 62,
+    "wattsDaily": 36,
+    "wattsHigh": 956,
+    "annualKWh": 104.30694076938732,
+    "annualCostUSD": 18
+   },
+   "variants": [
+    "Speck PE71-II VHV"
+   ],
+   "rank": 2
+  },
+  {
+   "product": {
+    "id": "hayward-energyflo-rs-ef200vs",
+    "brand": "Hayward",
+    "model": "Hayward EnergyFlo RS EF200VS",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1.85,
+    "nhp": 1.85,
+    "wef": 9.889093357,
+    "frame": "48",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      63,
+      37,
+      85
+     ],
+     "w": [
+      1407,
+      1128,
+      1543
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      10,
+      6,
+      14
+     ],
+     "w": [
+      22,
+      20,
+      22
+     ]
+    }
+   },
+   "score": 85.10658139330029,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 15,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 14,
+    "gpmAtCurveHigh": 85,
+    "wattsDaily": 27,
+    "wattsHigh": 1543,
+    "annualKWh": 79.01239067055394,
+    "annualCostUSD": 13
+   },
+   "variants": [],
+   "rank": 3
+  },
+  {
+   "product": {
+    "id": "hayward-tristar-sp3200vsp",
+    "brand": "Hayward",
+    "model": "Hayward TriStar SP3200VSP",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1.85,
+    "nhp": 1.85,
+    "wef": 9.878303306,
+    "frame": "48",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      64,
+      38,
+      85
+     ],
+     "w": [
+      1408,
+      1128,
+      1544
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      11,
+      7,
+      14
+     ],
+     "w": [
+      22,
+      21,
+      22
+     ]
+    }
+   },
+   "score": 85.08500129130029,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 15,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 14,
+    "gpmAtCurveHigh": 85,
+    "wattsDaily": 27,
+    "wattsHigh": 1544,
+    "annualKWh": 79.01239067055394,
+    "annualCostUSD": 13
+   },
+   "variants": [],
+   "rank": 4
+  },
+  {
+   "product": {
+    "id": "hayward-hl32900vsp",
+    "brand": "Hayward",
+    "model": "Hayward HL32900VSP",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1.85,
+    "nhp": 1.85,
+    "wef": 9.870840606,
+    "frame": "48",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      64,
+      38,
+      85
+     ],
+     "w": [
+      1408,
+      1128,
+      1543
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      11,
+      7,
+      14
+     ],
+     "w": [
+      22,
+      21,
+      23
+     ]
+    }
+   },
+   "score": 85.03954837672303,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 15,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 14,
+    "gpmAtCurveHigh": 85,
+    "wattsDaily": 28,
+    "wattsHigh": 1543,
+    "annualKWh": 82.60386297376094,
+    "annualCostUSD": 14
+   },
+   "variants": [
+    "Hayward TriStar SP3200VSPND"
+   ],
+   "rank": 5
+  },
+  {
+   "product": {
+    "id": "hayward-tristar-sp3202vsp",
+    "brand": "Hayward",
+    "model": "Hayward TriStar SP3202VSP",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1.85,
+    "nhp": 1.85,
+    "wef": 9.866146174,
+    "frame": "48",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      64,
+      38,
+      85
+     ],
+     "w": [
+      1408,
+      1128,
+      1544
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      11,
+      7,
+      14
+     ],
+     "w": [
+      22,
+      21,
+      23
+     ]
+    }
+   },
+   "score": 85.03015951272303,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 15,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 14,
+    "gpmAtCurveHigh": 85,
+    "wattsDaily": 28,
+    "wattsHigh": 1544,
+    "annualKWh": 82.60386297376094,
+    "annualCostUSD": 14
+   },
+   "variants": [
+    "Hayward TriStar SP3202VSPBH",
+    "Hayward TriStar SP3202VSPND",
+    "Hayward TriStar SP32900VSP",
+    "Hayward TriStar VS 900 HL32900VSP"
+   ],
+   "rank": 6
+  },
+  {
+   "product": {
+    "id": "hayward-hl2670020vsp",
+    "brand": "Hayward",
+    "model": "Hayward HL2670020VSP",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1.65,
+    "nhp": 1.65,
+    "wef": 10.10746055,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      55,
+      35,
+      70
+     ],
+     "w": [
+      1135,
+      961,
+      1231
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      9,
+      8,
+      11
+     ],
+     "w": [
+      22,
+      20,
+      22
+     ]
+    }
+   },
+   "score": 84.83033432314049,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 15,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 11,
+    "gpmAtCurveHigh": 70,
+    "wattsDaily": 56,
+    "wattsHigh": 1231,
+    "annualKWh": 162.89256198347104,
+    "annualCostUSD": 28
+   },
+   "variants": [],
+   "rank": 7
+  },
+  {
+   "product": {
+    "id": "hayward-super-pump-vs-700-hl2670020vsp",
+    "brand": "Hayward",
+    "model": "Hayward Super Pump VS 700 HL2670020VSP",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1.65,
+    "nhp": 1.65,
+    "wef": 10.10746055,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      55,
+      35,
+      70
+     ],
+     "w": [
+      1135,
+      961,
+      1231
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      9,
+      6,
+      11
+     ],
+     "w": [
+      22,
+      20,
+      22
+     ]
+    }
+   },
+   "score": 84.83033432314049,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 15,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 11,
+    "gpmAtCurveHigh": 70,
+    "wattsDaily": 56,
+    "wattsHigh": 1231,
+    "annualKWh": 162.89256198347104,
+    "annualCostUSD": 28
+   },
+   "variants": [
+    "Hayward SuperPump SP2603VSP",
+    "Hayward SuperPump SP2670020VSP"
+   ],
+   "rank": 8
+  },
+  {
+   "product": {
+    "id": "speck-badu-ecom3-v-1-65",
+    "brand": "Speck",
+    "model": "Speck Badu EcoM3 V 1.65",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1.65,
+    "nhp": 1.65,
+    "wef": 9.83115861,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      54,
+      33,
+      72
+     ],
+     "w": [
+      1165,
+      1034,
+      1247
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      9,
+      6,
+      12
+     ],
+     "w": [
+      22,
+      21,
+      22
+     ]
+    }
+   },
+   "score": 84.595832845,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 15,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 12,
+    "gpmAtCurveHigh": 72,
+    "wattsDaily": 43,
+    "wattsHigh": 1247,
+    "annualKWh": 125.46875,
+    "annualCostUSD": 21
+   },
+   "variants": [],
+   "rank": 9
+  },
+  {
+   "product": {
+    "id": "aquaguard-agvs165-59927-xxxx",
+    "brand": "Aquaguard",
+    "model": "Aquaguard AGVS165 59927-XXXX",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1.65,
+    "nhp": 1.65,
+    "wef": 9.464139954,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      64,
+      39,
+      84
+     ],
+     "w": [
+      1552,
+      1255,
+      1572
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      11,
+      7,
+      15
+     ],
+     "w": [
+      22,
+      20,
+      22
+     ]
+    }
+   },
+   "score": 84.382239908,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 15,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 15,
+    "gpmAtCurveHigh": 84,
+    "wattsDaily": 22,
+    "wattsHigh": 1572,
+    "annualKWh": 64.24,
+    "annualCostUSD": 11
+   },
+   "variants": [
+    "Aquapro APEXVS165 59927-XXXX",
+    "Aquapro SUNVS165 59927-XXXX"
+   ],
+   "rank": 10
+  },
+  {
+   "product": {
+    "id": "spectralight-leaf-v2-t2",
+    "brand": "Spectralight",
+    "model": "Spectralight Leaf V2 T2",
+    "st": "VS",
+    "mot": "CSCR",
+    "thp": 1.65,
+    "nhp": 1.65,
+    "wef": 9.447924524,
+    "frame": "48",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      60,
+      38,
+      78
+     ],
+     "w": [
+      1422,
+      1269,
+      1457
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      10,
+      6,
+      13
+     ],
+     "w": [
+      21,
+      20,
+      21
+     ]
+    }
+   },
+   "score": 84.09515833338916,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 15,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 13,
+    "gpmAtCurveHigh": 78,
+    "wattsDaily": 32,
+    "wattsHigh": 1457,
+    "annualKWh": 94.19890760127444,
+    "annualCostUSD": 16
+   },
+   "variants": [],
+   "rank": 11
+  },
+  {
+   "product": {
+    "id": "speck-badu-superpro-iii-cvs",
+    "brand": "Speck",
+    "model": "Speck BADU SuperPro-III CVS",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1.65,
+    "nhp": 1.65,
+    "wef": 9.376512265,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      58,
+      35,
+      78
+     ],
+     "w": [
+      1339,
+      1187,
+      1445
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      10,
+      6,
+      14
+     ],
+     "w": [
+      27,
+      26,
+      28
+     ]
+    }
+   },
+   "score": 83.89825412183674,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 15,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 14,
+    "gpmAtCurveHigh": 78,
+    "wattsDaily": 34,
+    "wattsHigh": 1445,
+    "annualKWh": 100.5612244897959,
+    "annualCostUSD": 17
+   },
+   "variants": [],
+   "rank": 12
+  }
+ ],
+ "warnings": [
+  {
+   "code": "PIPE_OK",
+   "severity": "info",
+   "ruleId": "PLUMBING_SIZE_GUIDANCE",
+   "text": "2″ plumbing carries about 63 GPM suction / 84 GPM return within the velocity limits."
+  },
+  {
+   "code": "WARRANTY_CHECK",
+   "severity": "info",
+   "ruleId": "WARRANTY_CHECK",
+   "text": "Before you buy: check the warranty. Internet purchases and owner installation can void coverage on some brands, a few require a certified installer, and most require product registration. Bundled purchases with professional install sometimes carry a longer warranty."
+  }
+ ],
+ "repairOptions": [
+  {
+   "ruleId": "ECOSTAR_KNOWN_ISSUE",
+   "summary": "Hayward EcoStar: the drive is separately replaceable from the motor, so a drive swap can be far cheaper than a whole pump — but note a replacement drive’s warranty expires on the same date as the original pump. TFP considers these drives failure-prone and suggests the Hayward TriStar VS if you are replacing outright."
+  }
+ ],
+ "curve": "C"
+}

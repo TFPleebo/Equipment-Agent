@@ -1,0 +1,42 @@
+{
+  "id": "swg-huge-pool",
+  "title": "SWG: 80k gal pool - no single cell meets 2x",
+  "mode": "swg",
+  "profile": {
+    "poolType": "inground-plaster",
+    "pipe": "2",
+    "automation": "none",
+    "voltage": "230",
+    "climate": "hot_sunny",
+    "gallons": 80000,
+    "failure": "first",
+    "runtime": 12,
+    "cycle": "long"
+  },
+  "expect": {
+    "requiredLbs": 5.6,
+    "lbsNeeded": 2.669,
+    "ppm": 4,
+    "runtime": 12,
+    "top": [
+      "pureline-crystal-pure-60",
+      "circupool-rj60",
+      "circupool-rj60p",
+      "circupool-core55",
+      "pentair-ic-60"
+    ],
+    "topRequiredOutputPct": 168,
+    "comparison": null,
+    "warnings": [
+      "PIPE_OK",
+      "DATA_QUALITY_FLAG",
+      "MULTI_CELL",
+      "SWG_FLOW_SWITCH",
+      "SWG_CYA_CELL_LIFE",
+      "CELL_LIFE",
+      "SWG_RUNTIME_TRADEOFF",
+      "WARRANTY_CHECK"
+    ],
+    "repairOptions": []
+  }
+}

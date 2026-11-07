@@ -1,0 +1,45 @@
+{
+  "id": "pump-replace-ecostar",
+  "title": "Pump: replacing a Hayward EcoStar (known drive issue), current VS pump selected",
+  "mode": "pump",
+  "profile": {
+    "poolType": "inground-plaster",
+    "pipe": "2",
+    "automation": "none",
+    "voltage": "230",
+    "climate": "warm",
+    "gallons": 20000,
+    "failure": "dead-motor",
+    "currentPumpId": "hayward-ecostar-sp3400vsp",
+    "currentPump": "Hayward EcoStar SP3400VSP",
+    "rate": 0.17,
+    "runtime": 8
+  },
+  "expect": {
+    "requiredGPM": 15,
+    "dailyGPM": 15,
+    "featureGPM": 0,
+    "minDriver": "skimmer 15 GPM",
+    "curve": "C",
+    "top": [
+      "hayward-hl2350020vsp",
+      "speck-e71-ii-vhv",
+      "hayward-energyflo-rs-ef200vs",
+      "hayward-tristar-sp3200vsp",
+      "hayward-hl32900vsp"
+    ],
+    "topAnnualCostUSD": 29,
+    "comparison": {
+      "kWhSaved": -128,
+      "costSaved": -22,
+      "pctSaved": -297
+    },
+    "warnings": [
+      "PIPE_OK",
+      "WARRANTY_CHECK"
+    ],
+    "repairOptions": [
+      "ECOSTAR_KNOWN_ISSUE"
+    ]
+  }
+}

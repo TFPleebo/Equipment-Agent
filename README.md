@@ -1,7 +1,8 @@
-# 🧠 Pool Equipment Advisor AI[
-https://tfpleebo.github.io/Equipment-Agent/Pool%20Equipment%20Advisor.html
+# 🧠 Pool Equipment Advisor
 
-**SWG & Pump Selection Assistant**
+**Live:** https://tfpleebo.github.io/Equipment-Agent/Pool%20Equipment%20Advisor.html
+
+**Pump, Salt System (SWG) & Filter Selection Assistant**
 
 ## 📌 Overview
 
@@ -212,16 +213,23 @@ This agent prioritizes:
 
 ---
 
+## 🗂️ Project layout
+
+| Path | What |
+|---|---|
+| `Pool Equipment Advisor.html` | the web page (wizard + results) |
+| `engine/advisor.js` | the sizing engine, no screen code; reusable in other apps |
+| `data/*.json` | pump, salt cell and filter catalogs plus the sizing rules |
+| `data/advisor-data.js` | generated from the JSON; the page loads this |
+| `docs/RULES.md` | every rule in plain English, plus open questions |
+| `docs/DATA.md` | what each data field means and how to update it |
+| `docs/POOLMATH-HANDOFF.md` | how PoolMath can embed or rebuild the advisor |
+| `tests/` | golden test cases (`node tests/run.mjs`) |
+| `pool-advisor-chatbot.html` | separate experimental chat version (OpenAI via a Cloudflare Worker) |
+
+**After editing data:** run `node tools/build-data.mjs` and then `node tests/run.mjs`.
+The page must be published together with the `data/` and `engine/` folders.
+
 ## 🛠️ Status
 
 🚧 In Development — Iterating on logic, inputs, and real-world recommendations
-
----
-
-If you want next step, I can:
-
-* Turn this into a **system prompt for the agent**
-* Add **actual product recommendations (Hayward, Pentair, Circupool, etc.)**
-* Or build a **decision tree / JSON schema** for your backend
-
-Just tell me 👍

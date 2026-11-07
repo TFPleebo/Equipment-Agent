@@ -1,0 +1,40 @@
+{
+  "id": "swg-20k-warm",
+  "title": "SWG: first salt system, 20k gal, warm climate",
+  "mode": "swg",
+  "profile": {
+    "poolType": "inground-plaster",
+    "pipe": "2",
+    "automation": "none",
+    "voltage": "230",
+    "climate": "warm",
+    "gallons": 20000,
+    "failure": "first",
+    "runtime": 8,
+    "cycle": "long"
+  },
+  "expect": {
+    "requiredLbs": 1.4,
+    "lbsNeeded": 0.5,
+    "ppm": 3,
+    "runtime": 8,
+    "top": [
+      "pureline-crystal-pure-60",
+      "circupool-rj60",
+      "circupool-rj60p",
+      "circupool-core55",
+      "pentair-ic-60"
+    ],
+    "topRequiredOutputPct": 47,
+    "comparison": null,
+    "warnings": [
+      "PIPE_OK",
+      "DATA_QUALITY_FLAG",
+      "SWG_FLOW_SWITCH",
+      "SWG_CYA_CELL_LIFE",
+      "CELL_LIFE",
+      "WARRANTY_CHECK"
+    ],
+    "repairOptions": []
+  }
+}

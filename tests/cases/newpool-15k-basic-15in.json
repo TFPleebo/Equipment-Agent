@@ -1,0 +1,52 @@
+{
+  "id": "newpool-15k-basic-15in",
+  "title": "New pool: 15k gal on 1.5in pipe, heavy debris, no automation",
+  "mode": "newpool",
+  "profile": {
+    "poolType": "inground-plaster",
+    "pipe": "1.5",
+    "automation": "none",
+    "voltage": "230",
+    "climate": "warm",
+    "mode": "newpool",
+    "newBuild": true,
+    "gallons": 15000,
+    "hasSWG": true,
+    "rate": 0.2,
+    "runtime": 10,
+    "debris": "high",
+    "waterCost": "low"
+  },
+  "expect": {
+    "pumpMaxGPM": 64,
+    "pumpTop": [
+      "hayward-tristar-sp3200vsp",
+      "hayward-hl32900vsp",
+      "hayward-tristar-sp3202vsp"
+    ],
+    "filterType": "cartridge",
+    "filterTop": [
+      "pentair-clean-clear-plus-ccp240",
+      "jandy-cs250",
+      "sta-rite-system-3-s7m120"
+    ],
+    "swgTop": [
+      "circupool-core55",
+      "pureline-crystal-pure-60",
+      "circupool-rj60"
+    ],
+    "advice": [
+      "PIPE_SMALL",
+      "PAD_FLOW_OK",
+      "PAD_SWG",
+      "PAD_AUTOMATION_NONE",
+      "SWG_FLOW_SWITCH",
+      "DATA_QUALITY_FLAG",
+      "SWG_FLOW_SWITCH",
+      "AQUARITE_CELL_TYPE",
+      "SWG_CYA_CELL_LIFE",
+      "CELL_LIFE",
+      "WARRANTY_CHECK"
+    ]
+  }
+}

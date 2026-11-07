@@ -1,0 +1,45 @@
+{
+  "id": "swg-upgrade-from-t9",
+  "title": "SWG: undersized T-CELL-9 on 30k gal, Hayward automation",
+  "mode": "swg",
+  "profile": {
+    "poolType": "inground-plaster",
+    "pipe": "2",
+    "automation": "hayward",
+    "voltage": "230",
+    "climate": "warm",
+    "gallons": 30000,
+    "failure": "more-capacity",
+    "currentSwgId": "hayward-aquarite-t9",
+    "runtime": 8,
+    "cycle": "long"
+  },
+  "expect": {
+    "requiredLbs": 2.1,
+    "lbsNeeded": 0.751,
+    "ppm": 3,
+    "runtime": 8,
+    "top": [
+      "pureline-crystal-pure-60",
+      "circupool-rj60",
+      "circupool-rj60p",
+      "circupool-core55",
+      "autopilot-ppc5"
+    ],
+    "topRequiredOutputPct": 71,
+    "comparison": {
+      "capacityFactor": 3.24,
+      "pctDrop": 159
+    },
+    "warnings": [
+      "PIPE_OK",
+      "DATA_QUALITY_FLAG",
+      "SWG_FLOW_SWITCH",
+      "SWG_CYA_CELL_LIFE",
+      "CELL_LIFE",
+      "SWG_RUNTIME_TRADEOFF",
+      "WARRANTY_CHECK"
+    ],
+    "repairOptions": []
+  }
+}

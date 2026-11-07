@@ -1,0 +1,53 @@
+{
+  "id": "filter-water-cost",
+  "title": "Filter: high water cost forces cartridge",
+  "mode": "filter",
+  "profile": {
+    "poolType": "inground-plaster",
+    "pipe": "1.5",
+    "automation": "none",
+    "voltage": "230",
+    "climate": "warm",
+    "gallons": 15000,
+    "replacingType": "sand",
+    "desiredType": "recommend",
+    "failureMode": "leaking-valve",
+    "pipeIn": 1.5,
+    "pumpMaxGPM": 50,
+    "debris": "high",
+    "waterCost": "high"
+  },
+  "expect": {
+    "chosenType": "cartridge",
+    "min": {
+      "kind": "sqft",
+      "value": 225,
+      "target": 300,
+      "ruleId": "FILTER_SIZING"
+    },
+    "pumpMaxGPM": 50,
+    "top": [
+      "pentair-clean-clear-plus-ccp240",
+      "jandy-cs250",
+      "hayward-swimclear-c2030",
+      "sta-rite-system-3-s7m120",
+      "sta-rite-system-2-plm300"
+    ],
+    "sizeUp": [
+      "jandy-cs250"
+    ],
+    "disqualified": 6,
+    "comparison": null,
+    "warnings": [
+      "PIPE_SMALL",
+      "FILTER_AUTOMATION_AGNOSTIC",
+      "WARRANTY_CHECK"
+    ],
+    "typeReasons": [
+      "FILTER_TYPE_CARTRIDGE_WATER"
+    ],
+    "repairOptions": [
+      "FILTER_REPAIR_FACTS"
+    ]
+  }
+}

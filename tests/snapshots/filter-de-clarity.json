@@ -1,0 +1,419 @@
+{
+ "mode": "filter",
+ "chosenType": "de",
+ "typeReasons": [
+  {
+   "code": "FILTER_TYPE_DE_CLARITY",
+   "severity": "good",
+   "ruleId": "FILTER_TYPE_RECOMMENDATION",
+   "text": "DE chosen for finest clarity (~3–5 micron vs ~10 cartridge, ~30 sand)."
+  }
+ ],
+ "min": {
+  "kind": "sqft",
+  "value": 60,
+  "ruleId": "FILTER_SIZING"
+ },
+ "pumpMaxGPM": 100,
+ "comparison": null,
+ "recommendations": [
+  {
+   "product": {
+    "id": "hayward-progrid-de7220",
+    "brand": "Hayward",
+    "model": "ProGrid DE7220",
+    "ft": "de",
+    "area": 72,
+    "tank": null,
+    "bed": null,
+    "gpm": 144,
+    "mic": 3,
+    "port": 2,
+    "cart": null,
+    "psi": 50,
+    "dq": "verified"
+   },
+   "score": 108,
+   "reasons": [
+    {
+     "code": "FILTER_PORT_UNDERSIZED",
+     "severity": "warning",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Ports are 2″ vs your 2.5″ plumbing — a reducer adds some restriction."
+    },
+    {
+     "code": "FILTER_SIZE_OK",
+     "severity": "good",
+     "ruleId": "FILTER_SIZING",
+     "text": "72 sq ft — meets the 60 sq ft minimum."
+    },
+    {
+     "code": "FILTER_FLOW_OK",
+     "severity": "good",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Handles ~144 GPM ≥ your pump's ~100 GPM."
+    },
+    {
+     "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "severity": "info",
+     "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+    }
+   ],
+   "fit": {
+    "meetsMinSize": true,
+    "flowOk": true,
+    "portOk": false,
+    "withinBudget": true
+   },
+   "derated": false,
+   "computed": {
+    "minRequired": 60,
+    "candidateSize": 72,
+    "candidateMaxGPM": 144,
+    "pumpMaxGPM": 100,
+    "oversizeRatio": 1.2
+   },
+   "rank": 1
+  },
+  {
+   "product": {
+    "id": "pentair-fns-plus-fnsp60",
+    "brand": "Pentair",
+    "model": "FNS Plus FNSP60",
+    "ft": "de",
+    "area": 60,
+    "tank": null,
+    "bed": null,
+    "gpm": 120,
+    "mic": 5,
+    "port": 2,
+    "cart": null,
+    "psi": 50,
+    "dq": "verified"
+   },
+   "score": 103.66666666666667,
+   "reasons": [
+    {
+     "code": "FILTER_PORT_UNDERSIZED",
+     "severity": "warning",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Ports are 2″ vs your 2.5″ plumbing — a reducer adds some restriction."
+    },
+    {
+     "code": "FILTER_SIZE_OK",
+     "severity": "good",
+     "ruleId": "FILTER_SIZING",
+     "text": "60 sq ft — meets the 60 sq ft minimum."
+    },
+    {
+     "code": "FILTER_FLOW_OK",
+     "severity": "good",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Handles ~120 GPM ≥ your pump's ~100 GPM."
+    },
+    {
+     "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "severity": "info",
+     "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+    }
+   ],
+   "fit": {
+    "meetsMinSize": true,
+    "flowOk": true,
+    "portOk": false,
+    "withinBudget": true
+   },
+   "derated": false,
+   "computed": {
+    "minRequired": 60,
+    "candidateSize": 60,
+    "candidateMaxGPM": 120,
+    "pumpMaxGPM": 100,
+    "oversizeRatio": 1
+   },
+   "rank": 2
+  },
+  {
+   "product": {
+    "id": "hayward-progrid-de6020",
+    "brand": "Hayward",
+    "model": "ProGrid DE6020",
+    "ft": "de",
+    "area": 60,
+    "tank": null,
+    "bed": null,
+    "gpm": 120,
+    "mic": 3,
+    "port": 2,
+    "cart": null,
+    "psi": 50,
+    "dq": "verified"
+   },
+   "score": 103.66666666666667,
+   "reasons": [
+    {
+     "code": "FILTER_PORT_UNDERSIZED",
+     "severity": "warning",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Ports are 2″ vs your 2.5″ plumbing — a reducer adds some restriction."
+    },
+    {
+     "code": "FILTER_SIZE_OK",
+     "severity": "good",
+     "ruleId": "FILTER_SIZING",
+     "text": "60 sq ft — meets the 60 sq ft minimum."
+    },
+    {
+     "code": "FILTER_FLOW_OK",
+     "severity": "good",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Handles ~120 GPM ≥ your pump's ~100 GPM."
+    },
+    {
+     "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "severity": "info",
+     "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+    }
+   ],
+   "fit": {
+    "meetsMinSize": true,
+    "flowOk": true,
+    "portOk": false,
+    "withinBudget": true
+   },
+   "derated": false,
+   "computed": {
+    "minRequired": 60,
+    "candidateSize": 60,
+    "candidateMaxGPM": 120,
+    "pumpMaxGPM": 100,
+    "oversizeRatio": 1
+   },
+   "rank": 3
+  },
+  {
+   "product": {
+    "id": "jandy-dev60",
+    "brand": "Jandy",
+    "model": "DEV60",
+    "ft": "de",
+    "area": 60,
+    "tank": null,
+    "bed": null,
+    "gpm": 120,
+    "mic": 5,
+    "port": 2,
+    "cart": null,
+    "psi": 50,
+    "dq": "partial"
+   },
+   "score": 98.86666666666667,
+   "reasons": [
+    {
+     "code": "FILTER_PORT_UNDERSIZED",
+     "severity": "warning",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Ports are 2″ vs your 2.5″ plumbing — a reducer adds some restriction."
+    },
+    {
+     "code": "FILTER_SIZE_OK",
+     "severity": "good",
+     "ruleId": "FILTER_SIZING",
+     "text": "60 sq ft — meets the 60 sq ft minimum."
+    },
+    {
+     "code": "FILTER_FLOW_OK",
+     "severity": "good",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Handles ~120 GPM ≥ your pump's ~100 GPM."
+    },
+    {
+     "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "severity": "info",
+     "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+    }
+   ],
+   "fit": {
+    "meetsMinSize": true,
+    "flowOk": true,
+    "portOk": false,
+    "withinBudget": true
+   },
+   "derated": false,
+   "computed": {
+    "minRequired": 60,
+    "candidateSize": 60,
+    "candidateMaxGPM": 120,
+    "pumpMaxGPM": 100,
+    "oversizeRatio": 1
+   },
+   "rank": 4
+  }
+ ],
+ "disqualified": [
+  {
+   "product": {
+    "id": "pentair-fns-plus-fnsp48",
+    "brand": "Pentair",
+    "model": "FNS Plus FNSP48",
+    "ft": "de",
+    "area": 48,
+    "tank": null,
+    "bed": null,
+    "gpm": 96,
+    "mic": 5,
+    "port": 2,
+    "cart": null,
+    "psi": 50,
+    "dq": "verified"
+   },
+   "reason": {
+    "code": "FILTER_UNDERSIZED",
+    "severity": "blocker",
+    "ruleId": "FILTER_SIZING",
+    "text": "Below the 60 sq ft minimum (this is 48 sq ft)."
+   }
+  },
+  {
+   "product": {
+    "id": "hayward-progrid-de4820",
+    "brand": "Hayward",
+    "model": "ProGrid DE4820",
+    "ft": "de",
+    "area": 48,
+    "tank": null,
+    "bed": null,
+    "gpm": 96,
+    "mic": 3,
+    "port": 2,
+    "cart": null,
+    "psi": 50,
+    "dq": "verified"
+   },
+   "reason": {
+    "code": "FILTER_UNDERSIZED",
+    "severity": "blocker",
+    "ruleId": "FILTER_SIZING",
+    "text": "Below the 60 sq ft minimum (this is 48 sq ft)."
+   }
+  },
+  {
+   "product": {
+    "id": "jandy-dev48",
+    "brand": "Jandy",
+    "model": "DEV48",
+    "ft": "de",
+    "area": 48,
+    "tank": null,
+    "bed": null,
+    "gpm": 96,
+    "mic": 5,
+    "port": 2,
+    "cart": null,
+    "psi": 50,
+    "dq": "partial"
+   },
+   "reason": {
+    "code": "FILTER_UNDERSIZED",
+    "severity": "blocker",
+    "ruleId": "FILTER_SIZING",
+    "text": "Below the 60 sq ft minimum (this is 48 sq ft)."
+   }
+  },
+  {
+   "product": {
+    "id": "hayward-perflex-ec75a",
+    "brand": "Hayward",
+    "model": "Perflex EC75A",
+    "ft": "de",
+    "area": 40,
+    "tank": null,
+    "bed": null,
+    "gpm": 80,
+    "mic": 3,
+    "port": 1.5,
+    "cart": null,
+    "psi": null,
+    "dq": "partial"
+   },
+   "reason": {
+    "code": "FILTER_UNDERSIZED",
+    "severity": "blocker",
+    "ruleId": "FILTER_SIZING",
+    "text": "Below the 60 sq ft minimum (this is 40 sq ft)."
+   }
+  },
+  {
+   "product": {
+    "id": "pentair-fns-plus-fnsp36",
+    "brand": "Pentair",
+    "model": "FNS Plus FNSP36",
+    "ft": "de",
+    "area": 36,
+    "tank": null,
+    "bed": null,
+    "gpm": 72,
+    "mic": 5,
+    "port": 2,
+    "cart": null,
+    "psi": 50,
+    "dq": "verified"
+   },
+   "reason": {
+    "code": "FILTER_UNDERSIZED",
+    "severity": "blocker",
+    "ruleId": "FILTER_SIZING",
+    "text": "Below the 60 sq ft minimum (this is 36 sq ft)."
+   }
+  },
+  {
+   "product": {
+    "id": "hayward-progrid-de3620",
+    "brand": "Hayward",
+    "model": "ProGrid DE3620",
+    "ft": "de",
+    "area": 36,
+    "tank": null,
+    "bed": null,
+    "gpm": 72,
+    "mic": 3,
+    "port": 2,
+    "cart": null,
+    "psi": 50,
+    "dq": "verified"
+   },
+   "reason": {
+    "code": "FILTER_UNDERSIZED",
+    "severity": "blocker",
+    "ruleId": "FILTER_SIZING",
+    "text": "Below the 60 sq ft minimum (this is 36 sq ft)."
+   }
+  }
+ ],
+ "alternatives": [],
+ "repairOptions": [],
+ "warnings": [
+  {
+   "code": "PIPE_OK",
+   "severity": "info",
+   "ruleId": "PLUMBING_SIZE_GUIDANCE",
+   "text": "2.5+″ plumbing carries about 90 GPM suction / 119 GPM return within the velocity limits."
+  },
+  {
+   "code": "FILTER_AUTOMATION_AGNOSTIC",
+   "severity": "info",
+   "ruleId": "AUTOMATION_SAME_BRAND",
+   "text": "Filters aren’t controlled by automation, so brand match doesn’t matter here."
+  },
+  {
+   "code": "WARRANTY_CHECK",
+   "severity": "info",
+   "ruleId": "WARRANTY_CHECK",
+   "text": "Before you buy: check the warranty. Internet purchases and owner installation can void coverage on some brands, a few require a certified installer, and most require product registration. Bundled purchases with professional install sometimes carry a longer warranty."
+  }
+ ]
+}

@@ -1,0 +1,45 @@
+{
+  "id": "pump-spa-heater",
+  "title": "Pump: 25k gal with 6-jet spa, gas heater and salt cell",
+  "mode": "pump",
+  "profile": {
+    "poolType": "inground-plaster",
+    "pipe": "2",
+    "automation": "none",
+    "voltage": "230",
+    "climate": "warm",
+    "gallons": 25000,
+    "spa": true,
+    "spaJets": 6,
+    "gasHeater": true,
+    "hasSWG": true,
+    "failure": "wrong-size",
+    "rate": 0.17,
+    "runtime": 8,
+    "filterType": "cartridge",
+    "filterSize": 420
+  },
+  "expect": {
+    "requiredGPM": 90,
+    "dailyGPM": 40,
+    "featureGPM": 90,
+    "minDriver": "gas heater 40 GPM",
+    "curve": "C",
+    "top": [
+      "pentair-whisperflo-vst-011532",
+      "jandy-stealth-vsshp220aut",
+      "stealth-vsshp220aut",
+      "hayward-ecostar-sp3400vspvrc",
+      "hayward-ecostar-sp3400vspvr"
+    ],
+    "topAnnualCostUSD": 210,
+    "comparison": null,
+    "warnings": [
+      "PIPE_OK",
+      "SWG_FLOW_SWITCH_OK",
+      "HEATER_BYPASS",
+      "WARRANTY_CHECK"
+    ],
+    "repairOptions": []
+  }
+}

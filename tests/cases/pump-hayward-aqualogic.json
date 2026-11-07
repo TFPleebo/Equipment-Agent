@@ -1,0 +1,40 @@
+{
+  "id": "pump-hayward-aqualogic",
+  "title": "Pump: Hayward AquaLogic automation (repair hint)",
+  "mode": "pump",
+  "profile": {
+    "poolType": "inground-plaster",
+    "pipe": "2",
+    "automation": "hayward",
+    "voltage": "230",
+    "climate": "warm",
+    "gallons": 18000,
+    "automationModel": "AquaLogic",
+    "failure": "dead-motor",
+    "rate": 0.17,
+    "runtime": 8
+  },
+  "expect": {
+    "requiredGPM": 15,
+    "dailyGPM": 15,
+    "featureGPM": 0,
+    "minDriver": "skimmer 15 GPM",
+    "curve": "C",
+    "top": [
+      "hayward-hl2350020vsp",
+      "hayward-energyflo-rs-ef200vs",
+      "hayward-tristar-sp3200vsp",
+      "hayward-hl32900vsp",
+      "hayward-tristar-sp3202vsp"
+    ],
+    "topAnnualCostUSD": 29,
+    "comparison": null,
+    "warnings": [
+      "PIPE_OK",
+      "WARRANTY_CHECK"
+    ],
+    "repairOptions": [
+      "AUTOMATION_EXCEPTIONS"
+    ]
+  }
+}

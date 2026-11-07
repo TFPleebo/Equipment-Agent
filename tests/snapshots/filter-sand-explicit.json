@@ -1,0 +1,680 @@
+{
+ "mode": "filter",
+ "chosenType": "sand",
+ "typeReasons": [],
+ "min": {
+  "kind": "diam",
+  "value": 24,
+  "ruleId": "FILTER_SIZING"
+ },
+ "pumpMaxGPM": 80,
+ "comparison": null,
+ "recommendations": [
+  {
+   "product": {
+    "id": "hayward-proseries-plus-s311sxv",
+    "brand": "Hayward",
+    "model": "ProSeries Plus S311SXV",
+    "ft": "sand",
+    "area": null,
+    "tank": 31,
+    "bed": 4.95,
+    "gpm": 99,
+    "mic": null,
+    "port": 2,
+    "cart": null,
+    "psi": null,
+    "dq": "verified"
+   },
+   "score": 101.52581825142256,
+   "reasons": [
+    {
+     "code": "FILTER_SIZE_OK",
+     "severity": "good",
+     "ruleId": "FILTER_SIZING",
+     "text": "31″ tank — comfortably above the 24″ minimum."
+    },
+    {
+     "code": "FILTER_BIGGER_IS_BETTER",
+     "severity": "good",
+     "ruleId": "FILTER_BIGGER_IS_BETTER",
+     "text": "~1.6× minimum → longer runs between cleanings."
+    },
+    {
+     "code": "FILTER_FLOW_OK",
+     "severity": "good",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Handles ~99 GPM ≥ your pump's ~80 GPM."
+    },
+    {
+     "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "severity": "info",
+     "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+    }
+   ],
+   "fit": {
+    "meetsMinSize": true,
+    "flowOk": true,
+    "portOk": true,
+    "withinBudget": true
+   },
+   "derated": false,
+   "computed": {
+    "minRequired": 24,
+    "candidateSize": 31,
+    "candidateMaxGPM": 99,
+    "pumpMaxGPM": 80,
+    "oversizeRatio": 1.58
+   },
+   "rank": 1
+  },
+  {
+   "product": {
+    "id": "hayward-proseries-s310t2",
+    "brand": "Hayward",
+    "model": "ProSeries S310T2",
+    "ft": "sand",
+    "area": null,
+    "tank": 30.5,
+    "bed": 4.91,
+    "gpm": 98,
+    "mic": null,
+    "port": 2,
+    "cart": null,
+    "psi": null,
+    "dq": "verified"
+   },
+   "score": 101.51079480427302,
+   "reasons": [
+    {
+     "code": "FILTER_SIZE_OK",
+     "severity": "good",
+     "ruleId": "FILTER_SIZING",
+     "text": "30.5″ tank — comfortably above the 24″ minimum."
+    },
+    {
+     "code": "FILTER_BIGGER_IS_BETTER",
+     "severity": "good",
+     "ruleId": "FILTER_BIGGER_IS_BETTER",
+     "text": "~1.6× minimum → longer runs between cleanings."
+    },
+    {
+     "code": "FILTER_FLOW_OK",
+     "severity": "good",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Handles ~98 GPM ≥ your pump's ~80 GPM."
+    },
+    {
+     "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "severity": "info",
+     "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+    }
+   ],
+   "fit": {
+    "meetsMinSize": true,
+    "flowOk": true,
+    "portOk": true,
+    "withinBudget": true
+   },
+   "derated": false,
+   "computed": {
+    "minRequired": 24,
+    "candidateSize": 30.5,
+    "candidateMaxGPM": 98,
+    "pumpMaxGPM": 80,
+    "oversizeRatio": 1.56
+   },
+   "rank": 2
+  },
+  {
+   "product": {
+    "id": "jandy-js100-sm",
+    "brand": "Jandy",
+    "model": "JS100-SM",
+    "ft": "sand",
+    "area": null,
+    "tank": 30,
+    "bed": 4.9,
+    "gpm": 98,
+    "mic": null,
+    "port": null,
+    "cart": null,
+    "psi": 50,
+    "dq": "verified"
+   },
+   "score": 101.50703894248564,
+   "reasons": [
+    {
+     "code": "FILTER_SIZE_OK",
+     "severity": "good",
+     "ruleId": "FILTER_SIZING",
+     "text": "30″ tank — comfortably above the 24″ minimum."
+    },
+    {
+     "code": "FILTER_BIGGER_IS_BETTER",
+     "severity": "good",
+     "ruleId": "FILTER_BIGGER_IS_BETTER",
+     "text": "~1.6× minimum → longer runs between cleanings."
+    },
+    {
+     "code": "FILTER_FLOW_OK",
+     "severity": "good",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Handles ~98 GPM ≥ your pump's ~80 GPM."
+    },
+    {
+     "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "severity": "info",
+     "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+    }
+   ],
+   "fit": {
+    "meetsMinSize": true,
+    "flowOk": true,
+    "portOk": true,
+    "withinBudget": true
+   },
+   "derated": false,
+   "computed": {
+    "minRequired": 24,
+    "candidateSize": 30,
+    "candidateMaxGPM": 98,
+    "pumpMaxGPM": 80,
+    "oversizeRatio": 1.56
+   },
+   "rank": 3
+  },
+  {
+   "product": {
+    "id": "pentair-tagelus-ta100d",
+    "brand": "Pentair",
+    "model": "Tagelus TA100D",
+    "ft": "sand",
+    "area": null,
+    "tank": 30.5,
+    "bed": 4.9,
+    "gpm": 100,
+    "mic": null,
+    "port": 2,
+    "cart": null,
+    "psi": 50,
+    "dq": "verified"
+   },
+   "score": 101.50703894248564,
+   "reasons": [
+    {
+     "code": "FILTER_SIZE_OK",
+     "severity": "good",
+     "ruleId": "FILTER_SIZING",
+     "text": "30.5″ tank — comfortably above the 24″ minimum."
+    },
+    {
+     "code": "FILTER_BIGGER_IS_BETTER",
+     "severity": "good",
+     "ruleId": "FILTER_BIGGER_IS_BETTER",
+     "text": "~1.6× minimum → longer runs between cleanings."
+    },
+    {
+     "code": "FILTER_FLOW_OK",
+     "severity": "good",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Handles ~98 GPM ≥ your pump's ~80 GPM."
+    },
+    {
+     "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "severity": "info",
+     "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+    }
+   ],
+   "fit": {
+    "meetsMinSize": true,
+    "flowOk": true,
+    "portOk": true,
+    "withinBudget": true
+   },
+   "derated": false,
+   "computed": {
+    "minRequired": 24,
+    "candidateSize": 30.5,
+    "candidateMaxGPM": 98,
+    "pumpMaxGPM": 80,
+    "oversizeRatio": 1.56
+   },
+   "rank": 4
+  },
+  {
+   "product": {
+    "id": "pentair-triton-ii-tr100",
+    "brand": "Pentair",
+    "model": "Triton II TR100",
+    "ft": "sand",
+    "area": null,
+    "tank": 30.5,
+    "bed": 4.91,
+    "gpm": 74,
+    "mic": null,
+    "port": 1.5,
+    "cart": null,
+    "psi": 50,
+    "dq": "verified"
+   },
+   "score": 96.51079480427302,
+   "reasons": [
+    {
+     "code": "FILTER_PORT_UNDERSIZED",
+     "severity": "warning",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Ports are 1.5″ vs your 2″ plumbing — a reducer adds some restriction."
+    },
+    {
+     "code": "FILTER_SIZE_OK",
+     "severity": "good",
+     "ruleId": "FILTER_SIZING",
+     "text": "30.5″ tank — comfortably above the 24″ minimum."
+    },
+    {
+     "code": "FILTER_BIGGER_IS_BETTER",
+     "severity": "good",
+     "ruleId": "FILTER_BIGGER_IS_BETTER",
+     "text": "~1.6× minimum → longer runs between cleanings."
+    },
+    {
+     "code": "FILTER_FLOW_OK",
+     "severity": "good",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Handles ~98 GPM ≥ your pump's ~80 GPM."
+    },
+    {
+     "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "severity": "info",
+     "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+    }
+   ],
+   "fit": {
+    "meetsMinSize": true,
+    "flowOk": true,
+    "portOk": false,
+    "withinBudget": true
+   },
+   "derated": false,
+   "computed": {
+    "minRequired": 24,
+    "candidateSize": 30.5,
+    "candidateMaxGPM": 98,
+    "pumpMaxGPM": 80,
+    "oversizeRatio": 1.56
+   },
+   "rank": 5
+  },
+  {
+   "product": {
+    "id": "hayward-proseries-plus-s360sx",
+    "brand": "Hayward",
+    "model": "ProSeries Plus S360SX",
+    "ft": "sand",
+    "area": null,
+    "tank": 36,
+    "bed": 6.5,
+    "gpm": 130,
+    "mic": null,
+    "port": 2,
+    "cart": null,
+    "psi": null,
+    "dq": "verified"
+   },
+   "score": 91.27464349513401,
+   "reasons": [
+    {
+     "code": "FILTER_SIZE_OK",
+     "severity": "good",
+     "ruleId": "FILTER_SIZING",
+     "text": "36″ tank — comfortably above the 24″ minimum."
+    },
+    {
+     "code": "FILTER_BIGGER_IS_BETTER",
+     "severity": "good",
+     "ruleId": "FILTER_BIGGER_IS_BETTER",
+     "text": "~2.1× minimum → longer runs between cleanings."
+    },
+    {
+     "code": "FILTER_FLOW_OK",
+     "severity": "good",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Handles ~130 GPM ≥ your pump's ~80 GPM."
+    },
+    {
+     "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "severity": "info",
+     "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+    }
+   ],
+   "fit": {
+    "meetsMinSize": true,
+    "flowOk": true,
+    "portOk": true,
+    "withinBudget": true
+   },
+   "derated": false,
+   "computed": {
+    "minRequired": 24,
+    "candidateSize": 36,
+    "candidateMaxGPM": 130,
+    "pumpMaxGPM": 80,
+    "oversizeRatio": 2.07
+   },
+   "rank": 6,
+   "sizeUp": true
+  },
+  {
+   "product": {
+    "id": "hayward-proseries-plus-s360t2",
+    "brand": "Hayward",
+    "model": "ProSeries Plus S360T2",
+    "ft": "sand",
+    "area": null,
+    "tank": 36,
+    "bed": 6.5,
+    "gpm": 130,
+    "mic": null,
+    "port": 2,
+    "cart": null,
+    "psi": null,
+    "dq": "verified"
+   },
+   "score": 91.27464349513401,
+   "reasons": [
+    {
+     "code": "FILTER_SIZE_OK",
+     "severity": "good",
+     "ruleId": "FILTER_SIZING",
+     "text": "36″ tank — comfortably above the 24″ minimum."
+    },
+    {
+     "code": "FILTER_BIGGER_IS_BETTER",
+     "severity": "good",
+     "ruleId": "FILTER_BIGGER_IS_BETTER",
+     "text": "~2.1× minimum → longer runs between cleanings."
+    },
+    {
+     "code": "FILTER_FLOW_OK",
+     "severity": "good",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Handles ~130 GPM ≥ your pump's ~80 GPM."
+    },
+    {
+     "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "severity": "info",
+     "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+    }
+   ],
+   "fit": {
+    "meetsMinSize": true,
+    "flowOk": true,
+    "portOk": true,
+    "withinBudget": true
+   },
+   "derated": false,
+   "computed": {
+    "minRequired": 24,
+    "candidateSize": 36,
+    "candidateMaxGPM": 130,
+    "pumpMaxGPM": 80,
+    "oversizeRatio": 2.07
+   },
+   "rank": 7
+  },
+  {
+   "product": {
+    "id": "pentair-triton-ii-tr140",
+    "brand": "Pentair",
+    "model": "Triton II TR140",
+    "ft": "sand",
+    "area": null,
+    "tank": 36.5,
+    "bed": 7.06,
+    "gpm": 106,
+    "mic": null,
+    "port": 1.5,
+    "cart": null,
+    "psi": 50,
+    "dq": "verified"
+   },
+   "score": 81.81830508856095,
+   "reasons": [
+    {
+     "code": "FILTER_PORT_UNDERSIZED",
+     "severity": "warning",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Ports are 1.5″ vs your 2″ plumbing — a reducer adds some restriction."
+    },
+    {
+     "code": "FILTER_SIZE_OK",
+     "severity": "good",
+     "ruleId": "FILTER_SIZING",
+     "text": "36.5″ tank — comfortably above the 24″ minimum."
+    },
+    {
+     "code": "FILTER_BIGGER_IS_BETTER",
+     "severity": "good",
+     "ruleId": "FILTER_BIGGER_IS_BETTER",
+     "text": "~2.2× minimum → longer runs between cleanings."
+    },
+    {
+     "code": "FILTER_FLOW_OK",
+     "severity": "good",
+     "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+     "text": "Handles ~141 GPM ≥ your pump's ~80 GPM."
+    },
+    {
+     "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "severity": "info",
+     "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+     "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+    }
+   ],
+   "fit": {
+    "meetsMinSize": true,
+    "flowOk": true,
+    "portOk": false,
+    "withinBudget": true
+   },
+   "derated": false,
+   "computed": {
+    "minRequired": 24,
+    "candidateSize": 36.5,
+    "candidateMaxGPM": 141,
+    "pumpMaxGPM": 80,
+    "oversizeRatio": 2.25
+   },
+   "rank": 8
+  }
+ ],
+ "disqualified": [
+  {
+   "product": {
+    "id": "hayward-proseries-s270t",
+    "brand": "Hayward",
+    "model": "ProSeries S270T",
+    "ft": "sand",
+    "area": null,
+    "tank": 27,
+    "bed": 3.7,
+    "gpm": 74,
+    "mic": null,
+    "port": 1.5,
+    "cart": null,
+    "psi": null,
+    "dq": "verified"
+   },
+   "reason": {
+    "code": "FILTER_FLOW_BOTTLENECK",
+    "severity": "blocker",
+    "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+    "text": "Allows only ~74 GPM but your pump pushes ~80 GPM — it would choke the flow."
+   }
+  },
+  {
+   "product": {
+    "id": "hayward-proseries-s270t2",
+    "brand": "Hayward",
+    "model": "ProSeries S270T2",
+    "ft": "sand",
+    "area": null,
+    "tank": 27,
+    "bed": 3.7,
+    "gpm": 74,
+    "mic": null,
+    "port": 2,
+    "cart": null,
+    "psi": null,
+    "dq": "verified"
+   },
+   "reason": {
+    "code": "FILTER_FLOW_BOTTLENECK",
+    "severity": "blocker",
+    "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+    "text": "Allows only ~74 GPM but your pump pushes ~80 GPM — it would choke the flow."
+   }
+  },
+  {
+   "product": {
+    "id": "pentair-sand-dollar-sd80",
+    "brand": "Pentair",
+    "model": "Sand Dollar SD80",
+    "ft": "sand",
+    "area": null,
+    "tank": 26,
+    "bed": 3.5,
+    "gpm": 75,
+    "mic": null,
+    "port": 1.5,
+    "cart": null,
+    "psi": 50,
+    "dq": "verified"
+   },
+   "reason": {
+    "code": "FILTER_FLOW_BOTTLENECK",
+    "severity": "blocker",
+    "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+    "text": "Allows only ~70 GPM but your pump pushes ~80 GPM — it would choke the flow."
+   }
+  },
+  {
+   "product": {
+    "id": "pentair-sand-dollar-sd80-2in",
+    "brand": "Pentair",
+    "model": "Sand Dollar SD80 2\" valve",
+    "ft": "sand",
+    "area": null,
+    "tank": 26,
+    "bed": 3.5,
+    "gpm": 75,
+    "mic": null,
+    "port": 2,
+    "cart": null,
+    "psi": 50,
+    "dq": "verified"
+   },
+   "reason": {
+    "code": "FILTER_FLOW_BOTTLENECK",
+    "severity": "blocker",
+    "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+    "text": "Allows only ~70 GPM but your pump pushes ~80 GPM — it would choke the flow."
+   }
+  },
+  {
+   "product": {
+    "id": "sta-rite-cristal-flo-ii-145363",
+    "brand": "Sta-Rite",
+    "model": "Cristal-Flo II 145363",
+    "ft": "sand",
+    "area": null,
+    "tank": 26,
+    "bed": 3.5,
+    "gpm": 75,
+    "mic": null,
+    "port": 1.5,
+    "cart": null,
+    "psi": 50,
+    "dq": "verified"
+   },
+   "reason": {
+    "code": "FILTER_FLOW_BOTTLENECK",
+    "severity": "blocker",
+    "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+    "text": "Allows only ~70 GPM but your pump pushes ~80 GPM — it would choke the flow."
+   }
+  },
+  {
+   "product": {
+    "id": "sta-rite-cristal-flo-ii-145387",
+    "brand": "Sta-Rite",
+    "model": "Cristal-Flo II 145387",
+    "ft": "sand",
+    "area": null,
+    "tank": 26,
+    "bed": 3.5,
+    "gpm": 75,
+    "mic": null,
+    "port": 2,
+    "cart": null,
+    "psi": 50,
+    "dq": "verified"
+   },
+   "reason": {
+    "code": "FILTER_FLOW_BOTTLENECK",
+    "severity": "blocker",
+    "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+    "text": "Allows only ~70 GPM but your pump pushes ~80 GPM — it would choke the flow."
+   }
+  }
+ ],
+ "alternatives": [
+  {
+   "product": {
+    "id": "hayward-proseries-plus-s360sx",
+    "brand": "Hayward",
+    "model": "ProSeries Plus S360SX",
+    "ft": "sand",
+    "area": null,
+    "tank": 36,
+    "bed": 6.5,
+    "gpm": 130,
+    "mic": null,
+    "port": 2,
+    "cart": null,
+    "psi": null,
+    "dq": "verified"
+   },
+   "label": "size-up"
+  }
+ ],
+ "repairOptions": [],
+ "warnings": [
+  {
+   "code": "PIPE_OK",
+   "severity": "info",
+   "ruleId": "PLUMBING_SIZE_GUIDANCE",
+   "text": "2″ plumbing carries about 63 GPM suction / 84 GPM return within the velocity limits."
+  },
+  {
+   "code": "FILTER_AUTOMATION_AGNOSTIC",
+   "severity": "info",
+   "ruleId": "AUTOMATION_SAME_BRAND",
+   "text": "Filters aren’t controlled by automation, so brand match doesn’t matter here."
+  },
+  {
+   "code": "WARRANTY_CHECK",
+   "severity": "info",
+   "ruleId": "WARRANTY_CHECK",
+   "text": "Before you buy: check the warranty. Internet purchases and owner installation can void coverage on some brands, a few require a certified installer, and most require product registration. Bundled purchases with professional install sometimes carry a longer warranty."
+  }
+ ]
+}

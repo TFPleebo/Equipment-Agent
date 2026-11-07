@@ -1,0 +1,52 @@
+{
+  "id": "filter-high-debris",
+  "title": "Filter: recommend type with heavy debris (sand)",
+  "mode": "filter",
+  "profile": {
+    "poolType": "inground-plaster",
+    "pipe": "2",
+    "automation": "none",
+    "voltage": "230",
+    "climate": "warm",
+    "gallons": 28000,
+    "replacingType": "sand",
+    "desiredType": "recommend",
+    "failureMode": "worn-out-media",
+    "pipeIn": 2,
+    "pumpMaxGPM": 80,
+    "debris": "high",
+    "waterCost": "low"
+  },
+  "expect": {
+    "chosenType": "sand",
+    "min": {
+      "kind": "diam",
+      "value": 30,
+      "ruleId": "FILTER_SIZING"
+    },
+    "pumpMaxGPM": 80,
+    "top": [
+      "hayward-proseries-plus-s360sx",
+      "hayward-proseries-plus-s360t2",
+      "hayward-proseries-plus-s311sxv",
+      "hayward-proseries-s310t2",
+      "jandy-js100-sm"
+    ],
+    "sizeUp": [
+      "pentair-triton-ii-tr140"
+    ],
+    "disqualified": 6,
+    "comparison": null,
+    "warnings": [
+      "PIPE_OK",
+      "FILTER_AUTOMATION_AGNOSTIC",
+      "WARRANTY_CHECK"
+    ],
+    "typeReasons": [
+      "FILTER_TYPE_DEBRIS"
+    ],
+    "repairOptions": [
+      "FILTER_REPAIR_FACTS"
+    ]
+  }
+}
