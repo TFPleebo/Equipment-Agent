@@ -705,6 +705,9 @@ function stepSwgOps(){
   const c=card([el('div','q','How you run the pump'),el('div','hint','Sets runtime %, cycle fit, and install checks.')]);
   const rt=el('input');rt.type='number';rt.value=p.runtime||8;p.runtime=p.runtime||8;rt.oninput=()=>p.runtime=num(rt.value)||8;
   c.append(el('label','fld','Pump runtime (hours/day)'),rt);
+  const fl=el('input');fl.type='number';fl.step='0.1';fl.min='0';fl.placeholder='e.g. 2.5 (leave blank to use your climate)';fl.value=p.fcLossPpm!=null?p.fcLossPpm:'';
+  fl.oninput=()=>{const v=num(fl.value);p.fcLossPpm=v!=null?v:undefined;};
+  c.append(fldHelp('Measured daily FC loss, ppm/day (optional)','Daily FC loss','How much free chlorine your pool loses in a typical sunny day, from your test log (or PoolMath). If you know it, we size the output percentage to your actual pool instead of a regional estimate.'),fl);
   c.append(fldHelp('Pump schedule','Pump schedule','Whether your pump runs in one long block or several short bursts. Short cycles suit salt cells that adjust output continuously.'),
     optGrid(true,[{v:'long',t:'Long continuous runs'},{v:'short',t:'Short cycles'}],p.cycle,v=>{p.cycle=v;}));
   c.append(chk('High calcium hardness (CH) water',p.highCH,v=>p.highCH=v));

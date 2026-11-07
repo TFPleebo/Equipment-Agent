@@ -32,6 +32,7 @@
     "comparison": null,
     "warnings": [
       "PIPE_SMALL",
+      "VOLTAGE_115",
       "WARRANTY_CHECK"
     ],
     "repairOptions": []

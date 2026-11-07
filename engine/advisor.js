@@ -155,6 +155,11 @@ function createAdvisor(data) {
     cands.length=0; cands.push(...collapsed);
     cands.forEach((c,i)=>c.rank=i+1);
 
+    // Power: the catalog has no voltage field yet, so a 115V pad gets a check-before-you-buy note.
+    if(p.voltage==='115') warnings.push({code:'VOLTAGE_115',severity:'warning',ruleId:'PUMP_VOLTAGE_CHECK',
+      text:'Your pad is 115V. Many full-size variable-speed pumps are 230V only, so confirm the voltage on any pump below before buying. Some run on either voltage, and some deliver less power on 115V. Moving to 230V needs an electrician.'});
+    else if(p.voltage==='unknown') warnings.push({code:'VOLTAGE_UNKNOWN',severity:'info',ruleId:'PUMP_VOLTAGE_CHECK',
+      text:'Check the voltage at your equipment pad (115V or 230V) before buying: it must match the pump.'});
     // repair options
     const repairOptions=[];
     if(p.automationModel&&/aqualogic/i.test(p.automationModel))

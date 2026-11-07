@@ -924,6 +924,12 @@
    "text": "1.5″ plumbing holds about 38 GPM on the suction side and 51 GPM on returns before water moves too fast (6 and 8 ft/s). Beyond that you pay in friction, energy and noise — these are efficiency and noise guidelines rather than hard limits, and PVC will carry more if a specific application calls for it; running a variable-speed pump slower is the practical fix."
   },
   {
+   "code": "VOLTAGE_115",
+   "severity": "warning",
+   "ruleId": "PUMP_VOLTAGE_CHECK",
+   "text": "Your pad is 115V. Many full-size variable-speed pumps are 230V only, so confirm the voltage on any pump below before buying. Some run on either voltage, and some deliver less power on 115V. Moving to 230V needs an electrician."
+  },
+  {
    "code": "WARRANTY_CHECK",
    "severity": "info",
    "ruleId": "WARRANTY_CHECK",

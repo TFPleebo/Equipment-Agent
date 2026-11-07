@@ -521,5 +521,13 @@
       "reviewedBy": "pending review (proposed 2026-11)"
     },
     "src": "Pump affinity laws on a fixed system curve; CEC appliance database test points"
+  },
+  "PUMP_VOLTAGE_CHECK": {
+    "title": "Pump voltage must match the pad",
+    "value": {
+      "dataGap": "pumps.json has no voltage field; add 'volts' (e.g. [115,230]) to filter instead of warn",
+      "severity115": "warning"
+    },
+    "src": "Manufacturer specs; NEC (2026-11, pending review)"
   }
 }
