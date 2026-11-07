@@ -224,10 +224,14 @@ This agent prioritizes:
 | `docs/RULES.md` | every rule in plain English, plus open questions |
 | `docs/DATA.md` | what each data field means and how to update it |
 | `docs/POOLMATH-HANDOFF.md` | how PoolMath can embed or rebuild the advisor |
+| `docs/UPDATING.md` | how to refresh the pump, filter and salt-cell catalogs and the rules |
+| `data/CHANGELOG.md` | what changed in each catalog release |
+| `tools/` | data build, catalog validator, importers, `check-all`, `impact` |
+| `sources/` | the downloaded and researched source data behind the catalog |
 | `tests/` | golden cases (`node tests/run.mjs`), input checks (`node tests/validation.mjs`), robustness sweep (`node tests/sweep.mjs`) |
 | `pool-advisor-chatbot.html` | separate experimental chat version (OpenAI via a Cloudflare Worker) |
 
-**After editing data:** run `node tools/build-data.mjs`, then `node tests/run.mjs`, `node tests/validation.mjs` and `node tests/sweep.mjs`.
+**After editing data:** run `node tools/build-data.mjs`, then `node tools/check-all.mjs` (CI runs the same on every push). Full process: `docs/UPDATING.md`.
 The page must be published together with the `data/` and `engine/` folders.
 
 ## 🛠️ Status

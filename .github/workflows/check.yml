@@ -1,0 +1,21 @@
+# Runs every repository check on each push and pull request, so a stale data bundle, an invalid catalog
+# record or a changed recommendation can't reach main unnoticed. Same as running locally:
+#   node tools/check-all.mjs
+name: check
+on:
+  push:
+  pull_request:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: All checks (data bundle, catalog, golden cases, input validation, sweep)
+        run: node tools/check-all.mjs
+      - name: Recommendation impact (informational)
+        if: always()
+        run: node tools/impact.mjs
