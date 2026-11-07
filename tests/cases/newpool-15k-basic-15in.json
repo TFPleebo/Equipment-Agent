@@ -18,11 +18,11 @@
     "waterCost": "low"
   },
   "expect": {
-    "pumpMaxGPM": 52,
+    "pumpMaxGPM": 70,
     "pumpTop": [
-      "hayward-hl2350020vsp",
-      "hayward-hl2670020vsp",
-      "hayward-super-pump-vs-700-hl2670020vsp"
+      "hayward-tristar-sp32950vsp",
+      "blue-torrent-cyclone-series-2030",
+      "speck-badu-superpro-v-cvs"
     ],
     "filterType": "cartridge",
     "filterTop": [

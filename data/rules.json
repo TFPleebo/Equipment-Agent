@@ -220,7 +220,10 @@
       "pump": "full-size variable-speed",
       "swg": "rated 2x pool volume",
       "automation": "same brand as pump/lights/SWG",
-      "note": "For a NEW pool TFP discourages single-speed and two-speed pumps outright (a 2-speed is only a reasonable compromise when replacing in an existing pool)."
+      "note": "For a NEW pool TFP discourages single-speed and two-speed pumps outright (a 2-speed is only a reasonable compromise when replacing in an existing pool).",
+      "fullSizeMinThp": 2.5,
+      "fullSizeBonus": 15,
+      "fullSizeNote": "2026-11 (pending review): the 'full-size variable-speed' default was stated but not applied, so the planner picked ~1.65-1.85 THP pumps for new builds. Full-size taken as >= 2.5 THP (the ~3 HP class, e.g. IntelliFlo 3 THP, TriStar VS 900 2.7 THP). +15 makes it decisive over small energy differences without excluding smaller pumps."
     },
     "src": "TFP: How to select pool equipment > Selection of Equipment"
   },

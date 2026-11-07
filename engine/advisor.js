@@ -126,6 +126,14 @@ function createAdvisor(data) {
       if(annualCost!=null) score -= annualCost*0.05;
       score += autoMatch?12:0;
       score += pump.dq==='ok'?2:0;
+      // New pool: TFP's default is a FULL-SIZE variable-speed pump (headroom for a spa, cleaner or
+      // features added later, while still running slow and cheap day to day).
+      if(p.newBuild){
+        const NP=RULES.NEW_POOL_DEFAULTS.value;
+        if(pump.thp!=null&&pump.thp>=NP.fullSizeMinThp){score+=NP.fullSizeBonus;
+          reasons.push({code:'FULL_SIZE_VS',severity:'good',ruleId:'NEW_POOL_DEFAULTS',text:`Full-size variable-speed (${pump.thp} THP): TFP's default for a new pool. Headroom for a spa, cleaner or features later, and it still runs slow and cheap every day.`});}
+        else reasons.push({code:'SMALLER_THAN_FULL_SIZE',severity:'info',ruleId:'NEW_POOL_DEFAULTS',text:`Smaller than a full-size pump (${pump.thp??'?'} THP). Fine for this pool as planned, but with less headroom if you add features later.`});
+      }
 
       cands.push({product:pump, score, reasons,
         fit:{meetsCapacity:true,meetsFlow:true,meetsFlowLow:efficientLow,automationMatch:autoMatch,regulatoryOk:true},

@@ -47,7 +47,7 @@
       ]
      }
     },
-    "score": 82.30495997366711,
+    "score": 97.30495997366711,
     "reasons": [
      {
       "code": "AUTOMATION_SAME_BRAND",
@@ -72,6 +72,12 @@
       "severity": "good",
       "ruleId": "FEATURE_FLOW_DEMANDS",
       "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+     },
+     {
+      "code": "FULL_SIZE_VS",
+      "severity": "good",
+      "ruleId": "NEW_POOL_DEFAULTS",
+      "text": "Full-size variable-speed (3.96 THP): TFP's default for a new pool. Headroom for a spa, cleaner or features later, and it still runs slow and cheap every day."
      }
     ],
     "fit": {
@@ -133,7 +139,7 @@
       ]
      }
     },
-    "score": 82.25755320711863,
+    "score": 97.25755320711863,
     "reasons": [
      {
       "code": "AUTOMATION_SAME_BRAND",
@@ -158,6 +164,12 @@
       "severity": "good",
       "ruleId": "FEATURE_FLOW_DEMANDS",
       "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+     },
+     {
+      "code": "FULL_SIZE_VS",
+      "severity": "good",
+      "ruleId": "NEW_POOL_DEFAULTS",
+      "text": "Full-size variable-speed (3.96 THP): TFP's default for a new pool. Headroom for a spa, cleaner or features later, and it still runs slow and cheap every day."
      }
     ],
     "fit": {
@@ -219,7 +231,7 @@
       ]
      }
     },
-    "score": 80.57545831582121,
+    "score": 95.57545831582121,
     "reasons": [
      {
       "code": "AUTOMATION_SAME_BRAND",
@@ -244,6 +256,12 @@
       "severity": "good",
       "ruleId": "FEATURE_FLOW_DEMANDS",
       "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+     },
+     {
+      "code": "FULL_SIZE_VS",
+      "severity": "good",
+      "ruleId": "NEW_POOL_DEFAULTS",
+      "text": "Full-size variable-speed (3.96 THP): TFP's default for a new pool. Headroom for a spa, cleaner or features later, and it still runs slow and cheap every day."
      }
     ],
     "fit": {
@@ -305,7 +323,7 @@
       ]
      }
     },
-    "score": 80.40042121431573,
+    "score": 95.40042121431573,
     "reasons": [
      {
       "code": "AUTOMATION_SAME_BRAND",
@@ -330,6 +348,12 @@
       "severity": "good",
       "ruleId": "FEATURE_FLOW_DEMANDS",
       "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+     },
+     {
+      "code": "FULL_SIZE_VS",
+      "severity": "good",
+      "ruleId": "NEW_POOL_DEFAULTS",
+      "text": "Full-size variable-speed (3.96 THP): TFP's default for a new pool. Headroom for a spa, cleaner or features later, and it still runs slow and cheap every day."
      }
     ],
     "fit": {
@@ -394,7 +418,7 @@
       ]
      }
     },
-    "score": 80.38234163473915,
+    "score": 95.38234163473915,
     "reasons": [
      {
       "code": "AUTOMATION_SAME_BRAND",
@@ -419,6 +443,12 @@
       "severity": "good",
       "ruleId": "FEATURE_FLOW_DEMANDS",
       "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+     },
+     {
+      "code": "FULL_SIZE_VS",
+      "severity": "good",
+      "ruleId": "NEW_POOL_DEFAULTS",
+      "text": "Full-size variable-speed (3.96 THP): TFP's default for a new pool. Headroom for a spa, cleaner or features later, and it still runs slow and cheap every day."
      }
     ],
     "fit": {
@@ -483,7 +513,7 @@
       ]
      }
     },
-    "score": 79.45168284456588,
+    "score": 94.45168284456588,
     "reasons": [
      {
       "code": "AUTOMATION_SAME_BRAND",
@@ -508,6 +538,12 @@
       "severity": "good",
       "ruleId": "FEATURE_FLOW_DEMANDS",
       "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+     },
+     {
+      "code": "FULL_SIZE_VS",
+      "severity": "good",
+      "ruleId": "NEW_POOL_DEFAULTS",
+      "text": "Full-size variable-speed (3.96 THP): TFP's default for a new pool. Headroom for a spa, cleaner or features later, and it still runs slow and cheap every day."
      }
     ],
     "fit": {
@@ -573,7 +609,7 @@
       ]
      }
     },
-    "score": 79.39565345249183,
+    "score": 94.39565345249183,
     "reasons": [
      {
       "code": "AUTOMATION_SAME_BRAND",
@@ -598,6 +634,12 @@
       "severity": "good",
       "ruleId": "FEATURE_FLOW_DEMANDS",
       "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+     },
+     {
+      "code": "FULL_SIZE_VS",
+      "severity": "good",
+      "ruleId": "NEW_POOL_DEFAULTS",
+      "text": "Full-size variable-speed (3.96 THP): TFP's default for a new pool. Headroom for a spa, cleaner or features later, and it still runs slow and cheap every day."
      }
     ],
     "fit": {
@@ -664,7 +706,7 @@
       ]
      }
     },
-    "score": 79.33596472121859,
+    "score": 94.33596472121859,
     "reasons": [
      {
       "code": "AUTOMATION_SAME_BRAND",
@@ -689,6 +731,12 @@
       "severity": "good",
       "ruleId": "FEATURE_FLOW_DEMANDS",
       "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+     },
+     {
+      "code": "FULL_SIZE_VS",
+      "severity": "good",
+      "ruleId": "NEW_POOL_DEFAULTS",
+      "text": "Full-size variable-speed (3.96 THP): TFP's default for a new pool. Headroom for a spa, cleaner or features later, and it still runs slow and cheap every day."
      }
     ],
     "fit": {
@@ -754,7 +802,7 @@
       ]
      }
     },
-    "score": 79.310496784658,
+    "score": 94.310496784658,
     "reasons": [
      {
       "code": "AUTOMATION_SAME_BRAND",
@@ -779,6 +827,12 @@
       "severity": "good",
       "ruleId": "FEATURE_FLOW_DEMANDS",
       "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+     },
+     {
+      "code": "FULL_SIZE_VS",
+      "severity": "good",
+      "ruleId": "NEW_POOL_DEFAULTS",
+      "text": "Full-size variable-speed (3.96 THP): TFP's default for a new pool. Headroom for a spa, cleaner or features later, and it still runs slow and cheap every day."
      }
     ],
     "fit": {
@@ -844,7 +898,7 @@
       ]
      }
     },
-    "score": 78.95674875689521,
+    "score": 93.95674875689521,
     "reasons": [
      {
       "code": "AUTOMATION_SAME_BRAND",
@@ -869,6 +923,12 @@
       "severity": "good",
       "ruleId": "FEATURE_FLOW_DEMANDS",
       "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+     },
+     {
+      "code": "FULL_SIZE_VS",
+      "severity": "good",
+      "ruleId": "NEW_POOL_DEFAULTS",
+      "text": "Full-size variable-speed (3.96 THP): TFP's default for a new pool. Headroom for a spa, cleaner or features later, and it still runs slow and cheap every day."
      }
     ],
     "fit": {
@@ -932,7 +992,7 @@
       ]
      }
     },
-    "score": 78.63743897726206,
+    "score": 93.63743897726206,
     "reasons": [
      {
       "code": "AUTOMATION_SAME_BRAND",
@@ -957,6 +1017,12 @@
       "severity": "good",
       "ruleId": "FEATURE_FLOW_DEMANDS",
       "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+     },
+     {
+      "code": "FULL_SIZE_VS",
+      "severity": "good",
+      "ruleId": "NEW_POOL_DEFAULTS",
+      "text": "Full-size variable-speed (3.96 THP): TFP's default for a new pool. Headroom for a spa, cleaner or features later, and it still runs slow and cheap every day."
      }
     ],
     "fit": {
@@ -1018,7 +1084,7 @@
       ]
      }
     },
-    "score": 77.3381729660672,
+    "score": 92.3381729660672,
     "reasons": [
      {
       "code": "AUTOMATION_SAME_BRAND",
@@ -1043,6 +1109,12 @@
       "severity": "good",
       "ruleId": "FEATURE_FLOW_DEMANDS",
       "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+     },
+     {
+      "code": "FULL_SIZE_VS",
+      "severity": "good",
+      "ruleId": "NEW_POOL_DEFAULTS",
+      "text": "Full-size variable-speed (3.96 THP): TFP's default for a new pool. Headroom for a spa, cleaner or features later, and it still runs slow and cheap every day."
      }
     ],
     "fit": {
