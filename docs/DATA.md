@@ -5,10 +5,10 @@ a one-line diff.
 
 | File | Contents |
 |---|---|
-| `pumps.json` | 665 pumps with CEC test points |
+| `pumps.json` | pumps, from the CEC database (see `docs/UPDATING.md`) |
 | `swg.json` | 107 salt water chlorine generators |
 | `filters.json` | 124 filters (64 cartridge, 36 sand, 15 DE, 9 hybrid DE) |
-| `rules.json` | 33 sizing rules: `{ title, value, src }` per rule ID. See `RULES.md` |
+| `rules.json` | sizing rules: `{ title, value, src }` per rule ID. See `RULES.md` |
 | `meta.json` | version, date, sources (counts are filled in by the build) |
 | `advisor-data.js` | **Generated.** All of the above as one script for the web page. Don't edit it by hand |
 
@@ -31,10 +31,19 @@ a one-line diff.
 | `mot` | motor type: `ECM`, `CSCR`, `PSC` |
 | `thp` | total horsepower (motor HP × service factor) |
 | `nhp` | nominal horsepower |
-| `hhp` | hydraulic horsepower, the DOE metric. **No record currently has it**, so the DOE check falls back to `thp > 1.1` |
-| `wef` | weighted energy factor (gallons per watt-hour; higher is better) |
-| `frame` | motor frame (`48`, `56`, …) |
-| `hi`, `lo` | CEC test points at high and low speed: `rpm`, `g` = GPM and `w` = watts, each `[curve A, curve B, curve C]` |
+| `hhp` | rated hydraulic horsepower, the DOE compliance metric (from CEC). Where missing (legacy records), the DOE check falls back to `thp > 1.1` |
+| `wef` | weighted energy factor (thousand gallons per kWh; higher is better). Imported records carry CEC's figure |
+| `frame` | motor frame (`48`, `56`, …); kept from legacy data, CEC doesn't publish it |
+| `hi`, `lo` | test points at maximum speed and at the low-flow point: `rpm`, `g` = GPM and `w` = watts, each `[curve A, curve B, curve C]`. CEC tests on curve C only; A and B are derived (see `abSrc`). Single-speed pumps have one operating point, so `lo` equals `hi` |
+| `mid` | variable-speed only: CEC's third ("high flow") test point on curve C, `{rpm, gpm, w}`. Not used by the engine yet; kept for a future 3-point energy model |
+| `hmax` | maximum head (feet) at full speed, from CEC; used to derive curves A and B |
+| `abSrc` | how curves A/B were obtained: `derived-parabolic` (rule `PUMP_CURVE_DERIVATION`) or `derived-ratio` (fallback when max head is missing). Absent on legacy records, whose A/B came from the original scrape |
+| `volts` | supply voltage(s) when CEC's model number states them, e.g. `[230]` or `[115, 230]` |
+| `class` | `inground`, `agp`, `inflatable`, `booster`, `waterfall`, `pond`, from CEC's product group; controls which pools it can be recommended for (rule `PUMP_CLASS_USE`). Legacy records without it count as `inground` |
+| `status` | `active` or `discontinued` (CEC archived). Discontinued pumps are never recommended but stay selectable as "your current pump" |
+| `sameAs` | id of the record this one duplicates (an older certification, or the same pump under another name). Never recommended; its name still finds the main record in the picker |
+| `cec` | the CEC listing it came from: `{model, brand, added, group}`. Used to match on re-import |
+| `src`, `asOf` | where the record's values came from and when (all catalogs have these) |
 | `dq` | data quality: `ok` |
 
 ## swg.json

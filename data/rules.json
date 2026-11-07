@@ -844,7 +844,7 @@
         "B": 0.45
       },
       "fallbackNote": "Used only if max head is missing or inconsistent with the test point (records marked abSrc derived-ratio). Ratios are the medians of the legacy catalog.",
-      "calibration": "pending: fitted against legacy records whose curve-C values match CEC exactly",
+      "calibration": "Checked 2026-11-07 against the 13 legacy records whose curve-C values equal CEC exactly (their A/B were derived by the original scraper from the same inputs): derived flows within median 1.6% (A) / 1.3% (B); watts with powerFixedFraction 0.5 within median 2.3% (A) / 4.3% (B). 0.45 and 0.55 were each worse on one curve.",
       "reviewedBy": "pending review (proposed 2026-11)"
     },
     "src": "CEC/DOE test procedure system curves (10 CFR 431 App. C to Subpart Y); TFP Hydraulics 101 curve constants"

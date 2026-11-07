@@ -62,6 +62,9 @@ const detailValues = (html) => {
   const req = ctx.request;
   const out = fs.createWriteStream(OUT, { flags: 'a' });
   let labels = null, written = 0;
+  let renewals = 0;      // how many times the CEC session had to be reopened
+  let streak = 0;        // failed requests in a row
+  let sinceRenew = null; // failed requests since the last renewal (null = none pending)
 
   for (const status of ['approved', 'archived']) {
     const total = Number(String(await search(page, TYPE, status)).replace(/,/g, ''));
@@ -81,10 +84,29 @@ const detailValues = (html) => {
     }
     const pages = Math.ceil(total / 25);
     let formState = formFields(html);
+    const isResults = (h) => h.includes("Select$");
+    // Move the results grid to page pg with the site's own postback. GridView accepts a jump to any page.
+    const gotoPage = async (state, pg) => {
+      const r = await req.post(BASE + 'ApplianceSearch.aspx', { form: { ...state, __EVENTTARGET: 'ctl00$MainContent$gvApplianceBase', __EVENTARGUMENT: 'Page$' + pg } });
+      return r.text();
+    };
+    // CEC's server session expires after a while; every request then returns the search page instead
+    // of a detail page. Renewing = rerunning the search in the browser and jumping back to page pg.
+    const renew = async (pg) => {
+      renewals++;
+      await search(page, TYPE, status);
+      let h = await page.content();
+      if (pg > 1) h = await gotoPage(formFields(h), pg);
+      if (!isResults(h)) throw new Error('renewed session did not return results');
+      console.log(`session renewed (#${renewals}) on ${status} page ${pg}`);
+      return formFields(h);
+    };
     for (let pg = 1; pg <= pages; pg++) {
-      if (pg > 1) { // move the grid to page pg via the site's own postback, from the previous page's state
-        const r = await req.post(BASE + 'ApplianceSearch.aspx', { form: { ...formState, __EVENTTARGET: 'ctl00$MainContent$gvApplianceBase', __EVENTARGUMENT: 'Page$' + pg } });
-        html = await r.text(); formState = formFields(html); await sleep(PAUSE_MS);
+      if (pg > 1) {
+        html = await gotoPage(formState, pg);
+        if (!isResults(html)) { await sleep(PAUSE_MS); formState = await renew(pg); }
+        else formState = formFields(html);
+        await sleep(PAUSE_MS);
       }
       const rows = Math.min(25, total - (pg - 1) * 25);
       for (let i = 0; i < rows; i++) {
@@ -92,7 +114,7 @@ const detailValues = (html) => {
         if (rowNo >= MAX) break;
         if (done.has(status + '|' + rowNo)) continue;
         let rec = null;
-        for (let attempt = 1; attempt <= 3 && !rec; attempt++) {
+        for (let attempt = 1; attempt <= 5 && !rec; attempt++) {
           try {
             const r = await req.post(BASE + 'ApplianceSearch.aspx', { form: { ...formState, __EVENTTARGET: 'ctl00$MainContent$gvApplianceBase', __EVENTARGUMENT: 'Select$' + i } });
             const d = await r.text();
@@ -100,7 +122,17 @@ const detailValues = (html) => {
             const vals = detailValues(d);
             rec = { _status: status, _row: rowNo };
             for (const [id, v] of Object.entries(vals)) rec[labels[id] || id] = v;
-          } catch (e) { console.log(`row ${rowNo} attempt ${attempt}: ${e.message}`); await sleep(3000 * attempt); }
+            streak = 0; sinceRenew = null;
+          } catch (e) {
+            streak++; if (sinceRenew !== null) sinceRenew++;
+            console.log(`row ${rowNo} attempt ${attempt}: ${e.message}`);
+            if (sinceRenew !== null && sinceRenew >= 3) {
+              console.log(`stopping: still failing after renewing the session (row ${rowNo}). Re-run later to resume.`);
+              out.end(); await browser.close(); process.exit(3);
+            }
+            if (streak >= 2) { await sleep(3000); formState = await renew(pg); streak = 0; sinceRenew = 0; }
+            else await sleep(3000);
+          }
         }
         if (rec) { out.write(JSON.stringify(rec) + '\n'); written++; }
         if (written % 50 === 0 && rec) console.log(`${status} ${rowNo + 1}/${total} (${written} written)`);
@@ -110,5 +142,5 @@ const detailValues = (html) => {
     }
   }
   out.end(); await browser.close();
-  console.log(`done: ${written} new records`);
+  console.log(`done: ${written} new records, ${renewals} session renewals`);
 })();
