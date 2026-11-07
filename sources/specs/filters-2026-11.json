@@ -1,0 +1,777 @@
+{
+ "_about": "Filter specs checked against manufacturer documents (2026-11). One entry per catalog id: the values the source states, the source URL(s), and a verdict. Applied by tools/apply-specs.mjs. 'matches' = catalog already agrees; 'corrected' = catalog value changed to the source value; 'unverified' = no authoritative source found.",
+ "checked": "2026-11-07",
+ "entries": {
+  "hayward-proseries-s220t": {
+   "verdict": "matches",
+   "gpm": 52,
+   "bedSqFt": 2.64,
+   "src": "https://www.propools.com/Manuals/52858_20161181579.pdf",
+   "note": "Hayward ProSeries manual performance table; ratings at 20 GPM/sq ft"
+  },
+  "hayward-proseries-s220t2": {
+   "verdict": "matches",
+   "gpm": 52,
+   "bedSqFt": 2.64,
+   "src": "https://www.propools.com/Manuals/52858_20161181579.pdf"
+  },
+  "hayward-proseries-s244t": {
+   "verdict": "matches",
+   "gpm": 62,
+   "bedSqFt": 3.14,
+   "src": "https://www.hayward.com/proseries-24-sand-filter-top-mount-1-1-2-variflo-valve-included-s244t.html",
+   "note": "product page: Public Design Flow Rate 62 GPM, effective area 3.14 sq ft, 50 PSI"
+  },
+  "hayward-proseries-s244t2": {
+   "verdict": "matches",
+   "gpm": 62,
+   "bedSqFt": 3.14,
+   "src": "https://www.hayward.com/proseries-24-sand-filter-top-mount-2-variflo-valve-included-s244t2.html"
+  },
+  "hayward-proseries-s270t": {
+   "verdict": "matches",
+   "gpm": 74,
+   "bedSqFt": 3.7,
+   "src": "https://www.propools.com/Manuals/52858_20161181579.pdf"
+  },
+  "hayward-proseries-s270t2": {
+   "verdict": "matches",
+   "gpm": 74,
+   "bedSqFt": 3.7,
+   "src": "https://www.hayward.com/proseries-27-sand-filter-top-mount-2-variflo-valve-included-s270t2.html"
+  },
+  "hayward-proseries-s310t2": {
+   "verdict": "matches",
+   "gpm": 98,
+   "bedSqFt": 4.91,
+   "src": "https://www.hayward.com/proseries-30-sand-filter-top-mount-2-variflo-valve-included-s310t2.html"
+  },
+  "hayward-swimclear-c4030": {
+   "verdict": "matches",
+   "area": 425,
+   "gpm": 150,
+   "src": "https://www.hayward.com/swimclear-multi-element-cartridge-filter-425-sq-ft-c4030.html",
+   "note": "product page: 425 sq ft, design flow 150 GPM"
+  },
+  "pentair-clean-clear-plus-ccp240": {
+   "verdict": "matches",
+   "area": 240,
+   "gpm": 90,
+   "psi": 50,
+   "src": "https://online.flippingbook.com/view/603161483/45/",
+   "note": "Pentair 2025-2026 catalog; flows at 0.375 GPM/sq ft residential rate"
+  },
+  "pentair-clean-clear-plus-ccp320": {
+   "verdict": "matches",
+   "area": 320,
+   "gpm": 120,
+   "psi": 50,
+   "src": "https://online.flippingbook.com/view/603161483/45/"
+  },
+  "pentair-clean-clear-plus-ccp420": {
+   "verdict": "matches",
+   "area": 420,
+   "gpm": 150,
+   "psi": 50,
+   "src": "https://online.flippingbook.com/view/603161483/45/"
+  },
+  "pentair-clean-clear-plus-ccp520": {
+   "verdict": "matches",
+   "area": 520,
+   "gpm": 150,
+   "psi": 50,
+   "src": "https://online.flippingbook.com/view/603161483/45/",
+   "note": "Pentair does not recommend > 150 GPM"
+  },
+  "jandy-cv340": {
+   "verdict": "matches",
+   "area": 340,
+   "gpm": 127,
+   "psi": 50,
+   "src": "https://manuals.plus/jandy/h0291800c-cartridge-pool-filters-manual.pdf",
+   "note": "Jandy CV/CL installation manual Table 1"
+  },
+  "jandy-cv460": {
+   "verdict": "matches",
+   "area": 460,
+   "gpm": 150,
+   "psi": 50,
+   "src": "https://manuals.plus/jandy/h0291800c-cartridge-pool-filters-manual.pdf"
+  },
+  "jandy-cv580": {
+   "verdict": "matches",
+   "area": 580,
+   "gpm": 150,
+   "psi": 50,
+   "src": "https://manuals.plus/jandy/h0291800c-cartridge-pool-filters-manual.pdf"
+  },
+  "jandy-cl340": {
+   "verdict": "matches",
+   "area": 340,
+   "gpm": 127,
+   "psi": 50,
+   "src": "https://manuals.plus/jandy/h0291800c-cartridge-pool-filters-manual.pdf"
+  },
+  "jandy-cl460": {
+   "verdict": "matches",
+   "area": 460,
+   "gpm": 150,
+   "psi": 50,
+   "src": "https://manuals.plus/jandy/h0291800c-cartridge-pool-filters-manual.pdf"
+  },
+  "jandy-cl580": {
+   "verdict": "matches",
+   "area": 580,
+   "gpm": 150,
+   "psi": 50,
+   "src": "https://manuals.plus/jandy/h0291800c-cartridge-pool-filters-manual.pdf"
+  },
+  "hayward-swimclear-c2030": {
+   "verdict": "matches",
+   "area": 225,
+   "gpm": 84,
+   "src": "https://cdn.shopify.com/s/files/1/0105/0837/0005/files/SwimClear_Brochure.pdf",
+   "note": "Hayward SwimClear brochure; 0.375 GPM/sq ft NSF rate, capped at 150 GPM"
+  },
+  "hayward-swimclear-c3030": {
+   "verdict": "matches",
+   "area": 325,
+   "gpm": 122,
+   "src": "https://cdn.shopify.com/s/files/1/0105/0837/0005/files/SwimClear_Brochure.pdf",
+   "note": "Hayward SwimClear brochure; 0.375 GPM/sq ft NSF rate, capped at 150 GPM"
+  },
+  "hayward-swimclear-c5030": {
+   "verdict": "matches",
+   "area": 525,
+   "gpm": 150,
+   "src": "https://cdn.shopify.com/s/files/1/0105/0837/0005/files/SwimClear_Brochure.pdf",
+   "note": "Hayward SwimClear brochure; 0.375 GPM/sq ft NSF rate, capped at 150 GPM"
+  },
+  "hayward-swimclear-c7030": {
+   "verdict": "conflict",
+   "area": 700,
+   "gpm": 150,
+   "src": "https://cdn.shopify.com/s/files/1/0105/0837/0005/files/SwimClear_Brochure.pdf",
+   "note": "Hayward documents disagree on area: brochure 700, product page title 725, owner's manual 680 sq ft. Catalog keeps 700 (brochure). Flow 150 GPM agrees."
+  },
+  "hayward-swimclear-single-c100s": {
+   "verdict": "matches",
+   "area": 100,
+   "gpm": 100,
+   "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/SwimClear-LITSCSE17.pdf",
+   "note": "residential design flow (1 GPM/sq ft); public/NSF ratings are 38/56/75"
+  },
+  "hayward-swimclear-single-c150s": {
+   "verdict": "matches",
+   "area": 150,
+   "gpm": 120,
+   "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/SwimClear-LITSCSE17.pdf",
+   "note": "residential design flow (1 GPM/sq ft); public/NSF ratings are 38/56/75"
+  },
+  "hayward-swimclear-single-c200s": {
+   "verdict": "matches",
+   "area": 200,
+   "gpm": 120,
+   "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/SwimClear-LITSCSE17.pdf",
+   "note": "residential design flow (1 GPM/sq ft); public/NSF ratings are 38/56/75"
+  },
+  "hayward-star-clear-c250": {
+   "verdict": "matches",
+   "area": 25,
+   "gpm": 25,
+   "src": "https://hayward.com/media/akeneo_connector/asset_files/S/t/StarClearSeriesSellSheet20_2e6c.pdf",
+   "note": "Hayward Star-Clear sell sheet, residential design flow"
+  },
+  "hayward-star-clear-c500": {
+   "verdict": "matches",
+   "area": 50,
+   "gpm": 50,
+   "src": "https://hayward.com/media/akeneo_connector/asset_files/S/t/StarClearSeriesSellSheet20_2e6c.pdf",
+   "note": "Hayward Star-Clear sell sheet, residential design flow"
+  },
+  "hayward-star-clear-c751": {
+   "verdict": "matches",
+   "area": 75,
+   "gpm": 75,
+   "src": "https://hayward.com/media/akeneo_connector/asset_files/S/t/StarClearSeriesSellSheet20_2e6c.pdf",
+   "note": "Hayward Star-Clear sell sheet, residential design flow"
+  },
+  "hayward-star-clear-c7512": {
+   "verdict": "matches",
+   "area": 75,
+   "gpm": 75,
+   "src": "https://hayward.com/media/akeneo_connector/asset_files/S/t/StarClearSeriesSellSheet20_2e6c.pdf",
+   "note": "Hayward Star-Clear sell sheet, residential design flow"
+  },
+  "hayward-star-clear-c900": {
+   "verdict": "matches",
+   "area": 90,
+   "gpm": 90,
+   "src": "https://hayward.com/media/akeneo_connector/asset_files/S/t/StarClearSeriesSellSheet20_2e6c.pdf",
+   "note": "Hayward Star-Clear sell sheet, residential design flow"
+  },
+  "hayward-star-clear-c9002": {
+   "verdict": "matches",
+   "area": 90,
+   "gpm": 90,
+   "src": "https://hayward.com/media/akeneo_connector/asset_files/S/t/StarClearSeriesSellSheet20_2e6c.pdf",
+   "note": "Hayward Star-Clear sell sheet, residential design flow"
+  },
+  "hayward-star-clear-c1200": {
+   "verdict": "matches",
+   "area": 120,
+   "gpm": 120,
+   "src": "https://hayward.com/media/akeneo_connector/asset_files/S/t/StarClearSeriesSellSheet20_2e6c.pdf",
+   "note": "Hayward Star-Clear sell sheet, residential design flow"
+  },
+  "hayward-star-clear-c12002": {
+   "verdict": "matches",
+   "area": 120,
+   "gpm": 120,
+   "src": "https://hayward.com/media/akeneo_connector/asset_files/S/t/StarClearSeriesSellSheet20_2e6c.pdf",
+   "note": "Hayward Star-Clear sell sheet, residential design flow"
+  },
+  "hayward-star-clear-c17502": {
+   "verdict": "matches",
+   "area": 175,
+   "gpm": 120,
+   "src": "https://hayward.com/media/akeneo_connector/asset_files/S/t/StarClearSeriesSellSheet20_2e6c.pdf",
+   "note": "Hayward Star-Clear sell sheet, residential design flow"
+  },
+  "hayward-progrid-de2420": {
+   "verdict": "matches",
+   "area": 24,
+   "gpm": 48,
+   "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/ProGrid-SellSheet-LITPG18.pdf"
+  },
+  "hayward-progrid-de3620": {
+   "verdict": "matches",
+   "area": 36,
+   "gpm": 72,
+   "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/ProGrid-SellSheet-LITPG18.pdf"
+  },
+  "hayward-progrid-de4820": {
+   "verdict": "matches",
+   "area": 48,
+   "gpm": 96,
+   "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/ProGrid-SellSheet-LITPG18.pdf"
+  },
+  "hayward-progrid-de6020": {
+   "verdict": "matches",
+   "area": 60,
+   "gpm": 120,
+   "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/ProGrid-SellSheet-LITPG18.pdf"
+  },
+  "hayward-progrid-de7220": {
+   "verdict": "matches",
+   "area": 72,
+   "gpm": 144,
+   "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/ProGrid-SellSheet-LITPG18.pdf"
+  },
+  "hayward-perflex-ec40ac": {
+   "verdict": "matches",
+   "area": 20,
+   "gpm": 40,
+   "src": "https://es.hayward.com/media/akeneo_connector/asset_files/L/I/LITPERABG23_Perflex_ABG_Sell_Sheet_5d24.pdf"
+  },
+  "hayward-perflex-ec50ac": {
+   "verdict": "matches",
+   "area": 25,
+   "gpm": 50,
+   "src": "https://es.hayward.com/media/akeneo_connector/asset_files/L/I/LITPERABG23_Perflex_ABG_Sell_Sheet_5d24.pdf"
+  },
+  "hayward-perflex-ec65a": {
+   "verdict": "unverified",
+   "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/PerflexFilter_specSheet.pdf",
+   "note": "spec sheet suggests 67 GPM (2.5 GPM/sq ft NSF max) but its table is garbled; catalog keeps 54 GPM (2 GPM/sq ft)"
+  },
+  "hayward-perflex-ec75a": {
+   "verdict": "unverified",
+   "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/PerflexFilter_specSheet.pdf",
+   "note": "spec sheet suggests 100 GPM (2.5 GPM/sq ft NSF max) but its table is garbled; catalog keeps 80 GPM (2 GPM/sq ft)"
+  },
+  "hayward-xstream-cc1000": {
+   "verdict": "matches",
+   "area": 100,
+   "gpm": 80,
+   "src": "https://www.manualowl.com/m/Hayward/XStream/Manual/212026"
+  },
+  "hayward-xstream-cc1500": {
+   "verdict": "corrected",
+   "area": 150,
+   "gpm": 120,
+   "psi": 35,
+   "src": "https://www.ereplacementparts.com/images/hayward/CC1500.pdf",
+   "note": "spec sheet and retailers: 120 GPM, 35 PSI max working pressure (catalog had 100 GPM, 30 PSI). One older Hayward comparison table says 100 GPM."
+  },
+  "hayward-proseries-plus-s311sxv": {
+   "verdict": "matches",
+   "gpm": 99,
+   "src": "https://cdn.shopify.com/s/files/1/0716/0591/1827/files/aus-pro-series-plus-side-mount.pdf",
+   "note": "Hayward AU sheet 375 LPM NSF = 99 GPM"
+  },
+  "hayward-proseries-plus-s360sx": {
+   "verdict": "matches",
+   "gpm": 130,
+   "bedSqFt": 6.5,
+   "src": "https://hayward.com/media/akeneo_connector/asset_files/L/I/LITPROPL20_ProSeries_Plus_Sell_Sheet_41b7.pdf"
+  },
+  "hayward-proseries-plus-s360t2": {
+   "verdict": "matches",
+   "gpm": 130,
+   "bedSqFt": 6.5,
+   "src": "https://hayward.com/media/akeneo_connector/asset_files/L/I/LITPROPL20_ProSeries_Plus_Sell_Sheet_41b7.pdf"
+  },
+  "pentair-clean-clear-cc50": {
+   "verdict": "matches",
+   "area": 50,
+   "gpm": 50,
+   "src": "https://www.poolsupplyunlimited.com/Products/Manuals/182707_2021319105649.pdf",
+   "note": "Pentair Clean & Clear manual; 1 GPM/sq ft residential, capped at 150"
+  },
+  "pentair-clean-clear-cc75": {
+   "verdict": "matches",
+   "area": 75,
+   "gpm": 75,
+   "src": "https://www.poolsupplyunlimited.com/Products/Manuals/182707_2021319105649.pdf",
+   "note": "Pentair Clean & Clear manual; 1 GPM/sq ft residential, capped at 150"
+  },
+  "pentair-clean-clear-cc100": {
+   "verdict": "matches",
+   "area": 100,
+   "gpm": 100,
+   "src": "https://www.poolsupplyunlimited.com/Products/Manuals/182707_2021319105649.pdf",
+   "note": "Pentair Clean & Clear manual; 1 GPM/sq ft residential, capped at 150"
+  },
+  "pentair-clean-clear-cc150": {
+   "verdict": "matches",
+   "area": 150,
+   "gpm": 150,
+   "src": "https://www.poolsupplyunlimited.com/Products/Manuals/182707_2021319105649.pdf",
+   "note": "Pentair Clean & Clear manual; 1 GPM/sq ft residential, capped at 150"
+  },
+  "pentair-clean-clear-cc200": {
+   "verdict": "matches",
+   "area": 200,
+   "gpm": 150,
+   "src": "https://www.poolsupplyunlimited.com/Products/Manuals/182707_2021319105649.pdf",
+   "note": "Pentair Clean & Clear manual; 1 GPM/sq ft residential, capped at 150"
+  },
+  "pentair-clean-clear-rp-ccrp100": {
+   "verdict": "matches",
+   "gpm": 100,
+   "src": "https://online.flippingbook.com/view/955049466/62/",
+   "note": "residential maximum (1 GPM/sq ft, Pentair cap 150). Retailers often quote the 0.375 GPM/sq ft commercial figure (38/56/75)"
+  },
+  "pentair-clean-clear-rp-ccrp150": {
+   "verdict": "matches",
+   "gpm": 150,
+   "src": "https://online.flippingbook.com/view/955049466/62/",
+   "note": "residential maximum (1 GPM/sq ft, Pentair cap 150). Retailers often quote the 0.375 GPM/sq ft commercial figure (38/56/75)"
+  },
+  "pentair-clean-clear-rp-ccrp200": {
+   "verdict": "matches",
+   "gpm": 150,
+   "src": "https://online.flippingbook.com/view/955049466/62/",
+   "note": "residential maximum (1 GPM/sq ft, Pentair cap 150). Retailers often quote the 0.375 GPM/sq ft commercial figure (38/56/75)"
+  },
+  "sta-rite-posi-clear-rp-pxcrp100": {
+   "verdict": "matches",
+   "gpm": 100,
+   "src": "https://online.flippingbook.com/view/955049466/62/",
+   "note": "residential maximum (1 GPM/sq ft, Pentair cap 150). Retailers often quote the 0.375 GPM/sq ft commercial figure (38/56/75)"
+  },
+  "sta-rite-posi-clear-rp-pxcrp150": {
+   "verdict": "matches",
+   "gpm": 150,
+   "src": "https://online.flippingbook.com/view/955049466/62/",
+   "note": "residential maximum (1 GPM/sq ft, Pentair cap 150). Retailers often quote the 0.375 GPM/sq ft commercial figure (38/56/75)"
+  },
+  "sta-rite-posi-clear-rp-pxcrp200": {
+   "verdict": "matches",
+   "gpm": 150,
+   "src": "https://online.flippingbook.com/view/955049466/62/",
+   "note": "residential maximum (1 GPM/sq ft, Pentair cap 150). Retailers often quote the 0.375 GPM/sq ft commercial figure (38/56/75)"
+  },
+  "sta-rite-system-3-s7m120": {
+   "verdict": "matches",
+   "area": 300,
+   "gpm": 100,
+   "psi": 50,
+   "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/Sta-Rite_System_3_Brochure.pdf"
+  },
+  "sta-rite-system-3-s7m400": {
+   "verdict": "matches",
+   "area": 400,
+   "gpm": 115,
+   "psi": 50,
+   "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/Sta-Rite_System_3_Brochure.pdf"
+  },
+  "sta-rite-system-3-s8m150": {
+   "verdict": "matches",
+   "area": 450,
+   "gpm": 124,
+   "psi": 50,
+   "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/Sta-Rite_System_3_Brochure.pdf"
+  },
+  "sta-rite-system-3-s8m500": {
+   "verdict": "matches",
+   "area": 500,
+   "gpm": 130,
+   "psi": 50,
+   "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/Sta-Rite_System_3_Brochure.pdf"
+  },
+  "sta-rite-system-3-s7md60": {
+   "verdict": "matches",
+   "area": 60,
+   "gpm": 120,
+   "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/Sta-Rite_System_3_Brochure.pdf",
+   "note": "maximum at 2 GPM/sq ft; Pentair's optimal range is lower (60-90 / 72-108)"
+  },
+  "sta-rite-system-3-s7md72": {
+   "verdict": "matches",
+   "area": 72,
+   "gpm": 144,
+   "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/Sta-Rite_System_3_Brochure.pdf",
+   "note": "maximum at 2 GPM/sq ft; Pentair's optimal range is lower (60-90 / 72-108)"
+  },
+  "sta-rite-system-2-plm100": {
+   "verdict": "corrected",
+   "area": 100,
+   "gpm": 100,
+   "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/Sta-Rite_System_2_Brochure.pdf",
+   "note": "catalog had no rated flow; brochure range 38-100 / 47-125 / 66-150 GPM (maximum used, as for the rest of the series)"
+  },
+  "sta-rite-system-2-plm125": {
+   "verdict": "corrected",
+   "area": 125,
+   "gpm": 125,
+   "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/Sta-Rite_System_2_Brochure.pdf",
+   "note": "catalog had no rated flow; brochure range 38-100 / 47-125 / 66-150 GPM (maximum used, as for the rest of the series)"
+  },
+  "sta-rite-system-2-plm175": {
+   "verdict": "corrected",
+   "area": 175,
+   "gpm": 150,
+   "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/Sta-Rite_System_2_Brochure.pdf",
+   "note": "catalog had no rated flow; brochure range 38-100 / 47-125 / 66-150 GPM (maximum used, as for the rest of the series)"
+  },
+  "sta-rite-system-2-plm150": {
+   "verdict": "matches",
+   "area": 150,
+   "gpm": 150,
+   "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/Sta-Rite_System_2_Brochure.pdf"
+  },
+  "sta-rite-system-2-plm200": {
+   "verdict": "matches",
+   "area": 200,
+   "gpm": 150,
+   "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/Sta-Rite_System_2_Brochure.pdf"
+  },
+  "sta-rite-system-2-plm300": {
+   "verdict": "matches",
+   "area": 300,
+   "gpm": 150,
+   "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/Sta-Rite_System_2_Brochure.pdf"
+  },
+  "sta-rite-system-2-plde36": {
+   "verdict": "corrected",
+   "area": 36,
+   "gpm": 72,
+   "src": "https://cdn.shopify.com/s/files/1/0401/6776/8220/files/sys2moddeDS.pdf",
+   "note": "catalog held Pentair's optimal flow (54); every other filter uses the maximum, so corrected to the 2 GPM/sq ft maximum (range 36-72)"
+  },
+  "sta-rite-system-2-plde48": {
+   "verdict": "corrected",
+   "area": 48,
+   "gpm": 96,
+   "src": "https://cdn.shopify.com/s/files/1/0401/6776/8220/files/sys2moddeDS.pdf",
+   "note": "catalog held Pentair's optimal flow (72); every other filter uses the maximum, so corrected to the 2 GPM/sq ft maximum (range 48-96)"
+  },
+  "pentair-fns-plus-fnsp24": {
+   "verdict": "matches",
+   "area": 24,
+   "gpm": 48,
+   "src": "https://www.propools.com/Manuals/52849_202211012935.pdf"
+  },
+  "pentair-fns-plus-fnsp36": {
+   "verdict": "matches",
+   "area": 36,
+   "gpm": 72,
+   "src": "https://www.propools.com/Manuals/52849_202211012935.pdf"
+  },
+  "pentair-fns-plus-fnsp48": {
+   "verdict": "matches",
+   "area": 48,
+   "gpm": 96,
+   "src": "https://www.propools.com/Manuals/52849_202211012935.pdf"
+  },
+  "pentair-fns-plus-fnsp60": {
+   "verdict": "matches",
+   "area": 60,
+   "gpm": 120,
+   "src": "https://www.propools.com/Manuals/52849_202211012935.pdf"
+  },
+  "pentair-quad-de-60": {
+   "verdict": "matches",
+   "area": 60,
+   "gpm": 120,
+   "src": "https://images.inyopools.com/cloud/documents/pentair-quad-de.pdf",
+   "note": "maximum; Quad 80/100 commercial rating is 150"
+  },
+  "pentair-quad-de-80": {
+   "verdict": "matches",
+   "area": 80,
+   "gpm": 160,
+   "src": "https://images.inyopools.com/cloud/documents/pentair-quad-de.pdf",
+   "note": "maximum; Quad 80/100 commercial rating is 150"
+  },
+  "pentair-quad-de-100": {
+   "verdict": "matches",
+   "area": 100,
+   "gpm": 160,
+   "src": "https://images.inyopools.com/cloud/documents/pentair-quad-de.pdf",
+   "note": "maximum; Quad 80/100 commercial rating is 150"
+  },
+  "pentair-sand-dollar-sd60": {
+   "verdict": "matches",
+   "gpm": 60,
+   "bedSqFt": 2.3,
+   "src": "https://www.pentair.com/content/dam/extranet/nam/pentair-pool/residential/filters/sand-dollar/sand-dollar-clearpro-filter-brochure-english.pdf"
+  },
+  "pentair-sand-dollar-sd70": {
+   "verdict": "unverified",
+   "bedSqFt": 3.15,
+   "src": "https://propools.com/subcategory/pentair-sand-dollar-filters/447",
+   "note": "area 3.15 sq ft confirmed; GPM rating not found (catalog 70)"
+  },
+  "pentair-sand-dollar-sd80": {
+   "verdict": "matches",
+   "gpm": 75,
+   "bedSqFt": 3.5,
+   "src": "https://manualmachine.com/starite/sd80cp/5256537-user-manual",
+   "note": "Pentair SD80 manual: 75 GPM (some retailers say 80)"
+  },
+  "pentair-sand-dollar-sd80-2in": {
+   "verdict": "matches",
+   "gpm": 75,
+   "bedSqFt": 3.5,
+   "src": "https://manualmachine.com/starite/sd80cp/5256537-user-manual",
+   "note": "Pentair SD80 manual: 75 GPM (some retailers say 80)"
+  },
+  "pentair-tagelus-ta40d": {
+   "verdict": "corrected",
+   "tank": 19,
+   "gpm": 40,
+   "bedSqFt": 1.8,
+   "src": "https://www.propools.com/Manuals/52870_202215142116.pdf",
+   "note": "Pentair spec sheet: 19\" tank (catalog had 19.5)"
+  },
+  "pentair-tagelus-ta50d": {
+   "verdict": "matches",
+   "tank": 21.5,
+   "gpm": 50,
+   "bedSqFt": 2.3,
+   "src": "https://www.propools.com/Manuals/52870_202215142116.pdf"
+  },
+  "pentair-tagelus-ta60d": {
+   "verdict": "matches",
+   "tank": 24.5,
+   "gpm": 60,
+   "bedSqFt": 3.1,
+   "src": "https://www.propools.com/Manuals/52870_202215142116.pdf"
+  },
+  "pentair-tagelus-ta60d-2in": {
+   "verdict": "matches",
+   "tank": 24.5,
+   "gpm": 60,
+   "bedSqFt": 3.1,
+   "src": "https://www.propools.com/Manuals/52870_202215142116.pdf"
+  },
+  "pentair-tagelus-ta100d": {
+   "verdict": "matches",
+   "tank": 30.5,
+   "gpm": 100,
+   "bedSqFt": 4.9,
+   "src": "https://www.propools.com/Manuals/52870_202215142116.pdf"
+  },
+  "pentair-triton-ii-tr60": {
+   "verdict": "matches",
+   "gpm": 63,
+   "bedSqFt": 3.14,
+   "src": "https://www.royalswimmingpools.com/tritondata.pdf"
+  },
+  "pentair-triton-ii-tr100": {
+   "verdict": "matches",
+   "gpm": 74,
+   "bedSqFt": 4.91,
+   "src": "https://www.royalswimmingpools.com/tritondata.pdf"
+  },
+  "pentair-triton-ii-tr140": {
+   "verdict": "conflict",
+   "gpm": 106,
+   "bedSqFt": 7.06,
+   "src": "https://www.royalswimmingpools.com/tritondata.pdf",
+   "note": "sources give 106 GPM and 141 GPM (= 20 GPM/sq ft x 7.06). Catalog keeps the lower 106 GPM"
+  },
+  "sta-rite-cristal-flo-ii-145361": {
+   "verdict": "unverified",
+   "note": "no manufacturer source found; values mirror the Sand Dollar equivalents"
+  },
+  "sta-rite-cristal-flo-ii-145362": {
+   "verdict": "unverified",
+   "note": "no manufacturer source found; values mirror the Sand Dollar equivalents"
+  },
+  "sta-rite-cristal-flo-ii-145363": {
+   "verdict": "unverified",
+   "note": "no manufacturer source found; values mirror the Sand Dollar equivalents"
+  },
+  "sta-rite-cristal-flo-ii-145387": {
+   "verdict": "unverified",
+   "note": "no manufacturer source found; values mirror the Sand Dollar equivalents"
+  },
+  "jandy-cs100": {
+   "verdict": "matches",
+   "area": 100,
+   "gpm": 100,
+   "psi": 50,
+   "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/Jandy_Single_Element_Spec_Sheet.pdf"
+  },
+  "jandy-cs150": {
+   "verdict": "matches",
+   "area": 150,
+   "gpm": 125,
+   "psi": 50,
+   "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/Jandy_Single_Element_Spec_Sheet.pdf"
+  },
+  "jandy-cs200": {
+   "verdict": "matches",
+   "area": 200,
+   "gpm": 125,
+   "psi": 50,
+   "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/Jandy_Single_Element_Spec_Sheet.pdf"
+  },
+  "jandy-cs250": {
+   "verdict": "matches",
+   "area": 250,
+   "gpm": 125,
+   "psi": 50,
+   "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/Jandy_Single_Element_Spec_Sheet.pdf"
+  },
+  "jandy-dev48": {
+   "verdict": "unverified",
+   "note": "no manufacturer source found in this pass"
+  },
+  "jandy-dev60": {
+   "verdict": "unverified",
+   "note": "no manufacturer source found in this pass"
+  },
+  "jandy-js60-sm": {
+   "verdict": "unverified",
+   "note": "no manufacturer source found in this pass"
+  },
+  "jandy-js100-sm": {
+   "verdict": "unverified",
+   "note": "no manufacturer source found in this pass"
+  },
+  "waterway-clearwater-ii-fc0757": {
+   "verdict": "matches",
+   "area": 75,
+   "gpm": 75,
+   "src": "https://www.propools.com/Manuals/62200_2020211102629.pdf"
+  },
+  "waterway-clearwater-ii-fc1007": {
+   "verdict": "matches",
+   "area": 100,
+   "gpm": 100,
+   "src": "https://www.propools.com/Manuals/62200_2020211102629.pdf",
+   "note": "FC1007 listed as discontinued by retailers"
+  },
+  "waterway-clearwater-ii-fc1257": {
+   "verdict": "matches",
+   "area": 125,
+   "gpm": 125,
+   "src": "https://www.propools.com/Manuals/62200_2020211102629.pdf"
+  },
+  "waterway-clearwater-ii-fc1507": {
+   "verdict": "matches",
+   "area": 150,
+   "gpm": 150,
+   "src": "https://www.propools.com/Manuals/62200_2020211102629.pdf"
+  },
+  "waterway-clearwater-ii-fc2007": {
+   "verdict": "matches",
+   "area": 200,
+   "gpm": 150,
+   "src": "https://www.propools.com/Manuals/62200_2020211102629.pdf"
+  },
+  "waterway-proclean-plus-pccf-075": {
+   "verdict": "unverified",
+   "note": "no manufacturer source found in this pass"
+  },
+  "waterway-proclean-plus-pccf-100": {
+   "verdict": "unverified",
+   "note": "no manufacturer source found in this pass"
+  },
+  "waterway-proclean-plus-pccf-125": {
+   "verdict": "unverified",
+   "note": "no manufacturer source found in this pass"
+  },
+  "waterway-proclean-plus-pccf-150": {
+   "verdict": "unverified",
+   "note": "no manufacturer source found in this pass"
+  },
+  "waterway-proclean-plus-pccf-200": {
+   "verdict": "unverified",
+   "note": "no manufacturer source found in this pass"
+  },
+  "waterway-pcde-30": {
+   "verdict": "unverified",
+   "note": "no manufacturer source found in this pass"
+  },
+  "waterway-pcde-40": {
+   "verdict": "unverified",
+   "note": "no manufacturer source found in this pass"
+  },
+  "waterway-carefree-fs01619": {
+   "verdict": "matches",
+   "gpm": 35,
+   "bedSqFt": 1.4,
+   "src": "https://www.propools.com/Manuals/62176_20202108435.pdf"
+  },
+  "waterway-carefree-fs01922": {
+   "verdict": "matches",
+   "gpm": 45,
+   "bedSqFt": 2,
+   "src": "https://www.propools.com/Manuals/62176_20202108435.pdf"
+  },
+  "waterway-carefree-fs02225": {
+   "verdict": "matches",
+   "gpm": 55,
+   "bedSqFt": 2.6,
+   "src": "https://www.propools.com/Manuals/62176_20202108435.pdf"
+  },
+  "waterway-carefree-fs02629": {
+   "verdict": "matches",
+   "gpm": 70,
+   "bedSqFt": 3.5,
+   "src": "https://www.propools.com/Manuals/62176_20202108435.pdf"
+  },
+  "intex-krystal-clear-sx1500": {
+   "verdict": "unverified",
+   "note": "Intex publishes pump-system flow (GPH), not filter ratings; not checked"
+  },
+  "intex-krystal-clear-sx2100": {
+   "verdict": "unverified",
+   "note": "Intex publishes pump-system flow (GPH), not filter ratings; not checked"
+  },
+  "intex-krystal-clear-sx2800": {
+   "verdict": "unverified",
+   "note": "Intex publishes pump-system flow (GPH), not filter ratings; not checked"
+  },
+  "intex-krystal-clear-sx3000": {
+   "verdict": "unverified",
+   "note": "Intex publishes pump-system flow (GPH), not filter ratings; not checked"
+  }
+ }
+}

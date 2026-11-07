@@ -1214,8 +1214,8 @@
      "cart": "Pentair 179135 / Pleatco ULTRA-A6-PAK4 / Unicel C-7471-4",
      "psi": 50,
      "dq": "verified",
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "src": "https://online.flippingbook.com/view/603161483/45/",
+     "asOf": "2026-11-07"
     },
     "units": 1,
     "score": 116.56,
@@ -1276,8 +1276,8 @@
      "cart": "Hayward CX880XREPAK4",
      "psi": 50,
      "dq": "verified",
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "src": "https://www.hayward.com/swimclear-multi-element-cartridge-filter-425-sq-ft-c4030.html",
+     "asOf": "2026-11-07"
     },
     "units": 1,
     "score": 116.4,
@@ -1339,8 +1339,8 @@
      "cart": "Pentair 170147; inner 25021-0202S (191 sq ft) + outer 25022-0203S (259 sq ft)",
      "psi": 50,
      "dq": "verified",
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/Sta-Rite_System_3_Brochure.pdf",
+     "asOf": "2026-11-07"
     },
     "units": 1,
     "score": 115.6,
@@ -1401,8 +1401,8 @@
      "cart": "Pentair 170146; inner 25021-0223S (136 sq ft) + outer 25022-0224S (264 sq ft)",
      "psi": 50,
      "dq": "verified",
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/Sta-Rite_System_3_Brochure.pdf",
+     "asOf": "2026-11-07"
     },
     "units": 1,
     "score": 115.43393334779152,
@@ -1450,6 +1450,118 @@
    },
    {
     "product": {
+     "id": "jandy-cv460",
+     "brand": "Jandy",
+     "model": "CV460",
+     "ft": "cartridge",
+     "area": 460,
+     "tank": null,
+     "bed": null,
+     "gpm": 150,
+     "mic": null,
+     "port": 2,
+     "cart": null,
+     "psi": 50,
+     "dq": "verified",
+     "src": "https://manuals.plus/jandy/h0291800c-cartridge-pool-filters-manual.pdf",
+     "asOf": "2026-11-07"
+    },
+    "units": 1,
+    "score": 115.28,
+    "reasons": [
+     {
+      "code": "FILTER_SIZE_OK",
+      "severity": "good",
+      "ruleId": "FILTER_SIZING",
+      "text": "460 sq ft — meets the 375 sq ft minimum."
+     },
+     {
+      "code": "FILTER_FLOW_OK",
+      "severity": "good",
+      "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+      "text": "Handles ~150 GPM ≥ your pump's ~92.22 GPM."
+     },
+     {
+      "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "severity": "info",
+      "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+     }
+    ],
+    "fit": {
+     "meetsMinSize": true,
+     "flowOk": true,
+     "portOk": true,
+     "withinBudget": true
+    },
+    "derated": false,
+    "computed": {
+     "minRequired": 375,
+     "candidateSize": 460,
+     "candidateMaxGPM": 150,
+     "pumpMaxGPM": 92.22,
+     "oversizeRatio": 1.23
+    },
+    "rank": 5
+   },
+   {
+    "product": {
+     "id": "jandy-cl460",
+     "brand": "Jandy",
+     "model": "CL460",
+     "ft": "cartridge",
+     "area": 460,
+     "tank": null,
+     "bed": null,
+     "gpm": 150,
+     "mic": null,
+     "port": 2,
+     "cart": null,
+     "psi": 50,
+     "dq": "verified",
+     "src": "https://manuals.plus/jandy/h0291800c-cartridge-pool-filters-manual.pdf",
+     "asOf": "2026-11-07"
+    },
+    "units": 1,
+    "score": 115.28,
+    "reasons": [
+     {
+      "code": "FILTER_SIZE_OK",
+      "severity": "good",
+      "ruleId": "FILTER_SIZING",
+      "text": "460 sq ft — meets the 375 sq ft minimum."
+     },
+     {
+      "code": "FILTER_FLOW_OK",
+      "severity": "good",
+      "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
+      "text": "Handles ~150 GPM ≥ your pump's ~92.22 GPM."
+     },
+     {
+      "code": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "severity": "info",
+      "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
+      "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
+     }
+    ],
+    "fit": {
+     "meetsMinSize": true,
+     "flowOk": true,
+     "portOk": true,
+     "withinBudget": true
+    },
+    "derated": false,
+    "computed": {
+     "minRequired": 375,
+     "candidateSize": 460,
+     "candidateMaxGPM": 150,
+     "pumpMaxGPM": 92.22,
+     "oversizeRatio": 1.23
+    },
+    "rank": 6
+   },
+   {
+    "product": {
      "id": "sta-rite-system-3-s8m500",
      "brand": "Sta-Rite",
      "model": "System 3 S8M500",
@@ -1463,8 +1575,8 @@
      "cart": "Pentair 170148; inner 25021-0224S (209 sq ft) + outer 25022-0225S (291 sq ft)",
      "psi": 50,
      "dq": "verified",
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/Sta-Rite_System_3_Brochure.pdf",
+     "asOf": "2026-11-07"
     },
     "units": 1,
     "score": 114,
@@ -1508,7 +1620,7 @@
      "pumpMaxGPM": 92.22,
      "oversizeRatio": 1.33
     },
-    "rank": 5
+    "rank": 7
    },
    {
     "product": {
@@ -1525,8 +1637,8 @@
      "cart": "Pentair 179136 / Pleatco ULTRA-A7-PAK4 / Unicel C-7472-4",
      "psi": 50,
      "dq": "verified",
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "src": "https://online.flippingbook.com/view/603161483/45/",
+     "asOf": "2026-11-07"
     },
     "units": 1,
     "score": 112.16,
@@ -1576,130 +1688,6 @@
      "pumpMaxGPM": 92.22,
      "oversizeRatio": 1.39
     },
-    "rank": 6
-   },
-   {
-    "product": {
-     "id": "hayward-swimclear-c5030",
-     "brand": "Hayward",
-     "model": "SwimClear C5030",
-     "ft": "cartridge",
-     "area": 525,
-     "tank": null,
-     "bed": null,
-     "gpm": 150,
-     "mic": null,
-     "port": 2,
-     "cart": "Hayward CX1280XREPAK4",
-     "psi": 50,
-     "dq": "verified",
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
-    },
-    "units": 1,
-    "score": 111.7,
-    "reasons": [
-     {
-      "code": "FILTER_SIZE_OK",
-      "severity": "good",
-      "ruleId": "FILTER_SIZING",
-      "text": "525 sq ft — meets the 375 sq ft minimum."
-     },
-     {
-      "code": "FILTER_FLOW_OK",
-      "severity": "good",
-      "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
-      "text": "Handles ~150 GPM ≥ your pump's ~92.22 GPM."
-     },
-     {
-      "code": "FILTER_TURNOVER_NOT_A_FACTOR",
-      "severity": "info",
-      "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
-      "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
-     },
-     {
-      "code": "CART_ELEMENT",
-      "severity": "info",
-      "ruleId": "FILTER_REPAIR_FACTS",
-      "text": "Replacement element: Hayward CX1280XREPAK4."
-     },
-     {
-      "code": "FILTER_OVER_TARGET",
-      "severity": "info",
-      "ruleId": "FILTER_SIZING",
-      "text": "Above the ~500 sq ft that suits 25,000 gallons. Extra cartridge area past this point buys very little — a smaller unit would still go a full season between cleanings."
-     }
-    ],
-    "fit": {
-     "meetsMinSize": true,
-     "flowOk": true,
-     "portOk": true,
-     "withinBudget": true
-    },
-    "derated": false,
-    "computed": {
-     "minRequired": 375,
-     "candidateSize": 525,
-     "candidateMaxGPM": 150,
-     "pumpMaxGPM": 92.22,
-     "oversizeRatio": 1.4
-    },
-    "rank": 7
-   },
-   {
-    "product": {
-     "id": "jandy-cv460",
-     "brand": "Jandy",
-     "model": "CV460",
-     "ft": "cartridge",
-     "area": 460,
-     "tank": null,
-     "bed": null,
-     "gpm": 150,
-     "mic": null,
-     "port": 2,
-     "cart": null,
-     "psi": 50,
-     "dq": "partial",
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
-    },
-    "units": 1,
-    "score": 110.48,
-    "reasons": [
-     {
-      "code": "FILTER_SIZE_OK",
-      "severity": "good",
-      "ruleId": "FILTER_SIZING",
-      "text": "460 sq ft — meets the 375 sq ft minimum."
-     },
-     {
-      "code": "FILTER_FLOW_OK",
-      "severity": "good",
-      "ruleId": "FILTER_MUST_NOT_BOTTLENECK_PUMP",
-      "text": "Handles ~150 GPM ≥ your pump's ~92.22 GPM."
-     },
-     {
-      "code": "FILTER_TURNOVER_NOT_A_FACTOR",
-      "severity": "info",
-      "ruleId": "FILTER_TURNOVER_NOT_A_FACTOR",
-      "text": "Sized for dirt-holding + low cleaning frequency, not turnover."
-     }
-    ],
-    "fit": {
-     "meetsMinSize": true,
-     "flowOk": true,
-     "portOk": true,
-     "withinBudget": true
-    },
-    "derated": false,
-    "computed": {
-     "minRequired": 375,
-     "candidateSize": 460,
-     "candidateMaxGPM": 150,
-     "pumpMaxGPM": 92.22,
-     "oversizeRatio": 1.23
-    },
     "rank": 8
    }
   ],
@@ -1718,9 +1706,9 @@
      "port": 2,
      "cart": null,
      "psi": 50,
-     "dq": "partial",
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "dq": "verified",
+     "src": "https://manuals.plus/jandy/h0291800c-cartridge-pool-filters-manual.pdf",
+     "asOf": "2026-11-07"
     },
     "reason": {
      "code": "FILTER_UNDERSIZED",
@@ -1743,9 +1731,9 @@
      "port": 2,
      "cart": null,
      "psi": 50,
-     "dq": "partial",
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "dq": "verified",
+     "src": "https://manuals.plus/jandy/h0291800c-cartridge-pool-filters-manual.pdf",
+     "asOf": "2026-11-07"
     },
     "reason": {
      "code": "FILTER_UNDERSIZED",
@@ -1769,8 +1757,8 @@
      "cart": "Hayward CX580XREPAK4",
      "psi": 50,
      "dq": "verified",
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "src": "https://cdn.shopify.com/s/files/1/0105/0837/0005/files/SwimClear_Brochure.pdf",
+     "asOf": "2026-11-07"
     },
     "reason": {
      "code": "FILTER_UNDERSIZED",
@@ -1794,8 +1782,8 @@
      "cart": "Pentair 179134 / Pleatco ULTRA-A5-PAK4 / Unicel C-7470-4",
      "psi": 50,
      "dq": "verified",
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "src": "https://online.flippingbook.com/view/603161483/45/",
+     "asOf": "2026-11-07"
     },
     "reason": {
      "code": "FILTER_UNDERSIZED",
@@ -1819,8 +1807,8 @@
      "cart": "Pentair 170145; inner 25021-0200S (100 sq ft) + outer 25022-0201S (200 sq ft)",
      "psi": 50,
      "dq": "verified",
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/Sta-Rite_System_3_Brochure.pdf",
+     "asOf": "2026-11-07"
     },
     "reason": {
      "code": "FILTER_UNDERSIZED",
@@ -1844,8 +1832,8 @@
      "cart": "Pentair/Sta-Rite 27002-0300S",
      "psi": 50,
      "dq": "verified",
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/Sta-Rite_System_2_Brochure.pdf",
+     "asOf": "2026-11-07"
     },
     "reason": {
      "code": "FILTER_UNDERSIZED",
@@ -1871,8 +1859,8 @@
      "cart": "Hayward CX880XREPAK4",
      "psi": 50,
      "dq": "verified",
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "src": "https://www.hayward.com/swimclear-multi-element-cartridge-filter-425-sq-ft-c4030.html",
+     "asOf": "2026-11-07"
     },
     "label": "size-up"
    }

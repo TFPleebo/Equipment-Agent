@@ -87,7 +87,9 @@ for (const f of filters) {
 }
 
 // ---------------- report ----------------
-const age = (list) => { const m = {}; list.forEach((x) => (m[x.src] = (m[x.src] || 0) + 1)); return Object.entries(m).map(([k, v]) => `${v} ${k}`).join(", "); };
+// Where records came from: legacy (not re-verified), the CEC database, or manufacturer documents (URLs).
+const srcKind = (s) => (/^legacy/.test(s) ? s : /^CEC/.test(s) ? "CEC database" : /^https?:/.test(s) ? "manufacturer/retailer documents" : s);
+const age = (list) => { const m = {}; list.forEach((x) => { const k = srcKind(x.src); m[k] = (m[k] || 0) + 1; }); return Object.entries(m).map(([k, v]) => `${v} ${k}`).join(", "); };
 console.log(`pumps ${pumps.length} (${age(pumps)}) | salt cells ${swg.length} (${age(swg)}) | filters ${filters.length} (${age(filters)})`);
 if (!quiet) for (const w of warnings) console.log("warn  " + w);
 for (const e of errors) console.log("ERROR " + e);

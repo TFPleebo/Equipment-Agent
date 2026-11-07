@@ -33,8 +33,8 @@
     "cart": "Pentair 170148; inner 25021-0224S (209 sq ft) + outer 25022-0225S (291 sq ft)",
     "psi": 50,
     "dq": "verified",
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
+    "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/Sta-Rite_System_3_Brochure.pdf",
+    "asOf": "2026-11-07"
    },
    "units": 2,
    "score": 105.22222222222221,
@@ -101,8 +101,8 @@
     "cart": "Pentair 179136 / Pleatco ULTRA-A7-PAK4 / Unicel C-7472-4",
     "psi": 50,
     "dq": "verified",
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
+    "src": "https://online.flippingbook.com/view/603161483/45/",
+    "asOf": "2026-11-07"
    },
    "units": 2,
    "score": 104.11111111111111,
@@ -170,8 +170,8 @@
     "cart": "Hayward CX1280XREPAK4",
     "psi": 50,
     "dq": "verified",
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
+    "src": "https://cdn.shopify.com/s/files/1/0105/0837/0005/files/SwimClear_Brochure.pdf",
+    "asOf": "2026-11-07"
    },
    "units": 2,
    "score": 103.83333333333333,
@@ -238,8 +238,8 @@
     "cart": "Pentair 170147; inner 25021-0202S (191 sq ft) + outer 25022-0203S (259 sq ft)",
     "psi": 50,
     "dq": "verified",
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
+    "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/Sta-Rite_System_3_Brochure.pdf",
+    "asOf": "2026-11-07"
    },
    "units": 2,
    "score": 102,
@@ -305,12 +305,12 @@
     "port": 2,
     "cart": null,
     "psi": 50,
-    "dq": "partial",
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
+    "dq": "verified",
+    "src": "https://manuals.plus/jandy/h0291800c-cartridge-pool-filters-manual.pdf",
+    "asOf": "2026-11-07"
    },
    "units": 2,
-   "score": 96.64444444444445,
+   "score": 101.44444444444444,
    "reasons": [
     {
      "code": "FILTER_PARALLEL",
@@ -367,12 +367,12 @@
     "port": 2,
     "cart": null,
     "psi": 50,
-    "dq": "partial",
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
+    "dq": "verified",
+    "src": "https://manuals.plus/jandy/h0291800c-cartridge-pool-filters-manual.pdf",
+    "asOf": "2026-11-07"
    },
    "units": 2,
-   "score": 96.64444444444445,
+   "score": 101.44444444444444,
    "reasons": [
     {
      "code": "FILTER_PARALLEL",
@@ -429,12 +429,12 @@
     "port": 2,
     "cart": null,
     "psi": 50,
-    "dq": "partial",
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
+    "dq": "verified",
+    "src": "https://manuals.plus/jandy/h0291800c-cartridge-pool-filters-manual.pdf",
+    "asOf": "2026-11-07"
    },
    "units": 2,
-   "score": 95.97777777777777,
+   "score": 100.77777777777777,
    "reasons": [
     {
      "code": "FILTER_PARALLEL",
@@ -491,12 +491,12 @@
     "port": 2,
     "cart": null,
     "psi": 50,
-    "dq": "partial",
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
+    "dq": "verified",
+    "src": "https://manuals.plus/jandy/h0291800c-cartridge-pool-filters-manual.pdf",
+    "asOf": "2026-11-07"
    },
    "units": 2,
-   "score": 95.97777777777777,
+   "score": 100.77777777777777,
    "reasons": [
     {
      "code": "FILTER_PARALLEL",
@@ -556,8 +556,8 @@
     "cart": "Hayward CX591XREPAK4 (two four-packs / eight elements)",
     "psi": 50,
     "dq": "verified",
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
+    "src": "https://cdn.shopify.com/s/files/1/0105/0837/0005/files/SwimClear_Brochure.pdf",
+    "asOf": "2026-11-07"
    },
    "reason": {
     "code": "FILTER_UNDERSIZED",
@@ -580,9 +580,9 @@
     "port": 2,
     "cart": null,
     "psi": 50,
-    "dq": "partial",
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
+    "dq": "verified",
+    "src": "https://manuals.plus/jandy/h0291800c-cartridge-pool-filters-manual.pdf",
+    "asOf": "2026-11-07"
    },
    "reason": {
     "code": "FILTER_UNDERSIZED",
@@ -605,9 +605,9 @@
     "port": 2,
     "cart": null,
     "psi": 50,
-    "dq": "partial",
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
+    "dq": "verified",
+    "src": "https://manuals.plus/jandy/h0291800c-cartridge-pool-filters-manual.pdf",
+    "asOf": "2026-11-07"
    },
    "reason": {
     "code": "FILTER_UNDERSIZED",
@@ -631,8 +631,8 @@
     "cart": "Hayward CX1280XREPAK4",
     "psi": 50,
     "dq": "verified",
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
+    "src": "https://cdn.shopify.com/s/files/1/0105/0837/0005/files/SwimClear_Brochure.pdf",
+    "asOf": "2026-11-07"
    },
    "reason": {
     "code": "FILTER_UNDERSIZED",
@@ -656,8 +656,8 @@
     "cart": "Pentair 179136 / Pleatco ULTRA-A7-PAK4 / Unicel C-7472-4",
     "psi": 50,
     "dq": "verified",
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
+    "src": "https://online.flippingbook.com/view/603161483/45/",
+    "asOf": "2026-11-07"
    },
    "reason": {
     "code": "FILTER_UNDERSIZED",
@@ -681,8 +681,8 @@
     "cart": "Pentair 170148; inner 25021-0224S (209 sq ft) + outer 25022-0225S (291 sq ft)",
     "psi": 50,
     "dq": "verified",
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
+    "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/Sta-Rite_System_3_Brochure.pdf",
+    "asOf": "2026-11-07"
    },
    "reason": {
     "code": "FILTER_UNDERSIZED",
@@ -708,8 +708,8 @@
     "cart": "Pentair 179136 / Pleatco ULTRA-A7-PAK4 / Unicel C-7472-4",
     "psi": 50,
     "dq": "verified",
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
+    "src": "https://online.flippingbook.com/view/603161483/45/",
+    "asOf": "2026-11-07"
    },
    "label": "size-up"
   }

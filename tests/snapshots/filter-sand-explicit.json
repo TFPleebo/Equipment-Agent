@@ -25,8 +25,8 @@
     "cart": null,
     "psi": null,
     "dq": "verified",
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
+    "src": "https://cdn.shopify.com/s/files/1/0716/0591/1827/files/aus-pro-series-plus-side-mount.pdf",
+    "asOf": "2026-11-07"
    },
    "units": 1,
    "score": 101.52581825142256,
@@ -87,8 +87,8 @@
     "cart": null,
     "psi": null,
     "dq": "verified",
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
+    "src": "https://www.hayward.com/proseries-30-sand-filter-top-mount-2-variflo-valve-included-s310t2.html",
+    "asOf": "2026-11-07"
    },
    "units": 1,
    "score": 101.51079480427302,
@@ -211,8 +211,8 @@
     "cart": null,
     "psi": 50,
     "dq": "verified",
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
+    "src": "https://www.propools.com/Manuals/52870_202215142116.pdf",
+    "asOf": "2026-11-07"
    },
    "units": 1,
    "score": 101.50703894248564,
@@ -273,8 +273,8 @@
     "cart": null,
     "psi": 50,
     "dq": "verified",
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
+    "src": "https://www.royalswimmingpools.com/tritondata.pdf",
+    "asOf": "2026-11-07"
    },
    "units": 1,
    "score": 96.51079480427302,
@@ -341,8 +341,8 @@
     "cart": null,
     "psi": null,
     "dq": "verified",
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
+    "src": "https://hayward.com/media/akeneo_connector/asset_files/L/I/LITPROPL20_ProSeries_Plus_Sell_Sheet_41b7.pdf",
+    "asOf": "2026-11-07"
    },
    "units": 1,
    "score": 91.27464349513401,
@@ -404,8 +404,8 @@
     "cart": null,
     "psi": null,
     "dq": "verified",
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
+    "src": "https://hayward.com/media/akeneo_connector/asset_files/L/I/LITPROPL20_ProSeries_Plus_Sell_Sheet_41b7.pdf",
+    "asOf": "2026-11-07"
    },
    "units": 1,
    "score": 91.27464349513401,
@@ -466,8 +466,8 @@
     "cart": null,
     "psi": 50,
     "dq": "verified",
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
+    "src": "https://www.royalswimmingpools.com/tritondata.pdf",
+    "asOf": "2026-11-07"
    },
    "units": 1,
    "score": 81.81830508856095,
@@ -536,8 +536,8 @@
     "cart": null,
     "psi": null,
     "dq": "verified",
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
+    "src": "https://www.propools.com/Manuals/52858_20161181579.pdf",
+    "asOf": "2026-11-07"
    },
    "reason": {
     "code": "FILTER_FLOW_BOTTLENECK",
@@ -561,8 +561,8 @@
     "cart": null,
     "psi": null,
     "dq": "verified",
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
+    "src": "https://www.hayward.com/proseries-27-sand-filter-top-mount-2-variflo-valve-included-s270t2.html",
+    "asOf": "2026-11-07"
    },
    "reason": {
     "code": "FILTER_FLOW_BOTTLENECK",
@@ -586,8 +586,8 @@
     "cart": null,
     "psi": 50,
     "dq": "verified",
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
+    "src": "https://manualmachine.com/starite/sd80cp/5256537-user-manual",
+    "asOf": "2026-11-07"
    },
    "reason": {
     "code": "FILTER_FLOW_BOTTLENECK",
@@ -611,8 +611,8 @@
     "cart": null,
     "psi": 50,
     "dq": "verified",
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
+    "src": "https://manualmachine.com/starite/sd80cp/5256537-user-manual",
+    "asOf": "2026-11-07"
    },
    "reason": {
     "code": "FILTER_FLOW_BOTTLENECK",
@@ -688,8 +688,8 @@
     "cart": null,
     "psi": null,
     "dq": "verified",
-    "src": "legacy-2026-07",
-    "asOf": "2026-07-25"
+    "src": "https://hayward.com/media/akeneo_connector/asset_files/L/I/LITPROPL20_ProSeries_Plus_Sell_Sheet_41b7.pdf",
+    "asOf": "2026-11-07"
    },
    "label": "size-up"
   }

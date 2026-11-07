@@ -1053,8 +1053,8 @@
      "cart": "Pentair 179133 / Pleatco ULTRA-A4-PAK4 / Unicel C-7469-4",
      "psi": 50,
      "dq": "verified",
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "src": "https://online.flippingbook.com/view/603161483/45/",
+     "asOf": "2026-11-07"
     },
     "units": 1,
     "score": 116.72380952380952,
@@ -1115,8 +1115,8 @@
      "cart": "Jandy R0462500",
      "psi": 50,
      "dq": "verified",
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/Jandy_Single_Element_Spec_Sheet.pdf",
+     "asOf": "2026-11-07"
     },
     "units": 1,
     "score": 116.66666666666667,
@@ -1178,8 +1178,8 @@
      "cart": "Pentair 170145; inner 25021-0200S (100 sq ft) + outer 25022-0201S (200 sq ft)",
      "psi": 50,
      "dq": "verified",
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/Sta-Rite_System_3_Brochure.pdf",
+     "asOf": "2026-11-07"
     },
     "units": 1,
     "score": 114,
@@ -1240,8 +1240,8 @@
      "cart": "Pentair/Sta-Rite 27002-0300S",
      "psi": 50,
      "dq": "verified",
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/Sta-Rite_System_2_Brochure.pdf",
+     "asOf": "2026-11-07"
     },
     "units": 1,
     "score": 114,
@@ -1302,8 +1302,8 @@
      "cart": "Pentair 179134 / Pleatco ULTRA-A5-PAK4 / Unicel C-7470-4",
      "psi": 50,
      "dq": "verified",
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "src": "https://online.flippingbook.com/view/603161483/45/",
+     "asOf": "2026-11-07"
     },
     "units": 1,
     "score": 110.93333333333334,
@@ -1370,8 +1370,8 @@
      "cart": "Hayward CX580XREPAK4",
      "psi": 50,
      "dq": "verified",
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "src": "https://cdn.shopify.com/s/files/1/0105/0837/0005/files/SwimClear_Brochure.pdf",
+     "asOf": "2026-11-07"
     },
     "units": 1,
     "score": 110.16666666666667,
@@ -1438,8 +1438,8 @@
      "cart": "Hayward CX481XREPAK4",
      "psi": 50,
      "dq": "verified",
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "src": "https://cdn.shopify.com/s/files/1/0105/0837/0005/files/SwimClear_Brochure.pdf",
+     "asOf": "2026-11-07"
     },
     "units": 1,
     "score": 108.66666666666667,
@@ -1499,12 +1499,12 @@
      "port": 2,
      "cart": null,
      "psi": 50,
-     "dq": "partial",
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "dq": "verified",
+     "src": "https://manuals.plus/jandy/h0291800c-cartridge-pool-filters-manual.pdf",
+     "asOf": "2026-11-07"
     },
     "units": 1,
-    "score": 103.06666666666668,
+    "score": 107.86666666666667,
     "reasons": [
      {
       "code": "FILTER_SIZE_OK",
@@ -1570,8 +1570,8 @@
      "cart": "Pentair R173217 / Pleatco ULTRA-C5 / Unicel C-9419",
      "psi": 50,
      "dq": "verified",
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "src": "https://www.poolsupplyunlimited.com/Products/Manuals/182707_2021319105649.pdf",
+     "asOf": "2026-11-07"
     },
     "reason": {
      "code": "FILTER_UNDERSIZED",
@@ -1595,8 +1595,8 @@
      "cart": "Pleatco ULTRA-C5 / Unicel C-9419",
      "psi": 50,
      "dq": "verified",
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "src": "https://online.flippingbook.com/view/955049466/62/",
+     "asOf": "2026-11-07"
     },
     "reason": {
      "code": "FILTER_UNDERSIZED",
@@ -1620,8 +1620,8 @@
      "cart": "Pentair/Sta-Rite 27002-0200S",
      "psi": 50,
      "dq": "verified",
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/Sta-Rite_System_2_Brochure.pdf",
+     "asOf": "2026-11-07"
     },
     "reason": {
      "code": "FILTER_UNDERSIZED",
@@ -1645,8 +1645,8 @@
      "cart": "Pleatco ULTRA-C5 / Unicel C-9419",
      "psi": 50,
      "dq": "verified",
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "src": "https://online.flippingbook.com/view/955049466/62/",
+     "asOf": "2026-11-07"
     },
     "reason": {
      "code": "FILTER_UNDERSIZED",
@@ -1670,8 +1670,8 @@
      "cart": "Hayward CX200XRE",
      "psi": 50,
      "dq": "verified",
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/SwimClear-LITSCSE17.pdf",
+     "asOf": "2026-11-07"
     },
     "reason": {
      "code": "FILTER_UNDERSIZED",
@@ -1695,8 +1695,8 @@
      "cart": "Jandy R0462400",
      "psi": 50,
      "dq": "verified",
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/Jandy_Single_Element_Spec_Sheet.pdf",
+     "asOf": "2026-11-07"
     },
     "reason": {
      "code": "FILTER_UNDERSIZED",
@@ -1722,8 +1722,8 @@
      "cart": "Jandy R0462500",
      "psi": 50,
      "dq": "verified",
-     "src": "legacy-2026-07",
-     "asOf": "2026-07-25"
+     "src": "https://cdn.shopify.com/s/files/1/0426/5373/files/Jandy_Single_Element_Spec_Sheet.pdf",
+     "asOf": "2026-11-07"
     },
     "label": "size-up"
    }

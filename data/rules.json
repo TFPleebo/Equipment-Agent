@@ -828,5 +828,25 @@
       "severity115": "warning"
     },
     "src": "Manufacturer specs; NEC (2026-11, pending review)"
+  },
+  "PUMP_CURVE_DERIVATION": {
+    "title": "How curve A and B points are derived from CEC's curve-C test points",
+    "value": {
+      "systemCurveK": {
+        "A": 0.0167,
+        "B": 0.05,
+        "C": 0.0082
+      },
+      "method": "Pump curve at the test speed: H = H0 - kp*Q^2, with H0 = maxHead*(rpm/maxRpm)^2 (affinity laws) and kp chosen so it passes through the curve-C test point. Flow on curve X = sqrt(H0/(kp + kX)). Watts = W_C * (f + (1-f) * Q_X/Q_C): a fixed share plus a share proportional to flow, typical of centrifugal pumps at constant speed.",
+      "powerFixedFraction": 0.5,
+      "fallbackRatio": {
+        "A": 0.74,
+        "B": 0.45
+      },
+      "fallbackNote": "Used only if max head is missing or inconsistent with the test point (records marked abSrc derived-ratio). Ratios are the medians of the legacy catalog.",
+      "calibration": "pending: fitted against legacy records whose curve-C values match CEC exactly",
+      "reviewedBy": "pending review (proposed 2026-11)"
+    },
+    "src": "CEC/DOE test procedure system curves (10 CFR 431 App. C to Subpart Y); TFP Hydraulics 101 curve constants"
   }
 }
