@@ -479,5 +479,17 @@
       }
     ],
     "src": "filter-selection-engine-spec.md §7"
+  },
+  "PUMP_ENERGY_MODEL": {
+    "title": "How daily pump energy is estimated",
+    "value": {
+      "vsModel": "twoPointFit",
+      "previousVsModel": "cubeFromLowPoint",
+      "formula": "VS: watts(Q) = fixed + k*Q^3, fitted through the CEC low- and high-speed points on the chosen curve; capped at high-speed watts. Two-/multi-speed: low-speed watts if low speed delivers the daily minimum, else high-speed watts. Single-speed: high-speed watts.",
+      "fixedSpeedLowMaxOverMinimum": 2,
+      "changeReason": "Pure cube-law scaling from the low point ignores the drive/motor losses that stay roughly constant at low speed (median ~40 W in the CEC data), so pumps tested at a higher low-speed flow looked unrealistically cheap at 15-25 GPM and before/after comparisons could show negative savings. Two-/multi-speed pumps were also modelled as if they could throttle like a VS, understating their running cost.",
+      "reviewedBy": "pending review (proposed 2026-11)"
+    },
+    "src": "Pump affinity laws on a fixed system curve; CEC appliance database test points"
   }
 }

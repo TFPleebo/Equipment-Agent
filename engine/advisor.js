@@ -84,11 +84,10 @@ function createAdvisor(data) {
       if(p.newBuild && pump.st!=='VS'){continue;}
       const gLo=pump.lo.g[ci], wLo=pump.lo.w[ci], gHi=pump.hi.g[ci], wHi=pump.hi.w[ci];
       if(gHi==null||gHi<requiredGPM) continue; // can't reach peak/feature flow at all
-      // Daily filtering runs at (throttled to) turnover flow. VS / 2-speed throttle;
-      // single-speed only offers its one high point.
-      const throttleable = pump.st!=='SS';
-      const efficientLow = gLo!=null && gLo<=dailyGPM+2; // can idle at/below the minimum useful flow
-      const wattsDaily = throttleable ? estWattsAtGPM(gLo,wLo,gHi,wHi,dailyGPM) : wHi;
+      // Daily filtering runs at the minimum useful flow. VS pumps slow down to it; two- and
+      // multi-speed pumps use their low speed if it delivers enough; single-speed runs flat out.
+      const efficientLow = canRunAtDailyFlow(pump.st,gLo,dailyGPM);
+      const wattsDaily = estWattsAtGPM(gLo,wLo,gHi,wHi,dailyGPM,pump.st);
       const kWh=(((wattsDaily||0)/1000)*dailyHours + ((wHi||0)/1000)*featureHours)*365;
       const annualCost=p.rate?kWh*p.rate:null;
 
@@ -105,7 +104,7 @@ function createAdvisor(data) {
       if(pump.st==='VS') reasons.push({code:'VS_PREFERRED',severity:'good',ruleId:'VS_REQUIRED_ABOVE_THP',text:'Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering.'});
       else if(pump.st!=='SS') reasons.push({code:'MULTISPEED',severity:'info',ruleId:'VS_REQUIRED_ABOVE_THP',text:`${pump.st==='DS'?'Two-speed':'Multi-speed'} — acceptable for an existing-pool swap, though VS saves more.`});
       reasons.push({code:'FLOW_MINIMUM', severity: efficientLow?'good':'info', ruleId:'TURNOVER_FORMULA',
-        text: efficientLow?`Can idle down to the ~${Math.round(dailyGPM)} GPM your ${minBits[0]} needs — cheapest way to run every day.`:`Reaches the ~${Math.round(dailyGPM)} GPM minimum (${minBits[0]}) only at a higher speed.`});
+        text: efficientLow?(pump.st==='VS'?`Can idle down to the ~${Math.round(dailyGPM)} GPM your ${minBits[0]} needs — cheapest way to run every day.`:`Low speed (~${Math.round(gLo)} GPM) covers the ~${Math.round(dailyGPM)} GPM your ${minBits[0]} needs, so it can run on low most of the day.`):(pump.st==='SS'?`Single speed: runs at full flow (~${Math.round(gHi)} GPM) all day even though ~${Math.round(dailyGPM)} GPM (${minBits[0]}) would do.`:`Reaches the ~${Math.round(dailyGPM)} GPM minimum (${minBits[0]}) only at a higher speed.`)});
       if(featBits.length) reasons.push({code:'FEATURE_FLOW',severity: gHi>=featureGPM?'good':'info',ruleId:'FEATURE_FLOW_DEMANDS',text:`Reaches ${featBits.join(' + ')} peak (~${Math.round(featureGPM)} GPM) at full speed.`});
 
       let score=0;
@@ -165,8 +164,7 @@ function createAdvisor(data) {
     const curP = p.currentPumpId ? DATA.pumps.find(x=>x.id===p.currentPumpId) : null;
     if(curP && cands.length){
       const cgLo=curP.lo.g[ci], cwLo=curP.lo.w[ci], cgHi=curP.hi.g[ci], cwHi=curP.hi.w[ci];
-      const cThrottle = curP.st!=='SS';
-      const cWattsDaily = cThrottle ? estWattsAtGPM(cgLo,cwLo,cgHi,cwHi,dailyGPM) : cwHi;
+      const cWattsDaily = estWattsAtGPM(cgLo,cwLo,cgHi,cwHi,dailyGPM,curP.st);
       const curKWh = (((cWattsDaily||0)/1000)*dailyHours + ((cwHi||0)/1000)*featureHours)*365;
       const top=cands[0];
       const newKWh = top.computed.annualKWh;
@@ -339,13 +337,38 @@ function createAdvisor(data) {
   const round1=x=>x==null?null:Math.round(x*10)/10;
   const round2=x=>x==null?null:Math.round(x*100)/100;
   const round3=x=>x==null?null:Math.round(x*1000)/1000;
-  // Estimate watts to hit a target GPM via pump affinity laws (flow~rpm, watts~rpm^3),
-  // anchored on the low-speed CEC point and capped at the high-speed point.
-  function estWattsAtGPM(gLo,wLo,gHi,wHi,target){
+  // Estimate the watts a pump draws while delivering `target` GPM on one CEC system curve
+  // (rule PUMP_ENERGY_MODEL).
+  //  - Single-speed: always its one (high) point.
+  //  - Two-/multi-speed: fixed speeds, no throttling. Low speed if it delivers the target,
+  //    otherwise high speed.
+  //  - Variable-speed: on a fixed system curve the hydraulic power follows flow^3 (affinity
+  //    laws), plus a roughly constant drive/motor loss. Fit watts = fixed + k*flow^3 through
+  //    BOTH CEC test points. (The old model scaled the low point alone with flow^3, which
+  //    ignored the fixed losses and made pumps tested at a higher low-speed flow look
+  //    unrealistically cheap at very low flow.)
+  function estWattsAtGPM(gLo,wLo,gHi,wHi,target,st){
     if(gHi==null||wHi==null) return null;
+    if(st==='SS') return wHi;
     if(target>=gHi) return wHi;
-    if(gLo!=null&&wLo!=null&&gLo>0) return Math.min(Math.max(wLo*Math.pow(target/gLo,3),0),wHi);
-    return wHi;
+    const hasLo = gLo!=null&&wLo!=null&&gLo>0;
+    if(st==='DS'||st==='MS') return (hasLo&&gLo>=target)?wLo:wHi;
+    if(!hasLo) return wHi;
+    const EM=RULES.PUMP_ENERGY_MODEL.value;
+    if(EM.vsModel==='twoPointFit' && gHi>gLo){
+      const k=(wHi-wLo)/(Math.pow(gHi,3)-Math.pow(gLo,3));
+      const fixed=wLo-k*Math.pow(gLo,3);
+      if(k>0&&fixed>=0) return Math.min(Math.max(fixed+k*Math.pow(target,3),0),wHi);
+    }
+    // fallback (and the previous model): cube law anchored on the low point
+    return Math.min(Math.max(wLo*Math.pow(target/gLo,3),0),wHi);
+  }
+  // Can this pump run at (or near) the daily minimum flow, rather than well above it?
+  function canRunAtDailyFlow(st,gLo,dailyGPM){
+    if(gLo==null) return false;
+    if(st==='VS') return gLo<=dailyGPM+2;              // VS can slow down to it
+    if(st==='DS'||st==='MS') return gLo>=dailyGPM && gLo<=dailyGPM*RULES.PUMP_ENERGY_MODEL.value.fixedSpeedLowMaxOverMinimum; // low speed meets it without big overshoot
+    return false;
   }
   /* Identity fingerprint: EVERY measured field, full precision. Two pumps group
      only if all of these match exactly — any difference keeps them separate.
@@ -548,7 +571,7 @@ function createAdvisor(data) {
     pumpEngine, swgEngine, filterEngine, padPlanner,
     recommendFilterType, filterMinRequired, bedAreaOf, filterAllowGPM,
     plumbingAdvice, heaterBypassAdvice, warrantyAdvice, pipeCapGPM,
-    estWattsAtGPM, pumpFingerprint, pumpName, stripBrand, curveIdx,
+    estWattsAtGPM, canRunAtDailyFlow, pumpFingerprint, pumpName, stripBrand, curveIdx,
     num, money, clamp, cap, cap1, round1, round2, round3, FC_BY_CLIMATE,
     DATA, RULES
   };

@@ -45,7 +45,7 @@
      ]
     }
    },
-   "score": 72.29562219117446,
+   "score": 72.58688304648064,
    "reasons": [
     {
      "code": "VS_PREFERRED",
@@ -78,16 +78,258 @@
     "dailyGPM": 40,
     "gpmAtCurveLow": 31.19,
     "gpmAtCurveHigh": 92.52,
-    "wattsDaily": 190,
+    "wattsDaily": 177,
     "wattsHigh": 2047.72,
-    "annualKWh": 1232.8774424500634,
-    "annualCostUSD": 210
+    "annualKWh": 1198.6114594728658,
+    "annualCostUSD": 204
    },
    "variants": [
     "Pentair WhisperFlo VST 011533",
     "Pentair WhisperFlo VST EC-011533"
    ],
    "rank": 1
+  },
+  {
+   "product": {
+    "id": "hayward-tristar-sp32950vsp",
+    "brand": "Hayward",
+    "model": "Hayward TriStar SP32950VSP",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 2.7,
+    "nhp": 2,
+    "wef": 7.7918995,
+    "frame": "48",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      70,
+      41,
+      97
+     ],
+     "w": [
+      1923,
+      1533,
+      2237
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      13,
+      8,
+      17
+     ],
+     "w": [
+      35,
+      34,
+      36
+     ]
+    }
+   },
+   "score": 70.75031286707664,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW",
+     "severity": "good",
+     "ruleId": "FEATURE_FLOW_DEMANDS",
+     "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 90,
+    "dailyGPM": 40,
+    "gpmAtCurveLow": 17,
+    "gpmAtCurveHigh": 97,
+    "wattsDaily": 179,
+    "wattsHigh": 2237,
+    "annualKWh": 1274.5277803439235,
+    "annualCostUSD": 217
+   },
+   "variants": [
+    "Hayward TriStar VS 950 HL32950VSP"
+   ],
+   "rank": 2
+  },
+  {
+   "product": {
+    "id": "speck-badu-ecomv-72-v-2-7",
+    "brand": "Speck",
+    "model": "Speck Badu EcoMV/72-V 2.7",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 2.7,
+    "nhp": 2.7,
+    "wef": 7.774924979,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      66,
+      40,
+      90
+     ],
+     "w": [
+      1874,
+      1659,
+      2049
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      23,
+      7,
+      16
+     ],
+     "w": [
+      39,
+      37,
+      40
+     ]
+    }
+   },
+   "score": 70.71863083212953,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW",
+     "severity": "good",
+     "ruleId": "FEATURE_FLOW_DEMANDS",
+     "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 90,
+    "dailyGPM": 40,
+    "gpmAtCurveLow": 16,
+    "gpmAtCurveHigh": 90,
+    "wattsDaily": 206,
+    "wattsHigh": 2049,
+    "annualKWh": 1274.2610736318188,
+    "annualCostUSD": 217
+   },
+   "variants": [],
+   "rank": 3
+  },
+  {
+   "product": {
+    "id": "jandy-epump-vs-jep-2-0",
+    "brand": "Jandy",
+    "model": "Jandy ePump VS JEP 2.0",
+    "st": "VS",
+    "mot": "PSC",
+    "thp": 2.7,
+    "nhp": 2,
+    "wef": 7.754788034,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      69,
+      41,
+      94
+     ],
+     "w": [
+      1911,
+      1542,
+      2149
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      11,
+      6,
+      15
+     ],
+     "w": [
+      38,
+      36,
+      39
+     ]
+    }
+   },
+   "score": 70.63694917755272,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
+    },
+    {
+     "code": "FEATURE_FLOW",
+     "severity": "good",
+     "ruleId": "FEATURE_FLOW_DEMANDS",
+     "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 90,
+    "dailyGPM": 40,
+    "gpmAtCurveLow": 15,
+    "gpmAtCurveHigh": 94,
+    "wattsDaily": 194,
+    "wattsHigh": 2149,
+    "annualKWh": 1279.1325753467381,
+    "annualCostUSD": 217
+   },
+   "variants": [],
+   "rank": 4
   },
   {
    "product": {
@@ -128,7 +370,7 @@
      ]
     }
    },
-   "score": 69.3798302494867,
+   "score": 70.45372048389221,
    "reasons": [
     {
      "code": "VS_PREFERRED",
@@ -161,13 +403,13 @@
     "dailyGPM": 40,
     "gpmAtCurveLow": 31.3,
     "gpmAtCurveHigh": 91,
-    "wattsDaily": 261,
+    "wattsDaily": 212,
     "wattsHigh": 2002,
-    "annualKWh": 1397.8365050015655,
-    "annualCostUSD": 238
+    "annualKWh": 1271.4964774244456,
+    "annualCostUSD": 216
    },
    "variants": [],
-   "rank": 2
+   "rank": 5
   },
   {
    "product": {
@@ -208,7 +450,7 @@
      ]
     }
    },
-   "score": 69.3798302494867,
+   "score": 70.45372048389221,
    "reasons": [
     {
      "code": "VS_PREFERRED",
@@ -241,13 +483,13 @@
     "dailyGPM": 40,
     "gpmAtCurveLow": 31.3,
     "gpmAtCurveHigh": 91,
-    "wattsDaily": 261,
+    "wattsDaily": 212,
     "wattsHigh": 2002,
-    "annualKWh": 1397.8365050015655,
-    "annualCostUSD": 238
+    "annualKWh": 1271.4964774244456,
+    "annualCostUSD": 216
    },
    "variants": [],
-   "rank": 3
+   "rank": 6
   },
   {
    "product": {
@@ -288,7 +530,7 @@
      ]
     }
    },
-   "score": 68.69217606383674,
+   "score": 70.10604396906979,
    "reasons": [
     {
      "code": "VS_PREFERRED",
@@ -321,13 +563,13 @@
     "dailyGPM": 40,
     "gpmAtCurveLow": 28,
     "gpmAtCurveHigh": 97,
-    "wattsDaily": 254,
+    "wattsDaily": 189,
     "wattsHigh": 2238,
-    "annualKWh": 1464.9312244897958,
-    "annualCostUSD": 249
+    "annualKWh": 1298.5938238741423,
+    "annualCostUSD": 221
    },
    "variants": [],
-   "rank": 4
+   "rank": 7
   },
   {
    "product": {
@@ -368,7 +610,7 @@
      ]
     }
    },
-   "score": 68.59874449183673,
+   "score": 69.99620901257565,
    "reasons": [
     {
      "code": "VS_PREFERRED",
@@ -401,15 +643,15 @@
     "dailyGPM": 40,
     "gpmAtCurveLow": 28,
     "gpmAtCurveHigh": 97,
-    "wattsDaily": 254,
+    "wattsDaily": 189,
     "wattsHigh": 2254,
-    "annualKWh": 1470.771224489796,
-    "annualCostUSD": 250
+    "annualKWh": 1306.3636338146287,
+    "annualCostUSD": 222
    },
    "variants": [
     "Hayward TriStar SP3206VSPVR"
    ],
-   "rank": 5
+   "rank": 8
   },
   {
    "product": {
@@ -450,7 +692,7 @@
      ]
     }
    },
-   "score": 68.57054604714565,
+   "score": 69.6785229188851,
    "reasons": [
     {
      "code": "VS_PREFERRED",
@@ -483,15 +725,15 @@
     "dailyGPM": 40,
     "gpmAtCurveLow": 31,
     "gpmAtCurveHigh": 92.8,
-    "wattsDaily": 262,
+    "wattsDaily": 211,
     "wattsHigh": 2120,
-    "annualKWh": 1442.348756335806,
-    "annualCostUSD": 245
+    "annualKWh": 1311.9985361311653,
+    "annualCostUSD": 223
    },
    "variants": [
     "Jandy Stealth VSSHP270DV2A"
    ],
-   "rank": 6
+   "rank": 9
   },
   {
    "product": {
@@ -532,7 +774,7 @@
      ]
     }
    },
-   "score": 68.57054604714565,
+   "score": 69.6785229188851,
    "reasons": [
     {
      "code": "VS_PREFERRED",
@@ -565,15 +807,15 @@
     "dailyGPM": 40,
     "gpmAtCurveLow": 31,
     "gpmAtCurveHigh": 92.8,
-    "wattsDaily": 262,
+    "wattsDaily": 211,
     "wattsHigh": 2120,
-    "annualKWh": 1442.348756335806,
-    "annualCostUSD": 245
+    "annualKWh": 1311.9985361311653,
+    "annualCostUSD": 223
    },
    "variants": [
     "Stealth VSSHP270DV2A"
    ],
-   "rank": 7
+   "rank": 10
   },
   {
    "product": {
@@ -614,7 +856,7 @@
      ]
     }
    },
-   "score": 68.35924121046746,
+   "score": 69.31003685143965,
    "reasons": [
     {
      "code": "VS_PREFERRED",
@@ -647,259 +889,15 @@
     "dailyGPM": 40,
     "gpmAtCurveLow": 31.14,
     "gpmAtCurveHigh": 95.97,
-    "wattsDaily": 244,
+    "wattsDaily": 200,
     "wattsHigh": 2265.28,
-    "annualKWh": 1450.442425592063,
-    "annualCostUSD": 247
+    "annualKWh": 1338.5841148894524,
+    "annualCostUSD": 228
    },
    "variants": [
     "Hayward HCP 2500 Series HCP2500VSPVR",
     "Hayward TriStar VS W3SP3206VSP"
    ],
-   "rank": 8
-  },
-  {
-   "product": {
-    "id": "jandy-jep-2-0-svrs",
-    "brand": "Jandy",
-    "model": "Jandy JEP 2.0 SVRS",
-    "st": "VS",
-    "mot": "PSC",
-    "thp": 2.7,
-    "nhp": 2,
-    "wef": 7.104610373,
-    "frame": "56",
-    "dq": "ok",
-    "hi": {
-     "rpm": 3450,
-     "g": [
-      69,
-      41,
-      94
-     ],
-     "w": [
-      1960,
-      1566,
-      2213
-     ]
-    },
-    "lo": {
-     "rpm": 1100,
-     "g": [
-      22,
-      11,
-      32
-     ],
-     "w": [
-      113,
-      97,
-      123
-     ]
-    }
-   },
-   "score": 68.1260982069375,
-   "reasons": [
-    {
-     "code": "VS_PREFERRED",
-     "severity": "good",
-     "ruleId": "VS_REQUIRED_ABOVE_THP",
-     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
-    },
-    {
-     "code": "FLOW_MINIMUM",
-     "severity": "good",
-     "ruleId": "TURNOVER_FORMULA",
-     "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
-    },
-    {
-     "code": "FEATURE_FLOW",
-     "severity": "good",
-     "ruleId": "FEATURE_FLOW_DEMANDS",
-     "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
-    }
-   ],
-   "fit": {
-    "meetsCapacity": true,
-    "meetsFlow": true,
-    "meetsFlowLow": true,
-    "automationMatch": false,
-    "regulatoryOk": true
-   },
-   "computed": {
-    "requiredGPM": 90,
-    "dailyGPM": 40,
-    "gpmAtCurveLow": 32,
-    "gpmAtCurveHigh": 94,
-    "wattsDaily": 240,
-    "wattsHigh": 2213,
-    "annualKWh": 1421.5438281250001,
-    "annualCostUSD": 242
-   },
-   "variants": [],
-   "rank": 9
-  },
-  {
-   "product": {
-    "id": "pentair-intelliflo-3-vsf-011075",
-    "brand": "Pentair",
-    "model": "Pentair INTELLIFLO 3 VSF 011075",
-    "st": "VS",
-    "mot": "ECM",
-    "thp": 3,
-    "nhp": 3,
-    "wef": 7.256038231,
-    "frame": null,
-    "dq": "ok",
-    "hi": {
-     "rpm": 3450,
-     "g": [
-      69.84,
-      41.35,
-      94.22
-     ],
-     "w": [
-      1987.25,
-      1635.28,
-      2253.48
-     ]
-    },
-    "lo": {
-     "rpm": 1142,
-     "g": [
-      23.118,
-      13.687,
-      31.19
-     ],
-     "w": [
-      109.694,
-      96.928,
-      119.35
-     ]
-    }
-   },
-   "score": 68.05344038839289,
-   "reasons": [
-    {
-     "code": "VS_PREFERRED",
-     "severity": "good",
-     "ruleId": "VS_REQUIRED_ABOVE_THP",
-     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
-    },
-    {
-     "code": "FLOW_MINIMUM",
-     "severity": "good",
-     "ruleId": "TURNOVER_FORMULA",
-     "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
-    },
-    {
-     "code": "FEATURE_FLOW",
-     "severity": "good",
-     "ruleId": "FEATURE_FLOW_DEMANDS",
-     "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
-    }
-   ],
-   "fit": {
-    "meetsCapacity": true,
-    "meetsFlow": true,
-    "meetsFlowLow": true,
-    "automationMatch": false,
-    "regulatoryOk": true
-   },
-   "computed": {
-    "requiredGPM": 90,
-    "dailyGPM": 40,
-    "gpmAtCurveLow": 31.19,
-    "gpmAtCurveHigh": 94.22,
-    "wattsDaily": 252,
-    "wattsHigh": 2253.48,
-    "annualKWh": 1465.721891012601,
-    "annualCostUSD": 249
-   },
-   "variants": [
-    "Pentair INTELLIFLO 3 VSF, IO BOARD 011076",
-    "Pentair INTELLIPRO 3 VSF 13075",
-    "Pentair INTELLIPRO 3 VSF, IO BOARD 13076"
-   ],
-   "rank": 10
-  },
-  {
-   "product": {
-    "id": "jandy-epump-vs-jep2-0svrs",
-    "brand": "Jandy",
-    "model": "Jandy ePump VS JEP2.0SVRS",
-    "st": "VS",
-    "mot": "ECM",
-    "thp": 2.7,
-    "nhp": 2.7,
-    "wef": 7.162498601,
-    "frame": null,
-    "dq": "ok",
-    "hi": {
-     "rpm": 3450,
-     "g": [
-      68.67,
-      41,
-      93.26
-     ],
-     "w": [
-      1929.66,
-      1539.87,
-      2177.97
-     ]
-    },
-    "lo": {
-     "rpm": 1153,
-     "g": [
-      22.95,
-      13.702,
-      31.16
-     ],
-     "w": [
-      120.121,
-      105.571,
-      129.39
-     ]
-    }
-   },
-   "score": 67.62358017215738,
-   "reasons": [
-    {
-     "code": "VS_PREFERRED",
-     "severity": "good",
-     "ruleId": "VS_REQUIRED_ABOVE_THP",
-     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
-    },
-    {
-     "code": "FLOW_MINIMUM",
-     "severity": "good",
-     "ruleId": "TURNOVER_FORMULA",
-     "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
-    },
-    {
-     "code": "FEATURE_FLOW",
-     "severity": "good",
-     "ruleId": "FEATURE_FLOW_DEMANDS",
-     "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
-    }
-   ],
-   "fit": {
-    "meetsCapacity": true,
-    "meetsFlow": true,
-    "meetsFlowLow": true,
-    "automationMatch": false,
-    "regulatoryOk": true
-   },
-   "computed": {
-    "requiredGPM": 90,
-    "dailyGPM": 40,
-    "gpmAtCurveLow": 31.16,
-    "gpmAtCurveHigh": 93.26,
-    "wattsDaily": 274,
-    "wattsHigh": 2177.97,
-    "annualKWh": 1494.2843564520738,
-    "annualCostUSD": 254
-   },
-   "variants": [],
    "rank": 11
   },
   {
@@ -941,7 +939,7 @@
      ]
     }
    },
-   "score": 67.33178400306122,
+   "score": 69.11196542736826,
    "reasons": [
     {
      "code": "VS_PREFERRED",
@@ -974,10 +972,10 @@
     "dailyGPM": 40,
     "gpmAtCurveLow": 28,
     "gpmAtCurveHigh": 98,
-    "wattsDaily": 280,
+    "wattsDaily": 198,
     "wattsHigh": 2324,
-    "annualKWh": 1563.3620408163267,
-    "annualCostUSD": 266
+    "annualKWh": 1353.9289320743221,
+    "annualCostUSD": 230
    },
    "variants": [
     "Hayward EcoStar HCP3400VSPVR",

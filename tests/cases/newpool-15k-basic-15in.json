@@ -18,11 +18,11 @@
     "waterCost": "low"
   },
   "expect": {
-    "pumpMaxGPM": 64,
+    "pumpMaxGPM": 52,
     "pumpTop": [
-      "hayward-tristar-sp3200vsp",
-      "hayward-hl32900vsp",
-      "hayward-tristar-sp3202vsp"
+      "hayward-hl2350020vsp",
+      "hayward-hl2670020vsp",
+      "hayward-super-pump-vs-700-hl2670020vsp"
     ],
     "filterType": "cartridge",
     "filterTop": [

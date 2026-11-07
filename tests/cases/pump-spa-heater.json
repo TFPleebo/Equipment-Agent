@@ -27,12 +27,12 @@
     "curve": "C",
     "top": [
       "pentair-whisperflo-vst-011532",
-      "jandy-stealth-vsshp220aut",
-      "stealth-vsshp220aut",
-      "hayward-ecostar-sp3400vspvrc",
-      "hayward-ecostar-sp3400vspvr"
+      "hayward-tristar-sp32950vsp",
+      "speck-badu-ecomv-72-v-2-7",
+      "jandy-epump-vs-jep-2-0",
+      "jandy-stealth-vsshp220aut"
     ],
-    "topAnnualCostUSD": 210,
+    "topAnnualCostUSD": 204,
     "comparison": null,
     "warnings": [
       "PIPE_OK",

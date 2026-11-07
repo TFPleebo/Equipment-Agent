@@ -23,12 +23,12 @@
     "curve": "A",
     "top": [
       "hayward-hl2350020vsp",
-      "speck-e71-ii-vhv",
+      "hayward-hl2670020vsp",
+      "hayward-super-pump-vs-700-hl2670020vsp",
       "hayward-tristar-sp3200vsp",
-      "hayward-hl32900vsp",
-      "hayward-tristar-sp3202vsp"
+      "hayward-hl32900vsp"
     ],
-    "topAnnualCostUSD": 67,
+    "topAnnualCostUSD": 23,
     "comparison": null,
     "warnings": [
       "PIPE_SMALL",

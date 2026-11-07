@@ -24,16 +24,16 @@
     "curve": "C",
     "top": [
       "hayward-hl2350020vsp",
-      "speck-e71-ii-vhv",
+      "hayward-hl2670020vsp",
+      "hayward-super-pump-vs-700-hl2670020vsp",
       "hayward-energyflo-rs-ef200vs",
-      "hayward-tristar-sp3200vsp",
-      "hayward-hl32900vsp"
+      "hayward-tristar-sp3200vsp"
     ],
-    "topAnnualCostUSD": 53,
+    "topAnnualCostUSD": 32,
     "comparison": {
-      "kWhSaved": 6099,
-      "costSaved": 1525,
-      "pctSaved": 97
+      "kWhSaved": 6183,
+      "costSaved": 1546,
+      "pctSaved": 98
     },
     "warnings": [
       "PIPE_OK",

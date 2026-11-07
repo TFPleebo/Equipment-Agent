@@ -47,7 +47,7 @@
       ]
      }
     },
-    "score": 84.29562219117446,
+    "score": 84.58688304648064,
     "reasons": [
      {
       "code": "AUTOMATION_SAME_BRAND",
@@ -92,10 +92,10 @@
      "dailyGPM": 40,
      "gpmAtCurveLow": 31.19,
      "gpmAtCurveHigh": 92.52,
-     "wattsDaily": 190,
+     "wattsDaily": 177,
      "wattsHigh": 2047.72,
-     "annualKWh": 1232.8774424500634,
-     "annualCostUSD": 210
+     "annualKWh": 1198.6114594728658,
+     "annualCostUSD": 204
     },
     "variants": [
      "Pentair WhisperFlo VST 011533",
@@ -142,7 +142,7 @@
       ]
      }
     },
-    "score": 80.05344038839289,
+    "score": 80.99342947437584,
     "reasons": [
      {
       "code": "AUTOMATION_SAME_BRAND",
@@ -181,10 +181,10 @@
      "dailyGPM": 40,
      "gpmAtCurveLow": 31.19,
      "gpmAtCurveHigh": 94.22,
-     "wattsDaily": 252,
+     "wattsDaily": 208,
      "wattsHigh": 2253.48,
-     "annualKWh": 1465.721891012601,
-     "annualCostUSD": 249
+     "annualKWh": 1355.1349397204885,
+     "annualCostUSD": 230
     },
     "variants": [
      "Pentair INTELLIFLO 3 VSF, IO BOARD 011076",
@@ -232,7 +232,7 @@
       ]
      }
     },
-    "score": 78.78537280249019,
+    "score": 79.54877198307688,
     "reasons": [
      {
       "code": "AUTOMATION_SAME_BRAND",
@@ -271,10 +271,10 @@
      "dailyGPM": 40,
      "gpmAtCurveLow": 31.24,
      "gpmAtCurveHigh": 96.89,
-     "wattsDaily": 241,
+     "wattsDaily": 206,
      "wattsHigh": 2502.49,
-     "annualKWh": 1529.070155236448,
-     "annualCostUSD": 260
+     "annualKWh": 1439.2584869321308,
+     "annualCostUSD": 245
     },
     "variants": [
      "Pentair IntelliFlo VS+SVRS 011057",
@@ -287,44 +287,44 @@
    },
    {
     "product": {
-     "id": "pentair-intelliflo-xf-vs-svrs-22057",
+     "id": "pentair-011060",
      "brand": "Pentair",
-     "model": "Pentair IntelliFlo XF VS+SVRS 22057",
+     "model": "Pentair 011060",
      "st": "VS",
-     "mot": "ECM",
+     "mot": "PSC",
      "thp": 3.96,
-     "nhp": 3,
-     "wef": 6.153993447,
+     "nhp": 2,
+     "wef": 6.762613156,
      "frame": "56",
      "dq": "ok",
      "hi": {
       "rpm": 3450,
       "g": [
-       74,
-       44,
-       101
+       68.34,
+       41.45,
+       92.22
       ],
       "w": [
-       2545,
-       2138,
-       2837
+       2002.73,
+       1682.56,
+       2267.03
       ]
      },
      "lo": {
-      "rpm": 1100,
+      "rpm": 450,
       "g": [
-       24,
-       14,
-       33
+       9.23,
+       5.54,
+       12.33
       ],
       "w": [
-       129,
-       116,
-       137
+       61.41,
+       60.62,
+       61.94
       ]
      }
     },
-    "score": 76.20750390787148,
+    "score": 79.34407852630895,
     "reasons": [
      {
       "code": "AUTOMATION_SAME_BRAND",
@@ -361,58 +361,56 @@
     "computed": {
      "requiredGPM": 90,
      "dailyGPM": 40,
-     "gpmAtCurveLow": 33,
-     "gpmAtCurveHigh": 101,
-     "wattsDaily": 244,
-     "wattsHigh": 2837,
-     "annualKWh": 1658.880351309236,
-     "annualCostUSD": 282
+     "gpmAtCurveLow": 12.33,
+     "gpmAtCurveHigh": 92.22,
+     "wattsDaily": 237,
+     "wattsHigh": 2267.03,
+     "annualKWh": 1433.0762100813001,
+     "annualCostUSD": 244
     },
-    "variants": [
-     "Pentair IntelliPro XF VS+SVRS 23057"
-    ],
+    "variants": [],
     "rank": 4
    },
    {
     "product": {
-     "id": "pentair-022057",
+     "id": "pentair-intelliflo-i2-vs-011060",
      "brand": "Pentair",
-     "model": "Pentair 022057",
+     "model": "Pentair IntelliFlo i2 VS 011060",
      "st": "VS",
-     "mot": "PSC",
+     "mot": "ECM",
      "thp": 3.96,
-     "nhp": 3,
-     "wef": 6.152020646,
+     "nhp": 2,
+     "wef": 6.74696612,
      "frame": "56",
      "dq": "ok",
      "hi": {
       "rpm": 3450,
       "g": [
-       74.17,
-       44.01,
-       100.94
+       68,
+       41,
+       92
       ],
       "w": [
-       2544.81,
-       2138.2,
-       2837.4
+       2003,
+       1683,
+       2267
       ]
      },
      "lo": {
-      "rpm": 1100,
+      "rpm": 450,
       "g": [
-       24.02,
-       14.44,
-       32.68
+       9,
+       6,
+       12
       ],
       "w": [
-       128.5,
-       116.48,
-       136.99
+       61,
+       61,
+       62
       ]
      }
     },
-    "score": 76.04553334066594,
+    "score": 79.27601251285832,
     "reasons": [
      {
       "code": "AUTOMATION_SAME_BRAND",
@@ -449,17 +447,279 @@
     "computed": {
      "requiredGPM": 90,
      "dailyGPM": 40,
-     "gpmAtCurveLow": 32.68,
-     "gpmAtCurveHigh": 100.94,
-     "wattsDaily": 251,
-     "wattsHigh": 2837.4,
-     "annualKWh": 1677.4715236863588,
-     "annualCostUSD": 285
+     "gpmAtCurveLow": 12,
+     "gpmAtCurveHigh": 92,
+     "wattsDaily": 239,
+     "wattsHigh": 2267,
+     "annualKWh": 1437.4023208401977,
+     "annualCostUSD": 244
+    },
+    "variants": [],
+    "rank": 5
+   },
+   {
+    "product": {
+     "id": "pentair-intellipro-vs-p6e6vs4h-209l",
+     "brand": "Pentair",
+     "model": "Pentair IntelliPro VS P6E6VS4H-209L",
+     "st": "VS",
+     "mot": "ECM",
+     "thp": 3.96,
+     "nhp": 3,
+     "wef": 6.352328987,
+     "frame": "56",
+     "dq": "ok",
+     "hi": {
+      "rpm": 3450,
+      "g": [
+       71,
+       42,
+       97
+      ],
+      "w": [
+       2242,
+       1836,
+       2578
+      ]
+     },
+     "lo": {
+      "rpm": 450,
+      "g": [
+       10,
+       6,
+       13
+      ],
+      "w": [
+       61,
+       61,
+       61
+      ]
+     }
+    },
+    "score": 77.6711312546878,
+    "reasons": [
+     {
+      "code": "AUTOMATION_SAME_BRAND",
+      "severity": "good",
+      "ruleId": "AUTOMATION_SAME_BRAND",
+      "text": "Same brand as your Pentair automation — simplest to control."
+     },
+     {
+      "code": "VS_PREFERRED",
+      "severity": "good",
+      "ruleId": "VS_REQUIRED_ABOVE_THP",
+      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+     },
+     {
+      "code": "FLOW_MINIMUM",
+      "severity": "good",
+      "ruleId": "TURNOVER_FORMULA",
+      "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
+     },
+     {
+      "code": "FEATURE_FLOW",
+      "severity": "good",
+      "ruleId": "FEATURE_FLOW_DEMANDS",
+      "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+     }
+    ],
+    "fit": {
+     "meetsCapacity": true,
+     "meetsFlow": true,
+     "meetsFlowLow": true,
+     "automationMatch": true,
+     "regulatoryOk": true
+    },
+    "computed": {
+     "requiredGPM": 90,
+     "dailyGPM": 40,
+     "gpmAtCurveLow": 13,
+     "gpmAtCurveHigh": 97,
+     "wattsDaily": 232,
+     "wattsHigh": 2578,
+     "annualKWh": 1533.3560846249654,
+     "annualCostUSD": 261
+    },
+    "variants": [],
+    "rank": 6
+   },
+   {
+    "product": {
+     "id": "pentair-sta-rite-013001",
+     "brand": "Pentair",
+     "model": "Pentair Sta-Rite 013001",
+     "st": "VS",
+     "mot": "PSC",
+     "thp": 3.96,
+     "nhp": 3,
+     "wef": 6.274547872,
+     "frame": "56",
+     "dq": "ok",
+     "hi": {
+      "rpm": 3450,
+      "g": [
+       70.45,
+       42.29,
+       95.14
+      ],
+      "w": [
+       2222.35,
+       1818.88,
+       2552.88
+      ]
+     },
+     "lo": {
+      "rpm": 450,
+      "g": [
+       9.35,
+       5.63,
+       12.64
+      ],
+      "w": [
+       62.5,
+       61.58,
+       63.18
+      ]
+     }
+    },
+    "score": 77.35597697727793,
+    "reasons": [
+     {
+      "code": "AUTOMATION_SAME_BRAND",
+      "severity": "good",
+      "ruleId": "AUTOMATION_SAME_BRAND",
+      "text": "Same brand as your Pentair automation — simplest to control."
+     },
+     {
+      "code": "VS_PREFERRED",
+      "severity": "good",
+      "ruleId": "VS_REQUIRED_ABOVE_THP",
+      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+     },
+     {
+      "code": "FLOW_MINIMUM",
+      "severity": "good",
+      "ruleId": "TURNOVER_FORMULA",
+      "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
+     },
+     {
+      "code": "FEATURE_FLOW",
+      "severity": "good",
+      "ruleId": "FEATURE_FLOW_DEMANDS",
+      "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+     }
+    ],
+    "fit": {
+     "meetsCapacity": true,
+     "meetsFlow": true,
+     "meetsFlowLow": true,
+     "automationMatch": true,
+     "regulatoryOk": true
+    },
+    "computed": {
+     "requiredGPM": 90,
+     "dailyGPM": 40,
+     "gpmAtCurveLow": 12.64,
+     "gpmAtCurveHigh": 95.14,
+     "wattsDaily": 243,
+     "wattsHigh": 2552.88,
+     "annualKWh": 1552.131619614361,
+     "annualCostUSD": 264
     },
     "variants": [
-     "Pentair Sta-Rite 023057"
+     "Pentair Sta-Rite 013004",
+     "Pentair Sta-Rite 013028"
     ],
-    "rank": 5
+    "rank": 7
+   },
+   {
+    "product": {
+     "id": "pentair-intellipro-2-vst-13001",
+     "brand": "Pentair",
+     "model": "Pentair IntelliPro 2 VST 13001",
+     "st": "VS",
+     "mot": "ECM",
+     "thp": 3.96,
+     "nhp": 3,
+     "wef": 6.260168351,
+     "frame": "56",
+     "dq": "ok",
+     "hi": {
+      "rpm": 3450,
+      "g": [
+       70,
+       42,
+       95
+      ],
+      "w": [
+       2222,
+       1819,
+       2553
+      ]
+     },
+     "lo": {
+      "rpm": 450,
+      "g": [
+       9,
+       6,
+       13
+      ],
+      "w": [
+       63,
+       62,
+       63
+      ]
+     }
+    },
+    "score": 77.32338277982824,
+    "reasons": [
+     {
+      "code": "AUTOMATION_SAME_BRAND",
+      "severity": "good",
+      "ruleId": "AUTOMATION_SAME_BRAND",
+      "text": "Same brand as your Pentair automation — simplest to control."
+     },
+     {
+      "code": "VS_PREFERRED",
+      "severity": "good",
+      "ruleId": "VS_REQUIRED_ABOVE_THP",
+      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+     },
+     {
+      "code": "FLOW_MINIMUM",
+      "severity": "good",
+      "ruleId": "TURNOVER_FORMULA",
+      "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
+     },
+     {
+      "code": "FEATURE_FLOW",
+      "severity": "good",
+      "ruleId": "FEATURE_FLOW_DEMANDS",
+      "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+     }
+    ],
+    "fit": {
+     "meetsCapacity": true,
+     "meetsFlow": true,
+     "meetsFlowLow": true,
+     "automationMatch": true,
+     "regulatoryOk": true
+    },
+    "computed": {
+     "requiredGPM": 90,
+     "dailyGPM": 40,
+     "gpmAtCurveLow": 13,
+     "gpmAtCurveHigh": 95,
+     "wattsDaily": 243,
+     "wattsHigh": 2553,
+     "annualKWh": 1552.582814373148,
+     "annualCostUSD": 264
+    },
+    "variants": [
+     "Pentair IntelliPro VS 13028",
+     "Pentair IntelliPro VSF 13004"
+    ],
+    "rank": 8
    },
    {
     "product": {
@@ -500,7 +760,7 @@
       ]
      }
     },
-    "score": 76.0268510426875,
+    "score": 76.91058298541287,
     "reasons": [
      {
       "code": "AUTOMATION_SAME_BRAND",
@@ -539,13 +799,101 @@
      "dailyGPM": 40,
      "gpmAtCurveLow": 32,
      "gpmAtCurveHigh": 99,
-     "wattsDaily": 264,
+     "wattsDaily": 223,
      "wattsHigh": 2776,
-     "annualKWh": 1686.921640625,
-     "annualCostUSD": 287
+     "annualKWh": 1582.9531767749547,
+     "annualCostUSD": 269
     },
     "variants": [],
-    "rank": 6
+    "rank": 9
+   },
+   {
+    "product": {
+     "id": "pentair-intelliflo-xf-vs-svrs-22057",
+     "brand": "Pentair",
+     "model": "Pentair IntelliFlo XF VS+SVRS 22057",
+     "st": "VS",
+     "mot": "ECM",
+     "thp": 3.96,
+     "nhp": 3,
+     "wef": 6.153993447,
+     "frame": "56",
+     "dq": "ok",
+     "hi": {
+      "rpm": 3450,
+      "g": [
+       74,
+       44,
+       101
+      ],
+      "w": [
+       2545,
+       2138,
+       2837
+      ]
+     },
+     "lo": {
+      "rpm": 1100,
+      "g": [
+       24,
+       14,
+       33
+      ],
+      "w": [
+       129,
+       116,
+       137
+      ]
+     }
+    },
+    "score": 76.87603293397127,
+    "reasons": [
+     {
+      "code": "AUTOMATION_SAME_BRAND",
+      "severity": "good",
+      "ruleId": "AUTOMATION_SAME_BRAND",
+      "text": "Same brand as your Pentair automation — simplest to control."
+     },
+     {
+      "code": "VS_PREFERRED",
+      "severity": "good",
+      "ruleId": "VS_REQUIRED_ABOVE_THP",
+      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+     },
+     {
+      "code": "FLOW_MINIMUM",
+      "severity": "good",
+      "ruleId": "TURNOVER_FORMULA",
+      "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
+     },
+     {
+      "code": "FEATURE_FLOW",
+      "severity": "good",
+      "ruleId": "FEATURE_FLOW_DEMANDS",
+      "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
+     }
+    ],
+    "fit": {
+     "meetsCapacity": true,
+     "meetsFlow": true,
+     "meetsFlowLow": true,
+     "automationMatch": true,
+     "regulatoryOk": true
+    },
+    "computed": {
+     "requiredGPM": 90,
+     "dailyGPM": 40,
+     "gpmAtCurveLow": 33,
+     "gpmAtCurveHigh": 101,
+     "wattsDaily": 213,
+     "wattsHigh": 2837,
+     "annualKWh": 1580.2298776504379,
+     "annualCostUSD": 269
+    },
+    "variants": [
+     "Pentair IntelliPro XF VS+SVRS 23057"
+    ],
+    "rank": 10
    },
    {
     "product": {
@@ -586,7 +934,7 @@
       ]
      }
     },
-    "score": 75.93945974134706,
+    "score": 76.82851540707543,
     "reasons": [
      {
       "code": "AUTOMATION_SAME_BRAND",
@@ -625,406 +973,64 @@
      "dailyGPM": 40,
      "gpmAtCurveLow": 31.94,
      "gpmAtCurveHigh": 98.67,
-     "wattsDaily": 266,
+     "wattsDaily": 225,
      "wattsHigh": 2776.01,
-     "annualKWh": 1691.6323186650516,
-     "annualCostUSD": 288
+     "annualKWh": 1587.037534461713,
+     "annualCostUSD": 270
     },
     "variants": [
      "Pentair Sta-Rite 013002",
      "Pentair Sta-Rite S-013003"
     ],
-    "rank": 7
-   },
-   {
-    "product": {
-     "id": "pentair-intellipro-vs-p6e6xs4h-209l",
-     "brand": "Pentair",
-     "model": "Pentair IntelliPro VS P6E6XS4H-209L",
-     "st": "VS",
-     "mot": "ECM",
-     "thp": 3.96,
-     "nhp": 3,
-     "wef": 5.9333358,
-     "frame": "56",
-     "dq": "ok",
-     "hi": {
-      "rpm": 3450,
-      "g": [
-       71,
-       43,
-       97
-      ],
-      "w": [
-       2340,
-       1990,
-       2720
-      ]
-     },
-     "lo": {
-      "rpm": 1100,
-      "g": [
-       24,
-       15,
-       33
-      ],
-      "w": [
-       145,
-       132,
-       150
-      ]
-     }
-    },
-    "score": 75.62638566628266,
-    "reasons": [
-     {
-      "code": "AUTOMATION_SAME_BRAND",
-      "severity": "good",
-      "ruleId": "AUTOMATION_SAME_BRAND",
-      "text": "Same brand as your Pentair automation — simplest to control."
-     },
-     {
-      "code": "VS_PREFERRED",
-      "severity": "good",
-      "ruleId": "VS_REQUIRED_ABOVE_THP",
-      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
-     },
-     {
-      "code": "FLOW_MINIMUM",
-      "severity": "good",
-      "ruleId": "TURNOVER_FORMULA",
-      "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
-     },
-     {
-      "code": "FEATURE_FLOW",
-      "severity": "good",
-      "ruleId": "FEATURE_FLOW_DEMANDS",
-      "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
-     }
-    ],
-    "fit": {
-     "meetsCapacity": true,
-     "meetsFlow": true,
-     "meetsFlowLow": true,
-     "automationMatch": true,
-     "regulatoryOk": true
-    },
-    "computed": {
-     "requiredGPM": 90,
-     "dailyGPM": 40,
-     "gpmAtCurveLow": 33,
-     "gpmAtCurveHigh": 97,
-     "wattsDaily": 267,
-     "wattsHigh": 2720,
-     "annualKWh": 1675.3277569079223,
-     "annualCostUSD": 285
-    },
-    "variants": [],
-    "rank": 8
-   },
-   {
-    "product": {
-     "id": "pentair-intelliflo-vs-svrs-011017",
-     "brand": "Pentair",
-     "model": "Pentair IntelliFlo VS+SVRS 011017",
-     "st": "VS",
-     "mot": "ECM",
-     "thp": 3.96,
-     "nhp": 3,
-     "wef": 5.807281571,
-     "frame": "56",
-     "dq": "ok",
-     "hi": {
-      "rpm": 3450,
-      "g": [
-       73,
-       44,
-       101
-      ],
-      "w": [
-       2448,
-       1996,
-       2830
-      ]
-     },
-     "lo": {
-      "rpm": 1100,
-      "g": [
-       24,
-       14,
-       32
-      ],
-      "w": [
-       158,
-       132,
-       168
-      ]
-     }
-    },
-    "score": 73.7084334545,
-    "reasons": [
-     {
-      "code": "AUTOMATION_SAME_BRAND",
-      "severity": "good",
-      "ruleId": "AUTOMATION_SAME_BRAND",
-      "text": "Same brand as your Pentair automation — simplest to control."
-     },
-     {
-      "code": "VS_PREFERRED",
-      "severity": "good",
-      "ruleId": "VS_REQUIRED_ABOVE_THP",
-      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
-     },
-     {
-      "code": "FLOW_MINIMUM",
-      "severity": "good",
-      "ruleId": "TURNOVER_FORMULA",
-      "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
-     },
-     {
-      "code": "FEATURE_FLOW",
-      "severity": "good",
-      "ruleId": "FEATURE_FLOW_DEMANDS",
-      "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
-     }
-    ],
-    "fit": {
-     "meetsCapacity": true,
-     "meetsFlow": true,
-     "meetsFlowLow": true,
-     "automationMatch": true,
-     "regulatoryOk": true
-    },
-    "computed": {
-     "requiredGPM": 90,
-     "dailyGPM": 40,
-     "gpmAtCurveLow": 32,
-     "gpmAtCurveHigh": 101,
-     "wattsDaily": 328,
-     "wattsHigh": 2830,
-     "annualKWh": 1871.309375,
-     "annualCostUSD": 318
-    },
-    "variants": [
-     "Pentair IntelliPro VS+SVRS P6E6XS4H-209L"
-    ],
-    "rank": 9
-   },
-   {
-    "product": {
-     "id": "pentair-intelliflo-vs-3050",
-     "brand": "Pentair",
-     "model": "Pentair IntelliFlo VS 3050",
-     "st": "VS",
-     "mot": "ECM",
-     "thp": 3.96,
-     "nhp": 3,
-     "wef": 5.789368778,
-     "frame": "56",
-     "dq": "ok",
-     "hi": {
-      "rpm": 3450,
-      "g": [
-       71,
-       43,
-       97
-      ],
-      "w": [
-       2340,
-       1990,
-       2720
-      ]
-     },
-     "lo": {
-      "rpm": 800,
-      "g": [
-       18,
-       11,
-       24
-      ],
-      "w": [
-       110,
-       105,
-       110
-      ]
-     }
-    },
-    "score": 70.08009959303703,
-    "reasons": [
-     {
-      "code": "AUTOMATION_SAME_BRAND",
-      "severity": "good",
-      "ruleId": "AUTOMATION_SAME_BRAND",
-      "text": "Same brand as your Pentair automation — simplest to control."
-     },
-     {
-      "code": "VS_PREFERRED",
-      "severity": "good",
-      "ruleId": "VS_REQUIRED_ABOVE_THP",
-      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
-     },
-     {
-      "code": "FLOW_MINIMUM",
-      "severity": "good",
-      "ruleId": "TURNOVER_FORMULA",
-      "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
-     },
-     {
-      "code": "FEATURE_FLOW",
-      "severity": "good",
-      "ruleId": "FEATURE_FLOW_DEMANDS",
-      "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
-     }
-    ],
-    "fit": {
-     "meetsCapacity": true,
-     "meetsFlow": true,
-     "meetsFlowLow": true,
-     "automationMatch": true,
-     "regulatoryOk": true
-    },
-    "computed": {
-     "requiredGPM": 90,
-     "dailyGPM": 40,
-     "gpmAtCurveLow": 24,
-     "gpmAtCurveHigh": 97,
-     "wattsDaily": 509,
-     "wattsHigh": 2720,
-     "annualKWh": 2293.9574074074076,
-     "annualCostUSD": 390
-    },
-    "variants": [],
-    "rank": 10
-   },
-   {
-    "product": {
-     "id": "pentair-maxepro-p6e6y4h-209l",
-     "brand": "Pentair",
-     "model": "Pentair MaxEPro P6E6Y4H-209L",
-     "st": "VS",
-     "mot": "ECM",
-     "thp": 3.96,
-     "nhp": 3,
-     "wef": 5.89289889,
-     "frame": "56",
-     "dq": "ok",
-     "hi": {
-      "rpm": 3450,
-      "g": [
-       71,
-       43,
-       97
-      ],
-      "w": [
-       2340,
-       1990,
-       2720
-      ]
-     },
-     "lo": {
-      "rpm": 800,
-      "g": [
-       17,
-       10,
-       23
-      ],
-      "w": [
-       100,
-       100,
-       100
-      ]
-     }
-    },
-    "score": 69.92331075772664,
-    "reasons": [
-     {
-      "code": "AUTOMATION_SAME_BRAND",
-      "severity": "good",
-      "ruleId": "AUTOMATION_SAME_BRAND",
-      "text": "Same brand as your Pentair automation — simplest to control."
-     },
-     {
-      "code": "VS_PREFERRED",
-      "severity": "good",
-      "ruleId": "VS_REQUIRED_ABOVE_THP",
-      "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
-     },
-     {
-      "code": "FLOW_MINIMUM",
-      "severity": "good",
-      "ruleId": "TURNOVER_FORMULA",
-      "text": "Can idle down to the ~40 GPM your gas heater 40 GPM needs — cheapest way to run every day."
-     },
-     {
-      "code": "FEATURE_FLOW",
-      "severity": "good",
-      "ruleId": "FEATURE_FLOW_DEMANDS",
-      "text": "Reaches 6 spa jets + gas heater peak (~90 GPM) at full speed."
-     }
-    ],
-    "fit": {
-     "meetsCapacity": true,
-     "meetsFlow": true,
-     "meetsFlowLow": true,
-     "automationMatch": true,
-     "regulatoryOk": true
-    },
-    "computed": {
-     "requiredGPM": 90,
-     "dailyGPM": 40,
-     "gpmAtCurveLow": 23,
-     "gpmAtCurveHigh": 97,
-     "wattsDaily": 526,
-     "wattsHigh": 2720,
-     "annualKWh": 2336.763179090983,
-     "annualCostUSD": 397
-    },
-    "variants": [
-     "Pentair MaxEPro P6E6Z4H-209L"
-    ],
     "rank": 11
    },
    {
     "product": {
-     "id": "jandy-stealth-vsshp220aut",
-     "brand": "Jandy",
-     "model": "Jandy Stealth VSSHP220AUT",
+     "id": "pentair-022057",
+     "brand": "Pentair",
+     "model": "Pentair 022057",
      "st": "VS",
-     "mot": "CSCR",
-     "thp": 2.21,
-     "nhp": 2.21,
-     "wef": 7.630720271,
-     "frame": null,
+     "mot": "PSC",
+     "thp": 3.96,
+     "nhp": 3,
+     "wef": 6.152020646,
+     "frame": "56",
      "dq": "ok",
      "hi": {
       "rpm": 3450,
       "g": [
-       66.9,
-       39.7,
-       91
+       74.17,
+       44.01,
+       100.94
       ],
       "w": [
-       1783,
-       1452,
-       2002
+       2544.81,
+       2138.2,
+       2837.4
       ]
      },
      "lo": {
-      "rpm": 1187,
+      "rpm": 1100,
       "g": [
-       23.017,
-       13.659,
-       31.3
+       24.02,
+       14.44,
+       32.68
       ],
       "w": [
-       116.181,
-       102.7,
-       125.1
+       128.5,
+       116.48,
+       136.99
       ]
      }
     },
-    "score": 69.3798302494867,
+    "score": 76.80836822732874,
     "reasons": [
+     {
+      "code": "AUTOMATION_SAME_BRAND",
+      "severity": "good",
+      "ruleId": "AUTOMATION_SAME_BRAND",
+      "text": "Same brand as your Pentair automation — simplest to control."
+     },
      {
       "code": "VS_PREFERRED",
       "severity": "good",
@@ -1048,20 +1054,22 @@
      "meetsCapacity": true,
      "meetsFlow": true,
      "meetsFlowLow": true,
-     "automationMatch": false,
+     "automationMatch": true,
      "regulatoryOk": true
     },
     "computed": {
      "requiredGPM": 90,
      "dailyGPM": 40,
-     "gpmAtCurveLow": 31.3,
-     "gpmAtCurveHigh": 91,
-     "wattsDaily": 261,
-     "wattsHigh": 2002,
-     "annualKWh": 1397.8365050015655,
-     "annualCostUSD": 238
+     "gpmAtCurveLow": 32.68,
+     "gpmAtCurveHigh": 100.94,
+     "wattsDaily": 216,
+     "wattsHigh": 2837.4,
+     "annualKWh": 1587.726242902501,
+     "annualCostUSD": 270
     },
-    "variants": [],
+    "variants": [
+     "Pentair Sta-Rite 023057"
+    ],
     "rank": 12
    }
   ],

@@ -45,7 +45,7 @@
      ]
     }
    },
-   "score": 84.97485992518517,
+   "score": 87.16061579905818,
    "reasons": [
     {
      "code": "VS_PREFERRED",
@@ -72,10 +72,10 @@
     "dailyGPM": 15,
     "gpmAtCurveLow": 9,
     "gpmAtCurveHigh": 52,
-    "wattsDaily": 134,
+    "wattsDaily": 46,
     "wattsHigh": 938,
-    "annualKWh": 392.03703703703707,
-    "annualCostUSD": 67
+    "annualKWh": 134.88928716962516,
+    "annualCostUSD": 23
    },
    "variants": [
     "Hayward MaxFlo VS 500 HL2350020VSP",
@@ -86,44 +86,44 @@
   },
   {
    "product": {
-    "id": "speck-e71-ii-vhv",
-    "brand": "Speck",
-    "model": "Speck E71-II VHV",
+    "id": "hayward-hl2670020vsp",
+    "brand": "Hayward",
+    "model": "Hayward HL2670020VSP",
     "st": "VS",
     "mot": "ECM",
-    "thp": 1.1,
-    "nhp": 1,
-    "wef": 10.1347564,
-    "frame": "48",
+    "thp": 1.65,
+    "nhp": 1.65,
+    "wef": 10.10746055,
+    "frame": "56",
     "dq": "ok",
     "hi": {
-     "rpm": 3400,
+     "rpm": 3450,
      "g": [
-      46,
-      28,
-      62
+      55,
+      35,
+      70
      ],
      "w": [
-      875,
-      747,
-      956
+      1135,
+      961,
+      1231
      ]
     },
     "lo": {
-     "rpm": 1000,
+     "rpm": 600,
      "g": [
-      13,
+      9,
       8,
-      17
+      11
      ],
      "w": [
-      47,
-      46,
-      52
+      22,
+      20,
+      22
      ]
     }
    },
-   "score": 84.47749072444242,
+   "score": 85.22760965148932,
    "reasons": [
     {
      "code": "VS_PREFERRED",
@@ -148,17 +148,92 @@
    "computed": {
     "requiredGPM": 15,
     "dailyGPM": 15,
-    "gpmAtCurveLow": 13,
-    "gpmAtCurveHigh": 46,
-    "wattsDaily": 72,
-    "wattsHigh": 875,
-    "annualKWh": 210.82612653618563,
-    "annualCostUSD": 36
+    "gpmAtCurveLow": 9,
+    "gpmAtCurveHigh": 55,
+    "wattsDaily": 40,
+    "wattsHigh": 1135,
+    "annualKWh": 116.15428806007992,
+    "annualCostUSD": 20
+   },
+   "variants": [],
+   "rank": 2
+  },
+  {
+   "product": {
+    "id": "hayward-super-pump-vs-700-hl2670020vsp",
+    "brand": "Hayward",
+    "model": "Hayward Super Pump VS 700 HL2670020VSP",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1.65,
+    "nhp": 1.65,
+    "wef": 10.10746055,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      55,
+      35,
+      70
+     ],
+     "w": [
+      1135,
+      961,
+      1231
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      9,
+      6,
+      11
+     ],
+     "w": [
+      22,
+      20,
+      22
+     ]
+    }
+   },
+   "score": 85.22760965148932,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 15,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 9,
+    "gpmAtCurveHigh": 55,
+    "wattsDaily": 40,
+    "wattsHigh": 1135,
+    "annualKWh": 116.15428806007992,
+    "annualCostUSD": 20
    },
    "variants": [
-    "Speck PE71-II VHV"
+    "Hayward SuperPump SP2603VSP",
+    "Hayward SuperPump SP2670020VSP"
    ],
-   "rank": 2
+   "rank": 3
   },
   {
    "product": {
@@ -199,7 +274,7 @@
      ]
     }
    },
-   "score": 84.37201983514049,
+   "score": 84.94096861312724,
    "reasons": [
     {
      "code": "VS_PREFERRED",
@@ -226,13 +301,13 @@
     "dailyGPM": 15,
     "gpmAtCurveLow": 11,
     "gpmAtCurveHigh": 64,
-    "wattsDaily": 56,
+    "wattsDaily": 33,
     "wattsHigh": 1408,
-    "annualKWh": 162.89256198347104,
-    "annualCostUSD": 28
+    "annualKWh": 95.95741163208888,
+    "annualCostUSD": 16
    },
    "variants": [],
-   "rank": 3
+   "rank": 4
   },
   {
    "product": {
@@ -273,7 +348,7 @@
      ]
     }
    },
-   "score": 84.3570944351405,
+   "score": 84.92604321312724,
    "reasons": [
     {
      "code": "VS_PREFERRED",
@@ -300,15 +375,15 @@
     "dailyGPM": 15,
     "gpmAtCurveLow": 11,
     "gpmAtCurveHigh": 64,
-    "wattsDaily": 56,
+    "wattsDaily": 33,
     "wattsHigh": 1408,
-    "annualKWh": 162.89256198347104,
-    "annualCostUSD": 28
+    "annualKWh": 95.95741163208888,
+    "annualCostUSD": 16
    },
    "variants": [
     "Hayward TriStar SP3200VSPND"
    ],
-   "rank": 4
+   "rank": 5
   },
   {
    "product": {
@@ -349,7 +424,7 @@
      ]
     }
    },
-   "score": 84.3477055711405,
+   "score": 84.91665434912724,
    "reasons": [
     {
      "code": "VS_PREFERRED",
@@ -376,92 +451,16 @@
     "dailyGPM": 15,
     "gpmAtCurveLow": 11,
     "gpmAtCurveHigh": 64,
-    "wattsDaily": 56,
+    "wattsDaily": 33,
     "wattsHigh": 1408,
-    "annualKWh": 162.89256198347104,
-    "annualCostUSD": 28
+    "annualKWh": 95.95741163208888,
+    "annualCostUSD": 16
    },
    "variants": [
     "Hayward TriStar SP3202VSPBH",
     "Hayward TriStar SP3202VSPND",
     "Hayward TriStar SP32900VSP",
     "Hayward TriStar VS 900 HL32900VSP"
-   ],
-   "rank": 5
-  },
-  {
-   "product": {
-    "id": "speck-a91-ii-vsp",
-    "brand": "Speck",
-    "model": "Speck A91-II VSP",
-    "st": "VS",
-    "mot": "ECM",
-    "thp": 1.1,
-    "nhp": 1,
-    "wef": 9.87235898,
-    "frame": "48",
-    "dq": "ok",
-    "hi": {
-     "rpm": 3400,
-     "g": [
-      50,
-      32,
-      64
-     ],
-     "w": [
-      968,
-      882,
-      1031
-     ]
-    },
-    "lo": {
-     "rpm": 1000,
-     "g": [
-      14,
-      9,
-      18
-     ],
-     "w": [
-      51,
-      49,
-      53
-     ]
-    }
-   },
-   "score": 84.18781471655977,
-   "reasons": [
-    {
-     "code": "VS_PREFERRED",
-     "severity": "good",
-     "ruleId": "VS_REQUIRED_ABOVE_THP",
-     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
-    },
-    {
-     "code": "FLOW_MINIMUM",
-     "severity": "good",
-     "ruleId": "TURNOVER_FORMULA",
-     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
-    }
-   ],
-   "fit": {
-    "meetsCapacity": true,
-    "meetsFlow": true,
-    "meetsFlowLow": true,
-    "automationMatch": false,
-    "regulatoryOk": true
-   },
-   "computed": {
-    "requiredGPM": 15,
-    "dailyGPM": 15,
-    "gpmAtCurveLow": 14,
-    "gpmAtCurveHigh": 50,
-    "wattsDaily": 63,
-    "wattsHigh": 968,
-    "annualKWh": 183.1650874635569,
-    "annualCostUSD": 31
-   },
-   "variants": [
-    "Speck PA91-II VSP"
    ],
    "rank": 6
   },
@@ -504,7 +503,7 @@
      ]
     }
    },
-   "score": 83.935301714,
+   "score": 84.90432791875251,
    "reasons": [
     {
      "code": "VS_PREFERRED",
@@ -531,282 +530,54 @@
     "dailyGPM": 15,
     "gpmAtCurveLow": 10,
     "gpmAtCurveHigh": 63,
-    "wattsDaily": 74,
+    "wattsDaily": 35,
     "wattsHigh": 1407,
-    "annualKWh": 216.81,
-    "annualCostUSD": 37
+    "annualKWh": 102.80691708793923,
+    "annualCostUSD": 17
    },
    "variants": [],
    "rank": 7
   },
   {
    "product": {
-    "id": "hayward-hl2670020vsp",
-    "brand": "Hayward",
-    "model": "Hayward HL2670020VSP",
+    "id": "speck-e71-ii-vhv",
+    "brand": "Speck",
+    "model": "Speck E71-II VHV",
     "st": "VS",
     "mot": "ECM",
-    "thp": 1.65,
-    "nhp": 1.65,
-    "wef": 10.10746055,
-    "frame": "56",
-    "dq": "ok",
-    "hi": {
-     "rpm": 3450,
-     "g": [
-      55,
-      35,
-      70
-     ],
-     "w": [
-      1135,
-      961,
-      1231
-     ]
-    },
-    "lo": {
-     "rpm": 600,
-     "g": [
-      9,
-      8,
-      11
-     ],
-     "w": [
-      22,
-      20,
-      22
-     ]
-    }
-   },
-   "score": 83.68695813703704,
-   "reasons": [
-    {
-     "code": "VS_PREFERRED",
-     "severity": "good",
-     "ruleId": "VS_REQUIRED_ABOVE_THP",
-     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
-    },
-    {
-     "code": "FLOW_MINIMUM",
-     "severity": "good",
-     "ruleId": "TURNOVER_FORMULA",
-     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
-    }
-   ],
-   "fit": {
-    "meetsCapacity": true,
-    "meetsFlow": true,
-    "meetsFlowLow": true,
-    "automationMatch": false,
-    "regulatoryOk": true
-   },
-   "computed": {
-    "requiredGPM": 15,
-    "dailyGPM": 15,
-    "gpmAtCurveLow": 9,
-    "gpmAtCurveHigh": 55,
-    "wattsDaily": 102,
-    "wattsHigh": 1135,
-    "annualKWh": 297.4074074074074,
-    "annualCostUSD": 51
-   },
-   "variants": [],
-   "rank": 8
-  },
-  {
-   "product": {
-    "id": "hayward-super-pump-vs-700-hl2670020vsp",
-    "brand": "Hayward",
-    "model": "Hayward Super Pump VS 700 HL2670020VSP",
-    "st": "VS",
-    "mot": "ECM",
-    "thp": 1.65,
-    "nhp": 1.65,
-    "wef": 10.10746055,
-    "frame": "56",
-    "dq": "ok",
-    "hi": {
-     "rpm": 3450,
-     "g": [
-      55,
-      35,
-      70
-     ],
-     "w": [
-      1135,
-      961,
-      1231
-     ]
-    },
-    "lo": {
-     "rpm": 600,
-     "g": [
-      9,
-      6,
-      11
-     ],
-     "w": [
-      22,
-      20,
-      22
-     ]
-    }
-   },
-   "score": 83.68695813703704,
-   "reasons": [
-    {
-     "code": "VS_PREFERRED",
-     "severity": "good",
-     "ruleId": "VS_REQUIRED_ABOVE_THP",
-     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
-    },
-    {
-     "code": "FLOW_MINIMUM",
-     "severity": "good",
-     "ruleId": "TURNOVER_FORMULA",
-     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
-    }
-   ],
-   "fit": {
-    "meetsCapacity": true,
-    "meetsFlow": true,
-    "meetsFlowLow": true,
-    "automationMatch": false,
-    "regulatoryOk": true
-   },
-   "computed": {
-    "requiredGPM": 15,
-    "dailyGPM": 15,
-    "gpmAtCurveLow": 9,
-    "gpmAtCurveHigh": 55,
-    "wattsDaily": 102,
-    "wattsHigh": 1135,
-    "annualKWh": 297.4074074074074,
-    "annualCostUSD": 51
-   },
-   "variants": [
-    "Hayward SuperPump SP2603VSP",
-    "Hayward SuperPump SP2670020VSP"
-   ],
-   "rank": 9
-  },
-  {
-   "product": {
-    "id": "aquaguard-agvs165-59927-xxxx",
-    "brand": "Aquaguard",
-    "model": "Aquaguard AGVS165 59927-XXXX",
-    "st": "VS",
-    "mot": "ECM",
-    "thp": 1.65,
-    "nhp": 1.65,
-    "wef": 9.464139954,
-    "frame": "56",
-    "dq": "ok",
-    "hi": {
-     "rpm": 3450,
-     "g": [
-      64,
-      39,
-      84
-     ],
-     "w": [
-      1552,
-      1255,
-      1572
-     ]
-    },
-    "lo": {
-     "rpm": 600,
-     "g": [
-      11,
-      7,
-      15
-     ],
-     "w": [
-      22,
-      20,
-      22
-     ]
-    }
-   },
-   "score": 83.5436931311405,
-   "reasons": [
-    {
-     "code": "VS_PREFERRED",
-     "severity": "good",
-     "ruleId": "VS_REQUIRED_ABOVE_THP",
-     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
-    },
-    {
-     "code": "FLOW_MINIMUM",
-     "severity": "good",
-     "ruleId": "TURNOVER_FORMULA",
-     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
-    }
-   ],
-   "fit": {
-    "meetsCapacity": true,
-    "meetsFlow": true,
-    "meetsFlowLow": true,
-    "automationMatch": false,
-    "regulatoryOk": true
-   },
-   "computed": {
-    "requiredGPM": 15,
-    "dailyGPM": 15,
-    "gpmAtCurveLow": 11,
-    "gpmAtCurveHigh": 64,
-    "wattsDaily": 56,
-    "wattsHigh": 1552,
-    "annualKWh": 162.89256198347104,
-    "annualCostUSD": 28
-   },
-   "variants": [
-    "Aquapro APEXVS165 59927-XXXX",
-    "Aquapro SUNVS165 59927-XXXX"
-   ],
-   "rank": 10
-  },
-  {
-   "product": {
-    "id": "spectralight-leaf-v2-t2",
-    "brand": "Spectralight",
-    "model": "Spectralight Leaf V2 T2",
-    "st": "VS",
-    "mot": "CSCR",
-    "thp": 1.65,
-    "nhp": 1.65,
-    "wef": 9.447924524,
+    "thp": 1.1,
+    "nhp": 1,
+    "wef": 10.1347564,
     "frame": "48",
     "dq": "ok",
     "hi": {
-     "rpm": 3450,
+     "rpm": 3400,
      "g": [
-      60,
-      38,
-      78
+      46,
+      28,
+      62
      ],
      "w": [
-      1422,
-      1269,
-      1457
+      875,
+      747,
+      956
      ]
     },
     "lo": {
-     "rpm": 600,
+     "rpm": 1000,
      "g": [
-      10,
-      6,
-      13
+      13,
+      8,
+      17
      ],
      "w": [
-      21,
-      20,
-      21
+      47,
+      46,
+      52
      ]
     }
    },
-   "score": 83.136731548,
+   "score": 84.84851321055719,
    "reasons": [
     {
      "code": "VS_PREFERRED",
@@ -831,15 +602,17 @@
    "computed": {
     "requiredGPM": 15,
     "dailyGPM": 15,
-    "gpmAtCurveLow": 10,
-    "gpmAtCurveHigh": 60,
-    "wattsDaily": 71,
-    "wattsHigh": 1422,
-    "annualKWh": 206.95499999999998,
-    "annualCostUSD": 35
+    "gpmAtCurveLow": 13,
+    "gpmAtCurveHigh": 46,
+    "wattsDaily": 57,
+    "wattsHigh": 875,
+    "annualKWh": 167.17642228739,
+    "annualCostUSD": 28
    },
-   "variants": [],
-   "rank": 11
+   "variants": [
+    "Speck PE71-II VHV"
+   ],
+   "rank": 8
   },
   {
    "product": {
@@ -880,7 +653,7 @@
      ]
     }
    },
-   "score": 83.13435425703705,
+   "score": 84.63734742155039,
    "reasons": [
     {
      "code": "VS_PREFERRED",
@@ -907,10 +680,237 @@
     "dailyGPM": 15,
     "gpmAtCurveLow": 9,
     "gpmAtCurveHigh": 54,
-    "wattsDaily": 102,
+    "wattsDaily": 41,
     "wattsHigh": 1165,
-    "annualKWh": 297.4074074074074,
-    "annualCostUSD": 51
+    "annualKWh": 120.58468217054262,
+    "annualCostUSD": 20
+   },
+   "variants": [],
+   "rank": 9
+  },
+  {
+   "product": {
+    "id": "speck-a91-ii-vsp",
+    "brand": "Speck",
+    "model": "Speck A91-II VSP",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1.1,
+    "nhp": 1,
+    "wef": 9.87235898,
+    "frame": "48",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3400,
+     "g": [
+      50,
+      32,
+      64
+     ],
+     "w": [
+      968,
+      882,
+      1031
+     ]
+    },
+    "lo": {
+     "rpm": 1000,
+     "g": [
+      14,
+      9,
+      18
+     ],
+     "w": [
+      51,
+      49,
+      53
+     ]
+    }
+   },
+   "score": 84.36142706172099,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 15,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 14,
+    "gpmAtCurveHigh": 50,
+    "wattsDaily": 56,
+    "wattsHigh": 968,
+    "annualKWh": 162.74010567988483,
+    "annualCostUSD": 28
+   },
+   "variants": [
+    "Speck PA91-II VSP"
+   ],
+   "rank": 10
+  },
+  {
+   "product": {
+    "id": "aquaguard-agvs165-59927-xxxx",
+    "brand": "Aquaguard",
+    "model": "Aquaguard AGVS165 59927-XXXX",
+    "st": "VS",
+    "mot": "ECM",
+    "thp": 1.65,
+    "nhp": 1.65,
+    "wef": 9.464139954,
+    "frame": "56",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      64,
+      39,
+      84
+     ],
+     "w": [
+      1552,
+      1255,
+      1572
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      11,
+      7,
+      15
+     ],
+     "w": [
+      22,
+      20,
+      22
+     ]
+    }
+   },
+   "score": 84.08463172742618,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 15,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 11,
+    "gpmAtCurveHigh": 64,
+    "wattsDaily": 34,
+    "wattsHigh": 1552,
+    "annualKWh": 99.2527271263319,
+    "annualCostUSD": 17
+   },
+   "variants": [
+    "Aquapro APEXVS165 59927-XXXX",
+    "Aquapro SUNVS165 59927-XXXX"
+   ],
+   "rank": 11
+  },
+  {
+   "product": {
+    "id": "spectralight-leaf-v2-t2",
+    "brand": "Spectralight",
+    "model": "Spectralight Leaf V2 T2",
+    "st": "VS",
+    "mot": "CSCR",
+    "thp": 1.65,
+    "nhp": 1.65,
+    "wef": 9.447924524,
+    "frame": "48",
+    "dq": "ok",
+    "hi": {
+     "rpm": 3450,
+     "g": [
+      60,
+      38,
+      78
+     ],
+     "w": [
+      1422,
+      1269,
+      1457
+     ]
+    },
+    "lo": {
+     "rpm": 600,
+     "g": [
+      10,
+      6,
+      13
+     ],
+     "w": [
+      21,
+      20,
+      21
+     ]
+    }
+   },
+   "score": 83.99051068753488,
+   "reasons": [
+    {
+     "code": "VS_PREFERRED",
+     "severity": "good",
+     "ruleId": "VS_REQUIRED_ABOVE_THP",
+     "text": "Variable-speed — DOE-compliant and can run low, quiet and cheap for daily filtering."
+    },
+    {
+     "code": "FLOW_MINIMUM",
+     "severity": "good",
+     "ruleId": "TURNOVER_FORMULA",
+     "text": "Can idle down to the ~15 GPM your skimmer 15 GPM needs — cheapest way to run every day."
+    }
+   ],
+   "fit": {
+    "meetsCapacity": true,
+    "meetsFlow": true,
+    "meetsFlowLow": true,
+    "automationMatch": false,
+    "regulatoryOk": true
+   },
+   "computed": {
+    "requiredGPM": 15,
+    "dailyGPM": 15,
+    "gpmAtCurveLow": 10,
+    "gpmAtCurveHigh": 60,
+    "wattsDaily": 36,
+    "wattsHigh": 1422,
+    "annualKWh": 106.5103953488372,
+    "annualCostUSD": 18
    },
    "variants": [],
    "rank": 12

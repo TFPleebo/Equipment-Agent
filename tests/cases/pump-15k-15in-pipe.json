@@ -21,13 +21,13 @@
     "minDriver": "skimmer 15 GPM",
     "curve": "A",
     "top": [
+      "hayward-hl2350020vsp",
+      "hayward-hl2670020vsp",
+      "hayward-super-pump-vs-700-hl2670020vsp",
       "hayward-tristar-sp3200vsp",
-      "hayward-hl32900vsp",
-      "hayward-tristar-sp3202vsp",
-      "speck-e71-ii-vhv",
-      "speck-a91-ii-vsp"
+      "hayward-hl32900vsp"
     ],
-    "topAnnualCostUSD": 41,
+    "topAnnualCostUSD": 34,
     "comparison": null,
     "warnings": [
       "PIPE_SMALL",

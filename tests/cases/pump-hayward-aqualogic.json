@@ -22,12 +22,12 @@
     "curve": "C",
     "top": [
       "hayward-hl2350020vsp",
+      "hayward-hl2670020vsp",
+      "hayward-super-pump-vs-700-hl2670020vsp",
       "hayward-energyflo-rs-ef200vs",
-      "hayward-tristar-sp3200vsp",
-      "hayward-hl32900vsp",
-      "hayward-tristar-sp3202vsp"
+      "hayward-tristar-sp3200vsp"
     ],
-    "topAnnualCostUSD": 29,
+    "topAnnualCostUSD": 18,
     "comparison": null,
     "warnings": [
       "PIPE_OK",
